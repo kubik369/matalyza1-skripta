@@ -10,6 +10,7 @@
 *.fot
 *.cb
 *.cb2
+*.slo
 
 ## Intermediate documents:
 *.dvi
@@ -218,3 +219,6 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+# locally built files
+document.pdf

@@ -1,0 +1,258 @@
+\chapter*{Úvod (výroky, dôkazy)}
+
+\epigraph{
+  \enquote{Prosím také, aby čtenář nepovažoval tyto vědomě neúplné poznámky za
+  nějaký (sebe elementárnejší) úvod do matematickej logiky. Šlo mně jenom o to,
+  abychom si ujasnili způsob vjadřovaní, kterého ostatně nadaný matematik užívá
+  intuitivně s neomylnou správností.}
+}{
+  Vojtěch Jarník \\
+  Diferenciální počet (II)
+}
+
+\textbf{Výroky:}
+V matematike sa stretávame s tvrdeniami, o ktorých má
+zmysel povedať, že sú pravdivé alebo nepravdivé. Také tvrdenia sa nazývajú
+výroky.
+
+\textbf{Zložené výroka a ich negovanie:}
+Z výrokov A, B môžeme pomocou operácií negácie ($\neg$), konjukcie
+($\land$), disjunkcie ($\lor$), implikácie ($\Rightarrow$) a ekvivalencie
+($\iff$) vytvoriť nové, tzv. zložené výroky:
+
+\begin{center}
+  \begin{tabular}{ m{0.15\linewidth} p{0.5\linewidth} }
+    $\neg A$ & negácia výroku $A$ \\
+    \bigskip
+    $A \land B$
+      & \enquote{$A$ a súčasne $B$},
+        \enquote{$A$ a $B$};
+        namiesto $A \land B$ a často píše $A, B$ \\
+    \bigskip
+    $A \lor B$
+      & \enquote{$A$ alebo $B$},
+        \enquote{alebo $A$ alebo $B$} \\
+    \bigskip
+    $A \Rightarrow B$
+      & \enquote{ak $A$, tak $B$},
+        \enquote{nech $A$, potom $B$},
+        \enquote{$A$ je postačujúca podmienka pre $B$},
+        \enquote{$B$ je nutná podmienka pre $A$} \\
+    \bigskip
+    $A \iff B$
+      & \enquote{$A$ vtedy a len vtedy, keď $B$},
+        \enquote{$A$ práve vtedy, keď $B$},
+        \enquote{$A$ je nutná a postačujúca podmienka pre $B$}
+  \end{tabular}
+\end{center}
+
+Pravdivosť týchto zložených výrokov závisí len na pravdivosti výrokov A, B, a
+to následovne ($1$ označuje, že daný výrok je pravdivý; $0$, že je nepravdivý):
+
+\begin{center}
+  \begin{tabular}{|c|c|}
+    \hline
+    $A$ & $\neg A$ \\
+    \hline
+    1 & 0 \\
+    0 & 1 \\
+    \hline
+  \end{tabular}
+  \quad
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    $A$ & $B$ & $A \land B$ & $A \lor B$ & $A \Rightarrow B$ & $A \iff B$ \\
+    \hline
+    1 & 1 & 1 & 1 & 1 & 1 \\
+    1 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 1 & 1 \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Pre negáciu zložených výrokov platia tieto pravidlá:
+
+\begin{center}
+  \begin{tabular}{c | c}
+    výrok & negácia \\
+    \hline
+    $\neg A$ & $A$ \\
+    $A \land B$ & $\neg A \lor \neg B$ \\
+    $A \lor B$ & $\neg A \land \neg B$ \\
+    $A \Rightarrow B$ & $A \land \neg B$ \\
+    $A \iff B$ & $(A \land \neg B) \lor (B \land \neg A)$
+  \end{tabular}
+\end{center}
+
+Často budeme využívať, že pre ľubovoľné výroky $A, B$ je
+
+\begin{enumerate}
+  \item implikácia $A \Rightarrow B$ rovnocenná s obmenou (kontrapozíciou)
+        $\neg B \Rightarrow \neg A$
+  \item ekvivalencia $A \iff B$ rovnocenná s výrokom
+        $(A \Rightarrow B) \land (B \Rightarrow A)$
+\end{enumerate}
+
+Každá definícia v matematike má podobu ekvivalencie. Je však zvykom
+nevyjadrovať v definícií symbol \enquote{$\iff$} slovami \enquote{vtedy a len
+vtedy}, ale slovom \enquote{ak}. Teda napr. definíciu v slovnej podobe
+\enquote{funkcia sa nazýva rastúca, ak platí ...} treba chápať ako ekvivalenciu
+\enquote{funkcia je rastúca $\iff$ ...}.
+
+\textbf{Výrokové formy. Všeobecné a existenčné výroky a ich negovanie}:
+Výroková forma je výraz, ktorý síc enie je výrokom, ale obsahuje premenné,
+ktorých vhodným nahradením vznikne výrok (napr. výroková forma $x^2 + y \geq 0
+\land y < 0$ obsahuje dve také premenné). Tvorenie zložených výrokových foriem
+je analogické tvoreniu zložených výrokov.
+
+Nech $\varphi (x)$ je výroková forma, v ktorej je možno dosadzovať za jedinú
+premennú $x$, a $A$ je ľubovoľná neprázdna množina obsahujúca len také prvky,
+ktorých dosadením do $\varphi (x)$ vznikne výrok.
+
+Výrok \enquote{pre všetky $x \in A$ platí $\varphi (x)$} -- symbolicky ho zapisujeme
+
+$$\forall x \in A_1: \varphi (x)$$
+
+sa nazýva všobecný symbol $\forall$ zastupujúci slová \enquote{pre všetky} je
+tzv. všeobecný (alebo veľký) kvantifikátor. (Častá slovná podoba všeobecného
+výroku $\forall x \in A : \varphi (x)$ je \enquote{nech $x \in A$, potom
+(platí) $\varphi (x)$} alebo \enquote{ak $x \in A$, tak (platí) $\varphi
+(x)$}.)
+
+Výrok \enquote{existuje $x \in A$ také, že platí $\varphi (x)$} -- symbolicky
+
+$$\exists x \in A : \varphi (x)$$
+
+sa nazýva existenčný výrok; symbol $\exists$ vyjadrujúci slovo
+\enquote{existuje} (\enquote{pre niektoré}) je tzv. existenčný (malý)
+kvantifikátor.
+
+Pre negáciu všeobecných a existenčných kvantifikátorov platia tieto pravidlá:
+
+\begin{center}
+  \begin{tabular}{c | c}
+    výrok & negácia \\
+    \hline
+    $\forall x \in A : \varphi (x)$ & $\exists x \in A : \neg \varphi (x)$ \\
+    $\exists x \in A : \varphi (x)$ & $\forall x \in A : \neg \varphi (x)$
+  \end{tabular}
+\end{center}
+
+Ak uplatníme všeobecný (alebo existenčný) kvantifikátor na premennú $x_1$ vo
+výrokovej forme $\varphi(x_1, x_2, \ldots, x_n)$ -- v ktorej možno dosadzovať za
+$n$ premenných $x_1, \ldots, x_n$ kde $(n \geq 2)$ -- dostaneme výrokovú formu
+$\forall x_1 \in A: \varphi (x_1, \ldots, x_n) (\exists x_1 \in A: \varphi
+(x_1, \ldots, x_n))$, v ktorej možno dosadzovať už len za $n - 1$ premenných
+$x_2, \ldots, x_n$ za premennú viazanú kvantifikátorom už dosadzovať nemožno,
+predpokladáme samozrejme, že $A \neq B$ a že pre každé $a \in A$ je výraz
+$\varphi (a, x_2, \ldots, x_n)$ opäť výrokovou formou). Na premenné $x_2$ opäť
+možeme uplatniť kvantifikátor atď. Ak v poradí posledný použitý -- t.j. pri
+zápise prvý -- kvantifikátor je veľký (malý), dostaneme takýmto postupom
+všeobecný (existenčný) výrok.
+
+Dôkaz ekvivalencie $A \iff B$ spravidla prevádzame na dôkaz dvoch implikácií
+$A \Rightarrow B$ a $B \Rightarrow A$
+
+\textbf{Podrobnejšie o dôkazoch všeobecných výrokov.} Ako príklad priameho
+dôkazu všobecného výroku nám poslúži dôkaz tvrdenia \enquote{ak celé číslo $n$
+nie je deliteľné 3, tak $n^2 - 1$ je deliteľné 3} (symbolicky $\forall n \in
+\mathbb{Z}: (3 \nmid n \Rightarrow 3 \mid (n^2 - 1))$), ktorý prebieha
+nasledovne: ak $n$ nie je deliteľné 3, tak $n - 1$ alebo $n + 1$ je deliteľné
+3, teda $n^2 - 1$ je deliteľné 3. Symbolicky možno tento dôkaz zapísať takto:
+
+$$
+3 \nmid n
+\Rightarrow (3 \mid (n - 1) \lor 3 \mid (n + 1))
+\Rightarrow 3 \mid (n^2 - 1)
+$$
+
+Keby sme v uvedených úvahách namiestno $n$ písali napr. číslo 5, dostali by sme
+dôkaz implikácie $3 \nmid 5 \Rightarrow 3 \mid (5^2 - 1)$. To je pre tento typ
+dôkazu charakteristické; priamy dôkaz výroku $\forall x \in A: \varphi (x)$ je
+vlastne schémou, z ktorej možno dostať dôkaz každého jednolivého výroku
+$\varphi (a)$, ak v nej za $x$ dosadíme prvok $a \in A$.
+
+Zvláštnym typom priameho dôkazu všeobecného výroku je dôkaz matematickou
+indukciou. Výroky v tvare $\forall n \in N: \varphi (n)$ sa spravidla
+nedokazujú bezprostredne, namiesto toho stačí dokázať výroky
+
+\begin{center}
+  \begin{enumerate}[label=(\Alph*)]
+    \item platí $\varphi (1)$
+    \item $\forall n \in \mathbb{N}: \varphi (n) \Rightarrow \varphi (n + 1)$
+  \end{enumerate}
+\end{center}
+
+(výrok $\varphi (n)$ v implikácií $\varphi (n) \Rightarrow \varphi (n + 1)$ sa
+nazýva indukčný predpoklad)
+
+Z (A) a (B) možno totiž reťazcom úsudkov odvodiť ľubovoľný jednotlivý výrok
+$\varphi (n)$ takto:
+
+% TODO Indent the proof
+platí $\varphi (1)$
+platí $\varphi (1) \Rightarrow \varphi (2)$
+\hline
+teda platí $\varphi (2)$;
+platí $\varphi(2) \Rightarrow \varphi(3)$
+teda platí $\varphi(3)$;
+$\ldots$
+platí $\varphi (n - 1)$
+platí $\varphi (n - 1) \Rightarrow \varphi (n)$
+teda platí $\varphi (n)$.
+
+Takýmto spôsobom možno dokazovať ja tvrdenia platné pre všetky prirodzené čísla
+väčšie než dané číslo $p$, pre všetky celé čísla, pre všetky párne čísla a pod.
+
+Pri nepriamom dôkaze všeobecného výroku odvodzujeme z jeho negácie nepravdivé tvrdenie.
+
+\textbf{Dôkazy existenčných výrokov.} Výrok $\exists ~ x \in A: \varphi (x)$
+môžeme dokázať tak, že priamo určíme (skonštruujeme) prvok $a \in A$, pre ktorý
+je výrok $\varphi (a)$ pravdivý. Taký dôkaz sa nazýva konštruktívny. Často však
+odvodzujeme existenčný výrok z iných existenčných viet bez toho, že by sme
+skutočne určili prvok s požadovanou vlastnosťou.
+
+Existenčné výroky možno dokazovať aj nepriamo, teda odvodením nepravdivého
+tvrdenia z ich negácie.
+
+\begin{enumerate}
+  \item Určte negácie následujúcich výrokov:
+  \begin{enumerate}[label=\arabic*.]
+    \item $\forall x \in \mathbb{R} : x^2 \geq x;$
+    \item ($\exists x \in \mathbb{R})(\forall y \in \mathbb{N}): y \neq x;$
+    \item ($\forall x \in \mathbb{R})(\forall y \in \mathbb{R}):
+          x > y \Rightarrow x^2 > y^2;$
+    \item ($\forall x, y \in \mathbb{R})(\exists z \in \mathbb{N}):
+          x < z \land y < z;$
+    \item Nech $a, b$ sú nenulové reálne čísla, potom z nerovnosti
+          $ln(|a|) > ln(|b|)$ vyplýva nerovnosť $a > b$;
+    \item Nech $a, b$ sú kladné reálne čísla, nech $|ln(a)| < |ln(b)|$;
+          potom $a < b$;
+    \item Nech $A, B \subset \mathbb{R}$ sú neprázdne množiny, nech platí
+          $$(\forall x \in A)(\forall y \in B)(\exists c > 0): |x - y| > c$$
+          Potom $A \cap B = \emptyset$;
+    \item Nech $A, B \subset \mathbb{R}$ sú neprázdne množiny, nech $C$ je
+          neprázdna množina nezáporných čísel, nech platí
+          $$(\forall x \in A)(\exists y \in B)(\forall z \in C): x + z < y$$
+          Potom platí
+          $$(\forall x \in A)(\forall y \in B): x < y;$$
+    \item Nech $A \subset \mathbb{N}$ je neprázdna množina, nech platí
+          $$\forall n \in A: (2 \nmid n \lor 3 \nmid n)$$
+          Potom platí
+          $$(\forall n \in A: 2 \nmid n) \lor (\forall n \in A: 3 \nmid n);$$
+  \end{enumerate}
+  \item Namiesto bodiek doplňte slová \enquote{je nutné}, \enquote{stačí},
+        \enquote{je nutné a stačí} tak, aby vznikol pravdivý výrok:
+  \begin{enumerate}[label=\arabic*.]
+    \item aby súčet dvoch celých čísel bol deliteľný 2, $\ldots$ , aby každý
+          sčítanec bol deliteľný 2;
+    \item aby celé číslo bolo deliteľné 100, $\ldots$ , aby bolo deliteľné 10;
+    \item aby celé číslo bolo deliteľné 100, $\ldots$ , aby bolo deliteľné
+          1000;
+    \item aby platila nerovnosť $\frac{1}{x} < 1, \ldots$ , aby bolo $x > 1$;
+    \item aby platilo $\frac{1}{x} < 1, \ldots$ , aby bolo $x > 1$ alebo
+          $x < 0$;
+  \end{enumerate}
+\end{enumerate}
+

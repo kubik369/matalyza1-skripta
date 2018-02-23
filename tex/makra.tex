@@ -1,0 +1,301 @@
+% Author: Michal Foríšek, misof ~at~ ksp.sk
+\catcode`\@=11
+
+% definicie znamych tried jazykov
+%\def\R{\mathscr{R}}   % R_0 je \R_0
+\def\Llin{\mathscr{L}_{\it lin}}
+\def\Ldpda{\mathscr{L}_{\it DPDA}}
+\def\Ledpda{\mathscr{L}_{\it eDPDA}}
+\def\Lcf{\mathscr{L}_{\it CF}}
+\def\Lcs{\mathscr{L}_{\it CS}}
+\def\Lecs{\mathscr{L}_{\it ECS}}
+\def\Lrec{\mathscr{L}_{\it rec}}
+\def\Lre{\mathscr{L}_{\it RE}}
+
+\def\L{\mathscr{L}}   % vseobecna trieda jazykov
+%\def\pisD{\mathscr{D}} %pisane D - vseobecna trieda automatov
+%\def\L{{\cal L}}   % vseobecna trieda jazykov
+%\def\Ldcf{{\cal L}_{\it dCF}}
+%\def\Lcf{{\cal L}_{\it CF}}
+%\def\Lcs{{\cal L}_{\it CS}}
+%\def\Lecs{{\cal L}_{\it ECS}}
+%\def\Lre{{\cal L}_{\it RE}}
+%\def\Lrec{{\cal L}_{\it rec}}
+\def\R{{\cal R}}
+\def\cent{{c\kern-0.3em|\kern0.1em}}
+\def\N{{N}} % FIXME FIXME
+
+%\def\cent{%
+% \mathchoice%
+%  {\rm c\kern-0.21em\vrule width0.022em depth0.05em height0.50em\kern-0.022em\kern0.21em}%
+%  {\rm c\kern-0.21em\vrule width0.022em depth0.05em height0.50em\kern-0.022em\kern0.21em}%
+%  {\rm c\kern-0.15em\vrule width0.0205em depth0.035em height0.335em\kern-0.0205em\kern0.15em}%
+%  {\rm c\kern-0.12em\vrule width0.018em depth0.030em height0.25em\kern-0.018em\kern0.12em}%
+%}
+
+\let\eps=\varepsilon
+
+\def\relupdown#1#2#3{\mathrel{\mathop{#1}\limits^{#2}_{#3}}}
+
+\let\then=\Rightarrow
+\let\neht=\Leftarrow
+
+\def\krok#1{\relupdown{\Longrightarrow}{}{#1}}
+\def\thenrm{\relupdown{\Longrightarrow}{}{rm}}
+
+\def\bicik{\upharpoonright}
+\def\B{{\mathbf B}}
+\def\kodTS#1{{\tt <}#1{\tt >}}
+\def\bigdot{\textrm{\Huge .}}
+
+\newtheorem{definicia}{Definícia}[section]
+\newtheorem{HLPpoznamka}{Poznámka}[section]
+\newtheorem{HLPpriklad}{Príklad}[section]
+\newtheorem{HLPcvicenie}[HLPpriklad]{Cvičenie}
+\newtheorem{zadanie}{Úloha}[section]
+\newenvironment{poznamka}{\begin{HLPpoznamka}\rm}{\end{HLPpoznamka}}
+\newenvironment{priklad}{\begin{HLPpriklad}\rm}{\end{HLPpriklad}}
+\newenvironment{cvicenie}{\begin{HLPcvicenie}\rm}{\end{HLPcvicenie}}
+\newtheorem{veta}{Veta}[section]
+\newtheorem{lema}[veta]{Lema}
+\newtheorem{dosledok}[veta]{Dôsledok}
+\newtheorem{teza}[veta]{Téza}
+% \newtheorem{dokaz}{Dôkaz}[section]
+
+\long\def\odsadene#1{
+\leftskip=\parindent
+\parindent=0pt
+\vskip-5pt
+
+\parskip=5pt
+#1
+\parskip=0pt
+
+\parindent=\leftskip
+\leftskip=0pt
+
+} % end \odsadene
+
+
+
+
+%%%%%%%%%%% PROSTREDIE PRE PISANIE KOMENTAROV
+
+%\newenvironment{komentar}{%
+%\vskip\baselineskip
+%\tabularx{0.95\textwidth}{|X|}
+%\sl
+%}
+%{\endtabularx
+%\vskip\baselineskip
+%}
+
+\newenvironment{komentar}{%
+\vskip\baselineskip\noindent
+\tabularx{\textwidth}{>{\hsize=.2\hsize}X>{\hsize=1.8\hsize}X}
+\sl ~ & \sl
+}
+{\endtabularx
+\vskip\baselineskip
+}
+
+%\newenvironment{komentar}{%
+%\vskip\baselineskip
+%\trivlist\vspace{-4pt}\raggedleft\item\relax\tabularx{0.9\textwidth}{X}\sl}
+%{\endtabularx\vspace{-4pt}\endtrivlist
+%\vskip\baselineskip
+%}
+
+\newenvironment{dokaz}{\trivlist
+  \item[\hskip \labelsep{\bfseries Dôkaz.}]}{\endtrivlist}
+
+%\newenvironment{dokaz}{%
+%\vskip\baselineskip\noindent
+%\tabularx{\textwidth}{||X||}
+%\sl
+%}
+%{\endtabularx
+%\vskip\baselineskip
+%}
+
+%%%%%%%%%%% PROSTREDIE PRE PISANIE KODU
+
+\newcounter{program}[chapter]
+\renewcommand \theprogram
+   {\ifnum \c@chapter>\z@ \thechapter.\fi \@arabic\c@program}
+\def\fps@program{tbp}
+\def\ftype@program{1}
+\def\ext@program{lop}
+\def\fnum@program{Program~\theprogram}
+
+\newenvironment{program}{\@float{program}}{\end@float}
+
+\newcounter{schema}[chapter]
+\renewcommand \theschema
+   {\ifnum \c@chapter>\z@ \thechapter.\fi \@arabic\c@schema}
+\def\fps@schema{tbs}
+\def\ftype@schema{1}
+\def\ext@schema{los}
+\def\fnum@schema{Schéma~\theschema}
+
+\newenvironment{schema}{\@float{schema}}{\end@float}
+
+\newlength{\myboxwidth}
+\myboxwidth=\textwidth \advance\myboxwidth -13pt
+
+\long\def\mybox#1{\noindent%
+\fcolorbox{black}{lgray}%
+%  {\parbox{\myboxwidth}{ \vbox { % \vskip -0.74cm
+  {\parbox{\myboxwidth}{ \begin{center}\begin{minipage}{0.95\myboxwidth} #1 % \vskip -0.74cm
+\end{minipage}\end{center}}}}
+
+\def\VlozKod#1#2{
+
+\begin{program}[!bhtp]
+\noindent%
+\fcolorbox{black}{lgray}%
+  {\parbox{\myboxwidth}{ \vbox { \InputC{code/#1} \vskip -0.74cm }} }
+\caption{#2}
+\end{program}
+
+}
+
+%%%%%%%%%%% PROSTREDIE PRE MOJE ITEMIZE
+
+\newenvironment{myitemize}{%
+\begin{itemize}
+\itemsep-3pt
+}
+{\end{itemize}
+}
+
+%%%%%%%%%%% MATICKE MAKRA
+
+\font\tenrm=csr10
+
+\def\eps{\varepsilon}
+% \def\R{{\mathbb R}}
+\def\lvec#1{\overrightarrow{#1}}
+\def\uhol{{\measuredangle}}
+\def\then{\Rightarrow}
+% \def\lg{{\rm lg}}
+\def\lg{\log_2}
+%\def\div{\mathbin{\rm div}}
+\def\div{{\rm div}}
+
+%%%%%%%%%%% PDF
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+  \pdffalse
+\else
+  \pdfoutput=1 \pdftrue
+\fi
+
+%%%%%%%%%%% OBRAZKY
+
+\newcommand{\myincludegraphics}[2][]{\includegraphics[#1]{images/#2}}
+
+%%%%%%%%%%% SLOVNICEK
+
+\openout2=\jobname.slo
+
+\newcommand{\definuj}[3][]{%
+\def\tmpvoid{}\def\tmpfirst{#1}%
+\ifx\tmpvoid\tmpfirst%
+  {\sl #2}\label{definicia:#2}\write2{#2 & #3 & \pageref{definicia:#2} \cr}%
+\else%
+  {\sl #2}\label{definicia:#2}\write2{#1 & #3 & \pageref{definicia:#2} \cr}%
+\fi}
+
+\newcommand{\definujsilent}[2]{%
+\label{definicia:#1}\write2{#1 & #2 & \pageref{definicia:#1} \cr}%
+}
+
+\newcommand\myglossary{
+  \immediate\closeout2
+  %\if@twocolumn\@restonecoltrue\onecolumn\else\@restonecolfalse\fi
+  \chapter{Slovníček pojmov}
+  \begin{tabular}{|l|l|r|}
+  \hline
+  {\bfseries slovenský pojem} & {\bfseries anglický preklad} & {\bfseries str.} \\
+  \hline
+  \InputIfFileExists{\jobname.srs}{}{~ & ~ & ~ \\}
+  \hline
+  \end{tabular}
+  %\if@restonecol\twocolumn\fi
+}
+
+%%%%%%%%%%% UVODZOVKY
+
+\catcode`\"=13
+\def "{\begingroup\clqq\def "{\endgroup\crqq}}
+\def\dospecials{\do\ \do\\\do\{\do\}\do\$\do\&%
+  \do\#\do\^\do\^^K\do\_\do\^^A\do\%\do\~\do\"}
+
+%%%%%%%%%%% DANGER BENDS
+
+\font\manual=manfnt % font used for the METAFONT logo, etc.
+\def\dbend{{\manual\char127}} % dangerous bend sign
+
+\newlength{\bendwidth}   \settowidth{\bendwidth}{\dbend}    \newlength{\hangwidth}
+
+\def\hangone{%
+  \hangwidth=\bendwidth%
+  \advance\hangwidth 5pt%
+  \hangindent\hangwidth%
+}
+\def\hangtwo{%
+  \hangwidth=\bendwidth%
+  \multiply\hangwidth 2%
+  \advance\hangwidth 6pt%
+  \hangindent\hangwidth%
+}
+
+\def\medbreak{\par\ifdim\lastskip<\medskipamount \removelastskip\penalty-100\medskip\fi}
+\let\endgraf=\par
+
+\def\d@nger{\medbreak\begingroup\clubpenalty=10000
+%\def\d@nger{\begingroup\clubpenalty=10000
+%  \def\par{\endgraf\endgroup\medbreak} \noindent\hangone\hangafter=-2
+  \def\par{\endgraf\endgroup} \noindent\hangone\hangafter=-2
+  \hbox to0pt{\hskip-\hangindent\dbend\hfill}}
+\outer\def\danger{\d@nger}
+
+\def\dd@nger{\medbreak\begingroup\clubpenalty=10000
+%  \def\par{\endgraf\endgroup\medbreak} \noindent\hangtwo\hangafter=-2
+  \def\par{\endgraf\endgroup} \noindent\hangtwo\hangafter=-2
+  \hbox to0pt{\hskip-\hangindent\dbend\kern1pt\dbend\hfill}}
+\outer\def\ddanger{\dd@nger}
+
+\def\enddanger{\endgraf\endgroup} % omits the \medbreak
+\def\enddangerhop{\endgraf\endgroup\medbreak}
+
+
+
+
+\def\@nakedcite#1#2{{#1\if@tempswa , #2\fi}}
+\DeclareRobustCommand\nakedcite{%
+  \@ifnextchar [{\@tempswatrue\@nakedcitex}{\@tempswafalse\@nakedcitex[]}}
+\def\@nakedcitex[#1]#2{%
+  \let\@citea\@empty
+  \@nakedcite{\@for\@citeb:=#2\do
+    {\@citea\def\@citea{,\penalty\@m\ }%
+     \edef\@citeb{\expandafter\@firstofone\@citeb\@empty}%
+     \if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi
+     \@ifundefined{b@\@citeb}{\mbox{\reset@font\bfseries ?}%
+       \G@refundefinedtrue
+       \@latex@warning
+         {Citation `\@citeb' on page \thepage \space undefined}}%
+       {\hbox{\csname b@\@citeb\endcsname}}}}{#1}}
+
+\long\def\FIXME#1{
+  \begin{center}
+  \begin{minipage}{0.8\textwidth}
+  {\bf FIXME:~}\sl #1
+  \end{minipage}
+  \end{center}
+}
+
+
+\catcode`\@=12
