@@ -1,6 +1,7 @@
 \documentclass[11pt, a4paper]{report}
 \usepackage[slovak]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{a4wide}
 \usepackage{tabularx}
 \usepackage{amsfonts}
@@ -14,13 +15,13 @@
 \usepackage[autostyle]{csquotes}
 \usepackage[inline]{enumitem}
 % Zmenšiť voľné miesto pred začiatkom kapitoly
-\usepackage[compact]{titlesec}
+%\usepackage[compact]{titlesec}
 
 % Formátovanie titulky kapitol
-\titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename~\thechapter}{20pt}{\huge}
-\titlespacing*{\chapter}{0pt}{50pt}{40pt}
-\titlespacing*{name=\chapter,numberless}{0pt}{-30pt}{10pt}
+%\titleformat{\chapter}[display]
+%  {\normalfont\huge\bfseries}{\chaptertitlename~\thechapter}{20pt}{\huge}
+%\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+%\titlespacing*{name=\chapter}{0pt}{-30pt}{10pt}
 
 % Riadkovanie
 %\setlength{\parindent}{4em}
@@ -35,15 +36,17 @@
 
 % Štýl úvodzoviek
 \DeclareQuoteAlias{dutch}{slovak}
-\input{./tex/makra.tex}
+
+%\input{./tex/makra.tex}
 
 \begin{document}
 
 \input{./tex/titulna.tex}
 \input{./tex/predslov.tex}
 
-%\tableofcontents
+\tableofcontents
 
-\input{./tex/01-uvod.tex}
+\input{./tex/00-uvod.tex}
+\input{./tex/01-mnoziny.tex}
 
 \end{document}

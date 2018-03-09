@@ -2,13 +2,10 @@
 
 \epigraph{
   \enquote{Prosím také, aby čtenář nepovažoval tyto vědomě neúplné poznámky za
-  nějaký (sebe elementárnejší) úvod do matematickej logiky. Šlo mně jenom o to,
-  abychom si ujasnili způsob vjadřovaní, kterého ostatně nadaný matematik užívá
-  intuitivně s neomylnou správností.}
-}{
-  Vojtěch Jarník \\
-  Diferenciální počet (II)
-}
+nějaký (sebe elementárnejší) úvod do matematickej logiky. Šlo mně jenom o to,
+abychom si ujasnili způsob vjadřovaní, kterého ostatně nadaný matematik užívá
+intuitivně s neomylnou správností.}
+}{Vojtěch Jarník, Diferenciální počet (II)}
 
 \textbf{Výroky:}
 V matematike sa stretávame s tvrdeniami, o ktorých má
@@ -42,12 +39,12 @@ Z výrokov A, B môžeme pomocou operácií negácie ($\neg$), konjukcie
     $A \iff B$
       & \enquote{$A$ vtedy a len vtedy, keď $B$},
         \enquote{$A$ práve vtedy, keď $B$},
-        \enquote{$A$ je nutná a postačujúca podmienka pre $B$}
+        \enquote{$A$ je nutná a postačujúca podmienka pre $B$} \\
   \end{tabular}
 \end{center}
 
-Pravdivosť týchto zložených výrokov závisí len na pravdivosti výrokov A, B, a
-to následovne ($1$ označuje, že daný výrok je pravdivý; $0$, že je nepravdivý):
+Pravdivosť týchto zložených výrokov závisí len na pravdivosti výrokov $A, B$,
+a to následovne (1 označuje, že daný výrok je pravdivý; 0, že je nepravdivý):
 
 \begin{center}
   \begin{tabular}{|c|c|}
@@ -81,7 +78,7 @@ Pre negáciu zložených výrokov platia tieto pravidlá:
     $A \land B$ & $\neg A \lor \neg B$ \\
     $A \lor B$ & $\neg A \land \neg B$ \\
     $A \Rightarrow B$ & $A \land \neg B$ \\
-    $A \iff B$ & $(A \land \neg B) \lor (B \land \neg A)$
+    $A \iff B$ & $(A \land \neg B) \lor (B \land \neg A)$ \\
   \end{tabular}
 \end{center}
 
@@ -135,7 +132,7 @@ Pre negáciu všeobecných a existenčných kvantifikátorov platia tieto pravid
     výrok & negácia \\
     \hline
     $\forall x \in A : \varphi (x)$ & $\exists x \in A : \neg \varphi (x)$ \\
-    $\exists x \in A : \varphi (x)$ & $\forall x \in A : \neg \varphi (x)$
+    $\exists x \in A : \varphi (x)$ & $\forall x \in A : \neg \varphi (x)$ \\
   \end{tabular}
 \end{center}
 
@@ -154,12 +151,14 @@ všeobecný (existenčný) výrok.
 Dôkaz ekvivalencie $A \iff B$ spravidla prevádzame na dôkaz dvoch implikácií
 $A \Rightarrow B$ a $B \Rightarrow A$
 
-\textbf{Podrobnejšie o dôkazoch všeobecných výrokov.} Ako príklad priameho
-dôkazu všobecného výroku nám poslúži dôkaz tvrdenia \enquote{ak celé číslo $n$
-nie je deliteľné 3, tak $n^2 - 1$ je deliteľné 3} (symbolicky $\forall n \in
-\mathbb{Z}: (3 \nmid n \Rightarrow 3 \mid (n^2 - 1))$), ktorý prebieha
-nasledovne: ak $n$ nie je deliteľné 3, tak $n - 1$ alebo $n + 1$ je deliteľné
-3, teda $n^2 - 1$ je deliteľné 3. Symbolicky možno tento dôkaz zapísať takto:
+\textbf{Podrobnejšie o dôkazoch všeobecných výrokov:}
+
+Ako príklad priameho dôkazu všobecného výroku nám poslúži dôkaz tvrdenia
+\enquote{ak celé číslo $n$ nie je deliteľné 3, tak $n^2 - 1$ je deliteľné 3}
+(symbolicky $\forall n \in \mathbb{Z}: (3 \nmid n \Rightarrow 3 \mid
+(n^2 - 1))$), ktorý prebieha nasledovne: ak $n$ nie je deliteľné 3, tak
+$n - 1$ alebo $n + 1$ je deliteľné 3, teda $n^2 - 1$ je deliteľné 3. Symbolicky
+možno tento dôkaz zapísať takto:
 
 $$
 3 \nmid n
@@ -193,7 +192,8 @@ $\varphi (n)$ takto:
 % TODO Indent the proof
 platí $\varphi (1)$
 platí $\varphi (1) \Rightarrow \varphi (2)$
-\hline
+
+
 teda platí $\varphi (2)$;
 platí $\varphi(2) \Rightarrow \varphi(3)$
 teda platí $\varphi(3)$;
