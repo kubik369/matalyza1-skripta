@@ -1,5 +1,7 @@
 \chapter*{Úvod (výroky, dôkazy)}
 
+\loadallproblems[uvod]{./tex/00-uvod-ulohy.tex}
+
 \epigraph{
   \enquote{Prosím také, aby čtenář nepovažoval tyto vědomě neúplné poznámky za
 nějaký (sebe elementárnejší) úvod do matematickej logiky. Šlo mně jenom o to,
@@ -218,30 +220,7 @@ tvrdenia z ich negácie.
 
 \begin{enumerate}
   \item Určte negácie následujúcich výrokov:
-  \begin{enumerate}[label=\arabic*.]
-    \item $\forall x \in \mathbb{R} : x^2 \geq x;$
-    \item ($\exists x \in \mathbb{R})(\forall y \in \mathbb{N}): y \neq x;$
-    \item ($\forall x \in \mathbb{R})(\forall y \in \mathbb{R}):
-          x > y \Rightarrow x^2 > y^2;$
-    \item ($\forall x, y \in \mathbb{R})(\exists z \in \mathbb{N}):
-          x < z \land y < z;$
-    \item Nech $a, b$ sú nenulové reálne čísla, potom z nerovnosti
-          $ln(|a|) > ln(|b|)$ vyplýva nerovnosť $a > b$;
-    \item Nech $a, b$ sú kladné reálne čísla, nech $|ln(a)| < |ln(b)|$;
-          potom $a < b$;
-    \item Nech $A, B \subset \mathbb{R}$ sú neprázdne množiny, nech platí
-          $$(\forall x \in A)(\forall y \in B)(\exists c > 0): |x - y| > c$$
-          Potom $A \cap B = \emptyset$;
-    \item Nech $A, B \subset \mathbb{R}$ sú neprázdne množiny, nech $C$ je
-          neprázdna množina nezáporných čísel, nech platí
-          $$(\forall x \in A)(\exists y \in B)(\forall z \in C): x + z < y$$
-          Potom platí
-          $$(\forall x \in A)(\forall y \in B): x < y;$$
-    \item Nech $A \subset \mathbb{N}$ je neprázdna množina, nech platí
-          $$\forall n \in A: (2 \nmid n \lor 3 \nmid n)$$
-          Potom platí
-          $$(\forall n \in A: 2 \nmid n) \lor (\forall n \in A: 3 \nmid n);$$
-  \end{enumerate}
+  
   \item Namiesto bodiek doplňte slová \enquote{je nutné}, \enquote{stačí},
         \enquote{je nutné a stačí} tak, aby vznikol pravdivý výrok:
   \begin{enumerate}[label=\arabic*.]
@@ -256,3 +235,6 @@ tvrdenia z ich negácie.
   \end{enumerate}
 \end{enumerate}
 
+\begin{enumerate}
+  \item \useproblem[uvod]{uvod-1}
+\end{enumerate}
