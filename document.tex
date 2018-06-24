@@ -11,7 +11,7 @@
 \usepackage{color}
 \usepackage{mathrsfs}
 \usepackage{verbatim}
-\usepackage{hyperref}
+\usepackage[unicode]{hyperref}
 \usepackage[autostyle]{csquotes}
 \usepackage[inline]{enumitem}
 \usepackage{probsoln}
@@ -39,7 +39,7 @@
 \DeclareQuoteAlias{dutch}{slovak}
 
 %\input{./tex/makra.tex}
-
+\DeclareUnicodeCharacter{2601}{\cloud}
 \begin{document}
 
 \input{./tex/titulna.tex}
@@ -47,9 +47,11 @@
 
 \tableofcontents
 
+\loadallproblems[uvod]{./tex/00-ulohy-uvod.tex}
 \input{./tex/00-uvod.tex}
 
-\loadallproblems[mnoziny]{./tex/01-mnoziny-ulohy.tex}
+\loadallproblems[realne-cisla]{./tex/01-ulohy-realne-cisla.tex}
+\loadallproblems[supremum-infimum]{./tex/01-ulohy-supremum-infimum.tex}
 \input{./tex/01-mnoziny.tex}
 
 \end{document}

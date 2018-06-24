@@ -220,5 +220,8 @@ TSWLatexianTemp*
 # expex forward references with \gathertags
 *-tags.tex
 
+# TexMaker session file
+*.tks
+
 # locally built files
 document.pdf

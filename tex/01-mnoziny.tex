@@ -25,47 +25,45 @@ $max(A)$ ($min(A)$)
 
 \section{Reálne čísla}
 
-\begin{enumerate}
-  \item \useproblem[mnoziny]{real3}
+\begin{enumerate}[resume]
+    \foreachproblem[realne-cisla]{\item\thisproblem}
 \end{enumerate}
-3. Nech $a$ je racionálne, $b$ je iracionálne číslo. Potom $a + b$ je
-iracionálne číslo. Dokážte!
 
-4. Nech $a, b \in \mathbb{Q}$ a $\sqrt{ab}$ je iracionálne číslo. Potom
-$\sqrt{a} + \sqrt{b}$ je iracionálne číslo. Dokážte!
+\section{Ohraničené množiny reálnych čísel, supremum a infimum}
 
-5. Dokážte iracionálnosť čísel
-  1. $\sqrt{5}$
-  2. $\sqrt{15}$
-  3. $\sqrt{2} + \sqrt{3}$
-  4. $\sqrt{3} + \sqrt{5}$
-  5. $(4\sqrt{3} - 3) / 6$
-  6. $\sqrt{3} - \sqrt{2}$
+Neprázdna množina $A \subset \mathbb{R}$ sa nazýva \textit{zhora (zdola)
+ohraničená}, ak platí
 
-6. Dokážte nasledujúce nerovnosti:
-  1. $\forall a, b \in \mathbb{R}^+: \frac{1}{2} ln(a) + \frac{1}{2} ln(b) \leq ln(\frac{a+b}{2})$;
-  2. nech $a \in \mathbb{R}, b > 0, c > 0, a < b$; potom  $\frac{a}{b} < \frac{a + c}{b + c}$;
-  3. $(a + b) \geq 0 \Rightarrow a^3 + b^3 \geq a^2 b + ab^2$;
-  4. $a^2 + b^2 + c^2 \geq ab + bc + ac$;
-  5. $\forall a, b \mathbb{R}^+ : \frac{a^3 + b^3}{2} \geq (\frac{a + b}{2})^3$;
-  6. $\frac{x^2 + 2}{\sqrt{x^2 + 1}} \geq 2$.
+$$
+\exists K \in  \mathbb{R} \quad \forall x \in A: x \leq K \:
+(\exists K \in \mathbb{R} \quad \forall x \in A: x \geq K).
+$$
 
-7. Nech $b_1 > 0, \ldots, b_n > 0$. Dokážte, že zlomok $\frac{a_1 + a_2 +
-\ldots + a_n}{b_1 + b_2 + \ldots + b_n}$ nie je menší ako najmenší a nie je
-väčší ako najväčší zo zlomkov $\frac{a_1}{b_1}, \frac{a_2}{b_2},
-\ldots, \frac{a_n}{b_n}$
+Číslo $K$ s uvedenou vlastnosťou sa nazýva \textit{horné (dolné)
+ohraničenie množiny $A$.} $\emptyset$ považujeme za ohraničenú zhora aj zdola.
 
-8. Dokážte nasledujúce tvrdenia:
-  1. $\forall n \in \mathbb{N}: 1^2 + 3^2 + \ldots + (2n - 1)^2 = \frac{1}{3} n(2n - 1)(2n + 1)$;
-  2. $\forall n \in \mathbb{N}: 1^2 - 2^2 + 3^2 - 4^2 + \ldots + (-1)^{n-1}n^2 = (-1)^{n-1}\frac{1}{2}n(n + 1)$
-  3. $\forall n \in \mathbb{N}, n \geq 2: 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{n}} > \sqrt{n}$;
-  4. $\forall n \in \mathbb{N}, n > 1: \frac{1}{n+1} + \frac{1}{n+2} + \ldots + \frac{1}{2n} > \frac{13}{24}$
+Množina, ktorá je zhora aj zdola ohraničená, sa nazýva \textit{ohraničená}.
+Množina, ktorá nie je ohraničená sa nazýva \textit{neohraničená}.
 
-9. Absolútna hodnota $|x|$ reálneho čísla $x$ je definovaná nasledovne:
+\begin{enumerate}[resume]
+	\item \useproblem[supremum-infimum]{supremum-infimum-1}
+	\item \useproblem[supremum-infimum]{supremum-infimum-2}
+	\item \useproblem[supremum-infimum]{supremum-infimum-3}
+\end{enumerate}
 
-\[   \left\{
-\begin{array}{ll}
-  x & ak x \geq 0 \\
-  -x & ak x < 0 \\
-\end{array} 
-\right. \]
+
+Číslo $\alpha \in \mathbb{R}$ sa nazýva \textit{supremum množiny $A$}
+$\subset \mathbb{R}, A \neq \emptyset$, ak
+\begin{align}
+\forall x \in A: x \leq \alpha \label{eq:supremum-i} \tag{\cloud} \\
+(\forall \varepsilon > 0) (\exists \: x_\varepsilon \in A):
+x_\varepsilon > \alpha - \varepsilon
+\end{align}
+
+
+
+\begin{enumerate}[resume]
+\item aa
+\end{enumerate}
+
+(Podľa 
