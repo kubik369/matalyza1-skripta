@@ -157,7 +157,7 @@ Ak naviac $B \neq 0$, tak existuje aj $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}$
 \textbf{o limite zloženej funkcie}
 
 Nech sú dané funkcie $f,g$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f \circ g)$. Ak $\lim_{x \rightarrow a} g(x)=A$ $(A \in \mathbb{R^*})$, pričom je splnená podmienka 
-$$\exists O(a)\forall x \in O(a): x \neq a \Rightarrow g(x) /neq A,$$
+$$\exists O(a)\forall x \in O(a): x \neq a \Rightarrow g(x) \neq A,$$
 a $\lim_{x \rightarrow A} f(x)=B$  $(B \in \mathbb{R^*})$, tak $\lim_{x \rightarrow a} f(g(x))=B$
 \end{veta}
 
@@ -167,5 +167,41 @@ Ak $A$ je hromadným bodom $D(f)$, ale $A \notin D(f)$, tak uvedená veta platí
 
 Niektoré limity možno nájsť len na základe definície, v ostatných prípadoch je však oveľa efektívnejšie použiť vety o limitách. Pritom je potrebné osvojiť si zdôvodňovanie jednotlivých krokov výpočtu, inak sa nenaučíme odlišovať správne postupy od nesprávnych. Na ilustráciu podrobne popíšme nasledujúci výpočet
 
+\begin{center}
+$$\lim_{x \rightarrow \infty} \frac{2x^2+3x+5}{3x^2-7}=\lim_{x \rightarrow \infty} \frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}=\frac{\lim_{x \rightarrow \infty} (2+\frac{3}{x}+\frac{5}{x^2})}{\lim_{x \rightarrow \infty} (3-\frac{7}{x^2})}=$$
+$$=\frac{\lim_{x \rightarrow \infty} 2+\lim_{x \rightarrow \infty}\frac{3}{x}+\lim_{x \rightarrow \infty} \frac{5}{x^2}}{\lim_{x \rightarrow \infty}3-\lim_{x \rightarrow \infty}\frac{7}{x^2}}=\frac{2+0+0}{3-0}=\frac{2}{3}.$$
+\end{center}
 
+\textit{1. krok:}
+
+Na intervale $(0,\infty)$ iste platí $\frac{2x^2+3x+5}{3x^2-7}=\frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}$ (zlomok vľavo stačí rozšíriť výrazom $\frac{1}{x^2}$), preto: ak existuje limita na pravej strane prvej rovnosti, tak existuje aj limita na jej ľavej strane a tieto limity sa rovnajú \footnote{Táto elementárna, ale veľmi častá úvaha sa vo všeobecnosti formuluje takto: Nech $a \in \mathbb{R^*}$ je hromadný bod $D(f)$, nech existuje $O(a)$ tak, že $D(f) \cap (O(a) \setminus \{ a\})=D(g) \cap (O(a) \setminus \{ a\})$ a úre všetky $x \in D(f) \cap (O(a) \setminus \{ a\})$ platí $f(x)=g(x)$. Ak existuje $\lim_{x \rightarrow a} g(x)=b$ $(\in \mathbb{R^*})$, tak platí $\lim_{x \rightarrow a} f(x)=b$.}; ďalej sa teda snažíme zistiť, či existuje $\lim_{x \rightarrow \infty}\frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}$;
+
+\textit{2. krok:}
+
+tu sme použili vetu o limite podielu (zatiaľ ovšem len "na čestné slovo"); presnejšie povedané: ak ukážeme, že limita v čitateli aj v menovateli existujú a sú konečné, pričom limita v menovateli je nenulová, tak podľa vety o limite podielu bude platiť druhá rovnosť;
+
+\textit{3. krok:}
+
+v čitateli sme použili vetu o limite súčtu (tú možno indukciou rozšítiť na ľubovoľný konečný počet sčítancov), v menovateli vetu o limite rozdielu (obidve zatiaľ tiež len "na čestné slovo");
+
+\textit{4. krok:}
+
+teraz už ľahko overíme, že druhá a tretia rovnosť skutočne platia, pretože $\lim_{x \rightarrow \infty} 2$, $\lim_{x \rightarrow \infty} \frac{3}{x}$, $\lim_{x \rightarrow \infty} \frac{5}{x^2}$, $\lim_{x \rightarrow \infty} 3$ a $\lim_{x \rightarrow \infty} \frac{7}{x^2}$ existujú a sú konečné (to ľahko dokážeme priamo z definície), bolo použitie viet o limite súčtu a rozdielu v tretej rovnosti oprávnené (a preto $\lim_{x \rightarrow \infty} (2+\frac{3}{x}+\frac{5}{x^2})=2$, $\lim_{x \rightarrow \infty} (3-\frac{7}{x^2})=3$); rovnako oprávnené bolo použitie vety o limite podielu v druhom kroku (limita v čitateli aj v menovateli - ako sme sa práve presvedčili - skutočne existujú, sú konečné a limita v menovateli je naviac nenulová).
+
+Z platnosti prvej, druhej a tretej rovnosti vyplýva $\lim_{x \rightarrow \infty} \frac{2x^2+3x+5}{3x^2-7}=\frac{2}{3}$.
+
+Takéto zdôvodnenie (vykonané ovšem len v duchu alebo ústne) by malo byť súčasťou výpočtu každej limity; po získaní istej prace budú zápisy aj argumentácia podstatne stručnejšie
+
+\begin{veta}
+Ak $f$ je elementárna funkcia a bod $a \in D(f)$ je hromadný bod množiny $D(f)$ je hromadný bod množiny $D(f)$, tak $\lim_{x \rightarrow a} f(x)=f(a)$.
+\end{veta}
+
+(Toto tvrdenie veľmi úzko súvisí s pojmom spojitosti (pozri kap. 3).)
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-17}
+	\item \useproblem[limita-funkcie]{limita-18}
+\end{enumerate}
+
+\textit{Riešenie 1:}
 
