@@ -1,0 +1,136 @@
+\begin{defproblem}{limita-1}
+Dokážte, že bod $a$ je hromadný bod množiny $A$, ak
+	
+\begin{enumerate}
+	\item $a=0 \quad A={x \in \mathbb{R}; \sin{\frac{1}{x}} = 0}$
+	\item $a=-\infty \quad A={x \in \mathbb{R}; \cos{x} = \frac{1}{2}}$ 
+	\item $a=\frac{1}{9} \quad A={\frac{m}{10^n}; m,n \in \mathbb{N}}$
+\end{enumerate}
+	
+(teda $A$ je množina všetkých kladných čísel, ktorých zápis v desiatkovej sústave má konečný počet nenulových cifier za desatinnou čiarkou).
+	
+\end{defproblem}
+
+\begin{defproblem}{limita-2}
+Nájdite všetky hromadné body množín
+\begin{enumerate}
+\item $A= \langle 0,1 \rangle$ ;
+\item $B= \{ (-1)^n n; n\in \mathbb{N} \} $;
+\item $C= (-2,\infty)$ ;
+\item $D= \{\frac{m}{n}; m,n \in \mathbb{N} \}$;
+\item $E= {\ \frac{m}{n}; m<n,m,n \in \mathbb{Z}}$;
+\item $F= \langle 1,2 ) \ \mathbb{Q}$;
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-3}
+Pomocou symbolov $\forall,\exists$ zapíšte výroky:
+\begin{enumerate}
+\item Bod $\infty$ nie je hromadný bod množiny $M$;
+\item Množina $M$ nemá hromadné body.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-4}
+Uveďte príklad neprázdnej množiny $A \subset \mathbb{R}$ takej, že
+\begin{enumerate}
+\item $A'=\emptyset$;
+\item $A'={\ 1, +\infty}$;
+\item $A'={\ -\infty,+\infty}$;
+\item $A'$ je nespočítateľná množina;
+\item $A'$ je nekonečná a spočítateľná množina.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-5}
+Nech $A \subset \mathbb{R}$ je zhora ohraničená neprázdna množina, nech $sup A \notin A$. Potom $sup A$ je hromadný bod množiny $A$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{limita-6}
+ Na základe definície dokážte nasledujúce tvrdenia:
+ \begin{enumerate}
+ \item $\lim_{n \rightarrow \infty} \frac{3n^2+1}{5n^2-1}=\frac{3}{5}$ (pre ktoré $n \in \mathbb{N}$ platí: 
+ \begin{enumerate}
+ \item $|\frac{3n^2+1}{5n^2-1}-\frac{3}{5}|<0,5;$
+ \item $<0,005;$
+ \item $<0,00005 ?);$
+ \end{enumerate}
+ 
+ \item $\lim_{n \rightarrow \infty} \frac{n^2+3n+1}{2n^2+2}=\frac{1}{2}$;
+ \item $\lim_{n \rightarrow \infty} \frac{n^2}{n+8}=+\infty$ 
+ 
+ (počínajúc ktorým prirodzeným číslom platí nerovnosť $\frac{n^2}{n+8}>10^3$?);
+ \item $\lim_{n \rightarrow \infty} (\frac{5}{n}-n)=-\infty$;
+ \item $\lim_{n \rightarrow \infty} q^n=0$  $(|q|<1).$
+ \end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-7}
+
+Rozhodnite, či existujú limity nasldujúcich postupností (nezabúdajte, že svoje tvrdenie musíte dokázať):
+\begin{enumerate}
+\item 
+ $$a_n = \left\{ \begin{array}{r@{\quad}c}
+    1-\frac{1}{n}, & $ak n $\in \mathbb{N}\ $je párne$ \\
+    1+\frac{1}{n^2}, & $ak n $\in \mathbb{N}\ $je nepárne$ \\ \end{array} \right.
+    $$ 
+\item $$a_n=\frac{cos \frac{n \pi}{2}}{n}$$
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-8}
+Postupnosť ${\{a_n\}}_{n=1}^\infty$ je daná vzťahom $a_n=n(1-(-1)^n)).$ Dokážte, že
+\begin{enumerate}
+\item číslo $0$ nie je limitou tejto postupnosti;
+\item bod $+\infty$ nie je limitou tejto postupnosti;
+\item žiadne $b \in \mathbb{R^*}$ nie je limitou tejto postupnosti.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-9}
+Pri formulácii definície vlastnej limity postupnosti študent:
+\begin{enumerate}
+\item namiesto "pre ľubovoľné $\varepsilon > 0$" povedal "pre ľubovoľné $\varepsilon$". Existujú postupnosti, ktoré majú limitu pri takejto definícii?
+\item definíciu napísal takto:
+$$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}: |a_n-b|<\varepsilon.$$
+Ktoré postupnosti by mali limitu pri takejto definícii?
+\item namiesto "pre každé $\varepsilon > 0$" povedal "aspoň pre jedno $\varepsilon > 0$". Ukážte, že pri takejto definícii je číslo $7$ limitou postupnosti $2,2, ...$ 
+\item namiesto "existuje $n_0 \in \mathbb{N}$" povedal "pre všetky $n_0 \in \mathbb{N}$". Ktoré postupnosti majú limitu pri takejto definícii?
+\item definćiu napísal takto:
+$$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N},n>n_0:a_n-b<\varepsilon.$$
+Ukážte, že pri takejto definícii je čáslo $5$ limitou postupnosti $1,1,1,...$ .
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-10}
+Je číslo $b \in \mathbb{R}$ limitou postupnosti ${\{a_n\}}_{n=1}^\infty$, ak existuje také prirodzené číslo $\mathbb{N^*}$, že pre ľubovoľné $\varepsilon>0$ a všetky $n \in \mathbb{N}, n>\mathbb{N^*}$ platí $|a_n-b|<\varepsilon$? 
+\end{defproblem}
+
+\begin{defproblem}{limita-11}
+Nájdite všetky postupnosti ${\{x_n\}}_{n=1}^\infty$, ktoré vyhovujú podmienke
+\begin{enumerate}
+\item $$\exists \varepsilon>0 \forall n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: |x_n|<\varepsilon; $$
+\item $$\forall \varepsilon>0 \forall n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: |x_n|<\varepsilon; $$
+\item $$\exists \varepsilon>0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: |x_n|<\varepsilon. $$
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{limita-12}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-13}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-14}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-15}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-16}
+
+\end{defproblem}

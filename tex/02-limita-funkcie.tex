@@ -1,0 +1,91 @@
+\chapter{Limita funkcie}%\label{chapter:gramatiky}
+
+\section{Okolia a hromadné body}
+Nech $a \in \mathbb{R};$ každý interval $(a-\varepsilon,a+\varepsilon)$, kde $\varepsilon > 0$, sa nazýva \textit{okolie bodu $a$}. Číslo $\varepsilon$ sa nazýva \textit{polomer okolia} $(a-\varepsilon,a+\varepsilon);$ ak chceme zdôrazniť, že dané okolie bodu $a$ má polomer $\varepsilon$, hovoríme o $\varepsilon-$okolí bodu $a$. Okolím bodu $\infty$ sa nazýva každý interval $(K,\infty)$, kde $K \in \mathbb{R};$ okolím bodu $- \infty$ je každý interval $(- \infty,K)$, kde $K \in \mathbb{R}.$ Okolie bodu $b \in \mathbb{R^*}$ ($\mathbb{R^*}$ sa nazýva rozšírená množina reálnych čísel a pozostáva zo všetkých reálnych čísel a symbolov $+\infty,-\infty$)\footnote{namiesto symbolu $+\infty$ sa často používa symbol $\infty$, niektorí autori však zavádzajú symbol $\infty$ s iným významom, k tomu pozri poznámku na konci odseku $2.5$} budeme označovať $O(b)$, symbol $O_\varepsilon (b)$ budeme používať pre $\varepsilon-$okolie bodu $b \in \mathbb{R}$.
+
+Bod $a \in \mathbb{R^*}$ sa nazýva hromadný bod množiny $M \subset \mathbb{R}$, ak každé jeho okolie $O(a)$ obsahuje aspoň jeden prvok množiny $M$, rôzny od bodu $a$, t.j. ak platí 
+$$\forall O(a): (O(a) \setminus \{ a \}) \cap M \neq \emptyset $$
+(tento výrok možno zapísať aj v tvare $\forall O(a) \exists x \in M; x \neq a \wedge x \in O(a);$ je ekvivalentný s výrokom: každé okolie bodu $a$ obsahuje nekonečne veľa prvkov množiny $M$).
+
+Množinu všetkých hromadných bodov množiny $M$ budeme označovať $M'$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-1}
+	\item \useproblem[limita-funkcie]{limita-2}
+	\item \useproblem[limita-funkcie]{limita-3}
+	\item \useproblem[limita-funkcie]{limita-4}
+	\item \useproblem[limita-funkcie]{limita-5}
+\end{enumerate}
+
+\section{Definícia limity}
+
+Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Bod $b \in \mathbb{R^*}$ sa nazýva \textit{limita funkcie $f$ v bode $a$} ak platí
+$$\forall O(b) \exists O(a) \forall x \in (O(a)\setminus \{ a \}) ) \cap D(f): f(x) \in O(b).$$
+(Ak $b \in \mathbb{R}$, hovoríme o \textit{vlastnej (alebo konečnej) limite}; ak $b=\infty$ alebo $b=-\infty$, o \textit{nevlastnej limite}; ak $a=\infty$ alebo $a=-\infty$, používane názov \textit{limita v nevlastnom bode}.) Zapisujeme $\lim_{x \rightarrow a} f(x)=b$ alebo $f(x) \rightarrow b$ pre $x \rightarrow a$.
+
+Všimnime si teraz jednotlivé prípady, ktoré zahŕňa uvedená definícia; začneme postupnosťami:
+\begin{itemize}
+\item Nech $b \in \mathbb{R}$; hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ konverguje k (číslu) $b$, ak $\lim_{n \rightarrow \infty} a_n=b$, t.j. ak platí 
+$$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N},n>n_0: |a_n-b|<\varepsilon.\footnote{Výroky $$\forall \varepsilon >0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0:|a_N-b<\varepsilon|$$ a $$\forall \varepsilon >0 \exists n_0 \in \mathbb{R} \forall n \in \mathbb{N}, n>n_0:|a_N-b<\varepsilon|$$ sú ekvivalentné. Pretože v definícii konečnej limity postupností je zvykom žiadať $n_0 \in \mathbb{N}$ (a nie $n_0 \in \mathbb{R}$), budeme ju v takej podobe používať aj my (hoci - ako uvidíme v príklade $105$ - sa tým niekedy komplikuje vyjadrenie závislosti čísla $n_0$ na čísle $\varepsilon$). Analogická poznámka sa vzťahuje aj na definície nevlastných limít postupností.}$$
+\item Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $+\infty$, ak $\lim_{n \rightarrow \infty} a_N = +\infty$, t.j. ak platí $$\forall K \in \mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: a_n>K.$$
+\item  Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $-\infty$, ak $\lim_{n \rightarrow \infty} a_N = -\infty$, t.j. ak platí $$\forall K \in \mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: a_n<K.$$
+Postupnosti, ktoré majú vlastnú limitu, sa nazývajú \textit{konvergentné}; ak postupnosť nemá limitu alebo má nevlastnú limitu, nazýva sa \textit{divergentná}.
+\end{itemize}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-6}
+\end{enumerate}
+
+\textit{Riešenie (b):} 
+
+Musíme dokázať pravdivosť výroku (*)
+ $$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: |\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$$
+ Nech je teda dané číslo $\varepsilon > 0$; zistíme, ktoré čísla $n \in \mathbb{N}$ vyhovujú nerovnici $$|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon.$$
+ Postupnými úpravami dostaneme ekvivalentné vzťahy v $\mathbb{N}:$
+ $$|\frac{3n}{2n^2+2}|<\varepsilon,$$
+ $$2 \varepsilon n^2-3n+2 \varepsilon >0.$$
+ (Nájdeme najprv všetky reálne rešenia poslednej nerovnice, z nich potom vyberieme tie, ktoré ležia v $\mathbb{N}$. Diskriminant $D$ je rovný $9-16 \varepsilon^2$, preto pre reálne riešenia platí:
+\begin{itemize}
+\item ak $\varepsilon > \frac{3}{4}$, t.j. ak $D<0$, je riešením každé reálne číslo;
+\item ak $\varepsilon \in (0,\frac{3}{4} \rangle$, je $D \geq 0$, preto riešeniami sú všetky prvky množiny $(-\infty,\frac{3-\sqrt{9-16\varepsilon^2}}{2}) \cup (\frac{3+\sqrt{9-16\varepsilon^2}}{2},\infty)$.)
+\end{itemize} 
+Preto:
+\begin{itemize}
+\item ak $\varepsilon > \frac{3}{4}$, je riešením nerovnice $|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$ každé číslo $n \in \mathbb{N}$;
+\item ak $\varepsilon \in (0,\frac{3}{4} \rangle$, sú riešeniami nerovnice $|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$ všetky tie $n \in \mathbb{N}$, pre ktoré platí $n>\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}$.
+Teraz už vidíme, že daný výrok (*) je pravdivý: stačí položiť $n_0=1$ pre $\varepsilon>\frac{3}{4}$ a $n_0=[\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}]$ pre $\varepsilon \in (0,\frac{3}{4} \rangle$ ([.] označujú celú časť; keby sme v (a) mali podmienku $n_0 \in \mathbb{R}$, stačilo by pre $\varepsilon \in (0,\frac{3}{4} \rangle$ položiť $n_0=\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}$). 
+\end{itemize}
+
+\textit{Poznámka:}
+
+Ak je nerovnosť $|a_n-b|<\varepsilon$ splnená pre všetky $n>n_0$ a platí $n_1>n_0$, tak nerovnosti $|a_n-b|<\varepsilon$ iste vyhovujú všetky čísla $n>n_1$. Z tohto samozrejmého tvrdenia vyplýva, že v závere riešenia príkladu $105 (b)$ by stačilo položiť $n_0>1$ pre $\varepsilon > \frac{3}{4}$ a $n_0 \geq [\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}]$ pre $\varepsilon \in (0,\frac{3}{4}\rangle$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-7}
+	\item \useproblem[limita-funkcie]{limita-8}
+	\item \useproblem[limita-funkcie]{limita-9}
+	\item \useproblem[limita-funkcie]{limita-10}
+	\item \useproblem[limita-funkcie]{limita-11}
+\end{enumerate}
+
+Ak $x \in \mathbb{R^*}$, nastáva práve jedna z troch možností:
+\begin{itemize}
+\item $x \in \mathbb{R}$,
+\item $x = +\infty$,
+\item $x = -\infty$.
+\end{itemize}
+
+Ak v definícii limity funkcie rozlíšime pre body $a,b \in \mathbb{R^*}$ tieto možnosti, dostaneme nasledujúcich deväť špeciálnych prípadov (v nich už a,b označujú len reálne čísla):
+
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item a
+    \item b
+    \item c
+    \item d
+    \item e
+    \item f
+\end{enumerate}
+\end{multicols}
+

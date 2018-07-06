@@ -15,6 +15,7 @@
 \usepackage[autostyle]{csquotes}
 \usepackage[inline]{enumitem}
 \usepackage{probsoln}
+\usepackage{multicol}
 % Zmenšiť voľné miesto pred začiatkom kapitoly
 %\usepackage[compact]{titlesec}
 
@@ -39,7 +40,6 @@
 \DeclareQuoteAlias{dutch}{slovak}
 
 %\input{./tex/makra.tex}
-\DeclareUnicodeCharacter{2601}{\cloud}
 \begin{document}
 
 \input{./tex/titulna.tex}
@@ -53,5 +53,8 @@
 \loadallproblems[realne-cisla]{./tex/01-ulohy-realne-cisla.tex}
 \loadallproblems[supremum-infimum]{./tex/01-ulohy-supremum-infimum.tex}
 \input{./tex/01-mnoziny.tex}
+
+\loadallproblems[limita-funkcie]{./tex/02-ulohy-limita-funkcie.tex}
+\input{./tex/02-limita-funkcie.tex}
 
 \end{document}
