@@ -78,14 +78,94 @@ Ak $x \in \mathbb{R^*}$, nastáva práve jedna z troch možností:
 Ak v definícii limity funkcie rozlíšime pre body $a,b \in \mathbb{R^*}$ tieto možnosti, dostaneme nasledujúcich deväť špeciálnych prípadov (v nich už a,b označujú len reálne čísla):
 
 
-\begin{multicols}{2}
+\begin{multicols}{3}
 \begin{enumerate}
-    \item a
-    \item b
-    \item c
-    \item d
-    \item e
-    \item f
+    \item $\lim_{x \rightarrow a} f(x)=b$;
+    \item $\lim_{x \rightarrow a} f(x)=+\infty$;
+    \item $\lim_{x \rightarrow a} f(x)=-\infty$;
+    \item $\lim_{x \rightarrow \infty} f(x)=b$;
+    \item $\lim_{x \rightarrow \infty} f(x)=+\infty$;
+    \item $\lim_{x \rightarrow \infty} f(x)=-\infty$;
+    \item $\lim_{x \rightarrow -\infty} f(x)=b$;
+    \item $\lim_{x \rightarrow -\infty} f(x)=+\infty$;
+    \item $\lim_{x \rightarrow -\infty} f(x)=-\infty$.
 \end{enumerate}
 \end{multicols}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-12}
+\end{enumerate}
+
+\textit{Riešenie $1$:}
+V tomto prípade sú okolia $O(a)$ a $O(b)$ jednoznačne určené svojimi polomermi $\delta,\epsilon$; definíciu limity možno potom prepísať do tvaru 
+$$\forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f), x \neq a, |x-a|<\delta:|f(x)-b|<\epsilon$$
+alebo - čo je to isté - do tvaru
+$$\forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f), x \neq a, |x-a|<\delta \Rightarrow |f(x)-b|<\epsilon$$
+(Samozrejme predpokladáme, že $a$ je hromadný bod množiny $D(f)$.)
+
+\begin{veta}
+\textbf{Cauchyho-Bolzanovo kritérium konvergencie}
+
+Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Funkcia $f$ má v bode $a$ konečnú limitu práve vtedy, keď platí 
+$$\forall \varepsilon > 0 \exists O(a) \forall x,y \in (O(a) \setminus \{ a \}) \cap D(f): |f(x)-f(y)|<\varepsilon.$$
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-13}
+\end{enumerate}
+
+\textit{Riešenie 1:}
+Treba dokázať pravdivosť tvrdenia (*)
+$$\forall \varepsilon > 0 \exists \delta > 0 \forall x \geq 0, x \neq 3, |x-3|< \delta : |\sqrt{x}-\sqrt{3}|< \varepsilon.$$
+Predpokladajme, že $|x-3|<\delta$ a skúsme na základe toho zhora odhadnúť výraz $|\sqrt{x}-\sqrt{3}|$. Pretože $|\sqrt{x}-\sqrt{3}|=\frac{|x-3|}{\sqrt{x}+\sqrt{3}}$ a $\sqrt{x}+\sqrt{3} \geq \sqrt{3}$ platí $\sqrt{x}-\sqrt{3} \leq \frac{1}{\sqrt{3}}|x-3|<\frac{\delta}{\sqrt{3}}$. Teraz už vidíme, že tvrdenie (*) platí: ak je dané $\varepsilon > 0$ a chceme, aby platilo $|\sqrt{x}-\sqrt{3}|<\varepsilon$, stačí položiť $\delta=\varepsilon \sqrt{3}$ (alebo $\delta \leq \varepsilon \sqrt{3}$).
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-14}
+	\item \useproblem[limita-funkcie]{limita-15}
+	\item \useproblem[limita-funkcie]{limita-16}
+\end{enumerate}
+
+\section{Vety o limitách I}
+\begin{veta}
+\textbf{o limite skalárneho násobku, súčtu, rozdielu, súčinu a podielu}
+
+Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f) \cap D(g)$. Ak existujú konečné $\lim_{x \rightarrow a} f(x)=A$, $\lim_{x \rightarrow a} g(x)=B$, tak existuje aj $\lim_{x \rightarrow a} cf(x)$ ($c \in \mathbb{R}$ je konštanta), $\lim_{x \rightarrow a} (f(x)+g(x)),\lim_{x \rightarrow a} (f(x)-g(x)),\lim_{x \rightarrow a} (f(x) \cdot g(x))$ a platí 
+\end{veta}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=]
+    \item $\lim_{x \rightarrow a} cf(x)=cA$;
+    \item $\lim_{x \rightarrow a} (f(x)+g(x))=A+B$;
+    \item $\lim_{x \rightarrow a} (f(x)-g(x))=A-B$;
+    \item $\lim_{x \rightarrow a} (f(x) \cdot g(x))=A \cdot B$;
+    \item $(=c \cdot \lim_{x \rightarrow a} f(x))$;
+    \item $(=\lim_{x \rightarrow a} f(x)+\lim_{x \rightarrow a} g(x))$;
+    \item $(=\lim_{x \rightarrow a} f(x)-\lim_{x \rightarrow a} g(x))$;
+    \item $(=\lim_{x \rightarrow a} f(x) \cdot \lim_{x \rightarrow a} g(x))$.
+\end{enumerate}
+\end{multicols}
+Ak naviac $B \neq 0$, tak existuje aj $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}$ a platí 
+
+\begin{multicols}{2}
+\begin{enumerate}[label=]
+\item $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}=\frac{A}{B}$
+\item $(=\frac{\lim_{x \rightarrow a} f(x)}{\lim_{x \rightarrow a} g(x)})$.
+\end{enumerate}
+\end{multicols}
+
+\begin{veta}
+\textbf{o limite zloženej funkcie}
+
+Nech sú dané funkcie $f,g$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f \circ g)$. Ak $\lim_{x \rightarrow a} g(x)=A$ $(A \in \mathbb{R^*})$, pričom je splnená podmienka 
+$$\exists O(a)\forall x \in O(a): x \neq a \Rightarrow g(x) /neq A,$$
+a $\lim_{x \rightarrow A} f(x)=B$  $(B \in \mathbb{R^*})$, tak $\lim_{x \rightarrow a} f(g(x))=B$
+\end{veta}
+
+\textit{Poznámka:}
+Ak $A$ je hromadným bodom $D(f)$, ale $A \notin D(f)$, tak uvedená veta platí aj vtedy, keď nie je splnená podmienka (*).
+
+
+Niektoré limity možno nájsť len na základe definície, v ostatných prípadoch je však oveľa efektívnejšie použiť vety o limitách. Pritom je potrebné osvojiť si zdôvodňovanie jednotlivých krokov výpočtu, inak sa nenaučíme odlišovať správne postupy od nesprávnych. Na ilustráciu podrobne popíšme nasledujúci výpočet
+
+
 
