@@ -204,4 +204,65 @@ Ak $f$ je elementárna funkcia a bod $a \in D(f)$ je hromadný bod množiny $D(f
 \end{enumerate}
 
 \textit{Riešenie 1:}
+Funkcie $P(x)=x^2-5x+6$ a $Q(x)=x^3-6x^2+10x-3$ sú elementárne, preto $\lim_{x \rightarrow 3} P(x)=P(3)=0$, $\lim_{x \rightarrow 3} Q(x)=Q(3)=0$. Pretože $\lim_{x \rightarrow 3} Q(x)=0$, nemôžeme použiť vetu o limite podielu. (Alebo inak povedané: funkcia $R=P \setminus Q$ je elementárna, ale $Q(3)=0$, preto $3 \notin D(R)$ a limitu funkcie $R$ v bode $3$ teda nemožno nájsť "dosadením".) Z rovností $P(3)=0$, $Q(3)=0$ vyplýva, že číslo $3$ teda polynómov $P$ aj $Q$, preto $P(x)$ aj $Q(x)$ musia byť deliteľné koreňovým činiteľom $(x-3)$. Po vyňatí člena $(x-3)$ dostaneme $P(x)=(x-3)(x-2)$, $Q(x)=(x-3)(x^2-3x+1)$. Pre $x \in D(R)$ teda platí $\frac{x^2-5x+6}{x^3-6x^2+10x-3}=\frac{(x-3)(x-2)}{(x-3)(x^2-3x+1)}=\frac{x-2}{x^2-3x+1}$, pritom $\lim_{x \rightarrow 3} \frac{x-2}{x^2-3x+1}=1$ (elementárna funkcia $R_1(x)=\frac{x-2}{x^2-3x+1}=1$ je definocaná aj v bode $3$, preto $\lim_{x \rightarrow 3} R_1(x)$ už možno nájsť "dosadením").
 
+Teda $$\lim_{x \rightarrow 3} \frac{x^2-5x+6}{x^3-6x^2+10x-3}=\lim_{x \rightarrow 3} \frac{(x-3)(x-2)}{(x-3)(x^2-3x+1)}=\lim_{x \rightarrow 3} \frac{x-2}{x^2-3x+1}=1.$$
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-19}
+	\item \useproblem[limita-funkcie]{limita-20}
+	\item \useproblem[limita-funkcie]{limita-21}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+Elementárna funkcia $f(x)=\frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}$ nie je definovaná v bode $-2$, preto $\lim_{x \rightarrow -2} f(x)$ nemožno nájsť "dosadením". Pre výpočet limity bude výhodnejší iný zápis predpisu funkcie $f$; dosadíme ho použitím vzorca $A^2-B^2=(A-B)(A+B),A^3+B^3=(A+B)(A^2-AB+B^2)$ (obidva sú špeciálnym prípadom rovnost $A^n-B^n=(A-B)(A^{n-1}+A^{n-2}B+...+AB^{n-2}+B^{n-1})$ ). Podľa prvého z nich $x^2-4=(\sqrt{x^2-3}-1)(\sqrt{x^2-3}+1)$, podľa druhého $x+2=(\sqrt[3]{x-6}+2)(\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4)$.
+
+Pre všetky $x \in D(f)$ preto platí $f(x)=\frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}=\frac{x+2}{x^2-4}\cdot\frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4}$ (zlomok sme rozšírili výrazom $(\sqrt{x^2-3}+1)(\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4)$). Teraz môžeme použiť vetu o limite súčinu: $\lim_{x \rightarrow -2} \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4}=\frac{1}{6}$ (ide o elementárnu funkciu definovanú v bode $-2$, preto stačí dosadiť), $\lim_{x \rightarrow -2} \frac{x+2}{x^2-4}=lim_{x \rightarrow -2} \frac{1}{x-2}=-\frac{1}{4}$ . Teda $lim_{x \rightarrow -2} \frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}=lim_{x \rightarrow -2}  \frac{x+2}{x^2-4} \cdot \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4}$    $(=lim_{x \rightarrow -2} \frac{x+2}{(x+2)(x-2)}\cdot lim_{x \rightarrow -2} \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4})=(lim_{x \rightarrow -2} \frac{1}{x-2})\cdot \frac{1}{6}=-\frac{1}{24}$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-22}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+Uvedieme dva rôzne návody:
+\begin{itemize}
+\item $\lim_{x \rightarrow 2} \frac{\sqrt{x+2}-\sqrt[3]{x^2+4}}{x-2}=\lim_{x \rightarrow 2} \frac{\sqrt[6]{(x+2)^3}-\sqrt[6]{(x^2+4)^3}}{x-2}$
+\item $\lim_{x \rightarrow 2} \frac{\sqrt{x+2}-\sqrt[3]{x^2+4}}{x-2}=\lim_{x \rightarrow 2} \frac{\sqrt{x+2}-2+2-\sqrt[3]{x^2+4}}{x-2}=\lim_{x \rightarrow 2} \frac{\sqrt{x+2}-2}{x-2}+\lim_{x \rightarrow 2} \frac{2-\sqrt[3]{x^2+4}}{x-2}$
+\end{itemize}
+
+(číslo $2$, ktoré sme pripočítali a odpočítali, je spoločnou funkcnou hodnotou funkcií $\sqrt{x+2}$ a $\sqrt[3]{x^2+4}$ v bode $2$); ďalší postup je potom rovnaký ako v príklade $120$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-23}
+\end{enumerate}
+
+\textit{Riešenie (b):}
+Aby sme sa v limitovanom výraze zbavili odmocniny, položíme $\sqrt[n]{1+x}=t$ (odtiaľ $(x=t^n-1)$). Použiť túto substitúciu neznamená nič iné, ako napísať funkciu $y=\frac{\sqrt[n]{1+x}-1}{x}$ v tvare superpozície funkcií $y=\frac{t-1}{t^n-1}$ a $t=\sqrt[n]{1+x}$. Výpočet limity sa potom zakladá na vete o limite zloženej funkcie: limita vnútornej zložky (predstavujúcej substitúciu) je $(\lim_{x \rightarrow 0} \sqrt[n]{1+x}=)1$; podmienka (*) a vety $3$ je splnená, pretože $\sqrt[n]{1+x}$ je prostá funkcia. Hľadaná limita sa preto rovná limite vonkajšej zložky v bode $1$; teda 
+$$\lim_{x \rightarrow 0} \frac{\sqrt[n]{1+x}-1}{x}=\lim_{t \rightarrow 1} \frac{t-1}{t^n-1}=\lim_{t \rightarrow 1} \frac{t-1}{(t-1)(t^{n-1}+t^{n-2}+...+1)}=\frac{1}{n}.$$
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-24}
+	\item \useproblem[limita-funkcie]{limita-25}
+	\item \useproblem[limita-funkcie]{limita-26}
+\end{enumerate}
+
+\begin{veta}
+$\lim_{x \rightarrow 0} \frac{sin x}{x}=1$.
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-27}
+	\item \useproblem[limita-funkcie]{limita-28}
+	\item \useproblem[limita-funkcie]{limita-29}
+	\item \useproblem[limita-funkcie]{limita-30}
+\end{enumerate}
+
+\textit{Riešenie (d):}
+Takéto limity sa pohodlnejšie počítajú v bode $0$, použijeme preto substitúciu $x-\frac{\pi}{3}=t$ (táto funkcia je prostá, podmienka (*) z vety o limite zloženej funkcie je teda splnená) a dostaneme
+$\lim_{x \rightarrow \frac{\pi}{3}} \frac{sin (x-\frac{\pi}{3})}{1-2 cos x}=\lim_{t \rightarrow 0} \frac{sin t}{1-2 cos (t+\frac{\pi}{3})}=\lim_{t \rightarrow 0} \frac{sin t}{1-2(\frac{1}{2}cos t -\frac{\sqrt{3}}{2}sin t)}=\lim_{t \rightarrow 0} \frac{sin t}{\sqrt{3}sin t + 1 - cos t}=\lim_{t \rightarrow 0} \frac{\frac{sin t}{t}}{\sqrt{3}\frac{sin t}{t}+\frac{1-cos t}{t^2}\cdot t}=\frac{1}{\sqrt{3}}$ (pritom sme využili rovnosť $\lim_{t \rightarrow 0} \frac{1-cos t}{t^2}=\frac{1}{2}$; pozri príklad $127.1$).
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-31}
+\end{enumerate}
+
+\section{Vety o limitách II (porovnávacie vety, vety o nevlastných limitách, jednostranné limity)}
