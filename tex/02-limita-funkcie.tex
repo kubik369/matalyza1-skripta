@@ -266,3 +266,97 @@ $\lim_{x \rightarrow \frac{\pi}{3}} \frac{sin (x-\frac{\pi}{3})}{1-2 cos x}=\lim
 \end{enumerate}
 
 \section{Vety o limitách II (porovnávacie vety, vety o nevlastných limitách, jednostranné limity)}
+
+\begin{veta}
+Nech sú dané sunkcie $f,g,h$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(g)$ a nech pre niektoré jeho prstencové okolie \footnote{Prstencovým okolím bodu $a$ sa nazýva množiny $O(a) \setminus \{ a\}$, kde $O(a)$ je okolie bodu $a$. (Teda každé okolie bodov $+\infty,-\infty$ je súčasne aj ich prstencovým okolím.)} $O^*(a)$ platí $O^*(a) \cap D(f)=O^*(a)\cap D(g)=O^*(a) \cap D(h)=D$. Ak $\lim_{x \rightarrow a} f(x)=\lim_{x \rightarrow a} h(x)=b$  $( \in \mathbb{R})$ a pre všetky $x \in D$ je $f(x) \leq g(x) \leq h(x)$, tak existuje aj $\lim_{x \rightarrow a} g(x)$ a rovná sa $b$.
+\end{veta}
+
+\begin{veta}
+Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f) \cap D(g)$. Ak $\lim_{x \rightarrow a} f(x)=0$ a funkcia $g$ je ohraničená v niektorom prstencovom okolí bodu $a$ (t.t. na niektorej z množín $(O(a) \setminus \{ a\})\cap D(g)$, tak $\lim_{x \rightarrow a} f(x) \cdot g(x)=0$.
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-32}
+	\item \useproblem[limita-funkcie]{limita-33}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+Pre $n \geq 3$ platí $\frac{2}{1}\cdot \frac{2}{2}\cdot \frac{2}{3}\cdot ... \cdot \frac{2}{n} \leq 2 \cdot 1 \cdot \frac{2}{3} \cdot ... \cdot \frac{2}{3}=2 \cdot (\frac{2}{3})^{n-2}=\frac{9}{2} \cdot (\frac{2}{3})^n$. Teda pre $n \geq 3$ platí $0 \leq \frac{2^n}{n!}\leq \frac{9}{2}\cdot (\frac{2}{3})^n$, pritom $\lim_{n \rightarrow \infty} 0=\lim_{n \rightarrow \infty} \frac{9}{2} \cdot (\frac{2}{3})^n=0$ (pozri príklad $105.5$). Preto (podľa vety $6$) $\lim_{n \rightarrow \infty} \frac{2^n}{n!}=0$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-34}
+	\item \useproblem[limita-funkcie]{limita-35}
+	\item \useproblem[limita-funkcie]{limita-36}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+Tvrdenie \footnote{Uvedenú rovnosť možno veľmi ľahko dokázať pomocou vety $3$ a vety $4$ $(\lim_{n \rightarrow \infty} \frac{1}{n}=0, \lim_{u \rightarrow 0} a^u=1)$. Tu uvedený postup nevyužívajúci vetu $4$ sa používa práve pri dôkaze skutočnosti, že tvrdenie vety $4$ platí pre exponenciálne funkcie} zrejme platí pre $a=1$. Predpokladajme teraz, že $a>1$, a označme $\omega (n)=\sqrt[n]{a}-1$. Potom iste $\omega (n)\geq 0$ a umocnením obidvoch strán rovnosti $\sqrt[n]{a}=1+\omega n$ na n-tú dostaneme 
+$$a=1+n \omega(n)+{n \choose 2}\omega^2 (n)+...+\omega^n (n)\geq 1+n\omega (n).$$
+Odtiaľ $$\omega (n) \leq \frac{a-1}{n}, n\in \mathbb{N}.$$
+Teda $$0\leq \omega (n) \leq \frac{a-1}{n}, n \in \mathbb{N},$$
+pritom $\lim_{n \rightarrow \infty} 0=\lim_{n \rightarrow \infty} \frac{a-1}{n}=0,$ preto (podľa vety $6$) $\lim_{n \rightarrow \infty}\omega (n)=0.$ Z rovnosti $\sqrt[n]{a}=1+\omega (n)$ potom (podľa vety o limite súčtu) vyplýva $\lim_{n \rightarrow \infty} (1+\omega (n))=1$. Zostal ešte prípad $0<a<1$; tu už bude dôkaz jednoduchý: ak $0<a<1$, tak $b=\frac{1}{a}>1$. Podľa predchádzajúceho teda $\lim_{n \rightarrow \infty} \sqrt[n]{b}=1$. Z rovnosti $\sqrt[n]{a}=\frac{1}{\sqrt[n]{b}}$ potom (podľa vety o limite podielu) vyplýva $\lim_{n \rightarrow \infty} \sqrt[n]{a}=\lim_{n \rightarrow \infty} \frac{1}{\sqrt[n]{b}}=1$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-37}
+\end{enumerate}
+
+\begin{veta}
+Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f)$ a nech pre niektoré jeho rýche okolie $O^*(a)$ a platí $O^*(a)\cap D(g)=:D$. Ak $\lim_{x \rightarrow a} g(x)=\infty$  $(-\infty)$ a pre všetky $x \in D$ platí $f(x)\geq g(x)$  $(f(x)\leq g(x))$ tak existuje aj $\lim_{x \rightarrow a} f(x)$ a rovná sa $\infty$  $(-\infty)$.
+\end{veta}
+
+\begin{veta}
+Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f)\cap D(g)$, nech existuje $\lim_{x \rightarrow a} f(x)=:A$,  $\lim_{x \rightarrow a} g(x)=:B$. Potom
+\begin{enumerate}
+\item ak $A=+\infty$, $B \in \mathbb{R}$ alebo $B=+\infty$, tak $\lim_{x \rightarrow a}(f(x)+g(x))=+\infty$;
+\item ak $A=+\infty$, $B >0$ alebo $B=+\infty$, tak $\lim_{x \rightarrow a}(f(x)\cdot g(x))=+\infty$.
+\end{enumerate}
+\end{veta}
+
+\begin{veta}
+Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Ak $\lim_{x \rightarrow a} f(x)=+\infty$   $(-\infty)$, tak $\lim_{\frac{1}{f(x)}=0}$.
+\end{veta}
+
+\textit{Poznámka:}
+Predchádzajúce tvrdenie (spolu s ďalšími, analogickými) si ľahko zapamätáme pomocou nasledujúcich rovností (ktoré ovšem považujeme len za mnemotechnickú pomôcku):
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $A +/- \infty = +/- \infty$;
+    \item $+/- \infty +/- \infty = +/- \infty$;
+    \item $\frac{1}{+/- \infty} = 0$;
+    \item $A \cdot (+/- \infty) = \left\{ \begin{array}{r@{\quad}c}
+    +/- \infty, & $ak$ A>0 \\
+    -/+ \infty, & $ak$ A<0 \\ \end{array} \right.
+    $;  
+    \item $\infty \cdot(+/- \infty)=+/- \infty$.
+\end{enumerate}
+\end{multicols}
+($A$ označuje reálne číslo.)
+Všimnime si, že žiadna z uvedených viet sa nevzťahuje na limity funkcií typu $+\inf\ -\infty, 0 \cdot ( +/- \infty),\frac{ +/- \infty}{ +/- \infty}, \frac{0}{0}$. Také funkcie budeme nazývať neurčitými výrazmi \footnote{neskôr tento pojem ešte zovšeobecníme (pozri poznámku pod čiarou v úvode odstavca $2.5$ a poznámku na konci toho istého odstavca)}; práve im je venovaná väčšina príkladov na výpočet limít.
+
+\begin{veta}
+Nech je daná funkcia $f$, nech $a \in \mathbb{R^*}$ he hromadný bod množiny $D:=\{ x \in D(f): f(x)\neq 0 \}$, nech $\lim_{x \rightarrow a} f(x)=0$. Ak existuje také prstencové okolie $O^*(a)$ bodu $a$, že pre všetky $x \in D \cap O^*(a)$ platí $f(x)>0$  $(f(x)<0)$, tak existuje $\lim_{x \rightarrow a}\frac{1}{f(x)}$ a rovná sa $+\infty)(-\infty)$
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-38}
+	\item \useproblem[limita-funkcie]{limita-39}
+	\item \useproblem[limita-funkcie]{limita-40}
+	\item \useproblem[limita-funkcie]{limita-41}
+	\item \useproblem[limita-funkcie]{limita-42}
+\end{enumerate}
+
+Nech je daná funkcia $f$, nech $a \mathbb{R}$ je hromadný bod množiny $D^+:=D(f)\cap (a,\infty)$ (množiny $D^-:=D(f)\cap (-\infty,a)$); označme $f'$ zúženie funkcie na množinu $D^+$ (na množinu $D^-$). Ak existuje limita funkcie $f'$ v bode $a$, nazývame ju \textit{limitou funkcie $f$ v bode $a$ sprava (zľava)} a označujeme $\lim_{x \rightarrow a+} f(x)$ $(\lim_{x \rightarrow a-} f(x))$. Pre limity sprava a zľava sa používa súhrnný názov \textit{jednostranné limity}.
+
+\begin{veta}
+Nech je daná funkcia $f$, nech $a$ je hromadný bod množín $D(f) \cap (-\infty,a)$ a $D(f) \cap (a,\infty)$. Potom $\lim_{x \rightarrow a} f(x)=\lim_{x \rightarrow -a} f(x)$; pritom $\lim_{x \rightarrow a} f(x)$ sa rovná spoločnej hodnote týchto jednostranných limít.
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-43}
+	\item \useproblem[limita-funkcie]{limita-44}
+	\item \useproblem[limita-funkcie]{limita-45}
+	\item \useproblem[limita-funkcie]{limita-46}
+	\item \useproblem[limita-funkcie]{limita-47}
+\end{enumerate}
+
+\section{Limity mocninovo-exponenciálnych funkcií}
