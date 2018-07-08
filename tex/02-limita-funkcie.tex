@@ -360,3 +360,64 @@ Nech je daná funkcia $f$, nech $a$ je hromadný bod množín $D(f) \cap (-\inft
 \end{enumerate}
 
 \section{Limity mocninovo-exponenciálnych funkcií}
+
+\begin{veta}
+$\lim_{x \rightarrow +\infty} (1+\frac{1}{x})^x=e,\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}=e$.
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-48}
+\end{enumerate}
+
+\textit{Riešenie:}
+Aby sme mohli použiť vety o limitách, napíšme funkciu $f^g$ v tvare $e^{g ln f}$. Pretože  $\lim_{x \rightarrow a} f(x)=A \in \mathbb{R^+}$ a $\lim_{x \rightarrow A} ln u= ln A$ ($ln$ je elementárna funkcia a $A \in D(ln)$), je podľa vety o limite zloženej funkcie z príkladu $124$ $\lim_{x \rightarrow a} ln f(x)=ln A$. Podľa vety o limite súčinu $\lim_{x \rightarrow a} (g(x)\cdot ln f(x))=B \cdot ln A$. Naopak opäť podľa vety z príkladu $124$ je $\lim_{x \rightarrow a} e^{g(x)ln f(x)}=e^{B \cdot ln A}=A^B$. Teda $\lim_{x \rightarrow a} f(x)^{g(x)}=A^B$.
+
+
+
+Analogicky sa dá postupovať v prípade funkcií typu $a^{+/- \infty}(a>0,a /neq 1),(+\infty)^a(a \neq 0),(+\infty)^{+/- \infty}$. Nemožno však odvodiť všeobecné pravidlá na výpočet limít typu $1^{+/- \infty,0^0,(+\infty)^0}$; vtedy totiž exponent $g \cdot ln f$ je neurčitým výrazom typu $0 \cdot (+\infty)$ alebo $0 \cdot (-\infty)$.
+V ďalšom budeme symbol $1^{+/- \infty}$ chápať trochu všeobecnejšie: znak $+/- \infty$ bude okrem funkcií s limitou $+\infty$ alebo $-\infty$ označovať aj tie exponenty, ktoré síce nemajú limitu, ale ich jednostranné limity sú nevlastné \footnote{rovnako možno zovšeobecniť aj pojem neurčitého výrazu typu $0 \cdot (+/- \infty)$ a $\frac{+/- \infty}{+/- \infty}$; ďalšie zovšeobecnenie pozri v poznámke na konci odseku}. Dôležitým príkladom limity tohto typu je $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}$. Ukážeme teraz, ako sa rovnosť $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}=e$ využíva pri výpočte ďalších limít typu $1^{+/- \infty}$. 
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-49}
+\end{enumerate}
+
+\textbf{Riešenie:}
+Ide skutočne o funkciu typu $1^{+/- \infty}$, pretože $\lim_{x \rightarrow \frac{\pi}{}} sin x=1,\lim_{x \rightarrow \frac{\pi}{2}+} tg x=-\infty,\lim_{x \rightarrow \frac{\pi}{2}-} tg x=+\infty$. Zapíšme funkciu $(sin x)^{tg x}$ v tvare $[(1+(sin x-1)^{\frac{1}{sin x-1}})]^{(sin x-1)\cdot tg x}$, t.j. zasa ako mocninovo-exponenciálnu funkciu $f_1(x)^{g_1(x)}$, kde $g_1(x)=(sin x-1)\cdot tg x$ a $f_1$ označuje funkciu v hranatej zátvorke. Vypočítajme teraz limity funkcií $f_1, g_1$:
+\begin{itemize}
+\item $\lim_{x \rightarrow \frac{\pi}{2}} f_1(x)=e$ podľa vety o limite zloženej funkcie (vnútornou zložkou je funkcia $sin x-1$, vonkajšou zložkou je funkcia $(1+u)^{\frac{1}{u}}$); využili sme pritom poznámku uvedenú za vetou o limite zloženej funkcie:
+\item $\lim_{x \rightarrow \frac{\pi}{2}}g_1(x)=\lim_{x \rightarrow \frac{\pi}{2}} (sin x-1)\frac{sin x}{cos x}=\lim_{x \rightarrow \frac{\pi}{2}} (-\frac{cos ^2 x}{1+sin x}\cdot \frac{sin x}{cos x})=0$.
+\end{itemize}
+Podľa príkladu $147$ je preto $\lim_{x \rightarrow \frac{\pi}{2}} f_1(x)^{g_1(x)}=e^0=1$.
+
+\textit{Poznámka:}
+I keď uvedený postup môže na prvý pohľad pôsobiť deprimujúcim dojmom, nie je až také ťažké zapamätať si ho: funkciu $f^g$ typu $1^{+/- \infty}$ prepisujeme na tvar $f_1^{g_1}$ tak, aby limita funkcie $f_1$ bola rovný $e$; preto položíme $f_1=(1+(f-1)\cdot g)$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-50}
+	\item \useproblem[limita-funkcie]{limita-51}
+	\item \useproblem[limita-funkcie]{limita-52}
+	\item \useproblem[limita-funkcie]{limita-53}
+\end{enumerate}
+
+\textbf{Riešenie (d):}
+Využijeme, že $\lim_{u \rightarrow 0}\frac{ln(1+u)}{u}=1$ (príklad $152.1$); potom $\lim_{x \rightarrow 0}\frac{sin 3x}{ln(1+sin 5x)}=\lim_{x \rightarrow 0}\frac{3x \cdot \frac{sin 3x}{3x}}{sin 5x \cdot \frac{ln (1+sin 5x)}{sin 5x}}(=\lim_{x \rightarrow 0} \frac{3x}{sin 5x} \frac{\lim_{x \rightarrow 0}\frac{sin 3x}{3x}}{\lim_{x \rightarrow 0} \frac{ln(1+sin 5x))}{sin 5x}})=\frac{1}{1}\cdot \lim_{x \rightarrow 0}\frac{3x}{sin 5x}=\frac{3}{5}$
+\footnote{všeobecným pohľadom na takýto spôsob výpočtu je príklad $193$}. 
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-54}
+\end{enumerate}
+
+\textbf{Riešenie (d):}
+Využijeme, že $\lim_{x \rightarrow a}\frac{e^u-1}{u}=1$ (príklad $153.1$); potom $\lim_{x \rightarrow a}\frac{x^x-x^a}{x-a}=\lim_{x \rightarrow a}x^a \cdot \frac{x^{x-a}-1}{x-a}(=\lim_{x \rightarrow a}x^a \cdot \lim_{x \rightarrow a}\frac{x^{x-a}-1}{x-a})=$\footnote{funkcia $x^a$ je elementárna, preto $x^a \rightarrow a^a$, ak $x \rightarrow a$} $a^a \cdot \lim_{x \rightarrow a}(\frac{e^{(x-a)ln x}-1}{(x-a)ln x}\cdot ln x)(=a^a \cdot \lim_{x \rightarrow a}\frac{e^{(x-a)ln x}-1}{(x-a)ln x}\cdot \lim_{x \rightarrow a}ln x)=a^a \cdot 1 \cdot ln a=a^a ln a$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-55}
+\end{enumerate}
+
+\textbf{Riešenie (b):}
+Využijeme, že $\lim_{x \rightarrow \infty} \frac{x^2}{e^x}=0,\lim_{x \rightarrow \infty}\frac{x^4}{e^{3x}}=0$ (pozri príklad $192$); potom 
+$\lim_{x \rightarrow \infty} \frac{ln(x^2+e^x)}{ln(x^4+e^{3x})}=\lim_{x \rightarrow \infty} \frac{ln(e^x(1+\frac{x^2}{e^x}))}{ln(e^{3x}(1+\frac{x^4}{e^{3x}}))}=\lim_{x \rightarrow \infty}\frac{ln e^{3x}+ln(1+\frac{x^2}{e^x})}{ln e^{3x}+ln(1+\frac{x^4}{e^{3x}})}=\lim_{x \rightarrow \infty}\frac{x+ln(1+\frac{x^2}{e^x})}{3x+ln(1+\frac{x^4}{e^{3x}})}=\lim_{x \rightarrow \infty}\frac{1+\frac{ln(1+\frac{x^2}{e^x})}{x}}{3+\frac{ln(1+\frac{x^4}{e^x})}{x}}=\frac{1}{3}$ 	$(\lim_{x \rightarrow \infty}\frac{ln(1+\frac{x^2}{e^x})}{x}=\lim_{x \rightarrow \infty}\frac{1}{x} \cdot \lim_{x \rightarrow \infty}ln(1+\frac{x^2}{e^x})=0 \cdot 0=0$; rovnako sa vypočíta aj limita druhého sčítanca v menovateli)
+
+\textit{Poznámka (o symbole $\infty$):}
+Niekedy sa okrem symbolov $+\infty$ a $-\infty$ zavádza aj symbol $\infty$; okolím sa nazýva každá množina tvaru $(-\infty,a)\cup (a,\infty), a \in \mathbb{R}$. (Zápis $\lim_{x \rightarrow a}f(x)=\infty$ znamená $\lim_{x \rightarrow a}|f(x)|=+\infty$, tvrdenie $\lim_{x \rightarrow \infty} f(x)=A$   $(a \in \mathbb{R^*})$ je ekvivalentné s tvrdením $\lim_{x \rightarrow +\infty}f(x)=\lim_{x \rightarrow -\infty}f(x)=A$.) Nami používaný pojem neurčitých výrazov typu $0 /cdot (+/- \infty)$, možno potom zovšeobecniť na neurčité výrazy typu $0, \infty, \frac{\infty}{\infty}$. Opätovne upozorňujeme, v týchto skriptách nepoužívame symbol $\infty$ v takomto význame, nami používaný symbol $\infty$ má rovnaký význam ako symbol $+\infty$.
+
+\section{Limity monotónnych postupností}
