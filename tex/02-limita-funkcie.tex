@@ -434,10 +434,10 @@ Analogicky tvrdenie pre nerastúcu postupnosť ${\{a_n\}}_{n=1}^\infty$  dostane
 
 \textbf{Riešenie (a):}
 Najprv matematickou indukciou dokážeme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ (ktorú možno zadať rekurentne vzťahom $a_1=\sqrt{2},a_{n+1}=\sqrt{2+a_n}$) je rastúca a zhora ohraničená. 
-\begin{enumerate}
+\begin{itemize}
 \item Zrejme $a_1<a_2$; z predpokladu $a_n<a_{n+1}$ vyplýva $a_n=\sqrt{2+a_n}<\sqrt{2+a_{n+1}}=a_{n+2}$ (využili sme, že $\sqrt{x}$ je rastúca funkcia). Teda ${\{a_n\}}_{n=1}^\infty$ je rastúca postupnosť.
 \item Dokážeme, že $a_n<2$ pre všetky $n \in \mathbb{N}$. Toto tvrdenie zrejme platí pre $n=1$. Z predpokladu $a_n<2$ vyplýva $a_{n+1}=\sqrt{2+a_{n}}<\sqrt{2+2}=2$.
-\end{enumerate}
+\end{itemize}
 
 Pretože ${\{a_n\}}_{n=1}^\infty$ je zhora ohraničená rastúca postupnosť, existuje konečná $\lim_{n \rightarrow \infty} a_n=a$; potom $\lim_{n \rightarrow \infty}\sqrt{2+a_n}=\sqrt{2+a}$. Z rovnosti $a_{n+1}=\sqrt{2+a_n} (n \in \mathbb{N})$ potom vyplýva $\lim_{n \rightarrow \infty} a_{n+1}=\lim_{n \rightarrow \infty} \sqrt{2+a_n}$. Teda hľadaná limita musí byť riešením rovnice $a=\sqrt{2+a}$, preto $a=2$ (využili sme pritom evidentnú skutočnosť, že $\lim_{n \rightarrow \infty} a_{n+1}=\lim_{n \rightarrow \infty} a_n=a$). Konvergenciu postupnosti ${\{a_n\}}_{n=1}^\infty$ názorne ukazuje nasledujúci obrázok:
 
@@ -449,3 +449,67 @@ Rovnosť $\lim_{n \rightarrow \infty} a_n=2$ vyplýva z rovnosti (*), mohlo by s
 \end{enumerate}
 
 \section{Heiného definícia limity}
+\begin{veta}
+Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru $D(f)$ funkcie $f$a $b \in \mathbb{R^*}$. Potom sú nasledujúce výroky ekvivalentné:
+\begin{itemize}
+\item $\lim_{x \rightarrow a} f(x)=b$;
+\item pre každú postupnosť ${\{a_n\}}_{n=1}^\infty$ prvkov z $D(f)\setminus \{ a\}$, ktorej limitou je $a$, platí $\lim_{n \rightarrow \infty} f(a_n)=b$.
+\end{itemize}
+\end{veta}
+
+Limitu funkcie možno definovať aj bez použitia pojmu okolia; v takomto prípade sa zavedie len pojem vlastnej a nevlastnej limity postupnosti a na definíciu limity funkcie $f$ v bode $a$ sa použije vlastnosť $2$ z uvedenej vety. Definícia limity funkcie v takejto podobe sa nazýva \textit{Hejného definíciou limity}. Veta $15$ teda hovorí, že definícia limity pomocou okolia a Hejného definícia limity sú ekvivalentné.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-59}
+\end{enumerate}
+
+\textbf{Riešenie (a):}
+Pre postupnosti $a_n=n\pi,b_n=\frac{\pi}{2}+2\pi n$ platí $a_n=\lim_{n \rightarrow \infty} a_n=\lim_{n \rightarrow \infty} b_n=\infty$, $\lim_{n \rightarrow \infty} \sin a_n=0,\lim_{n \rightarrow \infty} b_n=1$. Pre žiadne $b \in \mathbb{R^*}$ teda nemôže byť splnená vlastnosť $2$ z vety $15$, preto neexistuje $\lim_{n \rightarrow \infty} \sin x$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-60}
+\end{enumerate}
+
+\section{Hromadné hodnoty, limes inferior a limes superior postupností}
+
+Postupnosť ${\{a_n\}}_{n=1}^\infty$ sa nazýva \textit{podpostupnosť (vybranou postupnosťou z) postupnosti ${\{a_n\}}_{n=1}^\infty$}, ak existuje rastúce zobrazenie $k: \mathbb{N} \rightarrow \mathbb{N}$ také, že $b_n=a_{k(n)}$. 
+
+Bod $a \in \mathbb{R^*}$ sa nazýva \textit{hromadnou hodnotou postupnosti ${\{a_n\}}_{n=1}^\infty$}, ak je limitou niektorej jej podpostupnosti (to je ekvivalentné s podmienkou: pre každé okolie $O(a)$ bodu $a$ je množina $\{n \in \mathbb{N}: a_n \in O(a) \}$). Supremum (infimum) množiny $H$ v množine $\mathbb{R^*}$ sa nazýva \textit{limes superior (limer inferior) postupnosti ${\{a_n\}}_{n=1}^\infty$} a označuje sa $\limsup_{n \rightarrow \infty} a_n$ $(\liminf_{n \rightarrow \infty} a_n)$. (Suprémum (infimum) množiny $H$ v $\mathbb{R^*}$ sa definuje ako najmenšie (najväčšie) z jej horných (dolných) ohraničení, pritom ako horné a hodlé ohraničenia prichádzajú do úvahy aj body $+\infty,-\infty$ \footnote{Teda napr. supremom zhora neohraničenej množiny $H \subset \mathbb{R}$ je v množine $\mathbb{R^*}$ bod $+\infty$; $\sup\{ -\infty\}$=$-\infty$ a pod. Pre zhora (zdola) ohraničenú množinu $H \subset \mathbb{R}$ je jej supremum (infimum) v $\mathbb{R^*}$ zhodné s jej supremom (infimom)}.)
+
+\begin{veta}
+Limes superior a limes ingerior postupnosti ${\{a_n\}}_{n=1}^\infty$ sú jej hromadnými hodnotami.
+\end{veta}
+
+\begin{veta}
+Nech je daná postupnosť ${\{a_n\}}_{n=1}^\infty$, nech $b \in \mathbb{R}$. Rovnosť $\limsup_{n \rightarrow \infty} a_n =b$  $(\liminf_{n \rightarrow \infty} a_n =b)$ platí práve vtedy, keď
+\begin{itemize}
+\item $b$ je hromadná hodnota postupnosti ${\{a_n\}}_{n=1}^\infty$;
+\item pre každé $\epsilon > 0$ je množina $\{ n \in \mathbb{N}: a_n \geq b +\epsilon \}$  $(\{  n \in \mathbb{N}: a_n \leq b +\epsilon \} )$ konečná.
+\end{itemize}
+\end{veta}
+
+\begin{veta}
+Postupnosť ${\{a_n\}}_{n=1}^\infty$ má limitu práve vtedy, keď $\limsup_{n \rightarrow \infty} a_n = \liminf_{n \rightarrow \infty} a_n$; limitou je pritom spoločná hodnota $\limsup_{n \rightarrow \infty} a_n$ a $\liminf_{n \rightarrow \infty} a_n$. 
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-61}
+	\item \useproblem[limita-funkcie]{limita-62}
+	\item \useproblem[limita-funkcie]{limita-63}
+	\item \useproblem[limita-funkcie]{limita-64}
+	\item \useproblem[limita-funkcie]{limita-65}
+	\item \useproblem[limita-funkcie]{limita-66}
+	\item \useproblem[limita-funkcie]{limita-67}
+\end{enumerate}
+
+\textit{Riešenie:}
+Dokážeme druhú nerovnosť z príkladu $166.1b/$. (Skôr ako začneme vlastný dôkaz, musíme si uvedomiť, že $\liminf_{n \rightarrow \infty} (a_n+b_n),\liminf_{n \rightarrow \infty} a_n, \limsup_{n \rightarrow \infty} b_n$ sú reálne čísla, pretože postupnosti ${\{a_n+b_n\}}_{n=1}^\infty$,${\{a_n\}}_{n=1}^\infty$,${\{b_n\}}_{n=1}^\infty$ sú ohraničené.) Využijeme nasledujúce nerovnosti:
+Ak ${\{c_{n(k)}\}}_{k=1}^\infty$ je postupnosť vybraná z postupnosti ${\{c_n\}}_{n=1}^\infty$, tak $\liminf_{n \rightarrow \infty} c_n \leq \liminf_{k \rightarrow \infty} c_{n(k)} \leq \limsup_{k \rightarrow \infty}c_{n(k)}\leq \limsup_{k \rightarrow \infty} c_n$
+(nerovnosť $(2)$ je zrejmé, nerovnosti $(1)$ a $(3)$ vyplývajú z faktu, že každá hromadná hodnota postupnosti ${\{c_{n(k)}\}}_{k=1}^\infty$ je aj hodnotou postupnosti ${\{c_n\}}_{n=1}^\infty$, t.j. že množina hromadných hodnôt postupnosti ${\{c_{n(k)}\}}_{k=1}^\infty$ je podmnožina množiny hromadných hodnôt postupnosti ${\{c_n\}}_{n=1}^\infty$).
+
+Nech $a:=\lim_{n \rightarrow \infty} a_n$, potom existuje postupnosť ${\{a_n\}}_{n=1}^\infty$ taká, že $\lim_{k \rightarrow \infty} a_{n(k)}=a=\liminf_{n \rightarrow \infty} a_n$.Podľa príkladu $166.1a/$ je $\liminf_{k \rightarrow \infty} (a_{n(k)}+b_{n(k)})=\lim_{k \rightarrow \infty} a_{n(k)}+\liminf_{k \rightarrow \infty} b_{n(k)}$  $(=\liminf_{n \rightarrow \infty} a_n + \liminf_{n \rightarrow \infty} b{n(k)}).$ Na dokončenie dôkazu teraz už stačí len niekoľkokrát použiť nerovnosti z (*):
+$\liminf_{n \rightarrow \infty} (a_n+b_n) \leq \liminf_{k \rightarrow \infty} (a_{n(k)+b_{n(k)}})=\liminf_{\rightarrow \infty} a_n+\liminf_{n \rightarrow \infty} b_{n(k)} \leq \liminf_{n \rightarrow \infty} a_n+\limsup_{k \rightarrow \infty} b_{n(k)}\leq \liminf_{n \rightarrow \infty} a_n+\limsup_{n \rightarrow \infty} b_n$
+
+(ak zapíšeme nerovnosť $(1)$ z (*) pre postupnosti $c_n=a_n+b_n,c_{n(k)}=a_{n(k)}+b_{n(k)}$, dostaneme (I); nerovnosť (II) dostaneme, ak k obidvom stranám nerovnosti $(2)$ z (*) zapísanej pre postupnosť ${\{b_{n(k)}\}}_{k=1}^\infty$ pripočítame číslo $\liminf_{\rightarrow \infty} a_n$, podobne vyplýva (III) z nerovnosti $(3)$ v (*)).
+
+\section{Ďalšie príklady}

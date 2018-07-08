@@ -587,39 +587,82 @@ $$(1+\frac{1}{n})^n<e<(1+\frac{1}{n})^{n+1}.$$
 \end{defproblem}
 
 \begin{defproblem}{limita-59}
-
+Dokážte, že neexistujú nasledujúce limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{{x \rightarrow \infty}} \sin x$;
+    \item $\lim_{{x \rightarrow a}} \zeta (x), (a \in \mathbb{R^*})$;
+    \item $\lim_{{x \rightarrow 0}} \cos \frac{\pi}{x}$;
+    \item $\lim_{{x \rightarrow -\infty}} f(x)$, ak $f$ je nekonečná periodická funkcia.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-60}
-
+Nech $f$ je funkcia definovaná na $\mathbb{R}$, $a \in \mathbb{R^*}$. Rozhodnite, či tvrdenie $\lim_{x \rightarrow a} f(x)=b$ je ekvivalentné s niektorým z nasledujúcich výrokov:
+\begin{enumerate}
+\item pre každú postupnosť ${\{a_n\}}_{n=1}^\infty$ racionálnych čísel takú, že $a_n \neq a$ pre všetky $n \in \mathbb{N}$ a $\lim_{n \rightarrow \infty} a_n=a$, platí $\lim_{n \rightarrow \infty} f(a_n)=b$;
+\item pre každú postupnosť ${\{a_n\}}_{n=1}^\infty$ takú, že $\lim_{n \rightarrow \infty} a_n=a$, pričom množina $\{ a_n : n\in \mathbb{N }\}$ je podmnožinou $Q \setminus \{ a\}$ alebo podmnožinou $\mathbb{R} \setminus (\mathbb{Q} \cup \{ a\})$ platí $\lim_{n \rightarrow \infty} f(a_n)=b$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-61}
-
+Nájdite limes superior a limes inferior nasledujúcich postupností:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $a_n=(-1)^{n-1}(2+\frac{3}{n})$;
+    \item $a_n=1+2 \cdot (-1)^{n+1}+3 \cdot (-1)^{\frac{n(n-1)}{2}}$;
+    \item $a_n=\cos \frac{n \pi}{3}$;
+    \item $a_n=(1+\frac{1}{n})^n(-1)^n+\sin \frac{n \pi}{4}$;
+    \item $a_n=n^{(-1)^n}$;
+    \item $a_n=\sqrt[n]{1+2^{n \cdot (-1)^n}}$;
+\end{enumerate}
+\end{multicols}
+\begin{enumerate}[resume]
+    \item $1,\frac{1}{10},\frac{2}{10},...,\frac{9}{10},\frac{1}{10^2},\frac{2}{10^2},...,\frac{99}{10^2},...,\frac{1}{10^n},...,\frac{10^n-1}{10^n},...$;
+    \item $1,\frac{1}{2},\frac{2}{2},\frac{3}{2},\frac{1}{4}\frac{2}{4},...,\frac{5}{4},...,\frac{1}{2^n},...,\frac{2^n+1}{2^n},... $.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-62}
-
+Zostrojte postupnosť ${\{a_n\}}_{n=1}^\infty$ tak, aby množina jej hromadných hodnôt bola:
+\begin{enumerate}
+\item $\{ 1\}$;
+\item $\{ 0,1\}$;
+\item daná konečná množina $\{ a_1,...,a_n\}$;
+\item $\mathbb{N} \cup \{ +\infty \}$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-63}
-
+Nech ${\{a_n\}}_{n=1}^\infty$ je postupnosť taká, že $\{ a_n: n \in \mathbb{N} \}=\mathbb{Q}$ (taká postupnosť existuje, pretože $\mathbb{Q}$ je spočítateľná množina). Potom množina hromadných hodnôt postupnosti ${\{a_n\}}_{n=1}^\infty$ je $\mathbb{R^*}$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-64}
-
+Nech ohraničená postupnosť ${\{a_n\}}_{n=1}^\infty$ má práve dve hromadné hodnoty: označme $a := \liminf_{n \rightarrow \infty} a_n,b := \limsup_{n \rightarrow \infty} a_n$. Dokážte: pre každé $\epsilon \in (0,\frac{b-a}{2})$ je množina $\mathbb{N_\epsilon} := \{n \in \mathbb{N}; a_n \in \langle a+\epsilon, b-\epsilon \rangle \}$ konečná.
 \end{defproblem}
 
 \begin{defproblem}{limita-65}
-
+Nech pre ohraničenú postupnosť ${\{a_n\}}_{n=1}^\infty$ platí $$\forall \epsilon > 0: \limsup_{n \rightarrow \infty} a_n < \liminf_{n \rightarrow \infty} a_n+\epsilon.$$ Potom je postupnosť ${\{a_n\}}_{n=1}^\infty$ konvergentná. Dokážte! 
 \end{defproblem}
 
 \begin{defproblem}{limita-66}
-
+\begin{enumerate}
+\item Nech $a$ je hromadný bod množiny $A$ hromadných hodnôt postupnosti ${\{a_n\}}_{n=1}^\infty$. Potom $a$ je h romadnou hodnotou postupnosti ${\{a_n\}}_{n=1}^\infty$.
+\item Existuje postupnosť, ktorej množina hromadných hodnôt je $A=\{ \frac{1}{n}; n \in \mathbb{N} \}$ ?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-67}
-
+\begin{enumerate}
+\item Nech sú dané ohraničené postupnosti ${\{a_n\}}_{n=1}^\infty$ a ${\{b_n\}}_{n=1}^\infty$. Potom
+\begin{enumerate}
+\item ak existuje konečná $\lim_{n \rightarrow \infty} a_n$, tak 
+$$\liminf_{n \rightarrow \infty} (a_n+b_n)=\lim_{n \rightarrow \infty} a_n+\liminf_{n \rightarrow \infty} b_n;$$
+\item $\liminf_{n \rightarrow \infty} a_n+\liminf_{n \rightarrow \infty} b_n \leq \liminf_{n \rightarrow \infty} (a_n+b_n)\leq \liminf_{n \rightarrow \infty} a_n+\limsup_{n \rightarrow \infty} b_n\leq \limsup_{n \rightarrow \infty} (a_n+b_n) \leq \limsup_{n \rightarrow \infty} a_n+\limsup_{n \rightarrow \infty} b_n$.
+\end{enumerate}
+\item Uveďte príklady postupností ${\{a_n\}}_{n=1}^\infty$ a ${\{b_n\}}_{n=1}^\infty$, pre ktoré budú jednotlivé nerovnosti v príklade $166.1b/$ ostré.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-68}
@@ -647,5 +690,221 @@ $$(1+\frac{1}{n})^n<e<(1+\frac{1}{n})^{n+1}.$$
 \end{defproblem}
 
 \begin{defproblem}{limita-74}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-75}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-76}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-77}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-78}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-79}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-80}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-81}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-82}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-83}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-84}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-85}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-86}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-87}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-88}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-89}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-90}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-91}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-92}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-93}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-94}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-95}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-96}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-97}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-98}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-99}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-100}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-101}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-102}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-103}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-104}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-105}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-106}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-107}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-108}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-109}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-110}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-111}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-112}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-113}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-114}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-115}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-116}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-117}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-118}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-119}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-120}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-121}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-122}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-123}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-124}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-125}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-126}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-127}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-128}
 
 \end{defproblem}
