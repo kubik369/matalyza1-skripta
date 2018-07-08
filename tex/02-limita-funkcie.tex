@@ -421,3 +421,31 @@ $\lim_{x \rightarrow \infty} \frac{ln(x^2+e^x)}{ln(x^4+e^{3x})}=\lim_{x \rightar
 Niekedy sa okrem symbolov $+\infty$ a $-\infty$ zavádza aj symbol $\infty$; okolím sa nazýva každá množina tvaru $(-\infty,a)\cup (a,\infty), a \in \mathbb{R}$. (Zápis $\lim_{x \rightarrow a}f(x)=\infty$ znamená $\lim_{x \rightarrow a}|f(x)|=+\infty$, tvrdenie $\lim_{x \rightarrow \infty} f(x)=A$   $(a \in \mathbb{R^*})$ je ekvivalentné s tvrdením $\lim_{x \rightarrow +\infty}f(x)=\lim_{x \rightarrow -\infty}f(x)=A$.) Nami používaný pojem neurčitých výrazov typu $0 /cdot (+/- \infty)$, možno potom zovšeobecniť na neurčité výrazy typu $0, \infty, \frac{\infty}{\infty}$. Opätovne upozorňujeme, v týchto skriptách nepoužívame symbol $\infty$ v takomto význame, nami používaný symbol $\infty$ má rovnaký význam ako symbol $+\infty$.
 
 \section{Limity monotónnych postupností}
+\begin{veta}
+Každá zhora ohraničená neklesajúca postupnosť ${\{a_n\}}_{n=1}^\infty$ je konvergentná a platí $\lim_{n \rightarrow \infty} a_n=\sup {a_n;n \in \mathbb{N}}$.
+Ak ${\{a_n\}}_{n=1}^\infty$ je zhora neohraničená neklesajúca postupnosť, tak $\lim_{n \rightarrow \infty} a_n=+\infty$.
+Analogicky tvrdenie pre nerastúcu postupnosť ${\{a_n\}}_{n=1}^\infty$  dostaneme, ak predchádzajúcu vetu aplikujeme na postupnosť ${\{-a_n\}}_{n=1}^\infty$. 
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-56}
+	\item \useproblem[limita-funkcie]{limita-57}
+\end{enumerate}
+
+\textbf{Riešenie (a):}
+Najprv matematickou indukciou dokážeme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ (ktorú možno zadať rekurentne vzťahom $a_1=\sqrt{2},a_{n+1}=\sqrt{2+a_n}$) je rastúca a zhora ohraničená. 
+\begin{enumerate}
+\item Zrejme $a_1<a_2$; z predpokladu $a_n<a_{n+1}$ vyplýva $a_n=\sqrt{2+a_n}<\sqrt{2+a_{n+1}}=a_{n+2}$ (využili sme, že $\sqrt{x}$ je rastúca funkcia). Teda ${\{a_n\}}_{n=1}^\infty$ je rastúca postupnosť.
+\item Dokážeme, že $a_n<2$ pre všetky $n \in \mathbb{N}$. Toto tvrdenie zrejme platí pre $n=1$. Z predpokladu $a_n<2$ vyplýva $a_{n+1}=\sqrt{2+a_{n}}<\sqrt{2+2}=2$.
+\end{enumerate}
+
+Pretože ${\{a_n\}}_{n=1}^\infty$ je zhora ohraničená rastúca postupnosť, existuje konečná $\lim_{n \rightarrow \infty} a_n=a$; potom $\lim_{n \rightarrow \infty}\sqrt{2+a_n}=\sqrt{2+a}$. Z rovnosti $a_{n+1}=\sqrt{2+a_n} (n \in \mathbb{N})$ potom vyplýva $\lim_{n \rightarrow \infty} a_{n+1}=\lim_{n \rightarrow \infty} \sqrt{2+a_n}$. Teda hľadaná limita musí byť riešením rovnice $a=\sqrt{2+a}$, preto $a=2$ (využili sme pritom evidentnú skutočnosť, že $\lim_{n \rightarrow \infty} a_{n+1}=\lim_{n \rightarrow \infty} a_n=a$). Konvergenciu postupnosti ${\{a_n\}}_{n=1}^\infty$ názorne ukazuje nasledujúci obrázok:
+
+\textit{Poznámka:}
+Rovnosť $\lim_{n \rightarrow \infty} a_n=2$ vyplýva z rovnosti (*), mohlo by sa teda zdať, že stačilo len v rekurentnom vzťahu $a_{n+1}=\sqrt{2+a_n}$ prejsť k limite a príklad by bol vyriešený, t.j. všetky úvahy o monotónnosti a ohraničenosti boli vlastne zbytočné. To je ovšem omyl; skôr ako napíšeme (*), sa totiž musíme presvedčiť, že limity, ktoré tam vystupujú, skutočne existujú.
+
+\begin{enumerate}[resume]
+	\item \useproblem[limita-funkcie]{limita-58}
+\end{enumerate}
+
+\section{Heiného definícia limity}
