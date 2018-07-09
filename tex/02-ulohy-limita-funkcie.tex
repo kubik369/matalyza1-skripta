@@ -666,167 +666,370 @@ $$\liminf_{n \rightarrow \infty} (a_n+b_n)=\lim_{n \rightarrow \infty} a_n+\limi
 \end{defproblem}
 
 \begin{defproblem}{limita-68}
-
+Uveďte príklad neprázdnej množiny $a \subset \mathbb{R}$, že $A' \neq \emptyset$ a platí
+\begin{enumerate}
+\item $A' \subsetneq A$;
+\item $A'=A$;
+\item $A \subsetneq A'$;
+\item $A' \cap A = \emptyset$;
+\item $A \not\subset A'\wedge A' \not\subset A \wedge A' \cap A \neq\emptyset$
+\end{enumerate} 
 \end{defproblem}
 
 \begin{defproblem}{limita-69}
-
+Ak $a \in \mathbb{R^*}$ je hromadný bod množiny $A'$, tak $a$ je aj hromadný bod množiny $A$ (teda $(A')' \subset A'$). Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-70}
-
+Existuje množiny $A$ taká, že $A'=(0,1)$?
 \end{defproblem}
 
 \begin{defproblem}{limita-71}
-
+Nech $a \in \mathbb{R^*}$ je hromadný bod množiny $A \cup B$. Potom $a$ je hromadný bod množiny $A$ alebo $a$ je hromadný bod množiny $B$ (teda $(A \cup B)' \subset A' \cup B'$). Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-72}
-
+Nech je daná postupnosť ${\{a_n\}}_{n=1}^\infty$, definujme postupnosť ${\{b_n\}}_{n=1}^\infty$ predpisom 
+$$b_n=\frac{1}{n}(a_1+a_2+...+a_n).$$
+Ak $\lim_{n \rightarrow \infty} a_n=a (a \in \mathbb{R^*})$, tak existuje aj $\lim_{n \rightarrow \infty} b_n$ a platí $\lim_{n \rightarrow \infty} a_n=a$. Dokážte; ďalej ukážte, že obrátená implikácia vo všeobecnosti neplatí.
 \end{defproblem}
 
 \begin{defproblem}{limita-73}
-
+Nájdite limity:
+\begin{enumerate}
+\item $\lim_{n \rightarrow \infty} \frac{1}{n}(1+\frac{1}{2}+...+\frac{1}{n})$;
+\item $\lim_{n \rightarrow \infty} \frac{1}{n}(1+\frac{1}{\sqrt{2}}+...+\frac{1}{\sqrt{n}})$
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-74}
-
+\begin{enumerate}
+\item Nech ${\{a_n\}}_{n=1}^\infty$ je postupnosť taká, že $\{ a_n: n \in \mathbb{N} \}=\mathbb{N}$. Potom existuje $\lim_{n \rightarrow \infty} a_n$ a rovná sa $+\infty$.
+\item Postupnosť ${\{b_n\}}_{n=1}^\infty$ sa nazýva prerovnaním postupnosti ${\{a_n\}}_{n=1}^\infty$, ak existuje taká bijekcia $p: \mathbb{N} \rightarrow \mathbb{N}$, že $b_n=a_{p(n)},(n \in \mathbb{N})$. Ak $\lim_{n \rightarrow \infty} a_n=b,(b \in \mathbb{R^*})$, tak každé prerovnanie postupnosti ${\{a_n\}}_{n=1}^\infty$, má tiež limitu rovnú $b$. Dokážte!
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-75}
-
+Zostane tvrdenie z príkladu $173.(a)$  v platnosti, ak v ňom
+\begin{enumerate}
+\item vynecháme predpoklad "${\{a_n\}}_{n=1}^\infty$, je prostá postupnosť"?;
+\item Predpoklad "$\{a_n: n \in \mathbb{N}\}=\mathbb{N}$" nahradíme predpokladom "$\{a_n: n \in \mathbb{N}\} \subset \mathbb{N}$"?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-76}
-
+Nech ${\{a_n\}}_{n=1}^\infty$ je taká postupnosť, že existuje $\lim_{n \rightarrow \infty} |a_n|=b$ a neexistuje $\lim_{n \rightarrow \infty} a_n$. Dokážte, že
+\begin{enumerate}
+\item $b \neq 0$;
+\item množiny $\mathbb{N^+}:= \{n \in \mathbb{N}: a_n>0 \}$ a $\mathbb{N^-}:= \{n \in \mathbb{N}: a_n<0 \}$ sú konečné;
+\item množina $\mathbb{N} \setminus (\mathbb{N^+} \cup \mathbb{N^-})$ je konečná.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-77}
-
+Na základe definície limity dokážte:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{n \rightarrow \infty} \frac{5 \cdot 3^n}{3^n-2}=5$;
+    \item $\lim_{x \rightarrow \infty} arctg x=\frac{\pi}{2}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-78}
-
+Uveďte príklad funkcie $f: \mathbb{R} \rightarrow \mathbb{R}$, Ktorá má limitu len v bode $0$.
 \end{defproblem}
 
 \begin{defproblem}{limita-79}
-
+Dokážte, že postupnosť ${\{\sin n\}}_{n=1}^\infty$ nemá limitu.
 \end{defproblem}
 
 \begin{defproblem}{limita-80}
-
+Nájdite limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x \rightarrow 0} \frac{(1+mx)^n-(1+nx)^m}{x^2},(m,n \in \mathbb{N})$;
+    \item $\lim_{x \rightarrow a} \frac{x^n-a^n-na^{n-1}(x-a)}{(x-a)^2}$;
+    \item $\lim_{x \rightarrow 1} (\frac{3}{1-x^2}-\frac{1}{x-1})$;
+    \item $\lim_{x \rightarrow 1} (\frac{m}{1-x^m}-\frac{n}{1-x^n}),(m,n \in \mathbb{N})$;
+    \item $\lim_{x \rightarrow \infty} \frac{1}{n}[(x+\frac{a}{n})^2+(x+\frac{2a}{n})^2+...+(x+\frac{n-1}{n}a)^2]$;
+    \item $\lim_{n\rightarrow \infty} \frac{(x+1)(x^2+1)...(x^n+1)}{[(nx)^n+1]^{\frac{n+1}{2}}}$;
+    \item $\lim_{n \rightarrow \infty} \frac{(n+4)!-(n+2)!}{(n+3)!}$;
+    \item $\lim_{n \rightarrow \infty} \frac{1+3+...+(2n-1)}{1+4+...+(3n-2)}$;
+    \item $\lim_{n \rightarrow \infty} \frac{1-2+3-4+...+(-1)^{n-1}n}{n}$;
+    \item $\lim_{x \rightarrow \infty} (\frac{5}{6}+\frac{13}{36}+...+\frac{2^n-3^n}{6^n})$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-81}
-
+Nech ${\{a_n\}}_{n=1}^\infty$ je konvergentná postupnosť. Potom existuje maximum alebo minimum množiny $\{a_n: n \in \mathbb{N}\}$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-82}
-
+Dokážte, že neexistuje racionálna funkcia $\mathbb{R}$ s celočíselnými koeficientami taká, aby platilo 
+$$\forall r \in \mathbb{Q} \exists k \in \mathbb{Z}: R(k)=r.$$
 \end{defproblem}
 
 \begin{defproblem}{limita-83}
-
+Nájdite limity:
+\begin{enumerate}
+\item $\lim_{x \rightarrow 0 \frac{\sqrt[m]{1+\alpha x}-\sqrt[n]{1+\beta x}}{x}},(m,n \in \mathbb{Z})$;
+\item $\lim_{x \rightarrow 0}  \frac{\sqrt[m]{1+\alpha x}\sqrt[n]{1+\beta x}-1}{x},(m,n \in \mathbb{Z})$;
+\item $\lim_{x \rightarrow 0} (\sqrt{\frac{1}{x}+\sqrt{\frac{1}{x}+\sqrt{\frac{1}{x}}}}-\sqrt{\frac{1}{x}+\sqrt{\frac{1}{x}+\sqrt{\frac{1}{x}}}})$;
+\end{enumerate}
+\begin{multicols}{2}
+\begin{enumerate}[resume]
+    \item $\lim_{x \rightarrow -\infty} (x+\sqrt{\frac{x^3+2x^2}{x+1}})$;
+    \item $\lim_{x \rightarrow -\infty} \arcsin (\sqrt{x^2+x}+x)$;
+    \item $\lim_{x \rightarrow \infty} \frac{\sqrt{3x-1}-\sqrt[3]{125n^3+n}}{\sqrt[5]{n}-n}$;
+    \item $\lim_{x \rightarrow \infty} x^{\frac{3}{2}}(\sqrt{x+2}-2\sqrt{x+1}+\sqrt{x})$;
+    \item $\lim_{x \rightarrow \infty} (\sqrt[3]{x^3+3x^2}-\sqrt{x^2-2x})$;
+    \item $\lim_{x \rightarrow \infty} \frac{(x-\sqrt{x^2-1})^n+(x+\sqrt{x^2-1})^n}{x^n}, (n \in \mathbb{N})$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-84}
-
+Nech $f,g: \mathbb{R} \rightarrow \mathbb{R}$ sú periodické funkcie a $\lim_{x \rightarrow \infty} (f(x)-g(x)=0)$. Potom $f=g$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-85}
-
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x \rightarrow 0} \frac{\cos 3x^3-1}{\sin ^6 2x}$;
+    \item $\lim_{x \rightarrow 0} \frac{\sin (a+2x)-2\sin (a+x)+\sin a}{x^2}$;
+    \item $\lim_{x \rightarrow 0} \frac{4\sin (\frac{\pi}{6}+x)\sin (\frac{\pi}{6}+2x)-1}{\sin x}$;
+    
+    \item $\lim_{x \rightarrow 2} \frac{\arctan (x^2-2x)}{\sin 3\pi x}$;
+    \item $\lim_{x \rightarrow 0} \frac{\arctan \frac{1}{x}+2}{x^2}$;
+    \item $\lim_{x \rightarrow 0} \frac{1-\cos x\sqrt{\cos 2x}\sqrt[3]{\cos 3x}}{x^2}$;
+    \item $\lim_{x \rightarrow \frac{\pi}{3}} \frac{\tan^3 x-3 \tan c}{\cos (x+\frac{\pi}{6})}$;
+    \item $\lim_{x \rightarrow 0} \frac{\arcsin (1-x)}{\sqrt{x}}$;
+    \item $\lim_{x \rightarrow \frac{1}{2}} \frac{\arccos x}{(2x-1)^2}$;
+    \item $\lim_{x \rightarrow \frac{\pi}{2}} \frac{1-\sin ^3 x}{\cos ^2 x}$;
+    \item $\lim_{x \rightarrow 1} \frac{\sqrt{\sin \frac{\pi x}{2}}+\sqrt[3]{\sin \frac{3\pi x}{2}}}{\sqrt{x^2+1}-\sqrt{2x}}$;
+    \item $\lim_{x \rightarrow 1} \frac{\cos \frac{\pi x}{2}}{x-1}\cdot \frac{\sqrt{x+3}-2}{\sqrt{x^3+3x}-\sqrt{3x^2+1}}$;
+    \item $\lim_{x \rightarrow 0} \frac{1-\sqrt{\cos x}}{1-\cos \sqrt{x}}$;
+    \item $\lim_{x \rightarrow \frac{\pi}{2}} \sqrt{\frac{(2x-\pi)\sin \frac{\pi}{2x-\pi}}{\cos 4x}}$;
+    \item $\lim_{x \rightarrow \infty} (\sin \ln (x+1)-\sin \ln x)$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-86}
-
+\begin{enumerate}
+\item Nech $q \in (0,1)$, nech pre postupnosť ${\{a_n\}}_{n=1}^\infty$ nezáporných čísel platí $\sqrt[n]{a_n}\leq q,(n \in \mathbb{N})$. Potom $\lim_{n \rightarrow \infty} a_n=0$. Dokážte!
+\item Nájdite $\lim_{n \rightarrow \infty}\frac{n^{n-1}}{(2n^2+n+1)^{\frac{n+1}{2}}}$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-87}
-
+Dokážte, že
+\begin{enumerate}
+\item $\lim_{n \rightarrow \infty} \frac{n^k}{a^n}=0,(k \in \mathbb{R},a>1)$;
+\item $\lim_{n \rightarrow \infty} \frac{a^n}{n!}=0$;
+\item $\lim_{n \rightarrow \infty} \frac{1}{\sqrt[n]{n!}}=0$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-88}
-
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{n \rightarrow \infty} \sqrt[n]{\frac{2n^2-5n+3}{n^5+1}}$;
+    \item $\lim_{n \rightarrow \infty} \sqrt[n]{a^n+b^n},(a,b>0)$;
+    \item $\lim_{n \rightarrow \infty} \sqrt[n]{3^n+n2^n}$;
+    \item $\lim_{n \rightarrow \infty} (1+11^n)^{\frac{1}{n+2}}$;
+    \item $\lim_{n \rightarrow \frac{\pi}{2}} \frac{2^nn!}{n^n}$;
+    \item $\lim_{n \rightarrow \infty} \frac{3^nn!}{n^n}$;
+    \item $\lim_{n \rightarrow \infty} \frac{n!}{4^n}$;
+    \item $\lim_{n \rightarrow \infty} \frac{n^3+3^n}{n+3^{n+1}}$;
+    \item $\lim_{n \rightarrow \infty} \frac{2^{\frac{n}{2}}+(n+1)!}{n(3^n+n!)}$;
+    \item $\lim_{n \rightarrow \infty} \frac{2}{1-\sqrt[n]{n}}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-89}
-
+Nech $x_n=\sum_{k=1}^n \frac{1}{\sqrt{n^2+k}}$; ukážeme dva spôsoby výpočtu $\lim_{n \rightarrow \infty} x_n:$
+\begin{enumerate}
+\item odhadneme $x_n$ zhora a zdola:
+$$x_n=\sum_{k=1}^n \frac{1}{\sqrt{n^2+n}}\leq \sum_{k=1}^n \frac{1}{\sqrt{n^2+k}}\leq \sum_{k=1}^n \frac{1}{\sqrt{n^2}}=1;$$
+teda $$\frac{n}{\sqrt{n^2+n}}\leq x_n \leq 1, (n \in \mathbb{N}).$$
+Pretože $\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+n}}=1=\lim_{n \rightarrow \infty} 1$, je podľa vety $6$ $\lim_{n \rightarrow \infty} x_n=1$.
+\item Podľa vety o limite súčtu je 
+$$\lim_{n \rightarrow \infty} \sum_{k=1}^n \frac{1}{\sqrt{n^2+k}}=\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+1}}+\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+2}}+...+\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+n}}=0+0+...+0=0.$$
+Zrejme aspoň jeden z uvedených postupov je nesprávny. Ktorý to je a v čom spočíva chyba?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-90}
-
+Sformulujte a dokážte pravidlá pre výpočet limít typu $0^{+\infty}$ a $0^{-\infty}$.
 \end{defproblem}
 
 \begin{defproblem}{limita-91}
-
+Nájdite limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{n \rightarrow \infty} (\frac{3x^2-x+1}{2x^2+x+1})^{\frac{x^3}{1-x}}$;
+    \item $\lim_{n \rightarrow \infty} \tan ^n (\frac{\pi}{4}+\frac{1}{n})$;
+    \item $\lim_{n \rightarrow \infty} (\frac{2^x}{1+x^{x+1}})^{-x^2}$;
+    \item $\lim_{n \rightarrow 0} \sqrt[x]{\cos \sqrt{x}}$;
+    \item $\lim_{n \rightarrow 0} (1-\cos x)^{\frac{1}{x^2}}$;
+    \item $\lim_{n \rightarrow \frac{\pi}{4}} (\tan (\frac{\pi}{8}+x))^{\tan 2x}$;
+    \item $\lim_{n \rightarrow 0} (\frac{1+\sin x \cos ^ \alpha x}{1+\sin x \cos \beta x})^{\coth ^3 x}$;
+    \item $\lim_{n \rightarrow \frac{\pi}{3}} (\cos x)^{\frac{1}{(3x-\pi)^3}}$;
+    \item $\lim_{n \rightarrow \infty} (\frac{a_1x+b_1}{a_2x+b_2})^x,(a_1,a_2>0)$;
+    \item $\lim_{n \rightarrow 1} (\frac{\sin (x-1)}{x-1})^{\frac{\sin (x-1)}{x-1-\sin (x-1)}}$;
+    \item $\lim_{n \rightarrow \infty} \frac{(x+a)^{x+a}(x+b)^{x+b}}{(x+a+b)^{2x+a+b}}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-92}
-
+Nájdite limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{n \rightarrow 1} (1-x)\log_x 2$;
+    \item $\lim_{n \rightarrow \infty} \ln (1+2^x) \ln (1+\frac{3}{x})$;
+    \item $\lim_{n \rightarrow \infty} \ln \frac{x+\sqrt{x^2+1}}{x+\sqrt{x^2-1}} \cdot \ln ^{-2} \frac{x+1}{x-1}$;
+    \item $\lim_{n \rightarrow a} \frac{x^\alpha-a^\alpha}{x-a},(a>0,\alpha \in \mathbb{R})$;
+    \item $\lim_{n \rightarrow a} \frac{x^x-a^a}{x-a},(a>0)$;
+    \item $\lim_{n \rightarrow \infty} (\frac{\sqrt[n]{a}+\sqrt[n]{b}}{2})^n,(a.b>0)$;
+    \item $\lim_{n \rightarrow \infty} n^2(\sqrt[n]{x}-\sqrt[n+1]{x}),(x>0)$;
+    \item $\lim_{n \rightarrow 0} \frac{a^{x^2}-b^{x^2}}{(a^x-b^x)^2},(a,b>0)$;
+    \item $\lim_{n \rightarrow 0} (\frac{a^{x^2}-b^{x^2}}{(a^x-b^x)^2})^{\frac{1}{x}},(a,b>0)$;
+    \item $\lim_{n \rightarrow 0} \frac{\cos (xe^x)-\cos (xe^{-x})}{x^3}$;
+    \item $\lim_{n \rightarrow 1} \frac{\sin ^2 \pi x^\alpha}{\sin ^2 \pi x^\beta},(\beta \neq 0)$;
+    \item $\lim_{n \rightarrow 1} \frac{\sin ^2 \pi 2^{x}}{\ln (\cos \pi 2^{x})}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-93}
-
+\begin{enumerate}
+\item Dokážte, že:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{n \rightarrow \infty} \frac{x^{\alpha}}{a^x}=0,(a>1,\alpha>0)$;
+    \item $\lim_{x \rightarrow \infty} \frac{\log_a x}{x^\alpha}=0,(a>1,\alpha >0)$.
+\end{enumerate}
+\end{multicols}
+\item Nájdite:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{n \rightarrow 0} x^{\frac{1}{100}^{-\frac{1}{x^2}}}$;
+    \item $\lim_{x \rightarrow 0} x \ln x$;
+    \item $\lim_{x \rightarrow \infty} (\frac{1}{n})^{\tan \frac{1}{n}}$.
+\end{enumerate}
+\end{multicols}
+\textit{Poznámka:}
+Tvrdenie z príkladu $192.(a)$ si možno zapamätať v nasledujúcej symbolickej podobe $\log_a x\ll x^\alpha \ll a^x$ (pre $x$ dostatočne veľké, $\alpha >0, a>0$)
+kde $f\ll g$ (pre dostatočne veľké x) znamená $\lim_{x \rightarrow \infty} \frac{f(x)}{g(x)}=0$.
+Pre postupnosti platí (pozri aj príklad $186$):
+$\log_a n\ll n^\alpha\ll a^n\ll n!$ (pre $n$ dostatočne veľké,  $\alpha >0, a>0$)
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-94}
-
+Nech $\lim_{x \rightarrow a} \frac{\alpha (x)}{\alpha_1 (x)}$ a $\lim_{x \rightarrow a} \frac{\beta (x)}{\beta_1(x)}$ sú konečné a nenulové. Potom $\lim_{x \rightarrow a} \frac{\alpha (x)}{\beta (x)}$ existuje práve vtedy, keď existuje $\lim_{x \rightarrow a} \frac{\alpha_1 (x)}{\beta_1 (x)}$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-95}
-
+Nech $a$ je definovaná na $\mathbb{R}$ a $\lim_{x \rightarrow 0} f(x)=+\infty$. Zostrojte funkciu $g: \mathbb{R} \rightarrow \mathbb{R}$, pre ktorú existuje nenulová $\lim_{x \rightarrow 0} g(x)$ a neexistuje $\lim_{x \rightarrow 0} \frac{f(x)}{g(x)}$.
 \end{defproblem}
 
 \begin{defproblem}{limita-96}
-
+Dokážte, že nasledujúce postupnosti sú konvergentné:
+\begin{enumerate}
+\item $a_n=\frac{(2n)!!}{(2n+1)!!}$, kde $(2n)!!=2\cdot4\cdot...\cdot2n,(2n+1)!!=1\cdot3\cdot...\cdot(2n+1)$;
+\item $a_n=1+\frac{1}{2^2}+\frac{1}{3^2}+...+\frac{1}{n^2}$;
+\item $a_n=(1+\frac{1}{2})\cdot(1+\frac{1}{4})\cdot...\cdot(1+\frac{1}{2^n})$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-97}
-
+Nech $b_1=1,b_n=\sqrt{1+\sqrt{2+...+\sqrt{n}}}$. Potom ${\{b_n\}}_{n=1}^\infty$ je konvergentná postupnosť. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-98}
-
+Nájdite $\lim_{n \rightarrow \infty} a_n$, ak
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $a_1=0,a_2=1,a_{n+2}=\frac{a_n+a_{n+1}}{2}$;
+    \item $a_1=a,a_2=b,a_{n+2}=\frac{a_n+a_{n+1}}{2}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-99}
-
+Nech $f$ je funkcia definovaná na $\mathbb{R}$, $a \in \mathbb{R^*},b \in \mathbb{R^*}$. Rozhodnite, či tvrdenie $\lim_{x \rightarrow f(x)=b}$ je ekvivalentné s niektorým z nasledujúcich výrokov:
+\begin{enumerate}
+\item pre každú monotónnu postupnosť ${\{a_n\}}_{n=1}^\infty$ takú, že $\lim_{x \rightarrow \infty} a_n=a$, pričom $a_n \neq a,(n \in \mathbb{N})$ platí $\lim_{x \rightarrow \infty} f(a_n)=b$;
+\item z každej postupnosti ${\{a_n\}}_{n=1}^\infty$, ktorej limitou je $a$, pričom $a_n \neq a ,(n \in \mathbb{N})$, možno vybrať postupnosť ${\{a_{n(k)}\}}_{n=1}^\infty$ takú, že $\lim_{x \rightarrow \infty} f(a_{n(k)})=b$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-100}
-
+Nech $a$ je hromadný bod definičného oboru $D(f)$ funkcie $f$. Dokážte, že nasledujúce dve podmienky sú ekvivalentné:
+\begin{enumerate}
+\item neexistuje $\lim_{x \rightarrow \infty} f(x)=b$;
+\item existujú postupnosti ${\{a_n\}}_{n=1}^\infty$, ${\{b_n\}}_{n=1}^\infty$ prvkov z $D(f) \setminus \{a \}$ také, že $\lim_{n \rightarrow \infty} a_n=lim_{n \rightarrow \infty} b_n=a$, $\lim_{x \rightarrow \infty} f(a_n)$ a $\lim_{x \rightarrow \infty} f(b_n)$ existujú a nerovnajú sa.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-101}
-
+Nech je daná ohraničená postupnosť ${\{a_n\}}_{n=1}^\infty$. Dokážte, že 
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\limsup_{n \rightarrow \infty} a_n=\inf \{\sup_{k \geq n} a_k: n \in \mathbb{N}\}$;
+    \item $\liminf_{n \rightarrow \infty} a_n= \sup \{\inf_{k \geq n} a_k: n \in \mathbb{N}\}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-102}
-
+Existuje postupnosť taká, že množina jej hromadných hodnôt je
+\begin{enumerate}
+\item $\langle 0,1 \rangle$;
+\item $(0,1)$?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-103}
-
+Nech ${\{a_n\}}_{n=1}^\infty$ je ohraničená postupnosť a $\lim_{n \rightarrow \infty} (a_{n+1}-a_n)=0$. Dokážte, že množina $H$ hromadných hodnôt postupnosti ${\{a_n\}}_{n=1}^\infty$ je množina $\{x \in \mathbb{R}: \liminf_{n \rightarrow \infty} a_n \leq x \leq \limsup_{n \rightarrow \infty} a_n\}$.
 \end{defproblem}
 
 \begin{defproblem}{limita-104}
-
+Nech v postupnosti ${\{a_n\}}_{n=1}^\infty$ konvergujú podpostupnosti ${\{a_{2k}\}}_{k=1}^\infty$,${\{a_{2k-1}\}}_{k=1}^\infty$,${\{a_{3k}\}}_{k=1}^\infty$. Dokážte, že potom konverguje aj postupnosť ${\{a_n\}}_{n=1}^\infty$.
 \end{defproblem}
 
 \begin{defproblem}{limita-105}
-
+Aké postupnosti vyhovujú podmienke
+\begin{enumerate}
+\item $\forall \varepsilon >0 \forall n_0 \in \mathbb{N} \exists n \in \mathbb{N},n>n_0: |a_n|< \varepsilon$;
+\item $\forall \varepsilon >0 \exists n_0 \in \mathbb{N} \exists n \in \mathbb{N},n>n_0: |a_n|< \varepsilon$?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-106}
-
+\begin{enumerate}
+\item Nech pre postupnosť ${\{a_n\}}_{n=1}^\infty$ kladných čísel platí $\limsup_{n \rightarrow \infty} a_n \cdot \limsup_{n \rightarrow \infty} \frac{1}{a_n}=1$. Potom ${\{a_n\}}_{n=1}^\infty$ je konvergentná postupnosť. Dokážte!
+\item Pre ktoré postupnosti ${\{a_n\}}_{n=1}^\infty$ kladných čísel platí vzťah $\liminf_{n \rightarrow \infty} a_n \cdot \limsup_{n \rightarrow \infty} \frac{1}{a_n}=1$?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-107}
-
+Nech ${\{a_n\}}_{n=1}^\infty$, ${\{b_n\}}_{n=1}^\infty$ sú ohraničené postupnosti nezáporných čísel. Dokážte nasledujúce tvrdenia:
+\begin{enumerate}
+\item ak existuje konečná $\lim_{n \rightarrow \infty} a_n$, tak $\liminf_{n \rightarrow \infty} a_n \vdots b_n=\lim_{n \rightarrow \infty} a_n \cdot \limsup_{n \rightarrow \infty} b_n$;
+\item $\liminf_{n \rightarrow \infty} a_n \cdot \liminf_{n \rightarrow \infty} b_n \leq \liminf_{n \rightarrow \infty} a_n \cdot b_n \leq \liminf_{n \rightarrow \infty} a_n \cdot \limsup_{n \rightarrow \infty} b_n \leq \limsup_{n \rightarrow \infty} a_n \cdot b_n \leq \limsup_{n \rightarrow \infty} a_n \cdot \limsup_{n \rightarrow \infty} b_n$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-108}
-
+Nech ${\{a_n\}}_{n=1}^\infty$ je postupnosť kladných čísel, nech $\liminf_{n \rightarrow \infty} a_n =0$. Dokážte, že existuje nekonečne veľa indexov $n$ takých, že platí $$\forall k \in \mathbb{N}: k<n \Rightarrow a_k>a_n$$
+(t.j. $a_n$ je menšie než všetky predchádzajúce členy postupnosti ${\{a_n\}}_{n=1}^\infty$).
 \end{defproblem}
 
 \begin{defproblem}{limita-109}
@@ -906,5 +1109,93 @@ $$\liminf_{n \rightarrow \infty} (a_n+b_n)=\lim_{n \rightarrow \infty} a_n+\limi
 \end{defproblem}
 
 \begin{defproblem}{limita-128}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-129}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-130}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-131}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-132}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-133}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-134}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-135}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-136}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-137}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-138}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-139}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-140}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-141}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-142}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-143}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-144}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-145}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-146}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-147}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-148}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-149}
+
+\end{defproblem}
+
+\begin{defproblem}{limita-150}
 
 \end{defproblem}
