@@ -1,0 +1,64 @@
+\chapter{Spojitosť funkcie}%\label{chapter:gramatiky}
+
+\section{Definícia spojitosti v bode a na množine. Klasifikácia bodov nespojitosti}
+Hovoríme, že funkcia $f$ je spojitá v bode $a \in D(f)$, ak platí
+ $$\forall \varepsilon > 0 \exists \delta > 0 \forall x \in D(f):|x-a|<\delta \Rightarrow |f(x)-f(a)|< \varepsilon$$
+ \textit{Poznámka:} Všimnime si, že bod $a$ nemusí byť hromadným bodom množiny $D(f)$. Môžu teda nastať dva prípady:
+ \begin{itemize}
+ \item ak $a \in D(f)$ je hromadným bodom množiny $D(f)$, tak podmienka vyššie je ekvivalentná s podmienkou $\lim_{x \rightarrow a} f(x)=f(a)$;
+ \item ak $a \in D(f)$ nie je hromadným bodom množiny $D(f)$ (t.j. existuje $\eta > 0 $ tak, že $D(f) \cup (a-\eta,a+\eta)=\{ a\}$; taký bod sa nazýva izolovaným bodom množiny $D(f)$), je podmienka vyššie splnená (stačí položiť $\delta=\eta$ pre ľubovoľné $\varepsilon > 0$). Teda funkcia $f$ je splnená v každom izolovanom bode množiny $D(f)$.
+ \end{itemize}
+ 
+ \begin{veta}
+ Ak funkcie $f,g,f-g,f \cdot g$ sú spojité v bode $a$. Ak naviac $g(a) \neq 0$, tak aj funkcia $\frac{f}{g}$ je spojitá v bode $a$.
+ \end{veta}
+ 
+ \begin{veta}
+ Ak funkcia $f$ je spojitá v bode $a$, funkcia $g$ je spojitá v bode $f(a)$, tak funkcia $g \circ f$ je spojitá v bode $a$.
+ 
+ Hovoríme, že funkcia $f$ je spojitá, ak je spojitá v každom bode svojho definičného oboru. Hovoríme, že funkcia $f$ je spojitá na množine $A$ ($\emptyset \neq a \subset D(f)$), ak je spojitá funkcia $f \setminus A$.
+ \end{veta}
+ 
+ \begin{veta}
+ Každá základná elementárna funkcia je spojitá.
+ \end{veta}
+ 
+ (Z viet $1,2$ a $3$ vyplýva veta $4$ z kapitoly $2.$)
+ 
+ \begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-1}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-2}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-3}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-4}
+\end{enumerate}
+
+\textit{Riešenie 2:}
+Dokázať spojitosť funkcie $f$ na množine $\mathbb{R} \setminus \{0\}$ je jednoduché: pre každé číslo $a<0$ možno nájsť také jeho okolie $O(a)$, na ktorom sa funkcia $f$ zhoduje s elementárnou funkciou $\frac{1-e^x}{x}$ tá je spojitá v bode $a$; preto $\lim_{x \rightarrow a}f(x)=\lim_{x \rightarrow a}\frac{1-e^x}{x}=\frac{1*e^a}{a}=f(a)$, čo znamená, že funkcia $f$ je spojitá v bode $a$.Analogicky sa postupuje v prípade $a>0$ \footnote{Uvedenú myšlienku možno ľahko zovšeobecniť: ak je daná funkcia $f$ a spojitá funkcia $g$ a existuje neprázdna otvorená množina $G \subset D(f) \cap D(g)$ taká, že $\frac{f}{G}=\frac{g}{G}$, tak $f$ je spojitá v každom bode množiny $G$.}. Prípad $a=0$ treba vyšetriť samostatne: vtedy $\lim_{x \rightarrow 0+}f(x)=\lim_{x \rightarrow 0+}\frac{1-e^x}{x}=-1,\lim_{x \rightarrow 0-}f(x)=\lim_{x \rightarrow 0-}(2x-1)=-1$, preto $\lim_{x \rightarrow 0}f(x)=-1=f(0)$. Funkcia $f$ je teda spojitá aj v bode $0$, preto $f$ je spojitá funkcia.
+
+\begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-5}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-6}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-7}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-8}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-9}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-10}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-11}
+\end{enumerate}
+
+Číslo $a \in \mathbb{R}$, ktoré je hromadným bodom definičného oboru $D(f)$ funkcie $f$, sa nazýva bodom nespojitosti funkcie $f$, ak je splnená niektorá z nasledujúcich podmienok:
+\begin{itemize}
+\item $a \notin D(f)$;
+\item neexistuje $\lim_{x \rightarrow a}f(x)$;
+\item $a \in D(f)$ a existuje $\lim_{x \rightarrow a}f(x)$, ale neplatí $\lim_{x \rightarrow a}f(x)=f(a)$.
+\end{itemize}
+Ak $a \in \mathbb{R}$ je bod nespojitosti funkcie $f$ a existuje konečná $\lim_{x \rightarrow a}f(x)$, nazýva sa bodom odstrániteľnej nespojitosti. Ak neexistuje vlastná $\lim_{x \rightarrow a}f(x)$ nazýva sa $a$ bodom neodstrániteľnej nespojitosti.
+
+Nech $a \in \mathbb{R}$ je bod nespojitosti funkcie $f$, pričom $a$ je hromadným bodom množín $D(f) \cap (-\infty,a)$ aj $D(f)\cap (a,+\infty)$. Ak v bode $a$ existujú vlastné jednostranné limity a $\lim_{x \rightarrow a-}f(x) \neq \lim_{x \rightarrow a+}f(x)$ nazýva sa $a$ bodom nespojitosti $1.$ druhu (rozdiel $\lim_{x \rightarrow] a+}f(x)-\lim_{x \rightarrow a-}f(x)$ sa potom nazýva skokom funkcie $f$ v bode $a$). Ak aspoň jedna z jednostranných limít v bode $a$ neexistuje alebo je nevlastná, nayzva sa $a$ bodom nespojitosti $2.$ druhu.
+
+\textit{Poznámka:}
+Klasifikácia bodov nespojitosti nie je v matematickej literatúre jednotná; napr. niekedy sa hromadné body množiny $D(f)$, ktoré nie sú prvkami $D(f)$, nepovažujú za body nespojitosti funkcie $f$; v definícii bodu nespojitosti $1.$ druhu s aniekedy nepovažuje splnenie podmienky $\lim_{x \rightarrow a+}f(x) \neq \lim_{x \rightarrow a-}f(x)$ atď.
+
+\begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-12}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-13}
+\end{enumerate}
