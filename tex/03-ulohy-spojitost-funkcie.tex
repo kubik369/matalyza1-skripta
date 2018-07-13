@@ -99,12 +99,14 @@ Pomocou kvantifikátorov zapíšte tvrdenie "funkcia $f$ nie je spojitá v bode 
     $;
 	\item $f(x)=x \cdot [\frac{1}{x}]$;
 	\item $g(g(g(x)))$, kde $g(x)=\frac{1}{1-x}$;
-	\item $f(x)=g(\varphi(x))$, kde
+	\item $f(x)=g(\varphi(x))$, 
+	\\ kde
 	 $g(x) = \left\{ \begin{array}{r@{\quad}c}
     \sin \pi x,& $ak $ x \in \mathbb{Q} \\
     0, &  $ak $ x \in \mathbb{R} \setminus \mathbb{Q} \\ \end{array} \right.
     $;
-	\item $f(x)=g(\varphi(x))$, kde
+	\item $f(x)=g(\varphi(x))$,\\
+    kde
 	 $g(x) = \left\{ \begin{array}{r@{\quad}c}
     x,& $ak $ 0 \leq x \leq 1 \\
     2-x, &  $ak $ 1<x<2  \\ \end{array} \right.
@@ -123,60 +125,70 @@ Pomocou kvantifikátorov zapíšte tvrdenie "funkcia $f$ nie je spojitá v bode 
 	
 	(\textit{Návod:} Stačí dokázať, že množina $S$ všetkých bodov nespojitosti funkcie $f$ ležia vnútri intervalu $I$ - každý z nich je bodom nespojitosti $1.$ druhu - je spočítateľná. Ak každému bodu $a \in S$ priradíme interval ($\lim_{x \rightarrow a-}f(x),\lim_{x \rightarrow a+}f(x)$)), dostaneme systém po dvochdisjunktných intervalov; tento systém je spočítateľný - pozri príklad $99$. )
 	
-	\section{Vlastnosti spojitých funkcií I}
 	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-14}
-	
+	Dokážte, že existuje
+	\begin{enumerate}
+	\item $x \in (0,1)$, pre ktoré platí $x^5+x^4+x^3+x^2-x-1=0$;
+	\item $x \in \mathbb{R}$, pre ktoré platí $x=\cos x$;
+	\item aspoň jedno riešenie rovnice $P(x)=0$, kde $P$ je polynóm nepárneho stupňa.
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-15}
-	
+	Nech funkcia $f$ je spojitá na intervale $(a,b)$, nech $x_1,x_2,...,x_n \in (a,b)$. Potom existuje $o \in (a,b)$ tak, že 
+	$$f(c)=\frac{1}{n}(f(x_1)+...+f(x_n)).$$ Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-16}
-	
+	Nech $f:\langle 0,1 \rangle \rightarrow \langle 0,1 \rangle$ je spojitá funkcia. Potom pre niektoré $c \in \langle 0,1 \rangle$ platí $f(c)=c$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-17}
-	
+	Ak pre spojitú unkciu $f: \mathbb{R} \rightarrow \mathbb{R}$ platí $f(\mathbb{Q}= \{0\})$, tak aj $f(\mathbb{R})=\{0\}$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-18}
-	
+	Nech funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$ má túto vlastnosť: pre každý interval $I \subset \mathbb{R}$ je $I \setminus f(\mathbb{R} \neq \emptyset)$. Potom je $f$ konštantná na $\mathbb{R}$ alebo nespojitá v každom bode $x \in \mathbb{R}$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-19}
-	
+	Ak je funkcia $f$ prostá a spojitá na intervale $I$, tak je tam rýdyomonotónna. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-20}
-	
+	Nech spojitá funkcia $f$ nadobúda na intervale $\langle a,b \rangle$ len kladné hodnoty. Potom existuje $\mu > 0$ tak, že $f(x) \geq \mu$ platí pre každé $x \in \langle a,b \rangle$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-21}
-	
+	Ak funkcia $f: (a,b) \rightarrow \mathbb{R}$ $(a,b\in \mathbb{R^*})$ je spojitá a existujú konečné $\lim_{x \rightarrow a}f(x),\lim_{x \rightarrow b}f(x)$, tal $f$ je ohraničená. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-22}
-	
+	Ak $P$ je polynóm párneho stupňa, tak existuje $\max_{x \in \mathbb{R}} P(x)$. Dokážte! Aký je koeficient pri člene s najvyššou mocninou, ak existuje $\min_{x \in \mathbb{R}} P(x)$?
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-23}
-	
+	Ak $f$ je spojit8 na intervale $\langle0,\infty)$ a $\lim_{x \rightarrow \infty} f(x)=f(0)$, tak existuje $\max_{x \geq 0} f(x)$ aj $\min_{x \geq 0}f(x)$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-24}
-	
+	Vetu $5$ možno dokázať na základe nasledujúcich faktov:
+	\begin{enumerate}
+	\item ak funkcia $f$ je spojitá na kompaktnej množine $A$, tak $f(A)$ je kompaktná množina;
+	\item každá kompakná množina je ohraničená a obsahuje svoje supremum a infimum.
+	\end{enumerate}
+	Dokážte tieto tvrdenia!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-25}
-	
+	Nech $f: \mathbb{R} \rightarrow \mathbb{R}$ má len body nespojitosti $1.$ druhu. Potom $f$ je ohraničená na každom ohraničenom intervale. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-26}
-	
+	Existuje spojitá a ohraničená funkcia $f:(0,1 \rangle \rightarrow \mathbb{R}$ taká, že neexistuje $\max_{x \in (0,1 \rangle} f(x)$ ani $x \in (0,1 \rangle f(x)$?
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-27}
@@ -204,5 +216,61 @@ Pomocou kvantifikátorov zapíšte tvrdenie "funkcia $f$ nie je spojitá v bode 
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-33}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-34}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-35}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-36}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-37}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-38}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-39}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-40}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-41}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-42}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-43}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-44}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-45}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-46}
+	
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-47}
 	
 	\end{defproblem}
