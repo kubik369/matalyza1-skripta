@@ -102,3 +102,62 @@ Ak je funkcia $f$ spojitá na kompaktnej množine $A$ (alebo špeciálne na uzav
 \end{enumerate}
 
 \section{Rovnomerná spojitosť. Vlastnosti spojitých funkcií II}
+Funkcia $f$ sa nazýva rovnomerne spojitá na množine $A \subset D(f)$ $(A \neq \emptyset)$, ak platí 
+$$\forall \varepsilon > 0 \exists \delta > 0 \forall x,y\in A: |x-y|<\delta \Rightarrow |f(x)-f(y)|<\varepsilon.$$
+Funkcia $f$ rovnomerne spojitá na svojom definičnom obore sa nazýva rovnomerne spojitá.
+
+\begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-27}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-28}
+\end{enumerate}
+
+\textit{Riešenie 2:}
+Predpokladajme, že $x,y \in \langle -2,5 \rangle,|x-y|<\delta$, a pokúsme sa na základe toho zhora odhadnúť výraz $|f(x)-f(y)|$. Postupne dostaneme $|f(x)-f(y)|=|x^2-2x-1-(y^2-2y-1)|=|(x^2-y^2)+2(y-x)|\leq |x^2-y^2|+2|x-y|=|x-y||x+y|+2|x-y|=|x-y|(|x+y|+2)\leq |x-y|(|x|+|y|+2)\leq 12|x-y|<\delta$.
+
+Zistili sme teda: ak $x,y \in \langle -2,5 \rangle,|x-y|<\delta$, tak $|f(x)-f(y)|<12\delta$. To znamená, že funkcia $f$ je rovnomerne spojitá na intervale $\langle -2,5 \rangle$, pre dané $\varepsilon > 0$ stačí totiž položiť $\delta = \frac{\varepsilon}{12}$.
+
+\textit{Riešenie 5:}
+Ak si predstavíme graf funkcie $f(x)=\sin x^2,x \geq 0$, zistíme, že v smere k $+\infty$ funkcia $f$ na intervaloch stále menšej dĺžky nadobúda všetky hodnoty medzi $1$ a $-1$, t.j. že jej graf sa smerom k $+\infty$ "zhusťuje". To nás vedie k domnienke, že $f$ nie je na $\langle 0,\infty)$ rovnomerne spojitá. Všimnime si preto podrobnejšie dvojice bodov $(x_n,y_n)=(\sqrt{-\frac{\pi}{2}+2\pi n},\sqrt{\frac{\pi}{2}+2\pi n}),n\in \mathbb{N}$; zrejme $f(x_n)=-1,f(y_n)=1$. Pretože $\lim_{n \rightarrow \infty}|y_n-x_n|=0$, existuje pre každé $\delta>0$ dvojica $(x_n,y_n)$ také, že $|x_n-y_n|<\delta$. Tým sme dokázali 
+$$\exists \varepsilon >0 (\varepsilon=2)\forall \delta>0\exists x_n \geq 0,y_n \geq 0: |x_n-y_n|<\delta \wedge |f(x_n)-f(y_n)| \geq \varepsilon,$$
+čo je negácia tvrdenia "$f$ je rovnomerne spojitá na $\langle 0,\infty )$". Teda $\sin x^2$ nie je rovnomerne spojitá na intervale $\langle 0, \infty )$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-29}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-30}
+\end{enumerate}
+
+\begin{veta}
+Funkcia spojitá na kompaktnej množine $K$ je rovnomerne spojitá na $K$.
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-31}
+\end{enumerate}
+
+\textit{Riešenie 2:}
+Na funkciu $f(x)=\frac{\sin x}{x},x \in (0,\pi \rangle$ nemôžeme vetu $6$, pretože $D(f)=(0,\pi \rangle$ nie je kompaktná množina. Pomôžeme si nasledovne: funkciu $f$ možno spojite dodefinovať v čísle $0$, pretože $0$ je bodom odstrániteľnej nespojitosti. Teda $f=f_1/(0,\pi \rangle$, kde funkcia $f_1$ je určená predpisom $f_1(x) = \left\{ \begin{array}{r@{\quad}c}
+    f(x), & $ak $ x \in (0,\pi \rangle \\
+    1, &  $ak $ x=0 \\ \end{array} \right.
+    $ . Na kompakte $\langle 0,\pi \rangle$ je $f_1$ spojitá, a teda podľa vety $6$ aj rovnomerne spojitá. Pretože zúženie rovnomerne spojitej funkcie je funkcia rovnomerne spojitá, je funkcia $\frac{\sin x}{x}$ rovnomerne spojitá na intervale $(0,\pi \rangle$.
+    
+\begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-32}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-33}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-34}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-35}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-36}
+\end{enumerate}
+
+\section{Ďalšie príklady}
+\begin{enumerate}[resume]
+	\item \useproblem[spojitost-funkcie]{s-funkcie-37}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-38}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-39}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-40}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-41}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-42}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-43}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-44}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-45}
+	\item \useproblem[spojitost-funkcie]{s-funkcie-46}
+\end{enumerate}

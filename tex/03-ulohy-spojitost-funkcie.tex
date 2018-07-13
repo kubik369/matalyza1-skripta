@@ -171,7 +171,7 @@ Pomocou kvantifikátorov zapíšte tvrdenie "funkcia $f$ nie je spojitá v bode 
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-23}
-	Ak $f$ je spojit8 na intervale $\langle0,\infty)$ a $\lim_{x \rightarrow \infty} f(x)=f(0)$, tak existuje $\max_{x \geq 0} f(x)$ aj $\min_{x \geq 0}f(x)$. Dokážte!
+	Ak $f$ je spojitá na intervale $\langle0,\infty)$ a $\lim_{x \rightarrow \infty} f(x)=f(0)$, tak existuje $\max_{x \geq 0} f(x)$ aj $\min_{x \geq 0}f(x)$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-24}
@@ -188,47 +188,80 @@ Pomocou kvantifikátorov zapíšte tvrdenie "funkcia $f$ nie je spojitá v bode 
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-26}
-	Existuje spojitá a ohraničená funkcia $f:(0,1 \rangle \rightarrow \mathbb{R}$ taká, že neexistuje $\max_{x \in (0,1 \rangle} f(x)$ ani $x \in (0,1 \rangle f(x)$?
+	Existuje spojitá a ohraničená funkcia $f:(0,1 \rangle \rightarrow \mathbb{R}$ taká, že neexistuje $\max_{x \in (0,1 \rangle} f(x)$ ani $\min_{x \in (0,1 \rangle} f(x)$?
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-27}
-	
+	Pomocou kvamtifikátorov zapíšeme tvrdenie "Funkcia $f$ je spojitá na intervale $(a,b)$, ale nie je tam rovnomerne spojitá."!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-28}
-	
+	Rozhodnite, či je funkcia $f$ rovnomerne spojitá na množine $A$. Svoje tvrdenie dokážte na základe definície!
+	\begin{enumerate}
+	\item $f(x)=5x-3$,$A=\mathbb{R}$;
+	\item $f(x)=x^2-2x-1$,$A=\langle -2,5 \rangle$;
+	\item $f(x)=\cos \frac{1}{x}$,$A=(0,1)$;
+	\item $f(x)=\frac{1}{x}$,$A=(\frac{1}{10},1)$;
+	\item $f(x)=\sin x^2$,$A=\langle 0,\infty)$;
+	\item $f(x)=\sqrt{x}$,$A=\langle 0,\infty)$;
+	\item $f(x)=x+\sin x$,$A=\mathbb{R}$.
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-29}
-	
+	Funkcia $f$ je rovnomerne spojitá na ohraničenom intervale $I$ práve vtedy, keď pre ľubovoľné $\varepsilon >0$ existuje spojitá po častiach lineárna funkcia $\varphi$ taká, že pre všetky $x \in I$ platí $|f(x)-\varphi(x)|< \varepsilon$. Dokážte! (Spojitá funkcia $\varphi$ definovaná na ohraničenom intervale $I$ sa nazýva po častiach lineárna, ak existuje konečný počet po dvoch disjunktných intervlov $I_1,I_2,...,I_n$ tak, že $I_1 \cup I_2 \cup ... \cup I_n=I$ a funkcie $\frac{\varphi}{I_i}$ $(i=1,...,n)$ sú lineárne; t.j. grafom je "lomená čiara".)
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-30}
-	
+	Pre funkciu $F$ nájdite spojitú po častiach lineárnu funkciu $f$ takú, aby pre všetky $x \in \langle a,b \rangle$ platilo $|F(x)-f(x)|<0,1$ ak:
+	\begin{enumerate}
+	\item $F(x)=x^2, \langle a,b \rangle = \langle -1,1 \rangle$;
+	\item $F(x)=\frac{1}{x}, \langle a,b \rangle = \langle \frac{2}{3},2 \rangle$.
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-31}
-	
+	Rozhodnite, či je funkcia $f$ rovnomerne spojitá na množine $A$:
+	\begin{enumerate}
+	\item $f(x)=\frac{x}{4-x^2}$, $A=\langle -1,1 \rangle$;
+	\item $f(x)=\frac{\sin x}{x}$, $A=(0, \pi \rangle$;
+	\item $f(x)=\sqrt[3]{x}$, $A=\langle 0,\infty)$;
+	\item  $f(x) = \left\{ \begin{array}{r@{\quad}c}
+    x\cdot \sin \frac{1}{x}, & $ak $ x \in (0,\pi \rangle \\
+    0, &  $ak $ x=0 \\ \end{array} \right.
+    $, $A= \langle 0,\pi \rangle$;
+	\item $f(x)=x \cdot \sin x$, $A= \langle 0,\infty)$;
+	\item $f(x)=\frac{x^6-1}{\sqrt{1-x^4}}$, $A=(-1,1)$;
+	\item $f(x)=\ln x$, $A=\langle 1, \infty)$.
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-32}
-	
+	Ak funkcia $f$ je spojitá na intervale $\langle 0,\infty)$ a existuje konečná $\lim_{x \rightarrow \infty} f(x)$, tak $f$ je rovnomerne spojitá na $\langle 0,\infty)$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-33}
-	
+	Každá spojitá periodická funkcia $f:\mathbb{R} \rightarrow \mathbb{R}$ je rovnomerne spojitá. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-34}
-	
+	Nech funkcia $f$ je definovaná na ohraničenom intervale $(a,b)$, nech 
+	\begin{enumerate}
+	\item $\lim_{x \rightarrow b-}f(x)=+\infty$;
+	\item $\lim_{x \rightarrow b-}f(x)$ neexistuje.
+	\end{enumerate}
+	Potom $f$ nie je rovnomerne spojitá na $(a,b)$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-35}
-	
+	Spojitá funkcia $f$ definovaná na ohraničenom intervale $(a,b)$ je rovnomerne spojitá na $(a,b)$ práve vtedy, keď existujú konečné $\lim_{x \rightarrow a+}f(x)$, $\lim_{x \rightarrow b-}f(x)$. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-36}
-	
+	\begin{enumerate}
+	\item Ak $f$ je rovnomerne spojitá na ohraničenom intervale $(a,b)$, tak $f$ je na $(a,b)$ ohraničená. Dokážte!
+    \item Uveďte príklad funkcie, ktorá je spojitá a ohraničená na ohraničenom intervale, ale nie je tam rovnomerne spojitá!
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-37}
