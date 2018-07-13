@@ -1,0 +1,20 @@
+\chapter{Diferenciálny počet funkcií jednej premennej}%\label{chapter:gramatiky}
+
+\section{Definícia derivácie}
+Hovoríme, že funkcia $f$ (definovaná v okolí bodu $a$ \footnote{t.j. pre niektoré $\varepsilon>0$ platí $(a-\varepsilon,a+\varepsilon) \subset D(f)$; pojmy derivácie a nevlastnej derivácie a nevlastnej derivácie v bode $a$ by bolo možné zaviesť aj za slabšieho predpokladu "$a \in D(f)$ je hromadný bod množiny $D(f)$" (odstránili by sa tým aj niektoré ťažkosti so zavedením pojmu derivácie ako funkcie), definícia predpokladajúca, že $a$ je vnútorný bod množiny $D(f)$, je však v literatúre najčastejšia}) má deriváciu v bode $a,(a \in \mathbb{R})$, ak existuje konečná $\lim_{x \rightarrow a}\frac{f(x)-f(a)}{x-a}$. Ak existuje nevlastná $\lim_{x \rightarrow a}\frac{f(x)-f(a)}{x-a}$, hovoríme, že funkcia $f$ má nevlastnú (alebo nekonečnú) deriváciu v bode $a$. Hodnotu $\lim_{x \rightarrow a}\frac{f(x)-f(a)}{x-a}$ v obidvoch týchto prípadoch označujeme $f'(a)$. Ak nás nezaujíma, či je $\lim_{x \rightarrow a}\frac{f(x)-f(a)}{x-a}$ konečná alebo nekonečná. používame spoločný názov vlastná alebo nevlastná derivácia v bode $a$.
+Pojmy derivácie sprava a nevlastnej derivácie sprava, resp. derivácie zľava a nevlastnej derivácie zľava dostaneme, ak v predchádzajúcich definíciách $\lim_{x \rightarrow a}\frac{f(x)-f(a)}{x-a}$ nahradíme limitou $\lim_{x \rightarrow a+}\frac{f(x)-f(a)}{x-a}$, resp. $\lim_{x \rightarrow a-}\frac{f(x)-f(a)}{x-a}$ (v takom prípade stačí predpokladať, že definičný obor funkcie $f$ obsahuje interval $\langle a,a+\varepsilon), resp. (a-\varepsilon,a\rangle$ pre niektoré $\varepsilon>0$). Hodnoty $\lim_{x \rightarrow a+}\frac{f(x)-f(a)}{x-a}$, resp. $\lim_{x \rightarrow a-}\frac{f(x)-f(a)}{x-a}$ označujeme $f'_+(a)$,resp. $f'_-(a)$.
+
+\begin{veta}
+Funkcia $f$ (definovaná v okolí bodu $a \in \mathbb{R}$) má vlastnú alebo nevlastnú deriváciu $f'(a)$ práve vtedy, keď existujú $f'_+(a),f'_-(a)$ a platí $f'_+(a)=f'_-(a)$. Hodnota $f'(a)$ sa pritom rovná spoločnej hodnote $f'_+(a)$ a $f'_-(a)$.
+\end{veta}
+
+Pojem derivácie ako funkcie sa vo všeobecnosti definuje nasledovne: Nech $M$ je množina všetkých bodov definičného oboru $D(f)$, v ktorých má funkcia $f$ deriváciu. Funkcia $f':M \rightarrow \mathbb{R}$, ktorá každému bodu $a$  $M$ priradí hodnotu $f'(a)$ derivácie funkcie $f$ v bode $a$, sa nazýva derivácia funkcie $f$. V špeciálnych prípadoch, ktoré ilustruje nasledujúca poznámka, sa niekedy pojem derivácie ako funkcie chápe širšie: ak definičným oborom funkcie $f$ je niektorý z intervalov $\langle a,b \rangle, \langle a,b),(a,b \rangle$, pričom v jeho koncovom bode existuje jednostranná derivácia (v prvom prípade prichádzajú do úvahy body $a,b$, v druhom bod $a$, v trečom bod $b$), tak funkciu $f'$ považujeme za definovanú aj v tomto bode, jej funkčnou hodnotou je hodnota príslušnej jednostrannej derivácie.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-1}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-2}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-3}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-4}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-5}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-6}
+\end{enumerate}

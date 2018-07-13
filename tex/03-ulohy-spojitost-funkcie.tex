@@ -265,45 +265,156 @@ Pomocou kvantifikátorov zapíšte tvrdenie "funkcia $f$ nie je spojitá v bode 
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-37}
-	
+	Vyšetrite spojitosť nasledujúcich funkcií, určte charakter bodov nespojitosti:
+	\begin{enumerate}
+	\item $f(a)=(-1)^{[x^2]}$; 
+	\item $f(a)=[\frac{1}{x}] sgn \sin [\frac{\pi}{x}]$;
+	\item $f(a)=\frac{x+1}{\arctan\frac{1}{x}}$;
+	\item $f(a)=\lim_{n \rightarrow \infty} (x \cdot \arctan(n \cdot \cot x))$;
+	\item $f(a)=\lim_{n \rightarrow \infty} \frac{x+x^2e^{nx}}{1+e^{nx}}$;
+	\item $f(a)=\lim_{t \rightarrow \infty}\frac{\ln (1+e^{xt})}{1+e^t}$.
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-38}
-	
+	Určte číslo $A$ tak, aby funkcia $f_1(x) = \left\{ \begin{array}{r@{\quad}c}
+    f(x), & $ak $ x \in D(f) \\
+    A, &  $ak $ x=0 \\ \end{array} \right.
+    $ bola spojitá v bode $0$:
+    \begin{enumerate}
+    \item $f(x)=\frac{1}{x^2}^{-\frac{1}{x^2}}$;
+    \item $f(x)=x^x,x>0$;
+    \item $f(x)=x \cdot \ln^2 x$.
+    \end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-39}
-	
+	Nech $f: \mathbb{R} \rightarrow \mathbb{R}$ je spojitá funkcia. Potom funkcia
+	$F(x) = \left\{ \begin{array}{r@{\quad}c}
+    -c, & $ak $ f(x)<-c \\
+    f(x), & $ak $ |f(x)|\leq c \\
+    0, &  $ak $ f(x)>c \\ \end{array} \right.
+    $
+    je spojitá. Dokážte!
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-40}
-	
+	Zoraďme množinu $\mathbb{Q}$ do proste postupnosti ${\{q_n\}}_{n=1}^\infty$; nech ${\{a_n\}}_{n=1}^\infty$ je daná postupnosť reálnych čísel. Definujme funkciu $\psi$ (nazýva sa zovšeobecnená Riemannova funkcia) nasledovne:
+	$$\psi = \left\{ \begin{array}{r@{\quad}c}
+    0, & $ak $ x \in \mathbb{R} \setminus \mathbb{Q} \\
+    a_n, &  $ak $ x=q_n \\ \end{array} \right.$$
+    Ak $\lim_{n \rightarrow \infty} a_n=0$, tak funkcia $\psi$ je spojitá v každom iracionálnom čísle. Dokážte! Platí aj obrátená implikácia?
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-41}
-	
+	Vyšetrite spojitosť funkcie
+	$f(x) = \left\{ \begin{array}{r@{\quad}c}
+    \frac{nx}{|x|}, & $ak $ x=\frac{m}{n}, m\in \mathbb{Z} $a$ m\in \mathbb{N} $sú nesúdeliteľné$ \\
+    f(x), & $ak $ |f(x)|\leq c \\
+    |x|, &  $ak $ x \in \mathbb{R} \setminus \mathbb{Q} \\ \end{array} \right.
+    $
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-42}
-	
+	Nech $f: \langle a,b \rangle \rightarrow \mathbb{R}$ je spojitá funkcia. Vyšetrite spojitosť funkcie
+	$$g(x) = \left\{ \begin{array}{r@{\quad}c}
+    \sup_{t \in \langle a,x)}f(t)-\inf_{t \in \langle a,x)}f(t), & $ak $ x \in (a,b \rangle \\
+    0, &  $ak $ x=a \\ \end{array} \right.
+    $$
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-43}
-	
+	\begin{enumerate}
+	\item Nech je daná funkcia $f$, nech $x_0 \in D(f)$ a platí
+	 $$\forall \delta>0 \exists \varepsilon >0: |x-x_0|<\delta \Rightarrow |f(x)-f(x_0)|<\varepsilon.$$
+	 Vyplýva z týchto predpokladov spojitosť funkcie $f$ v bode $x_0$? Akú vlastnosť funkcie $f$ popisuje uvedená podmienka?
+	\item Nech je daná funkcia $f$, nech platí
+	$$\forall x_0 \in D(f) \forall \delta>0 \exists \varepsilon >0: |f(x)-f(x_0)|<\varepsilon \Rightarrow |x-x_0|<\delta.$$
+	Vyplýva z týchto predpokladov spojitosť funkcie $f$? Aká vlastnosť funkcie $f$ je popísaná uvedenou podmienkou?
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-44}
-	
+	Možno tvrdiť, že funkcia $g \circ f$ je nespojitá v bode $a$, ak $f$ nie je spojitá v bode $a \in D(f)$ a funkcia $g$ je
+	\begin{enumerate}
+	\item spojitá na $\mathbb{R}$;
+	\item prostá a spojitá na $\mathbb{R}$?
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-45}
-	
+	Zostrojte funkciu $f: \mathbb{R} \rightarrow \mathbb{R}$, ktorá je spojitá práve v bodoch množiny $M$, ak
+	\begin{enumerate}
+	\item $M=\{0\}$;
+	\item $M=\emptyset$;
+	\item $M=\mathbb{N}$;
+	\item $M=\{\frac{1}{n};n \in \mathbb{N}\}$.
+	\end{enumerate}
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-46}
-	
+	Zistite, či existuje bijekcia $f: \mathbb{R} \rightarrow \mathbb{R}$, ktorá nie je spojitá v žiadnom bode $x \in \mathbb{R}$.
 	\end{defproblem}
 	
 	\begin{defproblem}{s-funkcie-47}
+	Dokážte, že neexistuje funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$ taká, že pre každé $a \in \mathbb{R}$ existuje vlastná $\lim_{x \rightarrow a}f(x)$ a platí $\lim_{x \rightarrow a}f(x) \neq f(a)$.
+	\end{defproblem}
 	
+	\begin{defproblem}{s-funkcie-48}
+	\begin{enumerate}
+	\item Ak pre funkciu $f: \mathbb{R} \rightarrow \mathbb{R}$ platí $\lim_{x \rightarrow a}f(x)=0$ v každom bode $a \in \mathbb{R}$, tak množina $A:=\{x \in \mathbb{R};f(x)\neq 0\}$ je spojiteľná. Dokážte!
+	\item Neexistuje funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$, ktorá má v každom bode $a \in \mathbb{R}$ nevlastnú limitu. Dokážte!
+	\end{enumerate}
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-49}
+	Ak polynóm $P$ párneho stupňa nadobúda aspoň jednu hodnotu, ktorá má oparné znamienko ako koeficient pri člene s najvyššou mocninou, tak $P$ má aspoň dva reálne korene. Dokážte!
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-50}
+	Ak je funkcia $f: \mathbb{R} \rightarrow \mathbb{Q}$ spojitá, tak je konštantná. Dokážte!
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-51}
+	Nech funkcia $f: \langle 0, \infty) \rightarrow \mathbb{R}$ je spojitá a ohraničená a neexistuje $\lim_{x \rightarrow \infty}f(x)$. Potom existuje $A \in \mathbb{R}$, pre ktoré má rovnica $f(x)=A$ nekonečne veľa riešení. Dokážte!
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-52}
+	Ak $f: \mathbb{R} \rightarrow \mathbb{R}$ je spojitá funkcia a pre každé $x \in \mathbb{R}$ platí $f(f(x))=x$, tak existuje riešenie rovnice $f(x)=x$. Dokážte!
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-53}
+	Ak $f: \mathbb{R} \rightarrow \mathbb{R}$ je spojitá periodická funkcia s periódou $T$, tak existuje také $a \in \mathbb{R}$, pre ktoré $f(a+\frac{T}{2})=f(a)$. Dokážte!
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-54}
+	\begin{enumerate}
+	\item Inverzná funkcia k rýdzomonotónnej funkcii definovanej na intervale je spojitá. Dokážte!
+	\item Uveďte príklad prostej funkcie spojitej aj v bode $0$, ktorej inverzná funkcia nie je spojitá v bode $f(0)$;
+	\item Uveďte príklad spojitej rýdzomonotónnej funkcie, ktorej inverzná funkcia nie je spojitá!
+	\end{enumerate}
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-55}
+	Nech funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$ je rovnomerne spojitá. Potom existujú čísla $a \geq 0,b \geq 0$ tak, že pre všetky $x \in \mathbb{R}$ platí $|f(x)| \leq a \cdot |x|+b$. Dokážte!
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-56}
+	\begin{enumerate}
+	\item Ak sú funkcie $f,g$ rovnomerne spojité na ohraničenom intervale $(a,b)$, tak sú tam rovnomerne spojité aj funkcie $f+g,f \cdot g$. Dokážte!
+	\item Uveďte príklad funkcií $f \cdot g$ rovnomerne spojitých na intervale, ktorých súčin tam nie je rovnomerne spojitý.
+	\end{enumerate}
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-57}
+	Rozhodnite o pravdivosti nasledujúceho tvrdenia: "Nech $g$ je spojitá nekonštantná funkcia definovaná na intervale $I$, nech funkcia $f$ je spojitá na intervale $g(I)$. Ak aspoň jedna z funkcií $f,g$ je rovnomerne spojitá, tak aj funkcia $f \circ g$ je rovnomerne spojitá."
+	\end{defproblem}
+	
+	\begin{defproblem}{s-funkcie-58}
+	Popíšte funkcie, ktoré vyhovujú podmienke:
+	\begin{enumerate}
+	\item $\forall \varepsilon >0 \exists 0<\delta<\varepsilon \forall x,y \in \mathbb{R}:|x-y|<\delta \Rightarrow |f(x)-f(y)|<\varepsilon$;
+	\item $\forall \varepsilon >0 \exists \delta>0 \forall x,y \in \mathbb{R}:|x-y|<\delta \Rightarrow f(x)-f(y)<\varepsilon$;
+	\item $\forall \varepsilon >0 \exists \delta>0 \forall x,y \in \mathbb{R}:|x-y|<\delta \Rightarrow |f(x)-f(y)|<\varepsilon$.
+	\end{enumerate}
 	\end{defproblem}
