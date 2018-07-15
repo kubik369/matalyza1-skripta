@@ -17,4 +17,105 @@ Pojem derivácie ako funkcie sa vo všeobecnosti definuje nasledovne: Nech $M$ j
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-4}
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-5}
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-6}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-7}
 \end{enumerate}
+
+\begin{veta}
+Ak funkcie $f,g$ majú derivácie v bode $a$, tak aj funkcie $c \cdot f$ ($c$ je reálna konštanta), $f+g,f-g,f\cdot g$ majú v bode $a$ derivácie a platí:
+\begin{enumerate}
+\item $(c\cdot f)'(a)=c\cdot f'(a)$,
+\item $(f+g)'(a)=f'(a)+g'(a)$,
+\item $(f-g)'(a)=f'(a)-g'(a)$,
+\item $(f\cdot g)'(a)=f'(a)\cdot g'(a)$.
+\end{enumerate}
+Ak naviac $g(a)\neq 0$ majú v bode $a$ deriváciu aj funkcie $\frac{1}{g},\frac{f}{g}$ a platí
+\begin{enumerate}
+\item $(\frac{1}{g})'(a)=-\frac{g'(a)}{g^2(a)}$,
+\item $(\frac{f}{g})'(a)=\frac{f'(a)\cdot g(a)-f(a)\cdot g'(a)}{g^2 (a)}$.
+\end{enumerate}
+\end{veta}
+
+\begin{veta}
+Ak funkcia $f$ má deriváciu v bode $a$, funkcia $g$ v bode $f(a)$ a zložená funkcia $h=g \circ f$ je definovaná v okolí bodu $a$, tak $h$ má v bode $a$ deriváciu a platí $$h'(a)=f'(a)\cdot g'(f(a)).$$
+(Analogické vety možno dokázať aj pre jednostranné derivácie.)
+\end{veta}
+
+V nasledujúcej tabuľke sú derivácie základných elementárnych funkcií ($c$ je reálna konštanta):
+\begin{itemize}
+\item $c'=0$,
+\item $(x^n)'=n\cdot x^{n-1},(n \in \mathbb{R} \setminus \{0\})$,
+\item $(\sin x)'=\cos x$,
+\item $(\cos x)'=-\sin x$,
+\item $(\tan x)'=\frac{1}{\cos^2 x}$,
+\item $(a^x)'=a^x \cdot \ln a$, špeciálne $(e^x)'=e^x$,
+\item $(\log_{a} x)'=\frac{1}{x\cdot \ln a},x>0$, špeciálne $(\ln x)'=\frac{1}{x},x>0$,
+\item $(\arcsin x)'=\frac{1}{\sqrt{1-x^2}}$,
+\item $(\arccos x)'=-\frac{1}{\sqrt{1-x^2}}$,
+\item $(\arctan x)'=\frac{1}{1+x^2}$,
+\item $(arcctan x)'=-\frac{1}{1+x^2}$.
+\end{itemize} 
+
+Pre deriváciu hyperbolických funkcií platia nasledujúce vzorce
+\begin{multicols}{2}
+\begin{itemize}
+   \item $(sh x)'=ch x$,
+   \item $(ch x)'=sh x$,
+   \item $(th x)'=\frac{1}{ch^2 x}$,
+   \item $(cth x)'=-\frac{1}{sh^2 x}$.
+\end{itemize}
+\end{multicols}
+
+Ak pri hľadaní derivácie funkcie využívame len znalosť derivácií základných elementárnych funkcií a vety o derivácii súčtu, rozdielu, súčinu, podielu a zloženej funkcie, nazýva sa taký postup tabuľkovým derivovaním.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-8}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-9}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-10}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-11}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-12}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-13}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-14}
+\end{enumerate}
+
+Nájdite derivácie funkcií:
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-15}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-16}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-17}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+Výpočet sa zjednoduší nasledujúcou úvahou: ak funkcia $f$ má v bode $a$ deriváciu a $f(a)\neq 0$, tak $(\ln |f|)'(a)=\frac{1}{f(a)}\cdot f'(a)$; odtiaľ možno vyjadriť 
+$$f'(a)=f(a)\cdot (\ln |f|)'(a).$$
+V našom prípade $y=\frac{1+x^2}{\sqrt[3]{x^4}\cdot\sin^7 x}\cdot (\ln |y|)'=(\ln |1+x^2|-\frac{4}{3}\ln |x|-7\cdot\ln |\sin x|)'=\frac{2x}{1+x^2}-\frac{4}{3x}-7\cdot \cot x=\frac{2x^2-4}{3x\cdot (1+x^2)}-7\cot x$. Teda $y'=\frac{1+x^2}{\sqrt[3]{x^4}\cdot \sin^7 x}\cdot (\frac{2x^2-4}{3x\cdot (1+x^2)}-7\cdot\cot x)$.
+
+\textit{Riešenie (d):}
+Funkcie tvaru $f^g$ (o funkcii $f$ predpokladáme, že je nezáporná) možno derivovať na základe úvahy z riešenia príkladu $295.(a)$ alebo (čo je vlastne to isté) prepísať ich predpis do podoby $e^{g\cdot\ln f}$ a takto zapísanú funkciu potom derivovať na základe viet o derivácii súčinu a zloženej funkcie.
+
+V našom prípade $(x^x)'=(e^{x\cdot\ln x})'=e^{x\cdot\ln x}\cdot(x\cdot\ln x)'=x^x\cdot(\ln x +1)$.
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-18}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-19}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-20}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-21}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-22}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-23}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-24}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-25}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-26}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-27}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-28}
+\end{enumerate}
+
+\begin{veta}
+Ak funkcia $f$ má v bode $a$ deriváciu, tak $f$ je v tomto bode spojitá.
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-29}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-30}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-31}
+\end{enumerate}
+
+\section{Derivácia inverznej funkcie}
