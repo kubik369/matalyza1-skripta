@@ -207,4 +207,30 @@ Potom $y^{(13)}=((x-1)^{-1})^{(13)}+((x+2)^{-1})^{(13)}=(-1)^{13}\cdot 13!(x-1)^
 \begin{enumerate}[resume]
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-45}
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-46}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-47}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-48}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-49}
+\end{enumerate}
+
+\textit{Riešenie (f):}
+Pretože $f'(x)=\frac{1}{1+x^2}$, platí $(1+x^2)f'(x)=1$ pre všetky $x \in\mathbb{R}$. To znamená, že funkcia $(1+x^2)f'(x)$ je na $\mathbb{R}$ konštantná, preto jej derivácie všetkých rádov sú rovné $0$:
+$$[(1+x^2)f'(x)]^{(k)}=0,(k\in\mathbb{N}).$$
+Položme $k=n-1$; pre $n=2$ má uvedená rovnosť tvar $(*)$
+$$(1+x^2)f''(x)+2x\cdot f'(x)=0$$
+a pre $n\geq 3$ použitím Leibnitzovho vzorca dostaneme
+$$(1+x^2)f^{(n)}(x)+2(n-1)x\cdot f^{(n-1)}(x)+(n-1)(n-2)f^{(n-2)}(x)=0.$$
+(Až pre $k/geq 2$,t.j. $n\geq 3$, obsahuje Leibnitzov vzorec všetky nenulové derivácie funkcie $1+x^2$, zápis prvej derivácie funkcie $(1+x^2)f'(x)$ sa teda odlišuje od zápisu k-tej derivácie tejto funkcie pre $k\geq 2$, preto treba prípad $k=1$ robiť samostatne.)
+
+Ak v poslednej rovnosti položíme $x=0$, dostávame pre $n\geq 3$
+$$f^{(n)}(0)=-(n-1)(n-2)f^{(n-2)}(0),$$
+čo je rekurentný vzťah pre vyjadrenie $f^{(n)}(0)$. Dosadením do predpisu pre $f'$ dostaneme $f'(0)=1$, z $(*)$ vychádza $f''(0)=0$. Na základe toho môžeme matematickou indukciou dokázať. že 
+$f^{(2k+2)}(0)=0,f^{(2k+1)}(0)=(-1)^k(2k)$; pre $k=0,1,2,...$ .
+
+\textit{Poznámka:}
+Prechádzajúca úvaha má (našťastie len zdanlivo) jeden nedostatok: ak chceme použiť Leibnitzov vzorec na výpočet $(n-1)$-vej derivácie súčinu $(1+x^2)\cdot f'(x)$, treba sa najprv presvedčiť, že existujú $(n-1)$-vé derivácie funkcií $(1+x^2)$ a $f'(x)$ (t.j. $(1+x^2)^{(n-1)}$ a $f^{(n)}(x)$); to sme ale neurobili.
+
+Dokázať, že existuje $(1+x^2)^{(n-1)}$, je ľahké; zostávateda dokázať existenciu $(\arctan x)^{(n)}$. (Návod: možno postupovať indrukciou; z predpokladu, že $f^{(k-1)}$ je podielom polynómov $P_{k-1}$ a $Q_{k-1}$ nemá reálne korene, vyplýva na základe vety o derivácii podielu, že $f^{(k)}$ existuje a možno ju zapísať v tvare podielu polynómov $P_k$ a $Q_k$, pričom $Q_k$ nemá reálne korene.)
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-50}
 \end{enumerate}
