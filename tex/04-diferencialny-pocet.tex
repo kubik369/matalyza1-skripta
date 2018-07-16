@@ -234,3 +234,66 @@ Dokázať, že existuje $(1+x^2)^{(n-1)}$, je ľahké; zostávateda dokázať ex
 \begin{enumerate}[resume]
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-50}
 \end{enumerate}
+
+\section{Základné vety diferenciálneho počtu}
+\begin{veta}
+\textit{(Rolle).}
+Nech funkcia $f:\langle a,b \rangle\rightarrow \mathbb{R}$ vyhovuje nasledujúcim podmienkam:
+\begin{itemize}
+\item $f$ je spojitá na intervale $\langle a,b \rangle$;
+\item v každom bode $x\in (a,b)$ existuje vlastná alebo nevlastná $f'(x)$; 
+\item $f(a)=f(b)$.
+\end{itemize}
+Potom existuje bod $c\in (a,b)$, v ktorom $f'(c)=0$.
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-51}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-52}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-53}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-54}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-55}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-56}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-57}
+\end{enumerate}
+
+\begin{veta}
+\textit{(Lagrangeova veta o strednej hodnote.)}
+Nech funkcia $f:\langle a,b \rangle\rightarrow\mathbb{R}$ vyhovuje nasledujúcim podmienkam:
+\begin{itemize}
+\item $f$ je spojitá;
+\item v každom bode $x\in (a,b)$ existuje vlastná alebo nevlastná $f'(x)$.
+Potom existuje bod $c\in (a,b)$, v ktorom $f'(c)=\frac{f(b)-f(a)}{b-a}.$
+\end{itemize}
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-58}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-59}
+\end{enumerate}
+
+\textit{Riešenie:}
+Derivovaním dostaneme $f'(x)=\frac{1}{1+x^2},x\in\mathbb{R}\setminus \{1\},g'(x)=\frac{1}{1+x^2}$. Označme $h:=f-g$; potom $h'(x)=0$ pre $x\in (1,\infty)$. Podľa výsledku príkladu $336$ je teda funkcia $h$ konštantná na intervale $(-\infty,1)$ a konštantná na intervale $(1,\infty)$. Hodnotu konštanty na intervale $(-\infty,1)$ nájdeme ako funkčnú hodnotu v niektorom vhodne zvolenom bode, napr. $k_1=h(0)=\arctan 1- \arctan 0=\frac{\pi}{4}$. Pretože výpočet $h(c)$ v niektorom $c\in (1,\infty)$ by bol komplikovanejší, pomôžeme si nasledujúcou úvahou: pretože $h(x)=k_2$ na intervale $(1,\infty)$, platí $k_2=\lim_{x\rightarrow 1+}h(x)=-\frac{\pi}{2}-\frac{\pi}{4}=-\frac{3}{4}\pi$. Celkovo teda
+
+$\arctan \frac{1+x}{1-x}-\arctan x = \left\{ \begin{array}{r@{\quad}c}
+   \frac{\pi}{4},& $ak $ x<1 \\
+    -\frac{3}{4}\pi, &  $ak $ x>1 \\ \end{array} \right.$,
+    
+    čo môžeme prepísať do podoby $\arctan \frac{1+x}{1-x}-\arctan x=-\frac{\pi}{2} sgn (x-1)-\frac{\pi}{4},x\neq 1$.
+    
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-60}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-61}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-62}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-63}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+Pre $x=y$ Uvedená nerovnosť zrejme platí. Ak $x<y$ (dôkaz pre $x>y$ by bol rovnaký), tak na intervale $\langle x,y \rangle$ funkcia $f(x)=\sin x$ vyhovuje predpokladom Lagrangeovej vety o strednej hodnote, podľa ktorej $\sin s=\sin y=(x-y)\cos c$ pre niektoré $c\in (x,y)$. Pretože $|\cos c|\leq 1$ pre ľubovoľné $c\in\mathbb{R}$, je $|\sin x-\sin y|=|\cos c|\cdot|x-y|\leq |x-y|$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-64}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-65}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-66}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-67}
+\end{enumerate}
