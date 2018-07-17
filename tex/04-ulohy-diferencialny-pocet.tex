@@ -616,73 +616,219 @@ Nech derivácia funkcie $f$ je spojitá na uzavretom intervale $\langle a,b \ran
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-68}
-
+Nájdite chybu v nasledujúcom "dôkaze" Cauchyho vety: "Nech funkcie $f,g$ vyhovujú prvému, druhému a štvrtému predpokladu a nech $g'(x)\neq 0$ pre $x\in (a,b)$. Potom každá z funkcií $f,g$ vyhovuje predpokladom Lagrangeovej vety o strednej hodnote, a teda platí $f(b)-f(a)=f'(c)(a-b),g(b)-g(a)=g'(c)(b-a)$ pre niektoré $c\in (a,b)$. Ak vydelíme prvú z týchto rovností druhou, dostaneme 
+$$\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}.$$"
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-69}
-
+Nech funkcia $f$ a jej derivácia sú definované na intervale $\langle 1,2 \rangle$. Potom existuje $c\in (1,2)$ tak, že $f(2)-f(1)=\frac{c^2}{2}f'(c)$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-70}
-
+Nech funkcia $f$ a jej derivácia $f'$ sú definované na intervle $\langle a,b \rangle$, pričom $a\cdot b>0$. Dokážte, že potom existuje $c\in (a,b)$ tak, že 
+$$\frac{1}{a-b}
+\begin{vmatrix}
+a & b \\ 
+f(a) & f(b)
+\end{vmatrix}
+=f(c)-cf'(c). $$
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-71}
-
+Zistite, na ktorých intervaloch sú nasledujúce funkcie monotónne:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $y=3x-x^3$;
+	\item $y=\frac{2x}{1+x^2};$
+	\item $y=x+\sin x$;
+	\item $y=x+|\sin 2x|$;
+	\item $y=\cos \frac{\pi}{x}$;
+	\item $y=\frac{x^2}{2^x}$;
+	\item $y=x^2-\ln x^2$;
+	\item $y= \left\{ \begin{array}{r@{\quad}c}
+   x(\sqrt{\frac{3}{2}}+\sin \ln x),& $ak $ x > 0 \\
+    0, &  $ak $ x=0 \\ \end{array} \right.$
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-72}
-
+Nech funkcia $f: I \rightarrow\mathbb{R}$ Je rastúca na otvorenom intervale $I$ a diferencovateľná v každom bode $x\in I$. Potom $f'(x)\geq 0$ pre Každé $x\in I$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-73}
-
+Pre každý polynóm $P_n$ stupňa $n\geq 1$ možno nájsť číslo $a>0$ tak, že $P_n$ je rýdzomonotónny na intervale $(-\infty,-a)$ a rýdzomonotónny na intervale $(a,\infty)$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-74}
-
+Dokážte nasledujúce nerovnosti:
+\begin{enumerate}
+\item $e^x>1+x$ pre $x\neq 0$;
+\item $x-\frac{x^3}{6}<\sin x<x$ pre $x>0$;
+\item $\tan x>x$ pre $0<x<\frac{\pi}{2}$;
+\item $\tan x>x+\frac{x^3}{3}$ pre $0<x<\frac{\pi}{2}$;
+\item $x^{\alpha}-1>\alpha\cdot(x-1)$ pre $\alpha\geq 2,x>1$;
+\item $\sqrt[n]{x}-\sqrt[n]{a}<\sqrt[n]{x-a}$ pre $n>1,x>a>0$;
+\item $1+2\cdot\ln x\leq x^2$ pre $x>0$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-75}
-
+Dokážte nerovnosť $\frac{x}{1+x}<\ln (1+x)<x$ pre $x>-1$ a na jej základ erovnosť $\lim_{n \rightarrow \infty}(\frac{1}{n}+\frac{1}{n+1}+...+\frac{1}{2n})=\ln 2$. 
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-76}
+Nech $M$ je konečná podmnožina intervalu $I=(a,b)$, kde $a<b,a,b\in\mathbb{R^*}$, nech funkcia $f$ je spojitá na $I$ a má kladnú deriváciu v každom bode $x\in I \setminus M$. Potom $f$ je rastúca na $I$. Dokážte!
 
+(Všimnime si, že v predpokladoch tohto tvrdenia sa nehovorí nič o existencii derivácie v bodoch množiny $M$; teda funkcia $f'$ môže byť definovaná v niektorých (alebo aj vo všetkých) bodoch množiny $M$, ale pripúšťa sa aj možnosť, že definičným oborom funkcie $f'$ je len množina $I \setminus M$.)
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-77}
-
+Nech funkcie $f,g$ sú diferencovateľné na intervale $\langle a,\infty),f(a)>g(a)$ a Nech pre všetky $x\in (a,\infty)$ platí $f'(x)\geq g'(x)$. Potom pre všetky $x\in \langle a,\infty)$ platí $f(x)>g(x)$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-78}
-
+Musí byť derivácia monotónnej funkcie monotónna?
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-79}
-
+Zistite, na ktorých intervaloch sú nasledujúce funkcie rýdzo konvexné, resp. rýdzo konkávne:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $y=3x^2-x^3$;
+	\item $y=x+x^{\frac{5}{3}}$;
+	\item $y=x+\sin x$;
+	\item $y=\ln (1+x^2)$;
+	\item $y=x\cdot\sin (\ln x)$;
+	\item $y=\sqrt[3]{|x|}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-80}
-
+\begin{enumerate}
+\item Pre ktoré hodnoty $p\in\mathbb{N},q\in\mathbb{N}$ je bod $x=0$ inflexným bodom funkcie $y=x^{\frac{p}{q}}$ (predpokladáme, že $p,q$ sú nesúdeliteľné čísla)?
+\item Akým podmienkam musia vyhovovať koeficienty $a\neq 0,b,c$, aby krivka $y=ax^4+bx^3+cx^2+dx+e$ mala inflexné body?
+\item Pre aké hodnoty parametra $a$ je krivka $y=x^4+ax^3+\frac{3}{2}x^2+1$ konvexná na $\mathbb{R}$?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-81}
-
+Nech funkcia $f$ je diferencovateľná v každom bode intervalu $(a,b)$, pričom $f'$ je na $(a,b)$ rastúca. Potom $f$ je rýdzo konvexná na $(a,b)$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-82}
-
+Dokážte nasledujúce nerovnosti:
+\begin{enumerate}
+\item $\frac{1}{2}(x^n+y^n)>(\frac{x+y}{2})^n$ pre $x>0,y>0,x\neq y,n>1$;
+\item  $\frac{1}{2}(e^x+e^y)>e^{\frac{x+y}{2}}$ pre $x\neq y$;
+\item $x\cdot\ln x+\ln y>(x+y)\ln \frac{x+y}{2}$ pre $x>0,y>0,x\neq y$;
+\item $\frac{2}{\pi}x<\sin x$ pre $x\in (0,\frac{\pi}{2})$;
+\item $\arctan x+\arctan y>2\arctan \frac{x+y}{2}$ pre $x\neq y$;
+\item $x-1<\log_2 x$ pre $x\in (1,2)$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-83}
-
+Ukážte, že neexistuje funkcia, ktorá je kladná na $\mathbb{R}$ a má v každom bode $x\in\mathbb{R}$ zápornú druhú deriváciu.
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-84}
-
+\begin{enumerate}
+\item Nech $f$ je rýdzo konvexná a diferencovateľná na intervale $I$, nech $a\in I$. Potom na množine $I\setminus \{a\}$ leží graf funkcie $f$ nad svojou dotyčnicou v bode $a$. Dokážte!
+\item V inflexnom bode prechádza graf funkcie z jednej strany dotyčnice na druhú, t.j. ak $a$ je inflexný bod funkcie $f$, tak existuje $\varepsilon >0$ tak, že na jednej z množín $(a-\varepsilon,a),(a,a+\varepsilon)$ leží graf funkcie $f$ nad svojou dotyčnicou v bode $(a,f(a))$, na druhej z týchto množín leží pod ňou. Dokážte!
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-85}
+Nech
+$f(x)= \left\{ \begin{array}{r@{\quad}c}
+   x^3(2+\cos \frac{1}{x}),& $ak $ x \neq 0 \\
+    0, &  $ak $ x=0 \\ \end{array} \right.$
+    Ukážte, že
+    \begin{enumerate}
+    \item $f$ má deriváciu v bode $0$;
+    \item graf funkcie $f$ prechádza z jednej strany v bode $(0,0)$ na jej druhú stranu;
+    \item bod $0$ napriek tomu nie je inflexný bod funkcie $f$.
+    \end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-86}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-87}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-88}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-89}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-90}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-91}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-92}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-93}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-94}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-95}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-96}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-97}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-98}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-99}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-100}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-101}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-102}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-103}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-104}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-105}
 
 \end{defproblem}

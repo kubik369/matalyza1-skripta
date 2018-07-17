@@ -297,3 +297,132 @@ Pre $x=y$ Uvedená nerovnosť zrejme platí. Ak $x<y$ (dôkaz pre $x>y$ by bol r
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-66}
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-67}
 \end{enumerate}
+
+\begin{veta}
+\textit{(Cauchyho veta o strednej hodnote).}
+Nech funkcie $f: \langle a,b \rangle \rightarrow \mathbb{R}$ a $g: \langle a,b \rangle \rightarrow \mathbb{R}$ spĺňajú nasledujúce podmienky:
+\begin{itemize}
+\item $f$ a $g$ sú spojité na intervale $\langle a,b \rangle$; 
+\item v každom bode $x\in (a,b)$ existujú vlastná alebo nevlastná $f'(x)$ a vlastná $g'(x)$.
+\end{itemize}
+Potom existuje bod $c\in (a,b)$, v ktorom platí
+$$(f(b)-f(a))g'(c)=(g(b)-g(a))f'(c).$$
+Ak sú naviac splnené predpoklaady
+\begin{itemize}
+\item $(f'(x))^2+(g'(x))^2>0$ Pre každé $x\in (a,b)$;
+\item $g(b)\neq g(a)$;
+\end{itemize}
+možnouvedenú rovnosť písať v tvare 
+$$\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}.$$
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-68}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-69}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-70}
+\end{enumerate}
+
+\section{Vyšetrovanie niektorých vlastností funkcií pomocou diferenciálneho počtu}
+
+\subsection{Monotónnosť}
+\begin{veta}
+Nech funkcia $f: I \rightarrow\mathbb{R}$ je spojitá na intervale $I$ a má deriváciu v každom jeho vnútornom bode. Potom
+\begin{itemize}
+\item ak $f'>0,(f'\geq 0)$ vnútri intervalu $I$ (t.j. ak pre každý vnútorný bod $x$ intervalu $I$ platí $f'(x)>0,(f'(x)\geq 0)$), tak $f$ je rastúca (neklesajúca) na $I$;
+\item ak $f'<0,(f'\leq 0)$ vnútri intervalu $I$, tak $f$ je klesajúca (nerastúca) na $I$.
+\end{itemize}
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-71}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-72}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-73}
+\end{enumerate}
+
+\begin{veta}
+Nech funkcie $f,g$ sú $n$-krát diferencovateľné na intervale $I$, nech v bode $a\in I$ platí $f(a)=g(a),f'(a)=g'(a),...,f^{(n-1)}(a)=g^{(n-1)}(a)$ (teda ak $n=1$, predpokladáme len $f(a)=g(a)$). Potom
+\begin{enumerate}
+\item ak $f^{(n)}(x)>g^{(n)}(x)$, pre všetky $x\in I \cap (a,\infty)$, tak $f(x)>g(x)$ Pre všetky $x\in I \cap (a,\infty)$ (pritom samozrejme predpokladáme, že $I \cap (a,\infty)\neq \emptyset$);
+\item
+\begin{itemize}
+\item ak $f^{(n)}(x)>g^{(n)}(x)$ pre všetky $x\in I \cap (-\infty,a)$ a $n$ je párne, tak $f(x)>g(x)$ pre všetky $x\in I \cap (-\infty,a)$;
+\item ak $f^{(n)}(x)>g^{(n)}(x)$ pre všetky $x\in I \cap (-\infty,a)$ a $n$ je nepárne, tak $f(x)<g(x)$ pre všetky $x\in I \cap (-\infty,a)$ (pritom predpokladáme $I \cap (-\infty,a)\neq \emptyset$).
+\end{itemize}
+\end{enumerate}
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-74}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-75}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-76}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-77}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-78}
+\end{enumerate}
+
+\subsection{Konvexnosť a konkávnosť. Inflexné body}
+Funkcia $f$ sa nazýva rýdzo konvexná (konvexná) na intervale $I \subset D(f)$, ak platí $(*)$
+$$\forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)<pf(x)+qf(y)$$
+$$(\forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)\leq pf(x)+qf(y)).$$
+Funkcia $f$ sa nazýva rýdzo konkávna (konkávna) na intervale $I \subset D(f)$, ak platí
+$$\forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)>pf(x)+qf(y)$$
+$$(\forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)\geq pf(x)+qf(y)).$$
+(Geometricky možno výrok $(*)$ interpretovať takto: pre ľubovoľné $2$ čísla $x,y\in I,x<y$, leží úsečka spájajúca body $(x,f(x))$ nad grafom funkcie $f/(x,y)$.)
+
+\begin{veta}
+Nech funkcia $f$ je spojitá na intervale $I$ a dvakrát diferencovateľná v každom jeho vnútornom bode. Potom 
+\begin{itemize}
+\item $f''>0,(f''\geq 0)$ vnútri intervalu $I$, tak $f$ je rýdzo konvexná (konvexná) na $I$;
+\item $f''<0,(f''\leq 0)$ vnútri intervalu $I$, tak $f$ je rýdzo konkávna (konkávna) na $I$.
+\end{itemize}
+Vnútorný bod $a$ množiny $D(f)$ sa nazýva inflexný bod funkcie $f$, ak $f$ má v bode $a$ deriváciu a existuje $\varepsilon >0$ tak, že funkcia $f$ je rýdzo konvexná na jednej z množín $(a-\varepsilon,a\rangle$, $\langle a,a+\varepsilon )$ a rýdzo konkávna na druhej z nich.
+\end{veta}
+
+\begin{veta}
+Nech funkcia $f$ je triktár diferencovateľná v bode $a$ a dvakrát diferencovateľná v niektorom jeho okolí. Ak $f''(a)=0,f''(a)\neq 0$, tak $a$ je inflexný bod funkcie $f$.
+\end{veta}
+
+\textit{Poznámka:}
+Existujú aj iné definície rýdzej konvexnosti, rýdzej konkávnosti a inflexného bodu, ktoré nie sú ekvivalentné tu uvedeným. Všetky v matematickej literatúre používané definície týchto pojmov sú však volené tak, že vety $13$ a $14$ zostanú v platnosti.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-79}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-80}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-81}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-82}
+\end{enumerate}
+
+\textit{Riešenie (b):}
+Pretože $(e^x)''=e^x>0$ pre všetky $x\in\mathbb{R}$, je funkcia $f(x)=e^x$ rýdzo konvexná na $\mathbb{R}$: teda platí
+$$\forall x,y\in \mathbb{R},x\neq y \forall p,q>0,p+q=1;f(px+qy)<pf(x)+qf(y).$$
+Ak špeciálne zvolíme $p=q=\frac{1}{2}$, dostaneme
+$$e^{\frac{x+y}{2}}=f(\frac{1}{2}x+\frac{1}{2}y)<\frac{1}{2}f(x)+\frac{1}{2}f(y)=\frac{1}{2}(e^x+e^y),x\neq y.$$
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-83}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-84}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-85}
+\end{enumerate}
+
+\textit{Poznámka:}
+Na vlastnostiach odvodených v príklade $362$ sa zakladajú nasledujúce definície, odlišné od definícií používaných v tomto odstavci:
+\begin{itemize}
+\item Funkcia $f$ diferencovateľná na intervale $I$ sa nazýva rýdzo konvexná (rýdzo konkávna) na $I$, ak pre každé $a\in I$ platí: na množine $I \setminus \{a\}$ leží graf funkcie $f$ nad (pod) svojou dotyčnicou v bode $(a,f(a))$.
+\item Bod $a$ sa nazýva inflexný bod funkcie $f$, ak existuje konečná $f'(a)$ a graf funkcie $f$ prechádza v bode $a$ z jednej strany svojej dotyčnice na druhú.
+\end{itemize}
+Prvá z týchto definícií predstavuje užšie chápanie pojmov rýdzo konvexná a rýdzo konkávna funkcia (to sme tu nedokazovali, ale môžete to skúsiť sami), druhá naopak čirčie chápanie pojmu inflexný bod (to ukazujú príklady $362$ a $363$).
+
+\subsection{Extrémy}
+Nech definičným oborom funkcie $f$ je interval $I$. Hovoríme, že funkcia $f$ má v bode $a$ $I$ lokálne maximum (lokálne minimum), ak existuje okolie $O(a)$ bodu $a$ tak, že platí 
+$$\forall x\in (O(a)\setminus \{a\})\cap I:f(x)\leq f(a),(\forall x\in (O(a)\setminus \{a\})\cap I:f(x)\geq f(a)).$$
+Definíciu ostrého lokálneho maxima (ostrého lokálneho minima) dostaneme, ak v predchádzajúcej definícii zameníme znak $\leq$ ($\geq$) znakom $<(>)$. Lokálne maximá a lokálne minimá sa súhrnne nazývajú lokálnymi extrémami.
+
+\begin{veta}
+Ak funkcia $f$ má lokálny extrém vo vnútornom bode $a$ svojho definičného oboru, tak buď neexistuje vlastná ani nevlastná $f'(a)$, alebo $f'(a)=0$.
+Bod $a$ sa nazýva stacionálny bod funkcie $f$, ak $f'(a)=0$.
+Pri hľadaní lokálnych extrémov funkcie $f:I\rightarrow\mathbb{R}$, treba teda vyšetriť:
+\begin{enumerate}
+\item všetky jej stacionárne body;
+\item všetky body $a\in I$, v ktorých neexistuhe $f'(a)$;
+\item všetky body $a\in I$, ktoré nie sú vnútornými bodmi intervalu $I$.
+\end{enumerate}
+\end{veta}
