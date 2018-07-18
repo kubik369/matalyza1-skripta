@@ -476,3 +476,107 @@ Pretože $\max_{x\in \langle -2,2 \rangle}(3x-x^3)=2$ a $\min_{x\in \langle -2,2
 \end{enumerate}
 
 \subsection{L' Hospitalovo pravidlo}
+\begin{veta}
+Nech
+\begin{enumerate}
+\item funkcia $f,g$ sú doferencovateľné v niektorom prstencovom okolí $O^*(a)$ bodu $a\in\mathbb{R^*}$;
+\item $\forall x\in O^*(a):g'(x)\neq 0$;
+\item $\lim_{x\rightarrow a}f(x)=\lim_{x\rightarrow a}g(x)=0$ alebo $\lim_{x\rightarrow a}|g(x)|=+\infty$;
+\item existuje vlastná alebo nevlastná $\lim_{x\rightarrow a0\frac{f'(x)}{g'(x)}}$. Potom existuje aj $\lim_{x\rightarrow a}\frac{f(x)}{g(x)}$ a platí $\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a}\frac{f'(x)}{g'(x)}$.
+
+(Analogické tvrdenia možno sformulovať aj pre jednostranné limity.)
+\end{enumerate}
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-99}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-100}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+$\lim_{x\rightarrow 0}\frac{\arcsin 2x-2\arcsin x}{x^3}=\lim_{x\rightarrow 0}\frac{\frac{2}{\sqrt{1-4x^2}}-\frac{2}{\sqrt{1-x^2}}}{3x^2}=\lim_{x\rightarrow 0}\frac{2}{3}\cdot\frac{\frac{\sqrt{1-x^2}-\sqrt{1-4x^2}}{\sqrt{1-4x^2}\sqrt{1-x^2}}}{x^2}=\frac{2}{3}\lim_{x\rightarrow 0}\frac{1}{\sqrt{1-4x^2}\sqrt{1-x^2}}\cdot \lim_{x\rightarrow 0}\frac{\sqrt{1-x^2}-\sqrt{1-4x^2}}{x^2}=\frac{2}{3}\cdot \lim_{x\rightarrow 0}\frac{\frac{4x}{\sqrt{1-4x^2}}-\frac{x}{\sqrt{1-x^2}}}{2x}=\frac{2}{1}\cdot\frac{1}{2}\cdot \lim_{x\rightarrow 0}(\frac{4}{\sqrt{1-4x^2}}-\frac{1}{\sqrt{1-x^2}})=1$.
+
+\textit{Prvá úprava:}
+ide o neurčitý výraz typu $\frac{0}{0}$, skúsime preto použiť l'Hospitalovo pravidlo (t.j. vetu $18$); prvé tri predpoklady sú zrejme splnené, splnenie štvrtého predpokladu preveríme až ďalším výpočtom, prvá rovnosť má teda zatiaľ podmienený charakter: ak ukážeme existenciu limity na jej pravej strane, tak bude existovať aj limita vľavo a bude platiť prvá rovnosť (ak zistíme, že limita vpravo neexistuje, neboli sme oprívnení použiť l'Hospitalovo pravidlo);
+
+\textit{Druhá úprava:}
+výraz na ľavej strane je opäť typu $\frac{0}{0}$, skôr než však skúsime znovu použiť vetu $18$, upravíme limitovanú funkciu ("bezhlavým" používaním l'Hospitalovho pravidla sa výpočet často viac skomplikuje než zjednoduší), využijeme, že $\lim_{x\rightarrow 0}\sqrt{1-x^2}\sqrt{1-4x^2}=1$, a vetu $18$ použijeme len pri výpočte druhej z limít vpravo (predpoklady $1,2,3$ sú opäť zrejme splnené);
+
+\textit{Tretia úprava:}
+táto rovnosť je podmienená podobne ako prvá rovnosť
+
+\textit{Štvrtá úprava:}
+z existencie tejto limity vyplýva, že použitie l'Hospitalovho pravidla bolo v obidvoch prípadoch oprávnené, a teda všetky uvedené rovnosti skutočne platia.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-101}
+\end{enumerate}
+
+\textit{Návod:}
+Ak súčin $f\cdot g$, ktorý je neurčitým výrazom typu $0\cdot\infty$, prepíšeme do tvaru podielu $\frac{f}{\frac{1}{g}}$ alebo $\frac{g}{\frac{1}{f}}$, dostaneme neurčitý výraz typu $\frac{0}{0}$ alebo $\frac{\infty}{\infty}$, ktorého limitu môžeme skúsiť vypočítať pomocou l'Hospitalovho pravidla.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-102}
+\end{enumerate}
+
+\textit{Návod}
+Funkciu $f^g$, ktorá je neurčitým výrazom typu $0^0,(+\infty)^0$ alebo $1^{\infty}$, môžeme prepísať do tvaru $e^{g\cdot\ln f}$; exponent $g\cdot\ln f$ je potom neurčitým výrazom typu $0\cdot\infty$, pri výpočte jeho limity môžeme postupovať ako v príklade $379$ (v prípade neurčitých výrazov typu $1^{\infty}$ je však často výhodnejšie prepísať ich do tvaru $[(1+(f-1))^{\frac{1}{f-1}}]^{(f-1)\cdot g}$ a postup z príkladu $379$ použiť pri výpočte limity funkcie $(f-1)\cdot g$, ktorá je neurčitým výrazom typu $0\cdot\infty$).
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-103}
+\end{enumerate}
+
+\textit{Návod:}
+Ak chceme použiť l'Hospitalovo pravidlo pri výpočte limít neurčitých výrazov typu $\infty,-\infty$, musíme predovšetkým funkciu $f-g$ napísať v tvare podielu. Vo všeobecnosti to možno dosiahnúť nahradením funkcie $f-g$ funkciou $\frac{\frac{1}{g}-\frac{1}{f}}{\frac{1}{g\cdot f}}$ (tá je neurčitým výrazom typu $\frac{0}{0}$), v jednotlivých prípadoch však často možno nájsť jednoduchší postup.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-104}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-105}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-106}
+\end{enumerate}
+
+\subsection{Taylorov polynóm}
+Nech funkcia $f$ je $n$-krát diferencovateľná v bode $a\in\mathbb{R}$. Potom Taylorovým polynómom stupňa $n$ funkcie $f$ v bode $a$ sa nazýva polynóm (v premennej $x$)
+$$f(a)+\frac{f'(a)}{1!}(x-a)+...+\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+Ak špeciálne $a=0$, používa sa namiesto názvu Taylorov polynóm označenie Maclaurinov polynóm.
+
+\begin{veta}
+Ak funkcia $f$ je $n$-krát diferencovateľná v bode $a\in\mathbb{R}$ a $T_n$ je jej Taylorov polynóm stupňa $n$ v bode $a$, tak $$\lim_{x\rightarrow a}\frac{f(x)-T_n(x)}{(x-a)^n}=0.$$
+(Rozdiel $f-T_n$ sa nazýva zvyšok Taylorovho polynómu stupňa $n$ funkcie $f$ v bode $a$.)
+\end{veta}
+
+Nech funkcia $g$ je definovaná v niektorom rýdzom okolí bodu $a\in\mathbb{R^*}$ a nenadobúda tam nulové hodnoty. Znakom $c(g)$ budeme označovať triedu všetkých funkcií $f$ takých, že
+\begin{enumerate}
+\item ich definičný obor obsahuje niektoré rýdze okolie bodu $a$;
+\item platí $\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=0$.
+\end{enumerate}
+
+Namiesto zápisu $f\in c(g)$ sa používa zápis $f=c(g)$. (Pokiaľ by z kontextu nebolo jasné, ktorého $a\in\mathbb{R^*}$ sa vzťah $f=c(g)$ týka, používa sa zápis $f=c(g)$ $(x\rightarrow a).$) Zápis $f=h+c(g)$ treba chápať nasledovne: funkcia $f$ je súčtom funkcie $h$ a niektorej funkcie z triedy $c(g)$. 
+
+Ak funkcia $f$ je $n$-krát diferencovateľná v bode $a\in\mathbb{R}$, patrí podľa vety $19$ zvyšok jej Taylorovho polynómu stupňa $n$ v bode $a$ do triedy $c((x-a)^n)$, možno teda písať 
+$$f(x)=f(a)+\frac{f'(a)}{1!}(x-a)+...+\frac{f^{(n)}(a)}{n!}c((x-a)^n);$$
+tento zápis sa nazýva Taylorovým vzorcom so zvyškom v Peanovom tvare.
+V nasledujúcich príkladoch budeme používať tieto tvrdenia (v zápisoch všade vynechávame $x\rightarrow 0;m,n$ sú prirodzené čísla);
+\begin{enumerate}
+\item ak $f(x)=c(x^n)$ a $g(x)=c(x^n)$, tak $f(x)+g(x)=c(x^n)$;
+\item ak $m>n$ a $f(x)=c(x^m)$, tak $f(x)=c(x^n)$;
+\item ak $f(x)=c(x^n)$, tak $f^m(x)=c(x^{m\cdot n})$;
+\item ak $f(x)=c(x^n)$, tak $x^m\cdot f(x)=c(x^{m+n})$;
+\item ak $f(x)=c(x^n)$ a $g(x)=c(x^m)$, tak $f(x)\cdot g(x)=c(x^{m+n})$.
+\end{enumerate}
+
+Uvedené implikácie budeme zapisovať nasledovne:
+\begin{enumerate}
+\item $c(x^n)+c(x^n)=c(x^n)$;
+\item $c(x^m)=c(x^n)$ pre $m>n$;
+\item $c^m(x^n)=c(x^{m\cdot n})$;
+\item $x^m\cdot c(x^n)=c(x^{m+n})$;
+\item $c(x^n)\cdot c(x^m)=c(x^{m+n})$.
+\end{enumerate}
+
+Používanie týchto zápisov vyžaduje istú opatrnosť, pretože ide o symbolické vyjadrenie implikácií, možno (na rozdiel od skutočných rovností) tieto "rovnosti" čítať sprava doľava.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-107}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-108}
+\end{enumerate}

@@ -860,43 +860,111 @@ Pozorovateľ stojí oproti obrazu umiestnenému na vertikálnej stene, spodný o
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-99}
-
+Nech funkcie $f,g$ sú definované v okolí bodu $a\in\mathbb{R}$, nech $f(a)=g(a)=0$, nech existujú vlastné $f'(a)$ a $g'(a)\neq 0$. Potom $\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=\frac{f'(a)}{g'(a)}$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-100}
-
+Nájdite nasledujúce limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x\rightarrow 0}\frac{\arcsin 2x-2\arcsin x}{x^3}$;
+	\item $\lim_{x\rightarrow 0}\frac{\tan x-x}{x-\sin x}$;
+	\item $\lim_{x\rightarrow \frac{\pi}{4}}\frac{\sqrt[3]{\tan x}-1}{2\sin^2 x -1}$;
+	\item $\lim_{x\rightarrow\infty}\frac{x^n}{e^{ax}},(a>0,n\in\mathbb{N})$;
+	\item $\lim_{x\rightarrow 0}\frac{e^{-\frac{1}{x^2}}}{x^{100}}$;
+	\item $\lim_{x\rightarrow 0}\frac{\ln (1+x)-x}{x\cdot\tan x}$;
+	\item $\lim_{x\rightarrow 0}\frac{\cos x-\cos 3x+x^3\cos \frac{\pi}{x}}{x^2}$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-101}
-
+Nájdite limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x\rightarrow 1}\ln x \ln (1-x)$;
+	\item $\lim_{x\rightarrow 0}\sin x\cdot\ln \cot x$;
+	\item $\lim_{x\rightarrow \infty}x(\pi-2\arcsin\frac{x}{\sqrt{x^2+1}})$;
+	\item $\lim_{x\rightarrow 0}x^n\ln x,(n\in\mathbb{N})$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-102}
-
+Nájdite limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x\rightarrow 0+}x^x$;
+	\item $\lim_{x\rightarrow 0+}x^{\frac{1}{\ln (e^x-1)}}$;
+	\item $\lim_{x\rightarrow 0}(\frac{\arcsin x}{x})^{\frac{1}{x^2}}$;
+	\item $\lim_{x\rightarrow 0}[\frac{(1+x)^{\frac{1}{x}}}{e}]^{\frac{1}{x}}$;
+	\item $\lim_{x\rightarrow 0+}(\ln \frac{1}{x})^x$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-103}
-
+Nájdite limity:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x\rightarrow 0}(\frac{1}{x}-\frac{1}{e^x-1})$;
+	\item $\lim_{x\rightarrow 0}(\frac{1}{x^2}-\cot^2 x)$;
+	\item $\lim_{x\rightarrow 0}x-x^2\ln (1+\frac{1}{x})$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-104}
-
+Možno použiť l'Hospitalovo pravidlo pri výpočte týchto limít:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x\rightarrow \infty}\frac{x-\sin x}{x+\sin x})$;
+	\item $\lim_{x\rightarrow 0}\frac{x^2\sin \frac{1}{x}}{\sin x}$;
+	\item $\lim_{x\rightarrow 0}\frac{x}{\tan x -1}$?
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-105}
+Limitu funkcie $f(x)=\frac{1+x+\frac{\sin 2x}{2}}{(x+\frac{\sin 2x}{2})e^{\sin x}}$ v bode $+\infty$ budeme hľadať dvoma spôsobmi:
+\begin{enumerate}
+\item $\lim_{x\rightarrow\infty}f(x)=\lim_{x\rightarrow\infty}\frac{1+\cos 2x}{e^{\sin x}(1+\cos 2x)+\cos x e^{\sin x}(x+\sin x \cos x)}=\lim_{x\rightarrow\infty}\frac{2\cos^2 x}{2e^{\sin x}\cos^2 x+\cos x e^{\sin x}(x+\sin x \cos x)}=\lim_{x\rightarrow\infty}\frac{2\cos x}{e^{\sin x}}\cdot\frac{1}{x+\cos x (2+\sin x)}=0$
 
+(v prvom kroku sme zderivovali čitateľ aj menovateľ, v treťom sme limitovaný zlomok rozšírili výrazom $\frac{1}{\cos x}$); pretože $\lim_{x\rightarrow\infty}x=+\infty$ a funkcia $\cos x\cdot (2+\sin x)$ je zdola ohraničená, je $\lim_{x\rightarrow\infty}(x+\cos c (2+\sin x))=+\infty$, a teda $\lim_x \frac{1}{x+\cos x (2+\sin x)}=0$, funkcia $\frac{2\cos x}{e^{\sin x}}$ je ohraničená, preto platí posledná rovnosť;
+\item platí $f(x)=\frac{1}{e^{\sin x}}(1+\frac{1}{x+\sin x \cos x})$, pričom funkcia v zátvorke má v bode $+\infty$ limitu $1$, funkcia $\frac{1}{e^{\sin x}}$ nemá v bode $+\infty$ limitu (to možno ľahko dokázať pomocou Heineho definície limity), preto neexistuje ani $\lim_{x\rightarrow\infty}\frac{1}{e^{\sin x}}(1+\frac{1}{x+\sin x \cos x})$.
+
+Pretože sme dospeli k rôznym výsledkom, je aspoň jeden z týchto postupov nesprávny. Ktorý to je a v čom spočíva chyba?
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-106}
-
+\begin{enumerate}
+\item Nech funkcia $f$ je definovaná v okolí $O(a)$ bodu $a\in\mathbb{R}$, nech V každom bode $x\in O(a)\setminus \{a\}$ existuje vlastná $f'(x)$ a nech $f$ je spojitá v bode $a$. Ak existuje (vlastná alebo nevlastná) $\lim_{x\rightarrow a}f'(x)$, tak existuje $f'(a)$ a platí $f'(a)=\lim_{x\rightarrow a}f'(x)$. Dokážte!
+\item Nájdite $f'(a)$, ak:
+\begin{enumerate}
+\item $f(x)=\sin^2 \sqrt[3]{x^2},a=0$;
+\item $f(x)=\arcsin x,a=1,-1$;
+\item $f{x}= \left\{ \begin{array}{r@{\quad}c}
+   \frac{1}{x}-\frac{1}{e^x-1},& $ak $ x \neq 0 \\
+    \frac{1}{2}, &  $ak $ x=0 \\ \end{array} \right.$.
+\end{enumerate}
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-107}
-
+Na základe výpočtu príslušných derivácií zostrojte Taylorov polynóm stupňa $n$ funkcie $f$ v bode $a$, ak
+\begin{enumerate}
+\item $f(x)=\sqrt{x+1},a=-\frac{1}{2},n=4$;
+\item $f(x)=\tan x,a=0,n=3$;
+\item $f(x)=\sin (2x+\frac{\pi}{4}),a=0,n=5$;
+\item $f(x)=\frac{1}{2x+3},a=-1,n$ ľubovoľné;
+\item $f(x)=\sin^4 x+\cos^4 x,a=\frac{\pi}{4},n$ ľubovoľné.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-108}
-
+Nech funkcia $f$ je $n$-krát diferencovateľná v bode $a\in\mathbb{R}$, nech existujú čísla $A_0,...,A_n\in\mathbb{R}$ tak, ža platí
+$$f(x)=A_0+A_1(x-a)+...+A_n(x-a)^n+c((x-a)^n).$$ Potom  $A_0+A_1(x-a)+...+A_n(x-a)^n$ je Taylorov polynóm stupňa $n$ funkcie $f$ v bode $a$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-109}
@@ -908,5 +976,85 @@ Pozorovateľ stojí oproti obrazu umiestnenému na vertikálnej stene, spodný o
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-111}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-112}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-113}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-114}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-115}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-116}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-117}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-118}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-119}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-120}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-121}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-122}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-123}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-124}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-125}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-126}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-127}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-128}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-129}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-130}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-131}
 
 \end{defproblem}
