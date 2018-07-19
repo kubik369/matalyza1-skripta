@@ -580,3 +580,44 @@ Používanie týchto zápisov vyžaduje istú opatrnosť, pretože ide o symboli
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-107}
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-108}
 \end{enumerate}
+
+V nasledujúcich príkladoch využijeme tvrdenie z príkladu $386$ a znalosť MAclaurinových polynómov týchto funkcií (možno ich zostrojiť výpočtom príslušných derivácií):
+\begin{enumerate}
+\item $e^x=1+x+\frac{x^2}{2!}+...+\frac{x^n}{n!}+c(x^n)$;
+\item $\sin x=x-\frac{x^3}{3!}+...+(-1)^{n-1}\frac{x^{2n-1}}{(2n-1)!}+c(x^{2n})$\footnote{pretože $\sin^{(2n)}(0)=0$, majú Maclaurinov polynóm stupňa $2n-1$ a Maclaurinov polynóm stupňa $2n$ rovnaký tvar, preto aj zvyšok Maclaurinovho polynómu stupňa $2n-1$ funkcie $\sin$ patrí do triedy $c(x^{2n})$; podobná poznáma platí o funkcii $\cos$};
+\item $\cos x=1-\frac{x^2}{2!}+...+(-1)^{n}\frac{x^{2n}}{(2n)!}+c(x^{2n+1})$;
+\item $\ln (1+x)=x-\frac{x^2}{2}+...+(-1)^{n-1}\frac{x^n}{n}+c(x^n)$;
+\item $\frac{1}{1-x}=1+x+x^2+...+\frac{x^n}{n!}+c(x^n)$;
+\item $(1+x)^{\alpha}=1+x+\frac{\alpha(\alpha-1)}{2!}x^2+...+\frac{(\alpha-1)...(\alpha-n+1)}{n!}x^n+c(x^n),(\alpha\in\mathbb{R})$.
+\end{enumerate}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-109}
+\end{enumerate}
+
+\textit{Riešenie (b):}
+Pretože funkcia $e^{x^2}$ má derivácie všetkých rádov v bode $0$ (vyplýva to matematickou indukciou z viet o derivácii súčtu, súčinu a zloženej funkcie), existuje jej Maclaurinov polynóm ľubovoľného stupňa. Jeho koeficienty nebudeme hľadať derivovaním funkcie $e^{x^2}$, namiesto toho použijeme tento postup:
+Ak označíme $R_n(x)$ zvyšok Maclaurinovho polynómu stupňa $n$ funkcie $e^x$, tak pre každé $x\in\mathbb{R}$ platí $(*)$
+$$e^x=1+x+\frac{x^2}{2!}+...+\frac{x^n}{n!}+R_n(x),$$ 
+pritom podľa vety $19$ je $\lim_{x\rightarrow 0}\frac{R_n(x)}{x^n}=0$, t.j. pre každé $x\in\mathbb{R}$ platí 
+$$e^{x^2}=1+x^2+\frac{x^2}{2!}+...+\frac{x^{2n}}{n!}+R_n(x^2),$$
+pritom $\lim_{x\rightarrow 0}\frac{R_n(x^2)}{x^{2n}}=0$ (vyplýva to z vety o limite zloženej funkcie a z toho, že $\lim_{x\rightarrow 0}\frac{R_n(z)}{z^{2n}}=0$), teda $R_n(x^2)=c(x^{2n}).$ Podľa tvrdenia z príkladu $386$ je preto $1+x^2+...+\frac{x^{2n}}{n!}$ Maclaurinov polynóm stupňa $2n$ funkcie $e^{x^2}$.
+(Priamo z definície Maclaurinovho polynómu vyplýva: ak z Maclaurinovho polynómu stupňa $k$ $(x\geq 2)$ funkcie $f$ vynecháme člen obsahujúci $x^k$, dostaneme Maclaurinov polynóm stupňa $k-1$ funkcie $f$. Teda Maclaurinov polynóm stupňa $2n-1$ funkcie $e^{x^2}$ je $1+x^2+...+\frac{x^{2n-2}}{(n-1)}$!)
+
+\textit{Riešenie (d):}
+Ak rovnosť
+$$\ln (1+x)=x-\frac{x^2}{2}+...+(-1)^{n-3}\frac{x^{n-2}}{n-2}+(-1)^{n-2}\frac{x^{n-1}}{n-1}+(-1)^{n-1}\frac{x^n}{n}+c(x^n)$$
+ vynásobím $x^2$, dostaneme
+ $$x^2\ln (1+x)=x^3-\frac{x^4}{2}+...+(-1)^{n-3}\frac{x^{n}}{n-2}+(-1)^{n-2}\frac{x^{n+1}}{n-1}+(-1)^{n-1}\frac{x^{n+2}}{n}+x^2\cdot c(x^n).$$
+ Funkcia $(-1)^{n-2}\frac{x^{n+1}}{n-1}+(-1)^{n-1}\frac{x^{n+2}}{n}+x^2\cdot c(x^n)$ patrí do triedy $c(x^n)$, preto môžeme písať:
+ $$x^2\cdot\ln (1+x)=x^3-\frac{x^4}{2}+...+(-1)^{n-3}\frac{x^n}{n-2},$$ čo podľa tvrdenia z príkladu $386$ znamená, že $x^3-\frac{x^4}{2}+...+(-1)^{n-3}\frac{x^n}{n-2}$ je Maclaurinov polynóm stupňa $n,(n\geq 3)$ funkcie $x^2\cdot\ln (1+x)$. Zrejme Maclaurinovými polynómami stupňa $1$ a $2$ sú funkcie identicky rovné $0$. 
+ 
+ \begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-110}
+\end{enumerate}
+
+\textit{Riešenie (a):}
+Ak do rovnosti
+$$e^z=1+z+\frac{z^2}{2!}+R(z)$$
+($R$ označuje zvyšok Maclaurinovho polynómu) dosadíme $z=\sin^2 x$, dostaneme
+$$e^{\sin^2 x}=1+\sin^2 x+\frac{\sin^4 x}{2!}+R(\sin^2 x),$$
