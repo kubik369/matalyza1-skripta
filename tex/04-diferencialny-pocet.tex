@@ -546,10 +546,10 @@ Ak funkcia $f$ je $n$-krát diferencovateľná v bode $a\in\mathbb{R}$ a $T_n$ j
 \end{veta}
 
 Nech funkcia $g$ je definovaná v niektorom rýdzom okolí bodu $a\in\mathbb{R^*}$ a nenadobúda tam nulové hodnoty. Znakom $c(g)$ budeme označovať triedu všetkých funkcií $f$ takých, že
-\begin{enumerate}
+\begin{itemize}
 \item ich definičný obor obsahuje niektoré rýdze okolie bodu $a$;
 \item platí $\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=0$.
-\end{enumerate}
+\end{itemize}
 
 Namiesto zápisu $f\in c(g)$ sa používa zápis $f=c(g)$. (Pokiaľ by z kontextu nebolo jasné, ktorého $a\in\mathbb{R^*}$ sa vzťah $f=c(g)$ týka, používa sa zápis $f=c(g)$ $(x\rightarrow a).$) Zápis $f=h+c(g)$ treba chápať nasledovne: funkcia $f$ je súčtom funkcie $h$ a niektorej funkcie z triedy $c(g)$. 
 
@@ -557,22 +557,22 @@ Ak funkcia $f$ je $n$-krát diferencovateľná v bode $a\in\mathbb{R}$, patrí p
 $$f(x)=f(a)+\frac{f'(a)}{1!}(x-a)+...+\frac{f^{(n)}(a)}{n!}c((x-a)^n);$$
 tento zápis sa nazýva Taylorovým vzorcom so zvyškom v Peanovom tvare.
 V nasledujúcich príkladoch budeme používať tieto tvrdenia (v zápisoch všade vynechávame $x\rightarrow 0;m,n$ sú prirodzené čísla);
-\begin{enumerate}
+\begin{itemize}
 \item ak $f(x)=c(x^n)$ a $g(x)=c(x^n)$, tak $f(x)+g(x)=c(x^n)$;
 \item ak $m>n$ a $f(x)=c(x^m)$, tak $f(x)=c(x^n)$;
 \item ak $f(x)=c(x^n)$, tak $f^m(x)=c(x^{m\cdot n})$;
 \item ak $f(x)=c(x^n)$, tak $x^m\cdot f(x)=c(x^{m+n})$;
 \item ak $f(x)=c(x^n)$ a $g(x)=c(x^m)$, tak $f(x)\cdot g(x)=c(x^{m+n})$.
-\end{enumerate}
+\end{itemize}
 
 Uvedené implikácie budeme zapisovať nasledovne:
-\begin{enumerate}
+\begin{itemize}
 \item $c(x^n)+c(x^n)=c(x^n)$;
 \item $c(x^m)=c(x^n)$ pre $m>n$;
 \item $c^m(x^n)=c(x^{m\cdot n})$;
 \item $x^m\cdot c(x^n)=c(x^{m+n})$;
 \item $c(x^n)\cdot c(x^m)=c(x^{m+n})$.
-\end{enumerate}
+\end{itemize}
 
 Používanie týchto zápisov vyžaduje istú opatrnosť, pretože ide o symbolické vyjadrenie implikácií, možno (na rozdiel od skutočných rovností) tieto "rovnosti" čítať sprava doľava.
 
@@ -582,14 +582,14 @@ Používanie týchto zápisov vyžaduje istú opatrnosť, pretože ide o symboli
 \end{enumerate}
 
 V nasledujúcich príkladoch využijeme tvrdenie z príkladu $386$ a znalosť MAclaurinových polynómov týchto funkcií (možno ich zostrojiť výpočtom príslušných derivácií):
-\begin{enumerate}
+\begin{itemize}
 \item $e^x=1+x+\frac{x^2}{2!}+...+\frac{x^n}{n!}+c(x^n)$;
 \item $\sin x=x-\frac{x^3}{3!}+...+(-1)^{n-1}\frac{x^{2n-1}}{(2n-1)!}+c(x^{2n})$\footnote{pretože $\sin^{(2n)}(0)=0$, majú Maclaurinov polynóm stupňa $2n-1$ a Maclaurinov polynóm stupňa $2n$ rovnaký tvar, preto aj zvyšok Maclaurinovho polynómu stupňa $2n-1$ funkcie $\sin$ patrí do triedy $c(x^{2n})$; podobná poznáma platí o funkcii $\cos$};
 \item $\cos x=1-\frac{x^2}{2!}+...+(-1)^{n}\frac{x^{2n}}{(2n)!}+c(x^{2n+1})$;
 \item $\ln (1+x)=x-\frac{x^2}{2}+...+(-1)^{n-1}\frac{x^n}{n}+c(x^n)$;
 \item $\frac{1}{1-x}=1+x+x^2+...+\frac{x^n}{n!}+c(x^n)$;
 \item $(1+x)^{\alpha}=1+x+\frac{\alpha(\alpha-1)}{2!}x^2+...+\frac{(\alpha-1)...(\alpha-n+1)}{n!}x^n+c(x^n),(\alpha\in\mathbb{R})$.
-\end{enumerate}
+\end{itemize}
 
 \begin{enumerate}[resume]
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-109}
@@ -612,12 +612,148 @@ $$\ln (1+x)=x-\frac{x^2}{2}+...+(-1)^{n-3}\frac{x^{n-2}}{n-2}+(-1)^{n-2}\frac{x^
  Funkcia $(-1)^{n-2}\frac{x^{n+1}}{n-1}+(-1)^{n-1}\frac{x^{n+2}}{n}+x^2\cdot c(x^n)$ patrí do triedy $c(x^n)$, preto môžeme písať:
  $$x^2\cdot\ln (1+x)=x^3-\frac{x^4}{2}+...+(-1)^{n-3}\frac{x^n}{n-2},$$ čo podľa tvrdenia z príkladu $386$ znamená, že $x^3-\frac{x^4}{2}+...+(-1)^{n-3}\frac{x^n}{n-2}$ je Maclaurinov polynóm stupňa $n,(n\geq 3)$ funkcie $x^2\cdot\ln (1+x)$. Zrejme Maclaurinovými polynómami stupňa $1$ a $2$ sú funkcie identicky rovné $0$. 
  
- \begin{enumerate}[resume]
+\begin{enumerate}[resume]
 	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-110}
 \end{enumerate}
 
 \textit{Riešenie (a):}
 Ak do rovnosti
 $$e^z=1+z+\frac{z^2}{2!}+R(z)$$
-($R$ označuje zvyšok Maclaurinovho polynómu) dosadíme $z=\sin^2 x$, dostaneme
+($R$ označuje zvyšok Maclaurinovho polynómu) dosadíme $z=\sin^2 x$, dostaneme $(*)$
 $$e^{\sin^2 x}=1+\sin^2 x+\frac{\sin^4 x}{2!}+R(\sin^2 x),$$
+pritom $R(\sin^2 s)=c(x^4)$ (pretože $R(z^2)=c(z^2)$, je $\lim_{x\rightarrow 0}\frac{R(\sin^2 s)}{x^4}=\lim_{x\rightarrow 0}\frac{\sin^4 x}{x^4}\cdot\lim_{x\rightarrow 0}\frac{R(\sin^2 x)}{\sin^4 x}=1\cdot\lim_{x\rightarrow 0}\frac{R(z)}{z^2}=0)$.
+
+Pomocou rovností $\sin x=x-\frac{x^3}{3!}+c(x^3),\sin x=x+c(x)$ môžeme $(*)$ prepísať a upraviť nasledovne $(**)$:
+$e^{\sin^2 x}=1+(x-\frac{x^3}{3!}+c(x^3))^2+\frac{(x+c(x))^4}{2}+c(x^4)=1+(x^2+\frac{x^6}{3!\cdot 3!}+c^2 (x^3)-\frac{2x^4}{3!}+2xc(x^3)-\frac{2x^3c(x^3)}{3!})+(x^4+4x^3c(x)+6x^2c^2(x)+4xc(x)+c^4(x))+c(x^4)$.
+
+Všetky sčítance okrem vyznačených patria do $c(x^4)$, patrí tam teda aj ich súčet. Rovnosť $(**)$ preto môžeme písať
+$$e^{\sin^2 x}=1+x^2+(1-\frac{2}{3!})x^4+c(x^4),$$
+čo podľa tvrdenia z príkladu $386$ znamená, že $1+x^2+\frac{2}{3}x^4$ je Maclaurinov polynóm stupňa $4$ funkcie $e^{\sin^2 x}$.
+
+\textit{Poznámka:}
+Zo záveru uvedeného postupu vyplýva, že stupne Maclaurinových polynómov funkcií $e^x$ a $\sin^2 x$ sme volili tak, aby v $(**)$ všetky sčítance, ktoré nemajú tvar $\alpha x^m,m=0.1....$ (medzi ne patrí aj funkcia $R(\sin^2 x)$) boli z triedy $c(x^4)$.
+
+Všimnite si tiež, že hoci strana rovnosti $(**)$ obsahuje dokonca polynóm $6.$ stupňa, nemôžeme tvrdiť, že tento polynóm je Maclaurinovým polynómom $6.$ stupňa funkcie $e^{\sin^2 x}$; z nášho postupu totiž nevyplýva, že by súčet zvyšných členov na pravej strane rovnosti $(**)$ patril do $c(x^6)$.
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-111}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-112}
+\end{enumerate}
+
+\textit{Riešenie (b):}
+Funkciu v čitateli napíšeme v tvare $\alpha x^m+c(x^m)$, kde $\alpha\neq 0$ (t.j. z tých jej Maylaurinových polynómov, ktoré nie sú identicky rovné $0$, vyberieme polynóm najnižšieho stupňa); to isté urobíme v menovateli.
+
+V našom prípade
+
+$\cos x -e^{-\frac{x^2}{2}}=(1-\frac{x^2}{2}+\frac{x^4}{24}+c(x^4))-(1-\frac{x^2}{2}+\frac{x^4}{8}+c(x^4))=-\frac{1}{12}x^4+c(x^4),\sin^4 x=x^4+c(x^4)$.
+
+Potom 
+$$\lim_{x\rightarrow 0}\frac{\cos x -e^{-\frac{x^2}{2}}}{\sin x^4}=\lim_{x\rightarrow 0}\frac{-\frac{1}{12}x^4+c(x^4)}{x^4+c(x^4)}=\lim_{x\rightarrow 0}\frac{{-\frac{1}{12}}+\frac{c(x^4)}{x^4}}{1+\frac{c(x^4)}{x^4}}=-\frac{1}{12}$$
+
+(rovnosť $\lim_{x\rightarrow 0}\frac{c(x^4)}{x^4}=0$ vyplýva z definície symboli $c(x^4)$).
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-113}
+\end{enumerate}
+
+\begin{veta}
+Nech je daná funkcia $f$, nech funkcia $f^{(n)}$ je definovaná a spojitá v niektorom okolí $O(a)$ bodu $a\in\mathbb{R}$, nech pre každé $x\in O(a)\setminus \{a\}$ existuje vlastná $f^{(n+1)}(x)$. Nech $T_n$ je Taylorov polynóm stupňa $n$ funkcie $f$ v bode $a$. Potom
+\begin{itemize}
+\item pre každé $x\in O(a),x>a$ $(x\in O(a),x<a)$ existuje číslo $\vartheta (x)\in (a,x)$  $(\vartheta (x)\in (x,a))$ také, že
+$$f(x)-T_n(x)=\frac{f^{(n+1)}(\vartheta (x))}{(n+1)!}(x-a)^{n+1}$$
+(tzv. Lagrangeov tvar zvyšku);
+\item pre každé $x\in O(a),x>a$  $(x\in O(a),x<a)$ existuje číslo $\vartheta (x)\in (a,x)$  $\vartheta (x)\in (a,x)$  $(\vartheta (x)\in (x,a))$ také, že 
+$$f(x)-T_n(x)=\frac{f^{(n+1)}(\vartheta (x))}{n!}(x-a)(x-\vartheta (x))^n$$
+(tzv. Cauchyho tvar zvyšku).
+\end{itemize}
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-114}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-115}
+\end{enumerate}
+
+\subsection{Použitie diferenciálneho počtu pri zostrojovaní grafov funkcií}
+Pri zostrojovaní grafu funkcie $f$ postupujeme spravidla nasledovne:
+\begin{itemize}
+\item určíme $D(f)$;
+\item nájdeme všetky hodnoty $x$, pre ktoré $f(x)=0$ (t.j. priesečníky grafu funkcie $f$ s osou $Ox$);
+\item vyšetríme spojitosť funkcie $f$ a jej správanie sa v bodoch nespokojnosti;
+\item zistíme, na ktorých intervaloch je $f$ monotónna, a nájdeme body, v ktorých nadobúda lokálne extrémy;
+\item vyšetríme konvexnosť a konkávnosť funkcie $f$, nájdeme inflexné body;
+\item nájdeme asymptoty grafu funkcie (definíciu asymptoty pozri ďalej).
+\end{itemize}
+Zostrojenie grafu funkcie $f$ môžu uľahčiť niektoré jej špeciálne vlastnosti: pri párnej alebo nepárnej funkcii stačí zostrojiť graf funkcie $f/D(f)\cap \langle 0,+\infty)$, v prípade periodickej funkcie $f$ graf funkcie $f/\langle a,a+T\rangle cap D(f)$ a $T$ je niektorá perióda funkcie $f$.
+
+(Nech je daná funkcia $f$, nech $a\in\mathbb{R}$ je hromadný bod množiny $D(f)\cap (a,+\infty)$) (množiny $D(f)\cap (-\infty,a)$). Ak existuje $\lim_{x\rightarrow a+}f(x)$  $(\lim_{x\rightarrow a-}f(x))$ a je nevlastná, nazýva sa priamka $x=ay$ asymptotou bez smernice grafu funkcie $f$.
+
+Nech bod $+\infty$ je hromadný bod definičného oboru funkcie $f$. Priamka $y=kx+q$ sa nazýva asymptota so smernicou grafu funkcie $f$ v bode $+\infty$, ak $\lim_{x\rightarrow \infty}(f(x)-kx-q)=0$.
+
+Analogicky sa definuje asymptota so smernicou grafu funkcie $f$ v bode $-\infty$.
+
+\begin{veta}
+Nech bod $+\infty$ je hromadný bod definičného oboru funkcie $f$. Priamka $y=kx+q$ je asymptotou so smernicou grafu funkcie $f$ v bode $+\infty$ práve vtedy, keď:
+\begin{itemize}
+\item existuje konečná $\lim_{x\rightarrow \infty} \frac{f(x)}{x}$ a platí $\lim_{x\rightarrow \infty} \frac{f(x)}{x}=k$;
+\item existuje konečná $\lim_{x\rightarrow \infty} (f(x)-kx)$ a rovná sa číslu $q$.
+
+(Analogická veta platí pre asymptotu so smernicou grafu funkcie $f$ v bode $-\infty$.)
+\end{itemize}
+\end{veta}
+
+Zostrojte grafy nasledujúcich funkcií:
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-116}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-117}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-118}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-119}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-120}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-121}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-122}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-123}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-124}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-125}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-126}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-127}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-128}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-129}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-130}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-131}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-132}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-133}
+\end{enumerate}
+
+\subsection{Ďalšie príklady}
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-134}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-135}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-136}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-137}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-138}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-139}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-140}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-141}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-142}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-143}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-144}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-145}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-146}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-147}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-148}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-149}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-150}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-151}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-152}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-153}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-154}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-155}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-156}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-157}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-158}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-159}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-160}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-161}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-162}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-163}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-164}
+\end{enumerate}
