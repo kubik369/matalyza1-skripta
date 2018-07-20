@@ -1322,123 +1322,198 @@ Nech $f(x)=x^2\sin \frac{1}{x}$ pre $x\neq 0,f(0)=0$. Podľa vety o strednej hod
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-165}
-
+Nech funkcia $f$ je spojitá a nekonštantná na intervale $\langle a,b \rangle$, máderiváciu v každom bode $x\in (a,b)$ a platí $f(a)=f(b)$. Potom existujú body $c_1,c_2\in (a,b)$ tak, že $f'(c_1)>0,f'(c_2)<0$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-166}
-
+Nech funkcia je spojitá a nelineárna na intervale $\langle a,b \rangle$ a má deriváciu v každom bode $x\in (a,b)$. Potom existuje $c\in (a,b)$, v ktorom $|f'(c)|>|\frac{f(b)-f(a)}{b-a}|$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-167}
+Nech prostá funkcia $f:(a,b)\rightarrow\mathbb{R}$ má deriváciu v každom bode $x\in (a,b)$. Potom derivácia funkcie $f^{-1}$ je definovaná na hustej podmnožine množiny $D(f^{-1})$. Dokážte!
 
+(Množina $A\subset\mathbb{R}$ sa nazýva hustá v neprázdnej množine $B\subset\mathbb{R}$, ak $A\subset B$ a každý bod $b\in B$ je hromadným bodom množiny $A$.)
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-168}
-
+Nech funkcia $f$ aj jej derivácia sú definované na intervale $\langle a,b \rangle,a\cdot b>0$, nech $f(a)=f(b)$. Potom existuje $c\in (a,b)$ tak, že $f(a)-f(c)=c\cdot f'(c)/2$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-169}
-
+Dokážte nasledujúce nerovnosti:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\frac{\ln x}{x-1}\leq \frac{1}{\sqrt{x}}$ pre $x>0,x\neq 1$;
+	\item $(1+\frac{1}{x})^x<e<(1+\frac{1}{x})^{x+1}$ pre $x>0$;
+	\item $(x^{\alpha}+y^{\alpha})^{\frac{1}{\alpha}}>(x^{\beta}+y^{\beta})^{\frac{1}{\beta}}$, pre $x>0,y>0,0<\alpha<\beta$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-170}
-
+Nech funkcia $f$ je diferencovateľná v každom bode intervalu $(0,\infty)$ a $\inf_{x\in (0,\infty)}f'(x)>0$. Potom $\lim_{x\rightarrow\infty}f(x)=\infty$.
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-171}
-
+\begin{enumerate}
+\item Nech funkcia $f:\langle a,+\infty )\rightarrow\mathbb{R}$ je spojitá, nech $f(a)<0$ a $f'(x)>k>0$ pre všetky $x>a$. Potom funkcia $f$ je kladná na intervale $\langle a-\frac{f(a)}{k},\infty )$ a rovnica $f(x)=0$ má v intervale $\langle a,a-\frac{f(a)}{k} )$ práve jeden koreň. Dokážte!
+\item Ukážte, že jediný kladný koreň rovnice $x^3+px-q=0,(p>0,q>)$ leží v intervale $(0,\frac{q}{p})$.
+\item Nech funkcie $f,g$ sú spojité na $\langle a,+\infty)$, nech $f(a)-g(a)=A<0$ a nech pre všetky $x>a$ platí $f'(x)-g'(x)>p>0$. Potom pre všetky $x\geq a-\frac{A}{p}$ platí $f(x)>g(x)$. Dokážte!
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-172}
-
+Nech funkcia $f$ je rastúca v každom bode otvoreného intervalu $I$, t.j. nech platí $$\forall a\in I \exists O(a) \forall x,y\in O(a)\cap I: x<a<y\Rightarrow f(x)<f(a)<f(y).$$
+Potom funkcia $f$ je rastúca na intervale $I$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-173}
-
+Ukážte, že funkcia 
+$$f{x}= \left\{ \begin{array}{r@{\quad}c}
+   x+x^2\sin \frac{2}{x},& $ak $ x \neq 0 \\
+    0, &  $ak $ x=0 \\ \end{array} \right.$$
+    je rastúca v bode $x=0$; ale nie je rastúca na žiadnom okolí tohto bodu.
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-174}
-
+Nech je daný ohraničený interval $I$ a jeho podmnožina $M$, pričom vnútorný bod intervalu $I$ nie je hromadným bodom množiny $M$. Ak funkcia $f$ je spojitá na intervale $I$ a má zápornú deriváciu v každom bode $x\in I\setminus M$, tak $f$ je klesajúca na $I$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-175}
-
+Dokážte Jensenovu nerovnosť: Ak funkcia $f$ je konvexná na intervale $I$; $x_1,...,x_n\in I,\lambda_1,...,\lambda_n$ sú kladné čísla a $\sum_{i=1}^n \lambda_i=1$, tak
+$$f(\lambda_1x_1+...+\lambda_nx_n)\leq \lambda_1f(x_1)+...+\lambda_nf(x_n).$$
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-176}
-
+Dokážte nerovnosti:
+\begin{enumerate}
+\item $\frac{1}{n}\sum_{k=1}^n x_k\leq \sqrt{\frac{1}{n}\sum_{k=1}^n x^2_{k}}$, kde $x_1,...,x_n$ sú kladné čísla;
+\item $\sqrt[n]{x_1\cdot x_2\cdot...\cdot x_n}\leq \frac{1}{n}(x_1+x_2+...+x_n)$, kde $x_1,...,x_n>0$;
+\item $(\alpha_1+...+\alpha_n)^r\leq n^{r-1}(\alpha^r_1+...+\alpha^r_n)$ pre $\alpha_1,...,\alpha_n>0$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-177}
-
+Každý polynóm stupňa $2k+1$ $(k\in\mathbb{N})$ má aspoň jeden inflexný bod. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-178}
-
+Párny polynóm (t.j. polynóm, ktorý je párnou funkciou) s kladnými koeficientami nemá inflexné body. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-179}
-
+Nech funkcia $f$ je dvakrát diferencovateľná na intervale $\langle a,\infty),f(a)=A>0,f'(a)<0$ a nech pre všetky $x>a$ Platí $f''(x)<0$. Potom rovnica $f(x)=0$ má práve jeden koreň v intervale $(a,\infty)$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-180}
-
+Ak funkcia $f$ je konvexná na intervale $\langle a,b \rangle$, tak $f$ je spojitá na $(a,b)$ a má vlastné jednostranné derivácie v každom bode $c\in (a,b)$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-181}
-
+Dokážte, že v inflexnom bode nemôže mať funkcia lokálny extrém!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-182}
-
+Rozhodnite, či existuje funkcia $f$, ktorej druhá derivácia je spojitá na $\mathbb{R}$ a ktorá na ľubovoľnom intervale $I \subset\mathbb{R}$ nie je konvexná a nie je konkávna.
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-183}
-
+Nech funkcia $f:I\rightarrow\mathbb{R}$ je prostá a spojitá na intervale $I$. AK $f$ je konvexná na $I$ alebo konkávna na $I$, tak $f^{-1}$ je konvexná na $f(I)$ alebo Konkávna na $f(I)$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-184}
-
+Nech funkcia $f$ je konvexná a nie je rýdzo konvexná na intervale $I$. Potom existuje interval $I_1\subset I$, na ktorom je funkcia $f$ lineárna (t.j. existujú konštanty $a,b\in\mathbb{R}$ tak, že $f(x)=ax+b$ pre všetky $x\in I_1$). Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-185}
-
+Nájdite všetky lokálne extrémy funkcií:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $y=\sqrt[3]{2x^3+3x^2-36x}$;
+	\item $y=(x+1)^n\cdot e^{-x},n\in\mathbb{N}$;
+	\item $y=(1+x+\frac{x^2}{2!}+...+\frac{x^n}{n!})\cdot e^{-x}$;
+	\item $f{x}= \left\{ \begin{array}{r@{\quad}c}
+   e^{-\frac{1}{|x|}(\sqrt{2}+\sin \frac{1}{x})},& $ak $ x \neq 0 \\
+    0, &  $ak $ x=0 \\ \end{array} \right.$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-186}
-
+Dokážte nerovnosti:
+\begin{enumerate}
+\item $x^m(a-x)^n\leq \frac{m^n\cdot m^m}{(m+n)^{m+n}}$ pre $m>0,n>0,0\leq x\leq a$;
+\item $\frac{x+a}{2^{\frac{n-1}{n}}}\leq \sqrt[n]{x^n+a^n}\leq x+a$ pre $x>0,a>0,n>1$.
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-187}
+Sud tvaru valca stojaci na vodorovnej rovine je do výšky $H$ naplnený vodou. V akej hĺbke $x$ pod hladinou treba do steny suda urobiť otvor, ak má voda dostreknúť najďalej?
 
+(Rýchlosť vytekajúcej vody sa podľa Torricelluho zákona rovná $\sqrt{2hg}$, kde $h$ je hĺbka otvoru pod hladinou.)
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-188}
-
+K rieke šírky $a$, $(m)$ sa pod uhlom pripája kanál šírky $b$, $(m)$. Aká je najväčšia dĺžka plavidiel, ktoré z rieky vplávajú do kanála (šírku plavidiel zanedbávame)?
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-189}
-
+Nájdite nasledujúce limity použitím l'Hospitalovho pravidla:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim_{x\rightarrow 0}\frac{x\cdot\arcsin x^2}{x\cdot\cos x -\sin x}$;
+	\item $\lim_{x\rightarrow 0}\frac{\tan x -x}{\ln^3 (1+x)}$;
+	\item $\lim_{x\rightarrow 0}\frac{\ln x\cdot\ln (1+x)}{\sqrt{x}}$;
+	\item $\lim_{x\rightarrow \infty}\frac{e^x+\sin x}{x+\sin x}$;
+	\item $\lim_{x\rightarrow \infty}e^{x^n-e^x},x\in\mathbb{N}$;
+	\item $\lim_{x\rightarrow \infty}\frac{x^{\ln x}}{(\ln x)^x}$;
+	\item $\lim_{x\rightarrow 0}x^{x^x-1}$;
+	\item $\lim_{x\rightarrow 0}(x^{x^x}-1)$;
+	\item $\lim_{x\rightarrow \infty}(x^{\frac{7}{8}}-x^{\frac{6}{7}}\ln^2 x)$;
+	\item $\lim_{x\rightarrow \infty}(\sqrt[3]{x^3+x^2+x+1}-\sqrt{x^2+x+1}\cdot\frac{\ln (e^x+x)}{x})$;
+	\item $\lim_{x\rightarrow \infty}((x+a)^{1+\frac{1}{x}}-x^{1+\frac{1}{x+a}})$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-190}
-
+Nech $f(x)=e^{-2x}(\cos x+2\sin x),g(x)=e^{-x}(\cos x +\sin x)$. Potom $0=\lim_{x\rightarrow\infty}f(x)=\lim_{x\rightarrow\infty}g(x)\cdot\lim_{x\rightarrow\infty}\frac{f'(x)}{g'(x)}=0$; napriek tomu $\lim_{x\rightarrow\infty}\frac{f(x)}{g(x)}$ neesituje. Dokážte! Prečo použitie l'Hospitalovho pravidla vedie k nesprávnemu výsledku?
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-191}
-
+Nájdite Taylorov polynóm stupňa $n$ funkcie $f$ v bode $a$, ak
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $f(x)=\frac{x}{(1+x^3)^2},a=0$;
+	\item $f(x)=x\sqrt{\frac{2+x}{2-x}},a=0,n=2m+1$;
+	\item $f(x)=(x+3)\cdot e^{3x^2+18x},a=-3$;
+	\item $f(x)=\log_2(3x^2-24x+50),a=4$;
+	\item $f(x)=\frac{x^2-2x+1}{\sqrt[3]{x(2-x)}},a=1$;
+	\item $f(x)=x\cdot\sin (x^2+2x+2)\cdot\cos (x^2+2x),a=-1$.
+\end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-192}
-
+Nájdite Maclaurinov polynóm stupňa $n$ funkcie $f$, ak:
+\begin{multicols}{2}
+\begin{enumerate}
+	\item $f(x)=\ln (x+\sqrt{x^2+1})$;
+	\item $f(x)=\arctan x$;
+	\item $f(x)=\arccos x$.
+\end{enumerate}
+\end{multicols}
+(Návod: Najprv zostrojte Maclaurinov polynóm funkcie $f'$.)
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-193}
-
+Dokážte, že $e$ je iracionálne číslo.
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-194}
-
+Nech funkcia $f$ je $n$-krát diferencovateľná v okolí $O(a)$ bodu $a\in\mathbb{R}$, nech funkcia $f$ má v bode $a$ nenulovú $(n+1)$-vú deriváciu. Každému bodu $x\in O(a)$ priraďme číslo $\vartheta (x)\in (0,1)$ tak, aby platilo 
+$$f(x)=f(a)+f'(a)(x-a)+...+\frac{f^{(n)}(a+\vartheta (x)(x-a))}{n!}(x-a)^n.$$
+Potom $\lim_{x\rightarrow a}\vartheta (x)=\frac{1}{n+1}$. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-195}
@@ -1462,5 +1537,45 @@ Nech $f(x)=x^2\sin \frac{1}{x}$ pre $x\neq 0,f(0)=0$. Podľa vety o strednej hod
 \end{defproblem}
 
 \begin{defproblem}{diferencialny-pocet-200}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-201}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-202}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-203}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-204}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-205}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-206}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-207}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-208}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-209}
+
+\end{defproblem}
+
+\begin{defproblem}{diferencialny-pocet-210}
 
 \end{defproblem}
