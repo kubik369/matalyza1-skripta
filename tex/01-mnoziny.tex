@@ -108,7 +108,7 @@ Ak $f:A \rightarrow \mathbb{R}$ je funkcia a $B \subset A$ neprázdna množina, 
 
 Nech sú dané funkcie $f$, $g$.
 
-\begin{enumerate}
+\begin{itemize}
 \item Ak je množina $D_1:=D(f)\cap D(g)$ neprázdna, nazývajú sa funkcie $p$, $q$, $r$ definované na množine $D_1$ predpismi
 \begin{center}
 \item $p(x)=f(x)+g(x)$,
@@ -117,16 +117,16 @@ Nech sú dané funkcie $f$, $g$.
 \end{center}
 súčet, rozdiel a súčin funkcií $f$, $g$ a označujú sa $f+g$, $f-g$, $f\cdot g$.
 \item Ak je množina $D_2:=D(f)\cap \{x\in D(g);g(x)\neq 0\}$ neprázdna, nazýva sa funkcia $s:D_2 \rightarrow \mathbb{R}$ definovaná predpisom 
-\begin{enumerate}
+\begin{itemize}
 \item $a(x)=\frac{f(x)}{g(x)}$
-\end{enumerate}
+\end{itemize}
 podiel funkcií $f$, $g$ a označuje sa $\frac{f}{g}$.
 \item Ak je množina $D_3:=\{x\in D(f);f(x)\in D(g)\}$ neprázdna, nazýva sa funkcia $t:D_3\rightarrow\mathbb{R}$ daná predpisom
-\begin{enumerate}
+\begin{itemize}
 \item $t(x)=g(f(x))$
-\end{enumerate}
+\end{itemize}
 zložená funkcia z funkcií $f$, $g$ (superpozícia funkcií $f$ a $g$) a označuje sa $g \circ f$. Funkcia $f$ sa nazýva vnútorná zložka, funkcia $g$ vonkajšia zložka funkcie $g \circ f$.
-\end{enumerate}
+\end{itemize}
 
 Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
 \begin{tabular}{|l|l|p{10cm}|}
@@ -134,18 +134,18 @@ Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
   {\bf Názov} & {\bf Predpis} & {\bf Definičný obor} \\
   \hline \hline
   konštantné        & $f(x)\equiv a$\footnote{symbol $\equiv$ čítame "identicky rovné" }, $a\in\mathbb{R}$ & $\mathbb{R}$ \\
-  mocninové        & $f(x)=x^a,a\in\mathbb{R}\ \{0\}$ & \begin{enumerate}
+  mocninové        & $f(x)=x^a,a\in\mathbb{R}\ \{0\}$ & \begin{itemize}
   \item ak $a>0$:
-  \begin{enumerate}
+  \begin{itemize}
   \item ak $a=\frac{p}{q},p,q\in\mathbb{N},$ $p$ je párne alebo $p$ aj $q$ sú nepárne: $\mathbb{R}$
   \item vo všetkých ostatných prípadoch: $\langle 0,\infty)$;
-  \end{enumerate}
+  \end{itemize}
   \item ak $a<0$:
-  \begin{enumerate}
+  \begin{itemize}
   \item ak $a=-\frac{p}{q},p,q\in\mathbb{N}$, $p$ je párne lebo $p$ aj $q$ sú nepárne: $\mathbb{R}\ \{0\}$
   \item vo všetkých ostatných prípadoch: $(0,\infty)$
-  \end{enumerate}
-\end{enumerate}   \\
+  \end{itemize}
+\end{itemize}   \\
   exponenciálne        & $f(x)=a^x,a>0,a\neq 1$ & $\mathbb{R}$ \\
   logaritmické          & $f(x)=\log_a x,a>0,a\neq 1$\footnote{špeciálne v prípade $a=10$ budeme používať označenie $log_a x$, v prípade $a=e$ označenie $\ln x$} & $\mathbb{R}^{+}$\\
   goniometrické         & $f(x)=\sin x$ & $\mathbb{R}$ \\
@@ -162,3 +162,55 @@ Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
 Funkcie, ktoré vzniknú zo základných elementárnych funkcií len použitím operácií súčtu, rozdielu, súčinu, podielu a superpozície funkcií, sa nazývajú elementárne funkcie.
 
 Všimnime si, že definičný obor funkcie, ktorá je súčtom, rozdielom, súčinom, podielom alebo superpozíciou daných funkcií $f$ a $g$, je jednoznačne určený množinami $D(f)$ a $D(g)$. Teda ak funkcia $h$ vznikne z funkcií $f_1,..,f_n$ len použitím operácií súčtu, rozdielu, súčinu, podielu a superpozície funkcií, je množina $D(h)$ jednoznačne určená množinami $D(f_1),...,D(f_n)$. Preto ak napíšeme predpis takejto funkcie $h$ bez toho, aby sme výslovne určili jej definičný obor, považujeme funkciu $h$ za definovanú práve na tej množine, ktorá je určená množinami $D(f_1),...,D(f_n)$ na základe definícií súčtu, rozdielu, súčinu, podielu a superpozície funkcií. (Teda trocha nepresne povedané, za definičný obor takejto funkcie $h$ považujeme množinu všetkých tých $x\in\mathbb{R}$, pre ktoré má predpis funkcie $h$ "zmysel".)
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-9}
+  \item \useproblem[supremum-infimum]{supremum-infimum-10}
+  \item \useproblem[supremum-infimum]{supremum-infimum-11}
+  \item \useproblem[supremum-infimum]{supremum-infimum-12}
+\end{enumerate}
+
+Ak $f:A\rightarrow\mathbb{R},g:B\rightarrow\mathbb{R}$ sú funkcie, $A\subset B$ a pre všetky $x\in A$ platí $f(x)=g(x)$, hovoríme, že funkcia $f$ je zúženie funkcie $g$ na množinu $A$ ($f$ je funkcia $g$ zúžená na množinu $A$) a označujeme $f=\frac{g}{A}$.
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-13}
+\end{enumerate}
+
+\subsection{Graf funkcie}
+Nech je v rovine daná pravouhlá súradnicová sústava, pričom jednotky dĺžky na súradnicových osiach $Ox$ a $Oy$ sú rovnaké. Množina $\{(x,f(x))\}$ bodov roviny, kde $f:A\rightarrow\mathbb{R}$ je daná funkcia, sa nazýva graf funkcie $f$ $((x,f(x))$ je zápis bodu roviny pomocou jeho súradníc v danej súradnicovej sústave).
+
+V nasledujúcej tabuľke sú opísané elementárne transformácie grafov funkcií:
+
+\begin{tabular}{|l|p{10cm}|}
+  \hline
+  {\bf funkcia $y=g(x)$} & {\bf transformácia grafu funkcie $y=f(x)$}  \\
+  \hline \hline
+  $y=f(x)+c$  & posunutie o $c$ v smere osi $Oy$ \\
+  $y=f(x-c)$  & posunutie o $c$ v smere osi $Ox$ \\
+  $y=f(-x)$  & symetria podľa osi $Oy$ \\
+  $y=-f(x)$  & symetria podľa osi $Ox$ \\
+  $y=a\cdot f(x)$  & vynásobenie každej $y$-ovej súradnice číslom $a$ \\
+  $y=f(ax)$  & vydelenie každej $x$-ovej súradnice číslom $a,(a\neq 0)$ \\
+  \hline
+\end{tabular}
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-14}
+\end{enumerate}
+
+\textbf{Riešenie j):} Najprv zostrojíme graf funkcie $f(x)=\sin x$, vydelením každej $x$-ovej súradnice číslom $2$ (teda jeho "dvojnásobným zhustením") z neho dostaneme graf funkcie $f(2x)=g(x)=\sin 2x$. Naša funkcia $\sin 2(x+3)$ má tvar $g(x+3)$, jej graf teda získame, ak graf funkcie $g$ posunieme pozdĺž osi $Ox$ o $3$ jednotky dĺžky doľava.
+
+(Pri zostrojovaní takýchto grafov sa často chybne zamieňa poradie transformácií. Zistime, graf ktorej funkcie by sme dostali pri ich opačnom poradí: posunutím grafu funkcie $f(x)=\sin x$ o $3$ jednotky dĺžky vľavo získame graf funkcie $g_1(x)=f(x+3)=\sin (x+3);$ ak teraz v tomto grafe vydelíme každú $x$-ovú súradnicu číslom $2$, dostaneme graf funkcie $g_2(x)=g_1)(2x)=\sin (2x+3)$.)
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-15}
+  \item \useproblem[supremum-infimum]{supremum-infimum-16}
+  \item \useproblem[supremum-infimum]{supremum-infimum-17}
+\end{enumerate}
+
+\textbf{Riešenie c):} Pre $x=k\pi,k\in\mathbb{Z}$, je $y=0$, pre $x=\frac{\pi}{2}+2k\pi,k\in\mathbb{Z}$, ležia príslučné body grafu funkcie $y=x\sin x$ na priamke $y=x$, pre $x=\frac{3\pi}{2}+2k\pi,k\in\mathbb{Z}$, na priamke $y=-x$. Pretože pre $x\geq 0$ je $-x\leq x\sin x\leq x$, pre $x<0$ je $x\leq x\sin x\leq -x$, leží graf funkcie $y=x\sin x$ "medzi" priamkami $y=x$ a $y=-x$. Na základe toho už vieme približne načrtnúť tento obrázok:
+
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-18}
+\end{enumerate}
