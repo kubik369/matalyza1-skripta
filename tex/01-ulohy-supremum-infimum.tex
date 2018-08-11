@@ -312,17 +312,388 @@ Zostrojte grafy nasledujúcich funkcií tak, že predpis $y=a\cos x +b\sin x$ up
 \end{defproblem}
 
 \begin{defproblem}{supremum-infimum-19}
-
+Ukážte, že grafy funkcií $f(x)=x^3-3a^2x$ a $g(x)=x^3-3ax^2$ možno získať jeden z druhého posunutím.
 \end{defproblem}
 
 \begin{defproblem}{supremum-infimum-20}
-
+Do jedného obrázku nakreslite grafy funkcií $f$ a $g$, ak
+\begin{align*}
+f(x)=\sin x,& g(x)=-\sqrt{1-\cos^2 x};\\
+f(x)=\cos x,& g(x)=\frac{1}{\sqrt{1+\tan^2 x}}.
+\end{align*}
 \end{defproblem}
 
 \begin{defproblem}{supremum-infimum-21}
+Zostrojte graf funkcie $f:\mathbb{R}\rightarrow\mathbb{R}$, ak
+\begin{enumerate}
+\item $f(x+1)=2f(x),x\in\mathbb{R};f(x)=x(1-x)$ pre $x\in\langle 0,1 \rangle$;\\
+\item $f(x+\pi)=f(x)+\sin x,x\in\mathbb{R};f(x)=0$ pre $x\in\langle 0,\pi \rangle$.
+\end{enumerate}
+\end{defproblem}
+
+%aj tu by som dala M do samostatneho stlpca ako je to v skriptach originalnych
+\begin{defproblem}{supremum-infimum-22}
+Zistite, či funkcia $f$ je na množine $M$ ohraničená zhora, resp. zdola:
+\begin{enumerate}
+\item $f(x)=\sin\frac{1}{x},M=(0,1)$;
+\item $\frac{1}{4+x^2},M=\langle 2,\infty )$;
+\item $f(x)=\frac{x+5}{x-1},M=(1,2\rangle$.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-23}
+Pomocou symbolov $\forall,\exists$ zapíšte výrok "hodnota $f(x_0)$ nie je maximom funkcie $f$ na množine $B$ $(x_0\in B\subset D(f))$".
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-24}
+Nech je daná funkcia $f:\mathbb{R}\rightarrow(0,\infty)$. Potom funkcia $g$ určená predpisom $g(x)=\frac{1}{f(x)}$ je ohraničená práve vtedy, keď $\inf_{x\in\mathbb{R}}f(x)>0$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-25}
+Nech funkcie $f$ a $g$, definované na $\mathbb{R}$, sú zhora ohraničené. Potom $$\sup_{x\in\mathbb{R}}(f(x)+g(x))\leq\sup_{x\in\mathbb{R}}f(x)+\sup_{x\in\mathbb{R}}g(x).$$ Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-26}
+Uveďte príklad neohraničených funkcií $f$, $g$ definovaných na $\mathbb{R}$, ktorých superpozícia je ohraničená funkcia!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-27}
+Vyšetrite rast a klesanie funkcií:
+\begin{enumerate}
+\item $f(x)=\sin x +\cos x$;
+\item $f(x)=\sin^4 x +\cos^4 x$.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-28}
+Dokážte: Ak postupnosť $\{\frac{a_n}{b_n}\}_{n=1}^\infty$ $(b_n>0$ pre $n\in\mathbb{N}$) je monotónne, tak aj postupnosť $\{\frac{a_1+a_2+...+a_n}{b_1+b_2+...+b_n}\}_{n=1}^\infty$ je monotónna.
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-29}
+Pomocou symbolov $\forall,\exists$ zapíšte výroky
+\begin{enumerate}
+\item Funkcia $f:\mathbb{R}\rightarrow\mathbb{R}$ nie je klesajúca na množine $M$ $(\emptyset \neq M\subset\mathbb{R})$;
+\item Funkcia $f:A \rightarrow\mathbb{R}$ nie je monotónna na množine $M$ $(\emptyset \neq M\subset A \subset\mathbb{R})$.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-30}
+Ukážte, že nasledujúce funkcie nie sú monotónne:
+\begin{enumerate}
+\item $f(x)=x^2-3x+4$;
+\item $f(x)=sgn^2 x$;
+\item $f(x)=\tan x$.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-31}
+Uveďte príklad funkcie $f:\mathbb{R}\rightarrow\mathbb{R}$, ktorá je rastúca na $\langle 0,1)$, rastúca na $\langle 1,2)$, ale nie je rastúca na $\langle 0,2)$!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-32}
+Nech funkcie $f,g$ sú klesajúce a záporné na množine $M$. Rozhodnite o monotónnosti nasledujúcich funkcií na množine $M$ a svoje tvrdenia dokážte:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $f(x)\cdot g(x)$;
+    \item $f^3(x)$;
+    \item $f(x)+Bg(x)$;
+    \item $g^6(x)$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-33}
+\begin{enumerate}
+\item Dokážte, že superpozícia rýdzomonotónnych funkcií je rýdzomonotónna funkcia!
+\item Vyšetrite rast a klesanie funkcií 
+\begin{enumerate}
+\item $f(x)=\log (x^2-6x+10)$;
+\item $f(x)=\log_\frac{1}{2}(x^2-8x+20)$.
+\end{enumerate}
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-34}
+Uveďte príklady funkcií $f,g:\mathbb{R}\rightarrow\mathbb{R}$ takých, že
+\begin{enumerate}
+\item $f$ je rastúca, $g$ klesajúca, $f+g$ rastúca;
+\item $f$ je rastúca na $(0,1)$, $g$ klesajúca na $(0,1)$, $f\cdot g$ nie je rastúca na $(0,1)$.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-35}
+Dokážte, že
+\begin{enumerate}
+\item každé kladné racionálne číslo je periódou Dirichletovej funkcie;
+\item žiadne kladné iracionálne číslo nie je jej perodou.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-36}
+Ak najmenšou periódou funkcie $f$ je číslo $T$, tak najmen3ou peri=odou funkcie $g(x):=f(ax+b)$ $(a>0)$ je číslo $\frac{T}{a}$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-37}
+Zostrojte graf funkcie $f:\mathbb{R}\rightarrow\mathbb{R}$ s periódou $1$, ak pre $x\in\langle 0,1)$ platí $f(x)=x^2$.
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-38}
+Dokážte: Ak existuje $T>0$ také, že platí niektorá z nasledujúcich podmienok, tak funkcia $f:\mathbb{R}\rightarrow\mathbb{R}$ je periodická:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $f(x+T)=-f(x),x\in\mathbb{R}$;
+    \item $f(x+T)=\frac{1}{f(x)},x\in\mathbb{R}$;
+    \item $f(x+T)=\frac{f(x)+a}{bf(x)-1},x\in\mathbb{R}$;
+    \item $f(x+T)=\frac{1}{1-f(x)},x\in\mathbb{R}$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-39}
+Ak graf funkcie $f:\mathbb{R}\rightarrow\mathbb{R}$ je symetrický podľa osí $x=a,x=b$ $(a<b)$, tak $f$ je periodická funkcia. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-40}
+Zistite, či je daná funkcia prostá; ak áno, nájdite k nej inverznú funkciu a určte jej definičný obor:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $f(x)=\frac{1-x}{1+x}$;
+    \item $f(x)=\frac{x}{x^2+2}$;
+    \item $f(x)=\frac{2x}{1-x^2},x\leq -1$;
+    \item $f(x)=\frac{2x}{1+x^2},x\in\langle -1,1\rangle$;
+    \item $f(x)=3^{\frac{x}{x-1}}$;
+    \item $f(x)=2^{x^2-2x},x\leq 1$;
+    \item $f(x)=\frac{10^x-10^{-x}}{10^x+10^{-x}}+1$;
+    \item $f(x)=1+\sqrt{3+e^{2x}}$;
+    \item $f(x)=\log_x 10$;
+    \item $f(x)=2^{1+\ln\sqrt{x-2}}$;
+    \item $f(x)=\frac{1}{2}(x-\frac{1}{x}),x>0$;
+    \item $f(x)=\frac{1}{2}(x-\frac{1}{x}),x<0$;
+    \item $f(x)=x+\sqrt{x^2-1}$;
+    \item $f(x)=\log_2 (x+\sqrt{x^2+1})$;
+    \item $$f(x)= \left\{ \begin{array}{r@{\quad}c}
+    x, $ak $x<0 \\
+    2x, $ak $ x\geq 0 \\ \end{array} \right.$$
+    \item $$f(x)= \left\{ \begin{array}{r@{\quad}c}
+    x, $ak $ x\in\mathbb{Q} \\
+    1-x, $ak $ x\notin\mathbb{Q} \\ \end{array} \right.$$
+    \item $$f(x)= \left\{ \begin{array}{r@{\quad}c}
+    x-1, $ak $ x<1 \\
+    x^2, $ak $ x\in \langle 1,4\rangle \\
+    2^x, $ak $ x>4 \\ \end{array} \right.$$
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-41}
+Dokážte, že graf funkcie $y=\ln (1-e^x)$ je symetrický podľa priamky $y=x$.
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-42}
+\begin{enumerate}
+\item Uveďte príklad funkcie $f:\mathbb{R}\rightarrow\mathbb{R}$, ktorá je prostá, a nie je monotónna na $\mathbb{R}$!
+\item Uveďte príklad funkcie $f:\mathbb{R}\rightarrow\mathbb{R}$, ktorá je prostá, a nie je monotónna na žiadnom intervale $I\subset\mathbb{R}$!
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-43}
+Rozhodnite o pravdivosti tohto tvrdenia: "Ak aspoň jedna z funkcií $f,g$ definovaných na $\mathbb{R}$ nie je prostá, tak funkcia $f\circ g$ nie je prostá."!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-44}
+Vypočítajte:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\arcsin(\sin \frac{7}{3}\pi)$;
+    \item $\sin(\arcsin \frac{1}{\sqrt{2}})$;
+    \item $\arccos(\sin \frac{\pi}{6})$;
+    \item $\arcsin(\cos \frac{13}{3}\pi)$;
+    \item $\tan(\arccos\frac{1}{2})$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-45}
+\begin{enumerate}
+\item Pomocou funkcie $\arcsin$ vyjadrite inverznú funkciu k zúženiu funkcie $\sin$ na interval 
+\begin{enumerate}
+\item $\langle\frac{3\pi}{2},\frac{5\pi}{2}\rangle$;
+\item $\langle\frac{\pi}{2},\frac{3\pi}{2}\rangle$.
+\end{enumerate}
+\item Zostrojte grafy funkcií $\sin(\arcsin x),\arcsin(\sin x),\cos(\arccos x),\arccos(\cos x)$!
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-46}
+Nájdite inverznú funkciu k funkcii
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $f(x)=\sin^3 x,x\in\langle-\frac{\pi}{2},\frac{\pi}{2}\rangle$;
+    \item $f(x)=\sin^3 x,x\in\langle\frac{\pi}{2},\frac{3\pi}{2}\rangle$;
+    \item $f(x)=\sin^2 (\frac{\pi}{2}),x\in\langle 2\pi,3\pi \rangle$;
+    \item $f(x)=\tan x,x\in\langle -\pi,0)\ \{-\frac{\pi}{2}\}$;
+    \item $f(x)=\arctan\frac{1}{x}$;
+    \item $f(x)=4\arcsin\sqrt{1-x^3}$;
+    \item $f(x)=3+4\arccos(2x-1)$;
+    \item $f(x)=2^{3+\arctan x}$;
+    \item $f(x)=\sin (3x-1),|6x-2|<\pi$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-47}
+Dokážte rovnosť funkcií $\sin(\arccos x)$ a $\sqrt{1-x^2}$; Analogickým spôsobom vyjadrite funkcie dané predpismi
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\cos(\arcsin x)$;
+    \item $\sin(2\arcsin x)$;
+    \item $\cos^2 (\arctan x)$;
+    \item $\sin^2 (arccot x)$;
+    \item $\sin (arccot x)$;
+    \item $\tan (3\arctan x)$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-48}
+Zistite, pre ktoré $x\in\mathbb{R}$ platí rovnosť
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\arccos\sqrt{1-x^2}=\arcsin x$;
+    \item $\arccos\sqrt{1-x^2}=-\arcsin x$;
+    \item $\arccos\frac{1-x^2}{1+x^2}=2\arctan x$;
+    \item $\arctan x=\arcsin\frac{x}{\sqrt{1+x^2}}$;
+    \item $\arctan x +\arctan 1 =\pi+ \arctan\frac{1+x}{1-x}$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-49}
+Dokážte rovnosti
+\begin{enumerate}
+\item $\arcsin x +\arccos x =\frac{\pi}{2}$
+\item $\arctan x +\arctan\frac{1}{x}=\frac{\pi}{2}sgn x$.
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-50}
+Dokážte vzorce
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $ch^2x-sh^2x=1$;
+    \item $ch^2x+sh^2x=ch 2x$;
+    \item $sh 2x =2sh x ch x$;
+    \item $1-th^2x=\frac{1}{ch^2x}$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-51}
+Pre hyperbolické funkcie platia vzorce podobné goniometrickým. Odvoďte nasledujúce:
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $sh(x+y)$;
+    \item $ch(x+y)$;
+    \item $sh\frac{x}{2}$;
+    \item $ch x + ch y$;
+    \item $sh x - sh y$.
+\end{enumerate}
+\end{multicols}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-52}
+Rozhodnite o platnosti vety: "Nech $A,B\subset\mathbb{R}$ sú neprázdne množiny, nech platí $$\forall x\in A \forall \beta >0 \exists y\in B: |x-y|>\beta.$$ Potom $B$ nie je ohraničená." Svoje tvrdenie dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-53}
+Rozhodnite o platnosti vety: "Nech $A,B\subset\mathbb{R}$ sú neprázdne množiny, nech platí $$\forall \beta >0 \exists x\in A \exists y\in B: |x-y|>\beta.$$ Potom $B$ nie je ohraničená." Svoje tvrdenie dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-54}
+Nech $A,B\subset\mathbb{R}$ sú ohraničené množiny, nech $A\cap B\neq\emptyset$. Potom $A\cap B$ je ohraničená množina a $inf(A\cap B)\geq max \{\inf A,\inf B\}$. Dokážte: na konkrétnom príklade ukážte, že v uvedenom vzťahu nemusí platiť rovnosť!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-55}
+Nech $A,B\subset\mathbb{R}$ sú neprázdne množiny, nech platia nasledujúce výroky:
+\begin{enumerate}
+\item $\forall x\in A \forall y\in B: x<y$
+\item $\forall \varepsilon>0 \exists x\in A \exists y\in B:y-x<\varepsilon$.
+\end{enumerate}
+Potom platí $\sup A =\inf B$. Dokážte! (Nezabudnite, že najprv treba ukázať existenciu čísel $\sup A,\inf B$!)
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-56}
 
 \end{defproblem}
 
-\begin{defproblem}{supremum-infimum-22}
+\begin{defproblem}{supremum-infimum-57}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-58}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-59}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-60}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-61}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-62}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-63}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-64}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-65}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-66}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-67}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-68}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-69}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-70}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-71}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-72}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-73}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-74}
 
 \end{defproblem}

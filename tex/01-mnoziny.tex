@@ -172,6 +172,7 @@ Všimnime si, že definičný obor funkcie, ktorá je súčtom, rozdielom, súč
 
 Ak $f:A\rightarrow\mathbb{R},g:B\rightarrow\mathbb{R}$ sú funkcie, $A\subset B$ a pre všetky $x\in A$ platí $f(x)=g(x)$, hovoríme, že funkcia $f$ je zúženie funkcie $g$ na množinu $A$ ($f$ je funkcia $g$ zúžená na množinu $A$) a označujeme $f=\frac{g}{A}$.
 
+% má tam byť číslovanie v príklade
 \begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-13}
 \end{enumerate}
@@ -213,4 +214,132 @@ V nasledujúcej tabuľke sú opísané elementárne transformácie grafov funkci
 
 \begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-18}
+\end{enumerate}
+
+\textbf{Riešenie a):} $y=\sqrt{3}\cos x +1\cdot\sin x=2(\frac{\sqrt{3}}{2}\cos x +\frac{1}{2}\sin x)=2(\sin \frac{\pi}{3}\cos x +\cos \frac{\pi}{3}\sin x)=2\sin (x+\frac{\pi}{3})$ (táto úprava je analogická úprava algebraického tvaru komplexného čísla $a+bi$ na goniometrický tvar $\sqrt{a^2+b^2}(\cos\varphi +i\sin\varphi)$).
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-19}
+  \item \useproblem[supremum-infimum]{supremum-infimum-20}
+  \item \useproblem[supremum-infimum]{supremum-infimum-21}
+\end{enumerate}
+
+% ja by som dala do stĺpcov posledný príklad
+
+\subsection{Niektoré vlastnosti funkcií (ohraničené, monotónne, periodické, prosté funkcie)}
+
+Nech $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia $f:A\rightarrow\mathbb{R}$ sa nazýva ohraničená na množine $B$, ak je ohraničená množina $f(B)$. Funkcia ohraničená na svojom definičnom obore sa nazýva ohraničená. Analogicky sa zavádza pojem funkcie ohraničenej zhora, resp. zdola a funkcie ohraničenej zhora, resp. zdola na množine $B$.
+
+Ak je množina $f(B)$ zhora, resp. zdola ohraničená, tak jej supremum, resp. infimum sa nazýva supremum, resp. infimum funkcie $f$ na množine $B$ a označuje sa $\sup_{x\in B} f(x)$, resp. $\inf_{x\in B} f(x)$. Ak existuje maximum, resp. minimum množiny $f(B)$? nazýva sa toto číslo maximum, resp. minimum funkcie $f$ na množine $B$ (často sa používa názov globálne maximum, resp. globálne minimum funkcie $f$ na množine $B$) a označuje sa $\max_{x\in B}f(x)$, resp. $\min_{x\in B}f(x)$.
+
+% max a min  sa asi inak zapisuje nech tie x su pod tým
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-22}
+  \item \useproblem[supremum-infimum]{supremum-infimum-23}
+  \item \useproblem[supremum-infimum]{supremum-infimum-24}
+  \item \useproblem[supremum-infimum]{supremum-infimum-25}
+  \item \useproblem[supremum-infimum]{supremum-infimum-26}
+\end{enumerate}
+
+Na $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia $f:A\rightarrow\mathbb{R}$ sa nazýva rastúca na množine $B$, resp. neklesajúca na množine $B$, ak platí $$\forall x,y\in B:x<y\Rightarrow f(x)<f(y),$$ resp. $$\forall x,y\in B:x<y\Rightarrow f(x)\leq f(y).$$
+
+Ak má funkcia $f$ niektorú z uvedených štyroch vlastností, nazýva sa monotónna na množine $B$; funkcia, ktorá je rastúca na množine $B$ alebo klesajúca na množine $B$, sa nazýva rýdzomonotónna na množine $B$.
+
+Funkcia rastúca (klesajúca, nerastúca, neklesajúca, monotónna, rýdzomonotónna) na svojom definičnom obore sa nazýva rastúca (klesajúca, nerastúca, neklesajúca, monotónna, rýdzomonotónna).
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-27}
+  \item \useproblem[supremum-infimum]{supremum-infimum-28}
+  \item \useproblem[supremum-infimum]{supremum-infimum-29}
+  \item \useproblem[supremum-infimum]{supremum-infimum-30}
+\end{enumerate}
+
+\textbf{Riešenie a):} Pre $x=0$ a $y=1$ platí $x<y\wedge f(x)>f(y)$; pre $x=2$ a $y=3$ platí $x<y\wedge f(x)<f(y)$. Preto funkcia $f$ nemôže byť nerastúca (a teda nemôže byť ani klesajúca), tomu totiž odporuje voľba $x=2,y=3$; súčasne $f$ nemôže byť neklesajúca (a teda nemôže byť ani rastúca), tomu odporuje voľba $x=0,y=1$. (Samozrejme, že pri výbere vhodných $x,y$ sme si pomáhali grafom funkcie $f$.)
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-31}
+  \item \useproblem[supremum-infimum]{supremum-infimum-32}
+  \item \useproblem[supremum-infimum]{supremum-infimum-33}
+  \item \useproblem[supremum-infimum]{supremum-infimum-34}
+\end{enumerate}
+
+Funkcia $f$ sa nazýva periodická, ak existuje číslo $T>0$ tak, že platí
+\begin{itemize}
+\item $\forall a\in D(f):d(f)\cap \langle a+T,a+2T\rangle=\{x+T;x\in D(f)\cap \rangle a,a+T\rangle\}$;
+\item  $\forall a\in D(f):f(a+T)=f(a)$.
+\end{itemize}
+
+Každé číslo $T$ s uvedenými vlastnosťami sa nazýva perióda funkcie $f$; ak existuje najmenšie také $T>0$, nazýva sa najmenšia perióda funkcie $f$ (možno sa stretnúť aj s terminológiou, v ktorej sa pojem perióda používa výlučne v zmysle tu zavedeného pojmu najmenšej periódy).
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-35}
+  \item \useproblem[supremum-infimum]{supremum-infimum-36}
+  \item \useproblem[supremum-infimum]{supremum-infimum-37}
+  \item \useproblem[supremum-infimum]{supremum-infimum-38}
+  \item \useproblem[supremum-infimum]{supremum-infimum-39}
+\end{enumerate}
+
+Funkcia $f:A \rightarrow\mathbb{R}$ sa nazýva prostá (injektívna, jednoznačná), ak platí $$\forall x,y\in A:x\neq y\Rightarrow f(x)\neq f(y).$$
+
+Ak je funkcia $f:A \rightarrow\mathbb{R}$ prostá, tak funkcia s definičným oborom $f(A)$, ktorý každému číslu $x\in f(A)$ priradí to číslo $y\in A$, pre ktoré $f(y)=x$, sa nazýva inverzná funkcia k funkcii $f$ a označuje sa $f^{-1}$.
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-40}
+\end{enumerate}
+
+\textbf{Riešenie c):} Pre každé $x\in\mathbb{R}$ nájdime všetky tie $y\in D(f)$, pre ktoré $f(y)=x$, t.j. všetky tie $y\leq -1$, pre ktoré $\frac{2y}{(1-y^2)}=x$. Ak je $x$ dané, musia byť hľadané čísla $y$ riešeniami rovnice $$xy^2+2y-x=0;$$ tejto pre $x=0$ vyhovuje len $y=0$, pre $x\neq 0$ jej vyhovujú čísla $y_1=\frac{-1+\sqrt{1+x^2}}{x}$ a $y_2=\frac{-1-\sqrt{1+x^2}}{x}$. Pretože hľadáme len riešenia ležiace v intervale $(-\infty,-1\rangle$, musíme zistiť, kedy $y_1\leq -1$ a kedy $y_2\leq -1$. Prvá z týchto nerovností nie je splnená pre žiadnu $x\neq 0$, druhá platí pre každé $x>0$.
+
+Zistili sme teda: pre žiadne $x\neq 0$ neexistuje $y\neq -1$ také, že $f(y)=x$; pre každé $x>0$ existuje práve jedno číslo $y\leq -1$, pre ktoré $f(y)=x$, toto číslo je určené vzťahom $y=-\frac{(1+\sqrt{1+x^2})}{x}$. To znamená:
+\begin{itemize}
+\item funkcia $f$ je prostá;
+\item $f((-\infty,-1\rangle)=\langle 0,\infty )$;
+\item inverzná funkcia $f^{-1}$ je definovaná na množine $f((-\infty,-1\rangle)$ predpisom $f^{-1}(x)=-\frac{(1+\sqrt{1+x^2})}{x}$.
+\end{itemize}
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-41}
+  \item \useproblem[supremum-infimum]{supremum-infimum-42}
+  \item \useproblem[supremum-infimum]{supremum-infimum-43}
+\end{enumerate}
+
+\subsection{Cyklometrické a hyperbolické funkcie}
+
+Inverzné funkcie k funkciám $\sin/\langle-\frac{\pi}{2},\frac{\pi}{2}\rangle \cos/\langle 0,\pi\rangle,\tan/(-\frac{\pi}{2},\frac{\pi}{2}),\cot/(0,\pi)$ sa nazývajú arkussínus, arkuskosínus, arkustangens a arkuskotangens a označujú sa $\arcsin,\arccos,\arctan,arccot$. Tieto funkcie majú spoločný názov cyklometrické.
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-44}
+  \item \useproblem[supremum-infimum]{supremum-infimum-45}
+  \item \useproblem[supremum-infimum]{supremum-infimum-46}
+  \item \useproblem[supremum-infimum]{supremum-infimum-47}
+\end{enumerate}
+
+\textbf{Riešenie:} Pretože $\arccos x\in\langle 0,\pi\rangle$ pre každé $x\in\langle -1,1\rangle$ a rovnosť $\sin u=\sqrt{1-\cos^2 u}$ platí pre každú $u\in\langle 0,\pi\rangle$, je $\sin(\arccos x)=\sqrt{1-\cos^2(\arccos x)}=\sqrt{1-x^2}$.
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-48}
+\end{enumerate}
+
+\textbf{Riešenie a):} Pre $x\in\langle-1,0\rangle$ nemôže rovnosť platiť, pretože vtedy $\arccos\sqrt{1-x^2}\geq 0>\arcsin x$. Ak $x\in\langle 0,1\rangle$, ležia hodnoty $\arccos\sqrt{1-x^2}$ aj $\arcsin x$ v intervale $\langle 0,\frac{\pi}{2}$. Využijeme, že na tomto intervale je funkcia $\cos$ Prostá, t.j. že pre $\alpha,\beta\in\langle 0,\frac{\pi}{2}\rangle$ platí $$\alpha=\beta\Rightarrow\cos\alpha=\cos\beta.$$
+ V našom prípade $\cos(\arccos\sqrt{1-x^2})=\sqrt{1-x^2}=\cos(\arcsin x)$ (pozri príklad $60$), teda pre $x\in\langle 0,1\rangle$ platí $\arccos\sqrt{1-x^2}=\arcsin x$.
+ 
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-49}
+\end{enumerate}
+
+Funkcie definované predpismi $sh x=\frac{e^x-e^{-x}}{2}$ (sínus hyberbolický), $ch x=\frac{e^x+e^{-x}}{2}$ (kosínus hyperbolický), $th x=\frac{sh x}{ch x}$ (tangens hyperbolický) a $cth x=\frac{ch x}{sh x}$ (kotangens hyperbolický) sa nazývajú hyperbolické funkcie.
+
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-50}
+  \item \useproblem[supremum-infimum]{supremum-infimum-51}
+\end{enumerate}
+
+\subsection{Ďalšie príklady}
+\begin{enumerate}[resume]
+  \item \useproblem[supremum-infimum]{supremum-infimum-52}
+  \item \useproblem[supremum-infimum]{supremum-infimum-53}
+  \item \useproblem[supremum-infimum]{supremum-infimum-54}
+  \item \useproblem[supremum-infimum]{supremum-infimum-55}
+  \item \useproblem[supremum-infimum]{supremum-infimum-56}
+  \item \useproblem[supremum-infimum]{supremum-infimum-57}
 \end{enumerate}
