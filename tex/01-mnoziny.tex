@@ -12,9 +12,11 @@ V daľšom budeme používať tieto označenia:
     ($= \langle 0, \infty )$)
 \end{itemize}
 Ak pre niektorý prvok $a$ neprázdnej množiny $A \subset \mathbb{R}$ platí
-$$\forall x \in A : x \leq a (\forall x \in A: q \geq a)$$
+\[
+  \forall x \in A : x \leq a (\forall x \in A: q \geq a)
+\]
 nazývame tento prvok \emph{maximum (minimum) množiny $A$} a označujeme ho
-$max(A)$ ($min(A)$)
+$\max(A)$ ($\min(A)$)
 
 \section{Reálne čísla}
 
@@ -128,66 +130,76 @@ $f$). Špeciálne množina $f(A)$ sa nazýva obor hodnôt funkcie $f$.
 Nech sú dané funkcie $f$, $g$.
 
 \begin{itemize}
-\item
-  Ak je množina $D_1:=D(f)\cap D(g)$ neprázdna, nazývajú sa funkcie $p, q, r$
-  definované na množine $D_1$ predpismi
-  \begin{align*}
-    p(x) &= f(x)+g(x) \\
-    q(x) &= f(x)-g(x) \\
-    r(x) &= f(x)\cdot g(x)
-  \end{align*}
-  súčet, rozdiel a súčin funkcií $f, g$ a označujú sa $f+g$, $f-g$, $f\cdot g$.
-\item
-  Ak je množina $D_2:=D(f)\cap \{x\in D(g);g(x)\neq 0\}$ neprázdna, nazýva sa
-  funkcia $s:D_2 \rightarrow \mathbb{R}$ definovaná predpisom
-  $$a(x)=\frac{f(x)}{g(x)}$$
-  podiel funkcií $f$, $g$ a označuje sa $\frac{f}{g}$.
-\item
-  Ak je množina $D_3:=\{x\in D(f);f(x)\in D(g)\}$ neprázdna, nazýva sa funkcia
-  $t:D_3\rightarrow\mathbb{R}$ daná predpisom
-  $$t(x)=g(f(x))$$
-  zložená funkcia z funkcií $f$, $g$ (superpozícia funkcií $f$ a $g$) a označuje
-  sa $g \circ f$. Funkcia $f$ sa nazýva vnútorná zložka, funkcia $g$ vonkajšia
-  zložka funkcie $g \circ f$.
+  \item
+    Ak je množina $D_1:=D(f)\cap D(g)$ neprázdna, nazývajú sa funkcie $p, q, r$
+    definované na množine $D_1$ predpismi
+    \begin{align*}
+      p(x) &= f(x)+g(x) \\
+      q(x) &= f(x)-g(x) \\
+      r(x) &= f(x)\cdot g(x)
+    \end{align*}
+    súčet, rozdiel a súčin funkcií $f, g$ a označujú sa $f+g$, $f-g$, $f\cdot g$.
+  \item
+    Ak je množina $D_2:=D(f)\cap \{x\in D(g);g(x)\neq 0\}$ neprázdna, nazýva sa
+    funkcia $s:D_2 \rightarrow \mathbb{R}$ definovaná predpisom
+    \[
+      a(x)=\frac{f(x)}{g(x)}
+    \]
+    podiel funkcií $f$, $g$ a označuje sa $\frac{f}{g}$.
+  \item
+    Ak je množina $D_3:=\{x\in D(f);f(x)\in D(g)\}$ neprázdna, nazýva sa funkcia
+    $t:D_3\rightarrow\mathbb{R}$ daná predpisom
+    $$t(x)=g(f(x))$$
+    zložená funkcia z funkcií $f$, $g$ (superpozícia funkcií $f$ a $g$) a označuje
+    sa $g \circ f$. Funkcia $f$ sa nazýva vnútorná zložka, funkcia $g$ vonkajšia
+    zložka funkcie $g \circ f$.
 \end{itemize}
 
 Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
 
+\noindent
 % TODO Fix tabuľku
-\begin{tabular}{|l|l|p{10cm}|}
+\begin{tabular}{|p{0.2\textwidth}|p{0.22\textwidth}|p{0.45\textwidth}|}
   \hline
   {\bf Názov} & {\bf Predpis} & {\bf Definičný obor} \\
-  \hline \hline
+  \hline
   konštantné &
   $\underset{a \in \mathbb{R}}{f(x)}\equiv a$
   \footnote{symbol $\equiv$ čítame "identicky rovné" } &
   $\mathbb{R}$ \\
   mocninové &
   $\underset{a \in \mathbb{R} \setminus {0}}{f(x)}\equiv a$ &
-  \begin{enumerate}
+  \begin{enumerate}[leftmargin=0.5cm]
     \item ak $a>0$:
-    \begin{enumerate}
-      \item ak $a=\frac{p}{q},p,q\in\mathbb{N},$ $p$ je párne alebo $p$ aj $q$
-            sú nepárne: $\mathbb{R}$
-      \item vo všetkých ostatných prípadoch: $\langle 0,\infty)$;
-    \end{enumerate}
+      \begin{enumerate}[leftmargin=0.5cm]
+        \item ak $a=\frac{p}{q},p,q\in\mathbb{N},$ $p$ je párne alebo $p$ aj $q$
+              sú nepárne: $\mathbb{R}$
+        \item vo všetkých ostatných prípadoch: $\interval[open right]{0}{\infty}$
+      \end{enumerate}
     \item ak $a<0$:
-    \begin{enumerate}
-      \item ak $a=-\frac{p}{q},p,q\in\mathbb{N}$, $p$ je párne lebo $p$ aj $q$
-            sú nepárne: $\mathbb{R}\ \{0\}$
-      \item vo všetkých ostatných prípadoch: $(0,\infty)$
-    \end{enumerate}
-  \end{enumerate} \\
-  exponenciálne & $f(x)=a^x,a>0,a\neq 1$ & $\mathbb{R}$ \\
-  logaritmické & $f(x)=\log_a x,a>0,a\neq 1$\footnote{špeciálne v prípade $a=10$ budeme používať označenie $log_a x$, v prípade $a=e$ označenie $\ln x$} & $\mathbb{R}^{+}$\\
+      \begin{enumerate}[leftmargin=0.5cm]
+        \item ak $a=-\frac{p}{q},p,q\in\mathbb{N}$, $p$ je párne lebo $p$ aj $q$
+              sú nepárne: $\mathbb{R} \setminus \{0\}$
+        \item vo všetkých ostatných prípadoch: $\interval[open]{0}{\infty}$
+      \end{enumerate}
+  \end{enumerate}
+  \\
+  exponenciálne
+    & $f(x)=a^x, $\newline$ a>0,a\neq 1$
+    & $\mathbb{R}$ \\
+  logaritmické
+    & $f(x)=\log_a x,$\newline$ a>0,a\neq 1$
+    \footnote{špeciálne v prípade $a=10$ budeme používať označenie $log_a x$, v prípade $a=e$ označenie $\ln x$}
+    & $\mathbb{R}^{+}$\\
   goniometrické & $f(x)=\sin x$ & $\mathbb{R}$ \\
-   & $f(x)=\cos x$ & $\mathbb{R}$ \\
-   & $f(x)=\tan x$ & $\mathbb{R}\ \{\frac{\pi}{2}+k\pi;k\in\mathbb{Z}\}$ \\
-   & $f(x)=\cot x$ & $\mathbb{R}\ \{k\pi;k\in\mathbb{Z}\}$ \\
-  cyklometrické\footnote{pozri odsek $1.3.4$}    & $f(x)=\arcsin x$ & $\langle -1,1 \rangle$ \\
-   & $f(x)=\arccos x$ & $\langle -1,1 \rangle$ \\
-   & $f(x)=\arctan x$ & $\mathbb{R}$ \\
-   & $f(x)=arccot x$ & $\mathbb{R}$ \\
+    & $f(x)=\cos x$ & $\mathbb{R}$ \\
+    & $f(x)=\tan x$ & $\mathbb{R}\ \{\frac{\pi}{2}+k\pi;k\in\mathbb{Z}\}$ \\
+    & $f(x)=\cot x$ & $\mathbb{R}\ \{k\pi;k\in\mathbb{Z}\}$ \\
+  cyklometrické\footnote{pozri odsek $1.3.4$}
+    & $f(x)=\arcsin x$ & $\interval{-1}{1}$ \\
+    & $f(x)=\arccos x$ & $\interval{-1}{1}$ \\
+    & $f(x)=\arctan x$ & $\mathbb{R}$ \\
+    & $f(x)=\arccot x$ & $\mathbb{R}$ \\
   \hline
 \end{tabular}
 
@@ -215,7 +227,10 @@ predpis funkcie $h$ "zmysel".)
   \item \useproblem[supremum-infimum]{supremum-infimum-25}
 \end{enumerate}
 
-Ak $f:A\rightarrow\mathbb{R},g:B\rightarrow\mathbb{R}$ sú funkcie, $A\subset B$ a pre všetky $x\in A$ platí $f(x)=g(x)$, hovoríme, že funkcia $f$ je zúženie funkcie $g$ na množinu $A$ ($f$ je funkcia $g$ zúžená na množinu $A$) a označujeme $f=\frac{g}{A}$.
+Ak $f: A \rightarrow \mathbb{R}, g: B \rightarrow \mathbb{R}$ sú funkcie, $A
+\subset B$ a pre všetky $x \in A$ platí $f(x) = g(x)$, hovoríme, že funkcia $f$
+je zúženie funkcie $g$ na množinu $A$ ($f$ je funkcia $g$ zúžená na množinu
+$A$) a označujeme $f = \frac{g}{A}$.
 
 % má tam byť číslovanie v príklade
 \begin{enumerate}[resume]
@@ -223,47 +238,43 @@ Ak $f:A\rightarrow\mathbb{R},g:B\rightarrow\mathbb{R}$ sú funkcie, $A\subset B$
 \end{enumerate}
 
 \subsection{Graf funkcie}
-Nech je v rovine daná pravouhlá súradnicová sústava, pričom jednotky dĺžky na súradnicových osiach $Ox$ a $Oy$ sú rovnaké. Množina $\{(x,f(x))\}$ bodov roviny, kde $f:A\rightarrow\mathbb{R}$ je daná funkcia, sa nazýva graf funkcie $f$ $((x,f(x))$ je zápis bodu roviny pomocou jeho súradníc v danej súradnicovej sústave).
+
+Nech je v rovine daná pravouhlá súradnicová sústava, pričom jednotky dĺžky na
+súradnicových osiach $Ox$ a $Oy$ sú rovnaké. Množina
+\[
+  \{(x,f(x)); x \in A\}
+\]
+bodov roviny, kde $f:A \rightarrow \mathbb{R}$ je daná funkcia, sa nazýva
+\emph{graf funkcie $f$}, $((x,f(x))$ je zápis bodu roviny pomocou jeho súradníc
+v danej súradnicovej sústave).
 
 V nasledujúcej tabuľke sú opísané elementárne transformácie grafov funkcií:
 
-\begin{tabular}{|l|p{10cm}|}
-  \hline
-  {\bf funkcia $y=g(x)$} & {\bf transformácia grafu funkcie $y=f(x)$}  \\
-  \hline \hline
-  $y=f(x)+c$  & posunutie o $c$ v smere osi $Oy$ \\
-  $y=f(x-c)$  & posunutie o $c$ v smere osi $Ox$ \\
-  $y=f(-x)$  & symetria podľa osi $Oy$ \\
-  $y=-f(x)$  & symetria podľa osi $Ox$ \\
-  $y=a\cdot f(x)$  & vynásobenie každej $y$-ovej súradnice číslom $a$ \\
-  $y=f(ax)$  & vydelenie každej $x$-ovej súradnice číslom $a,(a\neq 0)$ \\
-  \hline
-\end{tabular}
+\begin{center}
+  \begin{tabular}{|p{0.2\textwidth}|p{0.6\textwidth}|}
+    \hline
+    {\bf funkcia $y=g(x)$} & {\bf transformácia grafu funkcie $y=f(x)$}  \\
+    \hline
+    $y = f(x) + c$     & posunutie o $c$ v smere osi $Oy$ \\
+    $y = f(x - c)$     & posunutie o $c$ v smere osi $Ox$ \\
+    $y = f(-x)$        & symetria podľa osi $Oy$ \\
+    $y = -f(x)$        & symetria podľa osi $Ox$ \\
+    $y = a \cdot f(x)$ & vynásobenie každej $y$-ovej súradnice číslom $a$ \\
+    $y = f(ax)$        & vydelenie každej $x$-ovej súradnice číslom $a$, $(a \neq 0)$ \\
+    \hline
+  \end{tabular}
+\end{center}
 
 \begin{enumerate}[resume]
+  \showanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-27}
-\end{enumerate}
-
-\textbf{Riešenie j):} Najprv zostrojíme graf funkcie $f(x)=\sin x$, vydelením každej $x$-ovej súradnice číslom $2$ (teda jeho "dvojnásobným zhustením") z neho dostaneme graf funkcie $f(2x)=g(x)=\sin 2x$. Naša funkcia $\sin 2(x+3)$ má tvar $g(x+3)$, jej graf teda získame, ak graf funkcie $g$ posunieme pozdĺž osi $Ox$ o $3$ jednotky dĺžky doľava.
-
-(Pri zostrojovaní takýchto grafov sa často chybne zamieňa poradie transformácií. Zistime, graf ktorej funkcie by sme dostali pri ich opačnom poradí: posunutím grafu funkcie $f(x)=\sin x$ o $3$ jednotky dĺžky vľavo získame graf funkcie $g_1(x)=f(x+3)=\sin (x+3);$ ak teraz v tomto grafe vydelíme každú $x$-ovú súradnicu číslom $2$, dostaneme graf funkcie $g_2(x)=g_1)(2x)=\sin (2x+3)$.)
-
-\begin{enumerate}[resume]
+  \hideanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-28}
   \item \useproblem[supremum-infimum]{supremum-infimum-29}
+  \showanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-30}
-\end{enumerate}
-
-\textbf{Riešenie c):} Pre $x=k\pi,k\in\mathbb{Z}$, je $y=0$, pre $x=\frac{\pi}{2}+2k\pi,k\in\mathbb{Z}$, ležia príslučné body grafu funkcie $y=x\sin x$ na priamke $y=x$, pre $x=\frac{3\pi}{2}+2k\pi,k\in\mathbb{Z}$, na priamke $y=-x$. Pretože pre $x\geq 0$ je $-x\leq x\sin x\leq x$, pre $x<0$ je $x\leq x\sin x\leq -x$, leží graf funkcie $y=x\sin x$ "medzi" priamkami $y=x$ a $y=-x$. Na základe toho už vieme približne načrtnúť tento obrázok:
-
-
-\begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-31}
-\end{enumerate}
-
-\textbf{Riešenie a):} $y=\sqrt{3}\cos x +1\cdot\sin x=2(\frac{\sqrt{3}}{2}\cos x +\frac{1}{2}\sin x)=2(\sin \frac{\pi}{3}\cos x +\cos \frac{\pi}{3}\sin x)=2\sin (x+\frac{\pi}{3})$ (táto úprava je analogická úprava algebraického tvaru komplexného čísla $a+bi$ na goniometrický tvar $\sqrt{a^2+b^2}(\cos\varphi +i\sin\varphi)$).
-
-\begin{enumerate}[resume]
+  \hideanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-32}
   \item \useproblem[supremum-infimum]{supremum-infimum-33}
   \item \useproblem[supremum-infimum]{supremum-infimum-34}
@@ -273,9 +284,19 @@ V nasledujúcej tabuľke sú opísané elementárne transformácie grafov funkci
 
 \subsection{Niektoré vlastnosti funkcií (ohraničené, monotónne, periodické, prosté funkcie)}
 
-Nech $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia $f:A\rightarrow\mathbb{R}$ sa nazýva ohraničená na množine $B$, ak je ohraničená množina $f(B)$. Funkcia ohraničená na svojom definičnom obore sa nazýva ohraničená. Analogicky sa zavádza pojem funkcie ohraničenej zhora, resp. zdola a funkcie ohraničenej zhora, resp. zdola na množine $B$.
+Nech $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia
+$f:A\rightarrow\mathbb{R}$ sa nazýva ohraničená na množine $B$, ak je ohraničená
+množina $f(B)$. Funkcia ohraničená na svojom definičnom obore sa nazýva
+ohraničená. Analogicky sa zavádza pojem funkcie ohraničenej zhora, resp. zdola a
+funkcie ohraničenej zhora, resp. zdola na množine $B$.
 
-Ak je množina $f(B)$ zhora, resp. zdola ohraničená, tak jej supremum, resp. infimum sa nazýva supremum, resp. infimum funkcie $f$ na množine $B$ a označuje sa $\sup_{x\in B} f(x)$, resp. $\inf_{x\in B} f(x)$. Ak existuje maximum, resp. minimum množiny $f(B)$? nazýva sa toto číslo maximum, resp. minimum funkcie $f$ na množine $B$ (často sa používa názov globálne maximum, resp. globálne minimum funkcie $f$ na množine $B$) a označuje sa $\max_{x\in B}f(x)$, resp. $\min_{x\in B}f(x)$.
+Ak je množina $f(B)$ zhora, resp. zdola ohraničená, tak jej supremum, resp.
+infimum sa nazýva supremum, resp. infimum funkcie $f$ na množine $B$ a označuje
+sa $\sup_{x\in B} f(x)$, resp. $\inf_{x\in B} f(x)$. Ak existuje maximum, resp.
+minimum množiny $f(B)$? nazýva sa toto číslo maximum, resp. minimum funkcie $f$
+na množine $B$ (často sa používa názov globálne maximum, resp. globálne minimum
+funkcie $f$ na množine $B$) a označuje sa $\max_{x\in B}f(x)$, resp. $\min_{x\in
+B}f(x)$.
 
 % max a min  sa asi inak zapisuje nech tie x su pod tým
 
@@ -287,22 +308,26 @@ Ak je množina $f(B)$ zhora, resp. zdola ohraničená, tak jej supremum, resp. i
   \item \useproblem[supremum-infimum]{supremum-infimum-39}
 \end{enumerate}
 
-Na $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia $f:A\rightarrow\mathbb{R}$ sa nazýva rastúca na množine $B$, resp. neklesajúca na množine $B$, ak platí $$\forall x,y\in B:x<y\Rightarrow f(x)<f(y),$$ resp. $$\forall x,y\in B:x<y\Rightarrow f(x)\leq f(y).$$
+Na $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia
+$f:A\rightarrow\mathbb{R}$ sa nazýva rastúca na množine $B$, resp. neklesajúca
+na množine $B$, ak platí $$\forall x,y\in B:x<y\Rightarrow f(x)<f(y),$$ resp.
+$$\forall x,y\in B:x<y\Rightarrow f(x)\leq f(y).$$
 
-Ak má funkcia $f$ niektorú z uvedených štyroch vlastností, nazýva sa monotónna na množine $B$; funkcia, ktorá je rastúca na množine $B$ alebo klesajúca na množine $B$, sa nazýva rýdzomonotónna na množine $B$.
+Ak má funkcia $f$ niektorú z uvedených štyroch vlastností, nazýva sa monotónna
+na množine $B$; funkcia, ktorá je rastúca na množine $B$ alebo klesajúca na
+množine $B$, sa nazýva rýdzomonotónna na množine $B$.
 
-Funkcia rastúca (klesajúca, nerastúca, neklesajúca, monotónna, rýdzomonotónna) na svojom definičnom obore sa nazýva rastúca (klesajúca, nerastúca, neklesajúca, monotónna, rýdzomonotónna).
+Funkcia rastúca (klesajúca, nerastúca, neklesajúca, monotónna, rýdzomonotónna)
+na svojom definičnom obore sa nazýva rastúca (klesajúca, nerastúca, neklesajúca,
+monotónna, rýdzomonotónna).
 
 \begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-40}
   \item \useproblem[supremum-infimum]{supremum-infimum-41}
   \item \useproblem[supremum-infimum]{supremum-infimum-42}
+  \showanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-43}
-\end{enumerate}
-
-\textbf{Riešenie a):} Pre $x=0$ a $y=1$ platí $x<y\wedge f(x)>f(y)$; pre $x=2$ a $y=3$ platí $x<y\wedge f(x)<f(y)$. Preto funkcia $f$ nemôže byť nerastúca (a teda nemôže byť ani klesajúca), tomu totiž odporuje voľba $x=2,y=3$; súčasne $f$ nemôže byť neklesajúca (a teda nemôže byť ani rastúca), tomu odporuje voľba $x=0,y=1$. (Samozrejme, že pri výbere vhodných $x,y$ sme si pomáhali grafom funkcie $f$.)
-
-\begin{enumerate}[resume]
+  \hideanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-44}
   \item \useproblem[supremum-infimum]{supremum-infimum-45}
   \item \useproblem[supremum-infimum]{supremum-infimum-46}
@@ -315,7 +340,10 @@ Funkcia $f$ sa nazýva periodická, ak existuje číslo $T>0$ tak, že platí
 \item  $\forall a\in D(f):f(a+T)=f(a)$.
 \end{itemize}
 
-Každé číslo $T$ s uvedenými vlastnosťami sa nazýva perióda funkcie $f$; ak existuje najmenšie také $T>0$, nazýva sa najmenšia perióda funkcie $f$ (možno sa stretnúť aj s terminológiou, v ktorej sa pojem perióda používa výlučne v zmysle tu zavedeného pojmu najmenšej periódy).
+Každé číslo $T$ s uvedenými vlastnosťami sa nazýva perióda funkcie $f$; ak
+existuje najmenšie také $T>0$, nazýva sa najmenšia perióda funkcie $f$ (možno sa
+stretnúť aj s terminológiou, v ktorej sa pojem perióda používa výlučne v zmysle
+tu zavedeného pojmu najmenšej periódy).
 
 \begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-48}
@@ -325,21 +353,29 @@ Každé číslo $T$ s uvedenými vlastnosťami sa nazýva perióda funkcie $f$; 
   \item \useproblem[supremum-infimum]{supremum-infimum-52}
 \end{enumerate}
 
-Funkcia $f:A \rightarrow\mathbb{R}$ sa nazýva prostá (injektívna, jednoznačná), ak platí $$\forall x,y\in A:x\neq y\Rightarrow f(x)\neq f(y).$$
+Funkcia $f:A \rightarrow\mathbb{R}$ sa nazýva prostá (injektívna, jednoznačná),
+ak platí $$\forall x,y\in A:x\neq y \Rightarrow f(x)\neq f(y).$$
 
-Ak je funkcia $f:A \rightarrow\mathbb{R}$ prostá, tak funkcia s definičným oborom $f(A)$, ktorý každému číslu $x\in f(A)$ priradí to číslo $y\in A$, pre ktoré $f(y)=x$, sa nazýva inverzná funkcia k funkcii $f$ a označuje sa $f^{-1}$.
+Ak je funkcia $f:A \rightarrow \mathbb{R}$ prostá, tak funkcia s definičným
+oborom $f(A)$, ktorý každému číslu $x\in f(A)$ priradí to číslo $y\in A$, pre
+ktoré $f(y)=x$, sa nazýva inverzná funkcia k funkcii $f$ a označuje sa $f^{-1}$.
 
 \begin{enumerate}[resume]
-  \item \useproblem[supremum-infimum]{supremum-infimum-53}
+  \showanswers
+    \item \useproblem[supremum-infimum]{supremum-infimum-53}
+  \hideanswers
 \end{enumerate}
 
-\textbf{Riešenie c):} Pre každé $x\in\mathbb{R}$ nájdime všetky tie $y\in D(f)$, pre ktoré $f(y)=x$, t.j. všetky tie $y\leq -1$, pre ktoré $\frac{2y}{(1-y^2)}=x$. Ak je $x$ dané, musia byť hľadané čísla $y$ riešeniami rovnice $$xy^2+2y-x=0;$$ tejto pre $x=0$ vyhovuje len $y=0$, pre $x\neq 0$ jej vyhovujú čísla $y_1=\frac{-1+\sqrt{1+x^2}}{x}$ a $y_2=\frac{-1-\sqrt{1+x^2}}{x}$. Pretože hľadáme len riešenia ležiace v intervale $(-\infty,-1\rangle$, musíme zistiť, kedy $y_1\leq -1$ a kedy $y_2\leq -1$. Prvá z týchto nerovností nie je splnená pre žiadnu $x\neq 0$, druhá platí pre každé $x>0$.
-
-Zistili sme teda: pre žiadne $x\neq 0$ neexistuje $y\neq -1$ také, že $f(y)=x$; pre každé $x>0$ existuje práve jedno číslo $y\leq -1$, pre ktoré $f(y)=x$, toto číslo je určené vzťahom $y=-\frac{(1+\sqrt{1+x^2})}{x}$. To znamená:
+Zistili sme teda: pre žiadne $x\neq 0$ neexistuje $y\neq -1$ také, že $f(y)=x$;
+pre každé $x>0$ existuje práve jedno číslo $y\leq -1$, pre ktoré $f(y)=x$, toto
+číslo je určené vzťahom $y=-\frac{(1+\sqrt{1+x^2})}{x}$. To znamená:
 \begin{itemize}
 \item funkcia $f$ je prostá;
-\item $f((-\infty,-1\rangle)=\langle 0,\infty )$;
-\item inverzná funkcia $f^{-1}$ je definovaná na množine $f((-\infty,-1\rangle)$ predpisom $f^{-1}(x)=-\frac{(1+\sqrt{1+x^2})}{x}$.
+\item $f(\interval[open left]{-\infty}{-1})=\interval[open right]{0}{\infty}$;
+\item
+  inverzná funkcia $f^{-1}$ je definovaná na množine
+  $f(\interval[open left]{-\infty}{-1})$ predpisom
+  $f^{-1}(x)=-\frac{(1+\sqrt{1+x^2})}{x}$.
 \end{itemize}
 
 \begin{enumerate}[resume]
@@ -350,29 +386,33 @@ Zistili sme teda: pre žiadne $x\neq 0$ neexistuje $y\neq -1$ také, že $f(y)=x
 
 \subsection{Cyklometrické a hyperbolické funkcie}
 
-Inverzné funkcie k funkciám $\sin/\langle-\frac{\pi}{2},\frac{\pi}{2}\rangle \cos/\langle 0,\pi\rangle,\tan/(-\frac{\pi}{2},\frac{\pi}{2}),\cot/(0,\pi)$ sa nazývajú arkussínus, arkuskosínus, arkustangens a arkuskotangens a označujú sa $\arcsin,\arccos,\arctan,arccot$. Tieto funkcie majú spoločný názov cyklometrické.
+Inverzné funkcie k funkciám
+$\sin / \interval{-\frac{\pi}{2}}{\frac{\pi}{2}}$,
+$\cos / \interval{0}{\pi}$,
+$\tan / \interval[open]{-\frac{\pi}{2}}{\frac{\pi}{2})}$,
+$\cot / \interval[open]{0}{\pi}$
+sa nazývajú arkussínus, arkuskosínus, arkustangens a arkuskotangens a označujú
+sa $\arcsin, \arccos, \arctan, \arccot$. Tieto funkcie majú spoločný názov
+cyklometrické.
 
 \begin{enumerate}[resume]
+
   \item \useproblem[supremum-infimum]{supremum-infimum-57}
   \item \useproblem[supremum-infimum]{supremum-infimum-58}
   \item \useproblem[supremum-infimum]{supremum-infimum-59}
+  \showanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-60}
-\end{enumerate}
-
-\textbf{Riešenie:} Pretože $\arccos x\in\langle 0,\pi\rangle$ pre každé $x\in\langle -1,1\rangle$ a rovnosť $\sin u=\sqrt{1-\cos^2 u}$ platí pre každú $u\in\langle 0,\pi\rangle$, je $\sin(\arccos x)=\sqrt{1-\cos^2(\arccos x)}=\sqrt{1-x^2}$.
-
-\begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-61}
-\end{enumerate}
-
-\textbf{Riešenie a):} Pre $x\in\langle-1,0\rangle$ nemôže rovnosť platiť, pretože vtedy $\arccos\sqrt{1-x^2}\geq 0>\arcsin x$. Ak $x\in\langle 0,1\rangle$, ležia hodnoty $\arccos\sqrt{1-x^2}$ aj $\arcsin x$ v intervale $\langle 0,\frac{\pi}{2}$. Využijeme, že na tomto intervale je funkcia $\cos$ Prostá, t.j. že pre $\alpha,\beta\in\langle 0,\frac{\pi}{2}\rangle$ platí $$\alpha=\beta\Rightarrow\cos\alpha=\cos\beta.$$
- V našom prípade $\cos(\arccos\sqrt{1-x^2})=\sqrt{1-x^2}=\cos(\arcsin x)$ (pozri príklad $60$), teda pre $x\in\langle 0,1\rangle$ platí $\arccos\sqrt{1-x^2}=\arcsin x$.
-
-\begin{enumerate}[resume]
+  \hideanswers
   \item \useproblem[supremum-infimum]{supremum-infimum-62}
 \end{enumerate}
 
-Funkcie definované predpismi $sh x=\frac{e^x-e^{-x}}{2}$ (sínus hyberbolický), $ch x=\frac{e^x+e^{-x}}{2}$ (kosínus hyperbolický), $th x=\frac{sh x}{ch x}$ (tangens hyperbolický) a $cth x=\frac{ch x}{sh x}$ (kotangens hyperbolický) sa nazývajú hyperbolické funkcie.
+Funkcie definované predpismi
+$\sinh x=\frac{e^x-e^{-x}}{2}$ (sínus hyberbolický),
+$\cosh x=\frac{e^x+e^{-x}}{2}$ (kosínus hyperbolický),
+$\tanh x=\frac{\sinh x}{\cosh x}$ (tangens hyperbolický) a
+$\coth x=\frac{cosh x}{sinh x}$ (kotangens hyperbolický) sa
+nazývajú hyperbolické funkcie.
 
 \begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-63}

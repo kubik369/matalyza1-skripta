@@ -20,6 +20,7 @@
 \usepackage{multicol}
 \usepackage{theorem}
 \usepackage{interval}
+\usepackage{tasks}
 
 % Justified citácie na začiatku kapitol
 \renewcommand{\textflush}{flushepinormal}
@@ -35,14 +36,15 @@
 
 % sign function
 \newcommand{\sgn}{\operatorname{sgn}}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
 
 \input{./tex/makra.tex}
 
 \begin{document}
 
 % Medzery pred a za $$
-\setlength{\abovedisplayskip}{6pt}
-\setlength{\belowdisplayskip}{6pt}
 
 \intervalconfig{
 soft  open  fences ,
