@@ -19,6 +19,7 @@
 \usepackage{probsoln}
 \usepackage{multicol}
 \usepackage{theorem}
+\usepackage{interval}
 
 % Justified citácie na začiatku kapitol
 \renewcommand{\textflush}{flushepinormal}
@@ -32,9 +33,22 @@
 % probsoln package Solution label redefinition
 \renewcommand{\solutionname}{Riešenie}
 
+% sign function
+\newcommand{\sgn}{\operatorname{sgn}}
+
 \input{./tex/makra.tex}
 
 \begin{document}
+
+% Medzery pred a za $$
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+
+\intervalconfig{
+soft  open  fences ,
+}
+
+\hyphenation{in-ver-zná}
 
 \input{./tex/titulna.tex}
 \input{./tex/predslov.tex}

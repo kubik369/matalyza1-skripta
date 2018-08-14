@@ -1,14 +1,12 @@
 \begin{defproblem}{limita-1}
 Dokážte, že bod $a$ je hromadný bod množiny $A$, ak
-	
 \begin{enumerate}
-	\item $a=0 \quad A=\{x \in \mathbb{R}; \sin{\frac{1}{x}} = 0 \}$
-	\item $a=-\infty \quad A=\{x \in \mathbb{R}; \cos{x} = \frac{1}{2} \}$ 
-	\item $a=\frac{1}{9} \quad A=\{\frac{m}{10^n}; m,n \in \mathbb{N} \}$
+    \item $a=0 \quad A=\{x \in \mathbb{R}; \sin{\frac{1}{x}} = 0 \}$
+    \item $a=-\infty \quad A=\{x \in \mathbb{R}; \cos{x} = \frac{1}{2} \}$
+    \item $a=\frac{1}{9} \quad A=\{\frac{m}{10^n}; m,n \in \mathbb{N} \}$
 \end{enumerate}
-	
-(teda $A$ je množina všetkých kladných čísel, ktorých zápis v desiatkovej sústave má konečný počet nenulových cifier za desatinnou čiarkou).
-	
+(teda $A$ je množina všetkých kladných čísel, ktorých zápis v desiatkovej
+sústave má konečný počet nenulových cifier za desatinnou čiarkou).
 \end{defproblem}
 
 \begin{defproblem}{limita-2}
@@ -51,16 +49,16 @@ Nech $A \subset \mathbb{R}$ je zhora ohraničená neprázdna množina, nech $sup
 \begin{defproblem}{limita-6}
  Na základe definície dokážte nasledujúce tvrdenia:
  \begin{enumerate}
- \item $\lim_{n \rightarrow \infty} \frac{3n^2+1}{5n^2-1}=\frac{3}{5}$ (pre ktoré $n \in \mathbb{N}$ platí: 
+ \item $\lim_{n \rightarrow \infty} \frac{3n^2+1}{5n^2-1}=\frac{3}{5}$ (pre ktoré $n \in \mathbb{N}$ platí:
  \begin{enumerate}
  \item $|\frac{3n^2+1}{5n^2-1}-\frac{3}{5}|<0,5;$
  \item $<0,005;$
  \item $<0,00005 ?);$
  \end{enumerate}
- 
+
  \item $\lim_{n \rightarrow \infty} \frac{n^2+3n+1}{2n^2+2}=\frac{1}{2}$;
- \item $\lim_{n \rightarrow \infty} \frac{n^2}{n+8}=+\infty$ 
- 
+ \item $\lim_{n \rightarrow \infty} \frac{n^2}{n+8}=+\infty$
+
  (počínajúc ktorým prirodzeným číslom platí nerovnosť $\frac{n^2}{n+8}>10^3$?);
  \item $\lim_{n \rightarrow \infty} (\frac{5}{n}-n)=-\infty$;
  \item $\lim_{n \rightarrow \infty} q^n=0$  $(|q|<1).$
@@ -68,14 +66,19 @@ Nech $A \subset \mathbb{R}$ je zhora ohraničená neprázdna množina, nech $sup
 \end{defproblem}
 
 \begin{defproblem}{limita-7}
-
-Rozhodnite, či existujú limity nasldujúcich postupností (nezabúdajte, že svoje tvrdenie musíte dokázať):
+Rozhodnite, či existujú limity nasldujúcich postupností (nezabúdajte, že svoje
+tvrdenie musíte dokázať):
 \begin{enumerate}
-\item 
- $$a_n = \left\{ \begin{array}{r@{\quad}c}
-    1-\frac{1}{n}, & $ak n $\in \mathbb{N}\ $je párne$ \\
-    1+\frac{1}{n^2}, & $ak n $\in \mathbb{N}\ $je nepárne$ \\ \end{array} \right.
-    $$ 
+\item
+    $$
+    a_n =
+        \left\{
+            \begin{array}{r@{\quad}c}
+                1-\frac{1}{n}, & $ak n $\in \mathbb{N}\ $je párne$ \\
+                1+\frac{1}{n^2}, & $ak n $\in \mathbb{N}\ $je nepárne$
+            \end{array}
+        \right.
+    $$
 \item $$a_n=\frac{cos \frac{n \pi}{2}}{n}$$
 \end{enumerate}
 \end{defproblem}
@@ -96,7 +99,7 @@ Pri formulácii definície vlastnej limity postupnosti študent:
 \item definíciu napísal takto:
 $$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}: |a_n-b|<\varepsilon.$$
 Ktoré postupnosti by mali limitu pri takejto definícii?
-\item namiesto "pre každé $\varepsilon > 0$" povedal "aspoň pre jedno $\varepsilon > 0$". Ukážte, že pri takejto definícii je číslo $7$ limitou postupnosti $2,2, ...$ 
+\item namiesto "pre každé $\varepsilon > 0$" povedal "aspoň pre jedno $\varepsilon > 0$". Ukážte, že pri takejto definícii je číslo $7$ limitou postupnosti $2,2, ...$
 \item namiesto "existuje $n_0 \in \mathbb{N}$" povedal "pre všetky $n_0 \in \mathbb{N}$". Ktoré postupnosti majú limitu pri takejto definícii?
 \item definćiu napísal takto:
 $$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N},n>n_0:a_n-b<\varepsilon.$$
@@ -105,7 +108,7 @@ Ukážte, že pri takejto definícii je čáslo $5$ limitou postupnosti $1,1,1,.
 \end{defproblem}
 
 \begin{defproblem}{limita-10}
-Je číslo $b \in \mathbb{R}$ limitou postupnosti ${\{a_n\}}_{n=1}^\infty$, ak existuje také prirodzené číslo $\mathbb{N^*}$, že pre ľubovoľné $\varepsilon>0$ a všetky $n \in \mathbb{N}, n>\mathbb{N^*}$ platí $|a_n-b|<\varepsilon$? 
+Je číslo $b \in \mathbb{R}$ limitou postupnosti ${\{a_n\}}_{n=1}^\infty$, ak existuje také prirodzené číslo $\mathbb{N^*}$, že pre ľubovoľné $\varepsilon>0$ a všetky $n \in \mathbb{N}, n>\mathbb{N^*}$ platí $|a_n-b|<\varepsilon$?
 \end{defproblem}
 
 \begin{defproblem}{limita-11}
@@ -186,7 +189,7 @@ Nájdite nasledujúce limity:
 \end{defproblem}
 
 \begin{defproblem}{limita-19}
-Zostrojte funkcie $f,g$ definované na $\mathbb{R}$ tak, aby neexistovali $\lim_{x \rightarrow 1} f(x)$ ani $\lim_{x \rightarrow 1} g(x)$ a exitovala konečná 
+Zostrojte funkcie $f,g$ definované na $\mathbb{R}$ tak, aby neexistovali $\lim_{x \rightarrow 1} f(x)$ ani $\lim_{x \rightarrow 1} g(x)$ a exitovala konečná
 \begin{multicols}{2}
 \begin{enumerate}
     \item $\lim_{{x \rightarrow 1}} (f(x)+g(x))$;
@@ -340,7 +343,7 @@ Nájdite limity:
 \begin{defproblem}{limita-34}
 \begin{enumerate}
 \item Nech $0<q<1$ a nech postupnosť ${\{a_n\}}_{n=1}^\infty$ kladných čísel spĺňa podmienku $\frac{a_{n+1}}{a_{n}} \leq q$ pre všetky $n \in \mathbb{N}$. Potom $\lim_{n \rightarrow] \infty} a_n=0$. Dokážte!
-\item Rozhodnite o platnosti tvrdenia " Ak postupnosť ${\{a_n\}}_{n=1}^\infty$ kldných čísel spĺňa podmienku $\frac{a_{n+1}}{a_{n}} \leq 1$ pre všetky $n \in \mathbb{N}$, tak $\lim_{n \rightarrow \infty} a_n=0$." ! 
+\item Rozhodnite o platnosti tvrdenia " Ak postupnosť ${\{a_n\}}_{n=1}^\infty$ kldných čísel spĺňa podmienku $\frac{a_{n+1}}{a_{n}} \leq 1$ pre všetky $n \in \mathbb{N}$, tak $\lim_{n \rightarrow \infty} a_n=0$." !
 \item Nájdite limity:
 \begin{itemize}
 \item $\lim_{n \rightarrow \infty} \frac{4^n n!}{(3n)^n}$;
@@ -350,7 +353,7 @@ Nájdite limity:
 \end{defproblem}
 
 \begin{defproblem}{limita-35}
-Nájdite limity: 
+Nájdite limity:
 \begin{enumerate}
 \item $\lim_{n \rightarrow \infty} (\frac{7}{3n})^n$;
 \item $\lim_{n \rightarrow \infty} (\frac{2n+3}{n^2})^n$.
@@ -422,7 +425,7 @@ Uveďte príklady postupností nenulových čísel ${\{a_n\}}_{n=1}^\infty$ a ${
 \end{defproblem}
 
 \begin{defproblem}{limita-42}
-Nech $R$ je racionálna funkcia, t.j. funkcia daná predpisom $R(x)=\frac{a_0x^n+a_1x^{n-1}+...+a_n}{b_0x^m+b_1x^{m-1}+...+b_m},(a_0 \neq 0, b_0 \neq 0,m,n \in \mathbb{N} \cup \{ 0\})$. Čomu sa rovná $\lim_{x \rightarrow \infty} R(x)$ ? 
+Nech $R$ je racionálna funkcia, t.j. funkcia daná predpisom $R(x)=\frac{a_0x^n+a_1x^{n-1}+...+a_n}{b_0x^m+b_1x^{m-1}+...+b_m},(a_0 \neq 0, b_0 \neq 0,m,n \in \mathbb{N} \cup \{ 0\})$. Čomu sa rovná $\lim_{x \rightarrow \infty} R(x)$ ?
 \end{defproblem}
 
 \begin{defproblem}{limita-43}
@@ -455,7 +458,7 @@ Vyšetrite existenciu nasledujúcich limít:
 \end{defproblem}
 
 \begin{defproblem}{limita-46}
-Uveďte príklad funkcie $f$: $\mathbb{R} \setminus \{ 0\} \rightarrow \mathbb{R}$ takej, že 
+Uveďte príklad funkcie $f$: $\mathbb{R} \setminus \{ 0\} \rightarrow \mathbb{R}$ takej, že
 \begin{enumerate}
 \item $\lim_{x \rightarrow 0-} f(x)>\lim_{x \rightarrow 0+} f(x)$;
 \item $\lim_{x \rightarrow 0-} f(x)$ neexistuje, $\lim_{x \rightarrow 0+} f(x)$ je nevlastná.
@@ -584,7 +587,7 @@ Dokážte, že nasledujúce postupnosti sú konvergentné a nájdite ich limity:
 \end{defproblem}
 
 \begin{defproblem}{limita-58}
-Dokážte, že postupnosť $a_{n}=(1+\frac{1}{n})^{n+1}$ je klesajúca a zdola ohraničená. Na základe toho dokážte nerovnosť 
+Dokážte, že postupnosť $a_{n}=(1+\frac{1}{n})^{n+1}$ je klesajúca a zdola ohraničená. Na základe toho dokážte nerovnosť
 $$(1+\frac{1}{n})^n<e<(1+\frac{1}{n})^{n+1}.$$
 \end{defproblem}
 
@@ -645,7 +648,7 @@ Nech ohraničená postupnosť ${\{a_n\}}_{n=1}^\infty$ má práve dve hromadné 
 \end{defproblem}
 
 \begin{defproblem}{limita-65}
-Nech pre ohraničenú postupnosť ${\{a_n\}}_{n=1}^\infty$ platí $$\forall \epsilon > 0: \limsup_{n \rightarrow \infty} a_n < \liminf_{n \rightarrow \infty} a_n+\epsilon.$$ Potom je postupnosť ${\{a_n\}}_{n=1}^\infty$ konvergentná. Dokážte! 
+Nech pre ohraničenú postupnosť ${\{a_n\}}_{n=1}^\infty$ platí $$\forall \epsilon > 0: \limsup_{n \rightarrow \infty} a_n < \liminf_{n \rightarrow \infty} a_n+\epsilon.$$ Potom je postupnosť ${\{a_n\}}_{n=1}^\infty$ konvergentná. Dokážte!
 \end{defproblem}
 
 \begin{defproblem}{limita-66}
@@ -659,7 +662,7 @@ Nech pre ohraničenú postupnosť ${\{a_n\}}_{n=1}^\infty$ platí $$\forall \eps
 \begin{enumerate}
 \item Nech sú dané ohraničené postupnosti ${\{a_n\}}_{n=1}^\infty$ a ${\{b_n\}}_{n=1}^\infty$. Potom
 \begin{enumerate}
-\item ak existuje konečná $\lim_{n \rightarrow \infty} a_n$, tak 
+\item ak existuje konečná $\lim_{n \rightarrow \infty} a_n$, tak
 $$\liminf_{n \rightarrow \infty} (a_n+b_n)=\lim_{n \rightarrow \infty} a_n+\liminf_{n \rightarrow \infty} b_n;$$
 \item $\liminf_{n \rightarrow \infty} a_n+\liminf_{n \rightarrow \infty} b_n \leq \liminf_{n \rightarrow \infty} (a_n+b_n)\leq \liminf_{n \rightarrow \infty} a_n+\limsup_{n \rightarrow \infty} b_n\leq \limsup_{n \rightarrow \infty} (a_n+b_n) \leq \limsup_{n \rightarrow \infty} a_n+\limsup_{n \rightarrow \infty} b_n$.
 \end{enumerate}
@@ -675,7 +678,7 @@ Uveďte príklad neprázdnej množiny $a \subset \mathbb{R}$, že $A' \neq \empt
 \item $A \subsetneq A'$;
 \item $A' \cap A = \emptyset$;
 \item $A \not\subset A'\wedge A' \not\subset A \wedge A' \cap A \neq\emptyset$
-\end{enumerate} 
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{limita-69}
@@ -691,7 +694,7 @@ Nech $a \in \mathbb{R^*}$ je hromadný bod množiny $A \cup B$. Potom $a$ je hro
 \end{defproblem}
 
 \begin{defproblem}{limita-72}
-Nech je daná postupnosť ${\{a_n\}}_{n=1}^\infty$, definujme postupnosť ${\{b_n\}}_{n=1}^\infty$ predpisom 
+Nech je daná postupnosť ${\{a_n\}}_{n=1}^\infty$, definujme postupnosť ${\{b_n\}}_{n=1}^\infty$ predpisom
 $$b_n=\frac{1}{n}(a_1+a_2+...+a_n).$$
 Ak $\lim_{n \rightarrow \infty} a_n=a (a \in \mathbb{R^*})$, tak existuje aj $\lim_{n \rightarrow \infty} b_n$ a platí $\lim_{n \rightarrow \infty} a_n=a$. Dokážte; ďalej ukážte, že obrátená implikácia vo všeobecnosti neplatí.
 \end{defproblem}
@@ -769,7 +772,7 @@ Nech ${\{a_n\}}_{n=1}^\infty$ je konvergentná postupnosť. Potom existuje maxim
 \end{defproblem}
 
 \begin{defproblem}{limita-82}
-Dokážte, že neexistuje racionálna funkcia $\mathbb{R}$ s celočíselnými koeficientami taká, aby platilo 
+Dokážte, že neexistuje racionálna funkcia $\mathbb{R}$ s celočíselnými koeficientami taká, aby platilo
 $$\forall r \in \mathbb{Q} \exists k \in \mathbb{Z}: R(k)=r.$$
 \end{defproblem}
 
@@ -802,7 +805,7 @@ Nech $f,g: \mathbb{R} \rightarrow \mathbb{R}$ sú periodické funkcie a $\lim_{x
     \item $\lim_{x \rightarrow 0} \frac{\cos 3x^3-1}{\sin ^6 2x}$;
     \item $\lim_{x \rightarrow 0} \frac{\sin (a+2x)-2\sin (a+x)+\sin a}{x^2}$;
     \item $\lim_{x \rightarrow 0} \frac{4\sin (\frac{\pi}{6}+x)\sin (\frac{\pi}{6}+2x)-1}{\sin x}$;
-    
+
     \item $\lim_{x \rightarrow 2} \frac{\arctan (x^2-2x)}{\sin 3\pi x}$;
     \item $\lim_{x \rightarrow 0} \frac{\arctan \frac{1}{x}+2}{x^2}$;
     \item $\lim_{x \rightarrow 0} \frac{1-\cos x\sqrt{\cos 2x}\sqrt[3]{\cos 3x}}{x^2}$;
@@ -859,7 +862,7 @@ Nech $x_n=\sum_{k=1}^n \frac{1}{\sqrt{n^2+k}}$; ukážeme dva spôsoby výpočtu
 $$x_n=\sum_{k=1}^n \frac{1}{\sqrt{n^2+n}}\leq \sum_{k=1}^n \frac{1}{\sqrt{n^2+k}}\leq \sum_{k=1}^n \frac{1}{\sqrt{n^2}}=1;$$
 teda $$\frac{n}{\sqrt{n^2+n}}\leq x_n \leq 1, (n \in \mathbb{N}).$$
 Pretože $\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+n}}=1=\lim_{n \rightarrow \infty} 1$, je podľa vety $6$ $\lim_{n \rightarrow \infty} x_n=1$.
-\item Podľa vety o limite súčtu je 
+\item Podľa vety o limite súčtu je
 $$\lim_{n \rightarrow \infty} \sum_{k=1}^n \frac{1}{\sqrt{n^2+k}}=\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+1}}+\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+2}}+...+\lim_{n \rightarrow \infty} \frac{n}{\sqrt{n^2+n}}=0+0+...+0=0.$$
 Zrejme aspoň jeden z uvedených postupov je nesprávny. Ktorý to je a v čom spočíva chyba?
 \end{enumerate}
@@ -981,7 +984,7 @@ Nech $a$ je hromadný bod definičného oboru $D(f)$ funkcie $f$. Dokážte, že
 \end{defproblem}
 
 \begin{defproblem}{limita-101}
-Nech je daná ohraničená postupnosť ${\{a_n\}}_{n=1}^\infty$. Dokážte, že 
+Nech je daná ohraničená postupnosť ${\{a_n\}}_{n=1}^\infty$. Dokážte, že
 \begin{multicols}{2}
 \begin{enumerate}
     \item $\limsup_{n \rightarrow \infty} a_n=\inf \{\sup_{k \geq n} a_k: n \in \mathbb{N}\}$;

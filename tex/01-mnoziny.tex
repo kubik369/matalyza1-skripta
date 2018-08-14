@@ -22,7 +22,7 @@ $max(A)$ ($min(A)$)
     \foreachproblem[realne-cisla]{\item\thisproblem}
 \end{enumerate}
 
-\section{Ohraničené množiny reálnych čísel, supremum a infimum}
+\section{Ohraničené množiny, supremum a infimum}
 
 Neprázdna množina $A \subset \mathbb{R}$ sa nazýva \textit{zhora (zdola)
 ohraničená}, ak platí
@@ -98,57 +98,89 @@ uvedených tvrdení za axiómu, z nej možno odvodiť vetu o existencií infima.
 
 \section{Funkcie}
 \subsection{Definícia funkcie. Zložené funkcie. Elementárne funkcie}
-Nech $A\subset \mathbb{R}$ je neprázdna množina. Ak je každému číslu $x\in A$ priradené práve jedno číslo $y\in\mathbb{R}$, ktoré označíme $f(x)$, hovoríme, že $f$ je funkcia (funkcia definovaná na množine $A$). Číslo $f(x)$ sa nazýva funkčná hodnota (v bode $x$), množina $A$ definičný obor funkcie $f$ (túto množinu budeme označovať $D(f)$).Na označenie funkcií budeme používať písmená latinskej a gréckej abecedy. Ak chceme zdôraznič, že definičným oborom funkcie $f$ je množina $A$, použijeme zápis $f:A \rightarrow \mathbb{R}$ (prápadne $f:A \rightarrow B$, ak pre každé $x\in A$ platí $f(x)\in B$) alebo $f(x)$, $x\in A$. Okrem označení "funkcia $f$", "funkcia $f:A \rightarrow \mathbb{R}^n$" sa možno stretnúť aj so spojeniami "funkcia $y=f(x)$" alebo "funkcia $f(x)$" (istá nepresnosť posledných dvoch spojení spočíva v tom, že symbol $f(x)$ sa zvykne označovať funkčná hodnota v danom bode $x$; mnohí autori preto rozlišujú označenie $f(x)$ pre funkčnú hodnotu a $f(.)$ pre funkciu).
 
-Hovoríme, že funkcie $f$ a $g$ sa rovnajú, ak $D(f)=D(g)$ a pre každé $x\in D(f)$ platí $f(x)=g(x)$ (teda funkcia je jednoznačne určená predpisom priradenia a definičným oborom). 
+Nech $A\subset \mathbb{R}$ je neprázdna množina. Ak je každému číslu $x\in A$
+priradené práve jedno číslo $y\in\mathbb{R}$, ktoré označíme $f(x)$, hovoríme,
+že $f$ je funkcia (funkcia definovaná na množine $A$). Číslo $f(x)$ sa nazýva
+funkčná hodnota (v bode $x$), množina $A$ definičný obor funkcie $f$ (túto
+množinu budeme označovať $D(f)$).Na označenie funkcií budeme používať písmená
+latinskej a gréckej abecedy. Ak chceme zdôraznič, že definičným oborom funkcie
+$f$ je množina $A$, použijeme zápis $f:A \rightarrow \mathbb{R}$ (prápadne $f:A
+\rightarrow B$, ak pre každé $x\in A$ platí $f(x)\in B$) alebo $f(x)$, $x\in
+A$. Okrem označení "funkcia $f$", "funkcia $f:A \rightarrow \mathbb{R}^n$" sa
+možno stretnúť aj so spojeniami "funkcia $y=f(x)$" alebo "funkcia $f(x)$" (istá
+nepresnosť posledných dvoch spojení spočíva v tom, že symbol $f(x)$ sa zvykne
+označovať funkčná hodnota v danom bode $x$; mnohí autori preto rozlišujú
+označenie $f(x)$ pre funkčnú hodnotu a $f(.)$ pre funkciu).
 
-Funkciu $a$, ktorej definičným oborom je množina $N$, nazývame postupnosť a označujeme ju spravidla $\{a_n\}_{n=1}^\infty$; funkčná hodnota v bode $n$ sa nazýva $n$-tý člen postupnosti $\{a_n\}_{n=1}^\infty$ a označuje sa $a_n$.
+Hovoríme, že funkcie $f$ a $g$ sa rovnajú, ak $D(f)=D(g)$ a pre každé $x\in
+D(f)$ platí $f(x)=g(x)$ (teda funkcia je jednoznačne určená predpisom
+priradenia a definičným oborom).
 
-Ak $f:A \rightarrow \mathbb{R}$ je funkcia a $B \subset A$ neprázdna množina, tak množina $f(B):=\{f(x);x\in B \}$ sa nazýva obraz množiny $B$ (pri zobrazení $f$). Špeciálne množina $f(A)$ sa nazýva obor hodnôt funkcie $f$.
+Funkciu $a$, ktorej definičným oborom je množina $N$, nazývame postupnosť a
+označujeme ju spravidla $\{a_n\}_{n=1}^\infty$; funkčná hodnota v bode $n$ sa
+nazýva $n$-tý člen postupnosti $\{a_n\}_{n=1}^\infty$ a označuje sa $a_n$.
+
+Ak $f:A \rightarrow \mathbb{R}$ je funkcia a $B \subset A$ neprázdna množina,
+tak množina $f(B):=\{f(x);x\in B \}$ sa nazýva obraz množiny $B$ (pri zobrazení
+$f$). Špeciálne množina $f(A)$ sa nazýva obor hodnôt funkcie $f$.
 
 Nech sú dané funkcie $f$, $g$.
 
 \begin{itemize}
-\item Ak je množina $D_1:=D(f)\cap D(g)$ neprázdna, nazývajú sa funkcie $p$, $q$, $r$ definované na množine $D_1$ predpismi
-\begin{center}
-\item $p(x)=f(x)+g(x)$,
-\item $q(x)=f(x)-g(x)$,
-\item $r(x)=f(x)\cdot g(x)$
-\end{center}
-súčet, rozdiel a súčin funkcií $f$, $g$ a označujú sa $f+g$, $f-g$, $f\cdot g$.
-\item Ak je množina $D_2:=D(f)\cap \{x\in D(g);g(x)\neq 0\}$ neprázdna, nazýva sa funkcia $s:D_2 \rightarrow \mathbb{R}$ definovaná predpisom 
-\begin{itemize}
-\item $a(x)=\frac{f(x)}{g(x)}$
-\end{itemize}
-podiel funkcií $f$, $g$ a označuje sa $\frac{f}{g}$.
-\item Ak je množina $D_3:=\{x\in D(f);f(x)\in D(g)\}$ neprázdna, nazýva sa funkcia $t:D_3\rightarrow\mathbb{R}$ daná predpisom
-\begin{itemize}
-\item $t(x)=g(f(x))$
-\end{itemize}
-zložená funkcia z funkcií $f$, $g$ (superpozícia funkcií $f$ a $g$) a označuje sa $g \circ f$. Funkcia $f$ sa nazýva vnútorná zložka, funkcia $g$ vonkajšia zložka funkcie $g \circ f$.
+\item
+  Ak je množina $D_1:=D(f)\cap D(g)$ neprázdna, nazývajú sa funkcie $p, q, r$
+  definované na množine $D_1$ predpismi
+  \begin{align*}
+    p(x) &= f(x)+g(x) \\
+    q(x) &= f(x)-g(x) \\
+    r(x) &= f(x)\cdot g(x)
+  \end{align*}
+  súčet, rozdiel a súčin funkcií $f, g$ a označujú sa $f+g$, $f-g$, $f\cdot g$.
+\item
+  Ak je množina $D_2:=D(f)\cap \{x\in D(g);g(x)\neq 0\}$ neprázdna, nazýva sa
+  funkcia $s:D_2 \rightarrow \mathbb{R}$ definovaná predpisom
+  $$a(x)=\frac{f(x)}{g(x)}$$
+  podiel funkcií $f$, $g$ a označuje sa $\frac{f}{g}$.
+\item
+  Ak je množina $D_3:=\{x\in D(f);f(x)\in D(g)\}$ neprázdna, nazýva sa funkcia
+  $t:D_3\rightarrow\mathbb{R}$ daná predpisom
+  $$t(x)=g(f(x))$$
+  zložená funkcia z funkcií $f$, $g$ (superpozícia funkcií $f$ a $g$) a označuje
+  sa $g \circ f$. Funkcia $f$ sa nazýva vnútorná zložka, funkcia $g$ vonkajšia
+  zložka funkcie $g \circ f$.
 \end{itemize}
 
 Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
+
+% TODO Fix tabuľku
 \begin{tabular}{|l|l|p{10cm}|}
   \hline
   {\bf Názov} & {\bf Predpis} & {\bf Definičný obor} \\
   \hline \hline
-  konštantné        & $f(x)\equiv a$\footnote{symbol $\equiv$ čítame "identicky rovné" }, $a\in\mathbb{R}$ & $\mathbb{R}$ \\
-  mocninové        & $f(x)=x^a,a\in\mathbb{R}\ \{0\}$ & \begin{itemize}
-  \item ak $a>0$:
-  \begin{itemize}
-  \item ak $a=\frac{p}{q},p,q\in\mathbb{N},$ $p$ je párne alebo $p$ aj $q$ sú nepárne: $\mathbb{R}$
-  \item vo všetkých ostatných prípadoch: $\langle 0,\infty)$;
-  \end{itemize}
-  \item ak $a<0$:
-  \begin{itemize}
-  \item ak $a=-\frac{p}{q},p,q\in\mathbb{N}$, $p$ je párne lebo $p$ aj $q$ sú nepárne: $\mathbb{R}\ \{0\}$
-  \item vo všetkých ostatných prípadoch: $(0,\infty)$
-  \end{itemize}
-\end{itemize}   \\
-  exponenciálne        & $f(x)=a^x,a>0,a\neq 1$ & $\mathbb{R}$ \\
-  logaritmické          & $f(x)=\log_a x,a>0,a\neq 1$\footnote{špeciálne v prípade $a=10$ budeme používať označenie $log_a x$, v prípade $a=e$ označenie $\ln x$} & $\mathbb{R}^{+}$\\
-  goniometrické         & $f(x)=\sin x$ & $\mathbb{R}$ \\
+  konštantné &
+  $\underset{a \in \mathbb{R}}{f(x)}\equiv a$
+  \footnote{symbol $\equiv$ čítame "identicky rovné" } &
+  $\mathbb{R}$ \\
+  mocninové &
+  $\underset{a \in \mathbb{R} \setminus {0}}{f(x)}\equiv a$ &
+  \begin{enumerate}
+    \item ak $a>0$:
+    \begin{enumerate}
+      \item ak $a=\frac{p}{q},p,q\in\mathbb{N},$ $p$ je párne alebo $p$ aj $q$
+            sú nepárne: $\mathbb{R}$
+      \item vo všetkých ostatných prípadoch: $\langle 0,\infty)$;
+    \end{enumerate}
+    \item ak $a<0$:
+    \begin{enumerate}
+      \item ak $a=-\frac{p}{q},p,q\in\mathbb{N}$, $p$ je párne lebo $p$ aj $q$
+            sú nepárne: $\mathbb{R}\ \{0\}$
+      \item vo všetkých ostatných prípadoch: $(0,\infty)$
+    \end{enumerate}
+  \end{enumerate} \\
+  exponenciálne & $f(x)=a^x,a>0,a\neq 1$ & $\mathbb{R}$ \\
+  logaritmické & $f(x)=\log_a x,a>0,a\neq 1$\footnote{špeciálne v prípade $a=10$ budeme používať označenie $log_a x$, v prípade $a=e$ označenie $\ln x$} & $\mathbb{R}^{+}$\\
+  goniometrické & $f(x)=\sin x$ & $\mathbb{R}$ \\
    & $f(x)=\cos x$ & $\mathbb{R}$ \\
    & $f(x)=\tan x$ & $\mathbb{R}\ \{\frac{\pi}{2}+k\pi;k\in\mathbb{Z}\}$ \\
    & $f(x)=\cot x$ & $\mathbb{R}\ \{k\pi;k\in\mathbb{Z}\}$ \\
@@ -159,9 +191,22 @@ Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
   \hline
 \end{tabular}
 
-Funkcie, ktoré vzniknú zo základných elementárnych funkcií len použitím operácií súčtu, rozdielu, súčinu, podielu a superpozície funkcií, sa nazývajú elementárne funkcie.
+Funkcie, ktoré vzniknú zo základných elementárnych funkcií len použitím
+operácií súčtu, rozdielu, súčinu, podielu a superpozície funkcií, sa nazývajú
+elementárne funkcie.
 
-Všimnime si, že definičný obor funkcie, ktorá je súčtom, rozdielom, súčinom, podielom alebo superpozíciou daných funkcií $f$ a $g$, je jednoznačne určený množinami $D(f)$ a $D(g)$. Teda ak funkcia $h$ vznikne z funkcií $f_1,..,f_n$ len použitím operácií súčtu, rozdielu, súčinu, podielu a superpozície funkcií, je množina $D(h)$ jednoznačne určená množinami $D(f_1),...,D(f_n)$. Preto ak napíšeme predpis takejto funkcie $h$ bez toho, aby sme výslovne určili jej definičný obor, považujeme funkciu $h$ za definovanú práve na tej množine, ktorá je určená množinami $D(f_1),...,D(f_n)$ na základe definícií súčtu, rozdielu, súčinu, podielu a superpozície funkcií. (Teda trocha nepresne povedané, za definičný obor takejto funkcie $h$ považujeme množinu všetkých tých $x\in\mathbb{R}$, pre ktoré má predpis funkcie $h$ "zmysel".)
+Všimnime si, že definičný obor funkcie, ktorá je súčtom, rozdielom, súčinom,
+podielom alebo superpozíciou daných funkcií $f$ a $g$, je jednoznačne určený
+množinami $D(f)$ a $D(g)$. Teda ak funkcia $h$ vznikne z funkcií
+$f_1,\ldots,f_n$ len použitím operácií súčtu, rozdielu, súčinu, podielu a
+superpozície funkcií, je množina $D(h)$ jednoznačne určená množinami
+$D(f_1),\ldots,D(f_n)$. Preto ak napíšeme predpis takejto funkcie $h$ bez toho,
+aby sme výslovne určili jej definičný obor, považujeme funkciu $h$ za
+definovanú práve na tej množine, ktorá je určená množinami
+$D(f_1),\ldots,D(f_n)$ na základe definícií súčtu, rozdielu, súčinu, podielu a
+superpozície funkcií. (Teda trocha nepresne povedané, za definičný obor takejto
+funkcie $h$ považujeme množinu všetkých tých $x\in\mathbb{R}$, pre ktoré má
+predpis funkcie $h$ "zmysel".)
 
 \begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-9}
@@ -322,7 +367,7 @@ Inverzné funkcie k funkciám $\sin/\langle-\frac{\pi}{2},\frac{\pi}{2}\rangle \
 
 \textbf{Riešenie a):} Pre $x\in\langle-1,0\rangle$ nemôže rovnosť platiť, pretože vtedy $\arccos\sqrt{1-x^2}\geq 0>\arcsin x$. Ak $x\in\langle 0,1\rangle$, ležia hodnoty $\arccos\sqrt{1-x^2}$ aj $\arcsin x$ v intervale $\langle 0,\frac{\pi}{2}$. Využijeme, že na tomto intervale je funkcia $\cos$ Prostá, t.j. že pre $\alpha,\beta\in\langle 0,\frac{\pi}{2}\rangle$ platí $$\alpha=\beta\Rightarrow\cos\alpha=\cos\beta.$$
  V našom prípade $\cos(\arccos\sqrt{1-x^2})=\sqrt{1-x^2}=\cos(\arcsin x)$ (pozri príklad $60$), teda pre $x\in\langle 0,1\rangle$ platí $\arccos\sqrt{1-x^2}=\arcsin x$.
- 
+
 \begin{enumerate}[resume]
   \item \useproblem[supremum-infimum]{supremum-infimum-49}
 \end{enumerate}

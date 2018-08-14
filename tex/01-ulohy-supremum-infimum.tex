@@ -1,6 +1,5 @@
 \begin{defproblem}{supremum-infimum-1}
 Zistite, či sú dané množiny zhora, resp. zdola ohraničené:
-
 \begin{enumerate}
   \item $A = \{ \sqrt{a + \sqrt{b}} ; \: a, b \in \mathbb{N}, a < b \}$ ;
   \item $B = \{ \frac{1}{x + \frac{1}{x}} ; \: x \in (0, \inf) \}$ ;
@@ -9,7 +8,6 @@ Zistite, či sú dané množiny zhora, resp. zdola ohraničené:
               x \in \mathbb{Q} \cap (2, 3) \}$ ;
   \item $E = \{ x \in \mathbb{R}; \: \exists \: a, b, c \in \mathbb{Q}:
                 a \neq 0 \land ax^2 + bx +c = 0 \}$
-
         (teda $E$ je množina koreňov všetkých polynómov druhého stupňa s
         racionálnymi koeficientami).
 \end{enumerate}
@@ -156,7 +154,7 @@ Zložením ktorých základných elementárnych funkcií vzniknú funkcie dané 
 \end{defproblem}
 
 \begin{defproblem}{supremum-infimum-10}
-Nájdite $D(f)$, ak funkcia $f$ je daná predpisom 
+Nájdite $D(f)$, ak funkcia $f$ je daná predpisom
 \begin{multicols}{2}
 \begin{enumerate}
     \item $f(x)=\sqrt{3x-x^3}$;
@@ -181,34 +179,18 @@ Nájdite $D(f)$, ak funkcia $f$ je daná predpisom
 \end{defproblem}
 
 \begin{defproblem}{supremum-infimum-11}
-Napíšte predpid a určte definičný obor funkcií $f\circ f,f\circ g,g\circ f$ a $g\circ g$, ak
-\begin{align*}
-f(x)=x^2, & g(x)=2^x \\
-f(x) = sgn x \footnote{táto funkcia sa nazýva signum}= \left\{ \begin{array}{r@{\quad}c}
-    0, $ak $ x=0 \\
-    1, $ak $ x>0 \\
-    -1, $ak $ x<0 \\ \end{array} \right.
-    , & g(x)=\frac{1}{x} \\
-f(x) = \left\{ \begin{array}{r@{\quad}c}
-    0, $ak $ x\leq 0 \\
-    x, $ak $ x>0 \\ \end{array} \right.
-    , &  g(x)= \left\{ \begin{array}{r@{\quad}c}
-    0, $ak $ x<0 \\
-    -x^2, $ak $ x\geq0 \\ \end{array} \right.\\
-f(x)= \left\{ \begin{array}{r@{\quad}c}
-    x^2, $ak $ x\in \langle 0,1 \rangle \\
-    3x, $ak $ x\notin \langle 0,1 \rangle \\ \end{array} \right., & g(x)= \left\{ \begin{array}{r@{\quad}c}
-    2x, $ak $ x\in \langle 0,1 \rangle \\
-    4x-2, $ak $ x\notin \langle 0,1 \rangle \\ \end{array} \right. \\
-f(x)=\zeta(x)\footnote{táto funkcia sa nazýva Dirichletova funkcia} := \left\{ \begin{array}{r@{\quad}c}
-    0, $ak $ x\in\mathbb{R}\ \mathbb{Q} \\
-    1, $ak $ x\in \mathbb{Q} \\ \end{array} \right., & g(x)=\frac{1}{x^2} \\
-f(x)= \left\{ \begin{array}{r@{\quad}c}
-    0, $ak $ |x|\neq 1 \\
-    1, $ak $ |x|>1\\ \end{array} \right. , & g(x)= \left\{ \begin{array}{r@{\quad}c}
-    x^2-2, $ak $ |x|\leq 2 \\
-   -1, $ak $ |x|>2 \\ \end{array} \right. 
-\end{align*}
+Napíšte predpis a určte definičný obor funkcií $f \circ f,f \circ g,g \circ f$
+a $g \circ g$, ak
+\begin{enumerate}
+    \item $f(x) = x^2$, $g(x) = 2^x$
+    \item $f(x) = \sgn{x} =
+        \begin{cases}
+            0  & \text{ak } x = 0 \\
+            1  & \text{ak } x > 0 \\
+            -1 & \text{ak } x > 0
+        \end{cases}
+        , \hfill g(x)=\frac{1}{x}$
+\end{enumerate}
 \end{defproblem}
 
 \begin{defproblem}{supremum-infimum-12}
@@ -273,7 +255,7 @@ Zostrojte grafy nasledujúcich funkcií:
     \item $y= \left\{ \begin{array}{r@{\quad}c}
     \sin x, $ak $ x\in \langle -\pi,0\rangle \\
     2, $ak $ x\in (0,1\rangle \\
-    \frac{1}{(x-1)}, $ak $ x\in (1,4\rangle \\ \end{array} \right.$.    
+    \frac{1}{(x-1)}, $ak $ x\in (1,4\rangle \\ \end{array} \right.$.
 \end{enumerate}
 \end{multicols}
 \end{defproblem}
@@ -405,7 +387,7 @@ Nech funkcie $f,g$ sú klesajúce a záporné na množine $M$. Rozhodnite o mono
 \begin{defproblem}{supremum-infimum-33}
 \begin{enumerate}
 \item Dokážte, že superpozícia rýdzomonotónnych funkcií je rýdzomonotónna funkcia!
-\item Vyšetrite rast a klesanie funkcií 
+\item Vyšetrite rast a klesanie funkcií
 \begin{enumerate}
 \item $f(x)=\log (x^2-6x+10)$;
 \item $f(x)=\log_\frac{1}{2}(x^2-8x+20)$.
@@ -515,7 +497,7 @@ Vypočítajte:
 
 \begin{defproblem}{supremum-infimum-45}
 \begin{enumerate}
-\item Pomocou funkcie $\arcsin$ vyjadrite inverznú funkciu k zúženiu funkcie $\sin$ na interval 
+\item Pomocou funkcie $\arcsin$ vyjadrite inverznú funkciu k zúženiu funkcie $\sin$ na interval
 \begin{enumerate}
 \item $\langle\frac{3\pi}{2},\frac{5\pi}{2}\rangle$;
 \item $\langle\frac{\pi}{2},\frac{3\pi}{2}\rangle$.

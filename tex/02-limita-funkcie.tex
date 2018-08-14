@@ -3,7 +3,7 @@
 \section{Okolia a hromadné body}
 Nech $a \in \mathbb{R};$ každý interval $(a-\varepsilon,a+\varepsilon)$, kde $\varepsilon > 0$, sa nazýva \textit{okolie bodu $a$}. Číslo $\varepsilon$ sa nazýva \textit{polomer okolia} $(a-\varepsilon,a+\varepsilon);$ ak chceme zdôrazniť, že dané okolie bodu $a$ má polomer $\varepsilon$, hovoríme o $\varepsilon-$okolí bodu $a$. Okolím bodu $\infty$ sa nazýva každý interval $(K,\infty)$, kde $K \in \mathbb{R};$ okolím bodu $- \infty$ je každý interval $(- \infty,K)$, kde $K \in \mathbb{R}.$ Okolie bodu $b \in \mathbb{R^*}$ ($\mathbb{R^*}$ sa nazýva rozšírená množina reálnych čísel a pozostáva zo všetkých reálnych čísel a symbolov $+\infty,-\infty$)\footnote{namiesto symbolu $+\infty$ sa často používa symbol $\infty$, niektorí autori však zavádzajú symbol $\infty$ s iným významom, k tomu pozri poznámku na konci odseku $2.5$} budeme označovať $O(b)$, symbol $O_\varepsilon (b)$ budeme používať pre $\varepsilon-$okolie bodu $b \in \mathbb{R}$.
 
-Bod $a \in \mathbb{R^*}$ sa nazýva hromadný bod množiny $M \subset \mathbb{R}$, ak každé jeho okolie $O(a)$ obsahuje aspoň jeden prvok množiny $M$, rôzny od bodu $a$, t.j. ak platí 
+Bod $a \in \mathbb{R^*}$ sa nazýva hromadný bod množiny $M \subset \mathbb{R}$, ak každé jeho okolie $O(a)$ obsahuje aspoň jeden prvok množiny $M$, rôzny od bodu $a$, t.j. ak platí
 $$\forall O(a): (O(a) \setminus \{ a \}) \cap M \neq \emptyset $$
 (tento výrok možno zapísať aj v tvare $\forall O(a) \exists x\in M; x \neq a \wedge x \in O(a);$ je ekvivalentný s výrokom: každé okolie bodu $a$ obsahuje nekonečne veľa prvkov množiny $M$).
 
@@ -25,7 +25,7 @@ $$\forall O(b) \exists O(a) \forall x \in (O(a)\setminus \{ a \}) ) \cap D(f): f
 
 Všimnime si teraz jednotlivé prípady, ktoré zahŕňa uvedená definícia; začneme postupnosťami:
 \begin{itemize}
-\item Nech $b \in \mathbb{R}$; hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ konverguje k (číslu) $b$, ak $\lim_{n \rightarrow \infty} a_n=b$, t.j. ak platí 
+\item Nech $b \in \mathbb{R}$; hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ konverguje k (číslu) $b$, ak $\lim_{n \rightarrow \infty} a_n=b$, t.j. ak platí
 $$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N},n>n_0: |a_n-b|<\varepsilon.\footnote{Výroky $$\forall \varepsilon >0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0:|a_N-b<\varepsilon|$$ a $$\forall \varepsilon >0 \exists n_0 \in \mathbb{R} \forall n \in \mathbb{N}, n>n_0:|a_N-b<\varepsilon|$$ sú ekvivalentné. Pretože v definícii konečnej limity postupností je zvykom žiadať $n_0 \in \mathbb{N}$ (a nie $n_0 \in \mathbb{R}$), budeme ju v takej podobe používať aj my (hoci - ako uvidíme v príklade $105$ - sa tým niekedy komplikuje vyjadrenie závislosti čísla $n_0$ na čísle $\varepsilon$). Analogická poznámka sa vzťahuje aj na definície nevlastných limít postupností.}$$
 \item Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $+\infty$, ak $\lim_{n \rightarrow \infty} a_N = +\infty$, t.j. ak platí $$\forall K \in \mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: a_n>K.$$
 \item  Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $-\infty$, ak $\lim_{n \rightarrow \infty} a_N = -\infty$, t.j. ak platí $$\forall K \in \mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: a_n<K.$$
@@ -36,7 +36,7 @@ Postupnosti, ktoré majú vlastnú limitu, sa nazývajú \textit{konvergentné};
 	\item \useproblem[limita-funkcie]{limita-6}
 \end{enumerate}
 
-\textit{Riešenie (b):} 
+\textit{Riešenie (b):}
 
 Musíme dokázať pravdivosť výroku (*)
  $$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: |\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$$
@@ -48,12 +48,12 @@ Musíme dokázať pravdivosť výroku (*)
 \begin{itemize}
 \item ak $\varepsilon > \frac{3}{4}$, t.j. ak $D<0$, je riešením každé reálne číslo;
 \item ak $\varepsilon \in (0,\frac{3}{4} \rangle$, je $D \geq 0$, preto riešeniami sú všetky prvky množiny $(-\infty,\frac{3-\sqrt{9-16\varepsilon^2}}{2}) \cup (\frac{3+\sqrt{9-16\varepsilon^2}}{2},\infty)$.)
-\end{itemize} 
+\end{itemize}
 Preto:
 \begin{itemize}
 \item ak $\varepsilon > \frac{3}{4}$, je riešením nerovnice $|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$ každé číslo $n \in \mathbb{N}$;
 \item ak $\varepsilon \in (0,\frac{3}{4} \rangle$, sú riešeniami nerovnice $|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$ všetky tie $n \in \mathbb{N}$, pre ktoré platí $n>\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}$.
-Teraz už vidíme, že daný výrok (*) je pravdivý: stačí položiť $n_0=1$ pre $\varepsilon>\frac{3}{4}$ a $n_0=[\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}]$ pre $\varepsilon \in (0,\frac{3}{4} \rangle$ ([.] označujú celú časť; keby sme v (a) mali podmienku $n_0 \in \mathbb{R}$, stačilo by pre $\varepsilon \in (0,\frac{3}{4} \rangle$ položiť $n_0=\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}$). 
+Teraz už vidíme, že daný výrok (*) je pravdivý: stačí položiť $n_0=1$ pre $\varepsilon>\frac{3}{4}$ a $n_0=[\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}]$ pre $\varepsilon \in (0,\frac{3}{4} \rangle$ ([.] označujú celú časť; keby sme v (a) mali podmienku $n_0 \in \mathbb{R}$, stačilo by pre $\varepsilon \in (0,\frac{3}{4} \rangle$ položiť $n_0=\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}$).
 \end{itemize}
 
 \textit{Poznámka:}
@@ -97,7 +97,7 @@ Ak v definícii limity funkcie rozlíšime pre body $a,b \in \mathbb{R^*}$ tieto
 \end{enumerate}
 
 \textit{Riešenie $1$:}
-V tomto prípade sú okolia $O(a)$ a $O(b)$ jednoznačne určené svojimi polomermi $\delta,\epsilon$; definíciu limity možno potom prepísať do tvaru 
+V tomto prípade sú okolia $O(a)$ a $O(b)$ jednoznačne určené svojimi polomermi $\delta,\epsilon$; definíciu limity možno potom prepísať do tvaru
 $$\forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f), x \neq a, |x-a|<\delta:|f(x)-b|<\epsilon$$
 alebo - čo je to isté - do tvaru
 $$\forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f), x \neq a, |x-a|<\delta \Rightarrow |f(x)-b|<\epsilon$$
@@ -106,7 +106,7 @@ $$\forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f), x \neq a, |x-a|<\d
 \begin{veta}
 \textbf{Cauchyho-Bolzanovo kritérium konvergencie}
 
-Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Funkcia $f$ má v bode $a$ konečnú limitu práve vtedy, keď platí 
+Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Funkcia $f$ má v bode $a$ konečnú limitu práve vtedy, keď platí
 $$\forall \varepsilon > 0 \exists O(a) \forall x,y \in (O(a) \setminus \{ a \}) \cap D(f): |f(x)-f(y)|<\varepsilon.$$
 \end{veta}
 
@@ -129,7 +129,7 @@ Predpokladajme, že $|x-3|<\delta$ a skúsme na základe toho zhora odhadnúť v
 \begin{veta}
 \textbf{o limite skalárneho násobku, súčtu, rozdielu, súčinu a podielu}
 
-Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f) \cap D(g)$. Ak existujú konečné $\lim_{x \rightarrow a} f(x)=A$, $\lim_{x \rightarrow a} g(x)=B$, tak existuje aj $\lim_{x \rightarrow a} cf(x)$ ($c \in \mathbb{R}$ je konštanta), $\lim_{x \rightarrow a} (f(x)+g(x)),\lim_{x \rightarrow a} (f(x)-g(x)),\lim_{x \rightarrow a} (f(x) \cdot g(x))$ a platí 
+Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f) \cap D(g)$. Ak existujú konečné $\lim_{x \rightarrow a} f(x)=A$, $\lim_{x \rightarrow a} g(x)=B$, tak existuje aj $\lim_{x \rightarrow a} cf(x)$ ($c \in \mathbb{R}$ je konštanta), $\lim_{x \rightarrow a} (f(x)+g(x)),\lim_{x \rightarrow a} (f(x)-g(x)),\lim_{x \rightarrow a} (f(x) \cdot g(x))$ a platí
 \end{veta}
 
 \begin{multicols}{2}
@@ -144,7 +144,7 @@ Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množin
     \item $(=\lim_{x \rightarrow a} f(x) \cdot \lim_{x \rightarrow a} g(x))$.
 \end{enumerate}
 \end{multicols}
-Ak naviac $B \neq 0$, tak existuje aj $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}$ a platí 
+Ak naviac $B \neq 0$, tak existuje aj $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}$ a platí
 
 \begin{multicols}{2}
 \begin{enumerate}[label=]
@@ -156,7 +156,7 @@ Ak naviac $B \neq 0$, tak existuje aj $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}$
 \begin{veta}
 \textbf{o limite zloženej funkcie}
 
-Nech sú dané funkcie $f,g$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f \circ g)$. Ak $\lim_{x \rightarrow a} g(x)=A$ $(A \in \mathbb{R^*})$, pričom je splnená podmienka 
+Nech sú dané funkcie $f,g$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f \circ g)$. Ak $\lim_{x \rightarrow a} g(x)=A$ $(A \in \mathbb{R^*})$, pričom je splnená podmienka
 $$\exists O(a)\forall x \in O(a): x \neq a \Rightarrow g(x) \neq A,$$
 a $\lim_{x \rightarrow A} f(x)=B$  $(B \in \mathbb{R^*})$, tak $\lim_{x \rightarrow a} f(g(x))=B$
 \end{veta}
@@ -237,7 +237,7 @@ Uvedieme dva rôzne návody:
 \end{enumerate}
 
 \textit{Riešenie (b):}
-Aby sme sa v limitovanom výraze zbavili odmocniny, položíme $\sqrt[n]{1+x}=t$ (odtiaľ $(x=t^n-1)$). Použiť túto substitúciu neznamená nič iné, ako napísať funkciu $y=\frac{\sqrt[n]{1+x}-1}{x}$ v tvare superpozície funkcií $y=\frac{t-1}{t^n-1}$ a $t=\sqrt[n]{1+x}$. Výpočet limity sa potom zakladá na vete o limite zloženej funkcie: limita vnútornej zložky (predstavujúcej substitúciu) je $(\lim_{x \rightarrow 0} \sqrt[n]{1+x}=)1$; podmienka (*) a vety $3$ je splnená, pretože $\sqrt[n]{1+x}$ je prostá funkcia. Hľadaná limita sa preto rovná limite vonkajšej zložky v bode $1$; teda 
+Aby sme sa v limitovanom výraze zbavili odmocniny, položíme $\sqrt[n]{1+x}=t$ (odtiaľ $(x=t^n-1)$). Použiť túto substitúciu neznamená nič iné, ako napísať funkciu $y=\frac{\sqrt[n]{1+x}-1}{x}$ v tvare superpozície funkcií $y=\frac{t-1}{t^n-1}$ a $t=\sqrt[n]{1+x}$. Výpočet limity sa potom zakladá na vete o limite zloženej funkcie: limita vnútornej zložky (predstavujúcej substitúciu) je $(\lim_{x \rightarrow 0} \sqrt[n]{1+x}=)1$; podmienka (*) a vety $3$ je splnená, pretože $\sqrt[n]{1+x}$ je prostá funkcia. Hľadaná limita sa preto rovná limite vonkajšej zložky v bode $1$; teda
 $$\lim_{x \rightarrow 0} \frac{\sqrt[n]{1+x}-1}{x}=\lim_{t \rightarrow 1} \frac{t-1}{t^n-1}=\lim_{t \rightarrow 1} \frac{t-1}{(t-1)(t^{n-1}+t^{n-2}+...+1)}=\frac{1}{n}.$$
 
 \begin{enumerate}[resume]
@@ -290,7 +290,7 @@ Pre $n \geq 3$ platí $\frac{2}{1}\cdot \frac{2}{2}\cdot \frac{2}{3}\cdot ... \c
 \end{enumerate}
 
 \textit{Riešenie (a):}
-Tvrdenie \footnote{Uvedenú rovnosť možno veľmi ľahko dokázať pomocou vety $3$ a vety $4$ $(\lim_{n \rightarrow \infty} \frac{1}{n}=0, \lim_{u \rightarrow 0} a^u=1)$. Tu uvedený postup nevyužívajúci vetu $4$ sa používa práve pri dôkaze skutočnosti, že tvrdenie vety $4$ platí pre exponenciálne funkcie} zrejme platí pre $a=1$. Predpokladajme teraz, že $a>1$, a označme $\omega (n)=\sqrt[n]{a}-1$. Potom iste $\omega (n)\geq 0$ a umocnením obidvoch strán rovnosti $\sqrt[n]{a}=1+\omega n$ na n-tú dostaneme 
+Tvrdenie \footnote{Uvedenú rovnosť možno veľmi ľahko dokázať pomocou vety $3$ a vety $4$ $(\lim_{n \rightarrow \infty} \frac{1}{n}=0, \lim_{u \rightarrow 0} a^u=1)$. Tu uvedený postup nevyužívajúci vetu $4$ sa používa práve pri dôkaze skutočnosti, že tvrdenie vety $4$ platí pre exponenciálne funkcie} zrejme platí pre $a=1$. Predpokladajme teraz, že $a>1$, a označme $\omega (n)=\sqrt[n]{a}-1$. Potom iste $\omega (n)\geq 0$ a umocnením obidvoch strán rovnosti $\sqrt[n]{a}=1+\omega n$ na n-tú dostaneme
 $$a=1+n \omega(n)+{n \choose 2}\omega^2 (n)+...+\omega^n (n)\geq 1+n\omega (n).$$
 Odtiaľ $$\omega (n) \leq \frac{a-1}{n}, n\in \mathbb{N}.$$
 Teda $$0\leq \omega (n) \leq \frac{a-1}{n}, n \in \mathbb{N},$$
@@ -326,7 +326,7 @@ Predchádzajúce tvrdenie (spolu s ďalšími, analogickými) si ľahko zapamät
     \item $A \cdot (+/- \infty) = \left\{ \begin{array}{r@{\quad}c}
     +/- \infty, & $ak$ A>0 \\
     -/+ \infty, & $ak$ A<0 \\ \end{array} \right.
-    $;  
+    $;
     \item $\infty \cdot(+/- \infty)=+/- \infty$.
 \end{enumerate}
 \end{multicols}
@@ -375,7 +375,7 @@ Aby sme mohli použiť vety o limitách, napíšme funkciu $f^g$ v tvare $e^{g l
 
 
 Analogicky sa dá postupovať v prípade funkcií typu $a^{+/- \infty}(a>0,a /neq 1),(+\infty)^a(a \neq 0),(+\infty)^{+/- \infty}$. Nemožno však odvodiť všeobecné pravidlá na výpočet limít typu $1^{+/- \infty,0^0,(+\infty)^0}$; vtedy totiž exponent $g \cdot ln f$ je neurčitým výrazom typu $0 \cdot (+\infty)$ alebo $0 \cdot (-\infty)$.
-V ďalšom budeme symbol $1^{+/- \infty}$ chápať trochu všeobecnejšie: znak $+/- \infty$ bude okrem funkcií s limitou $+\infty$ alebo $-\infty$ označovať aj tie exponenty, ktoré síce nemajú limitu, ale ich jednostranné limity sú nevlastné \footnote{rovnako možno zovšeobecniť aj pojem neurčitého výrazu typu $0 \cdot (+/- \infty)$ a $\frac{+/- \infty}{+/- \infty}$; ďalšie zovšeobecnenie pozri v poznámke na konci odseku}. Dôležitým príkladom limity tohto typu je $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}$. Ukážeme teraz, ako sa rovnosť $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}=e$ využíva pri výpočte ďalších limít typu $1^{+/- \infty}$. 
+V ďalšom budeme symbol $1^{+/- \infty}$ chápať trochu všeobecnejšie: znak $+/- \infty$ bude okrem funkcií s limitou $+\infty$ alebo $-\infty$ označovať aj tie exponenty, ktoré síce nemajú limitu, ale ich jednostranné limity sú nevlastné \footnote{rovnako možno zovšeobecniť aj pojem neurčitého výrazu typu $0 \cdot (+/- \infty)$ a $\frac{+/- \infty}{+/- \infty}$; ďalšie zovšeobecnenie pozri v poznámke na konci odseku}. Dôležitým príkladom limity tohto typu je $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}$. Ukážeme teraz, ako sa rovnosť $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}=e$ využíva pri výpočte ďalších limít typu $1^{+/- \infty}$.
 
 \begin{enumerate}[resume]
 	\item \useproblem[limita-funkcie]{limita-49}
@@ -401,7 +401,7 @@ I keď uvedený postup môže na prvý pohľad pôsobiť deprimujúcim dojmom, n
 
 \textbf{Riešenie (d):}
 Využijeme, že $\lim_{u \rightarrow 0}\frac{ln(1+u)}{u}=1$ (príklad $152.1$); potom $\lim_{x \rightarrow 0}\frac{sin 3x}{ln(1+sin 5x)}=\lim_{x \rightarrow 0}\frac{3x \cdot \frac{sin 3x}{3x}}{sin 5x \cdot \frac{ln (1+sin 5x)}{sin 5x}}(=\lim_{x \rightarrow 0} \frac{3x}{sin 5x} \frac{\lim_{x \rightarrow 0}\frac{sin 3x}{3x}}{\lim_{x \rightarrow 0} \frac{ln(1+sin 5x))}{sin 5x}})=\frac{1}{1}\cdot \lim_{x \rightarrow 0}\frac{3x}{sin 5x}=\frac{3}{5}$
-\footnote{všeobecným pohľadom na takýto spôsob výpočtu je príklad $193$}. 
+\footnote{všeobecným pohľadom na takýto spôsob výpočtu je príklad $193$}.
 \begin{enumerate}[resume]
 	\item \useproblem[limita-funkcie]{limita-54}
 \end{enumerate}
@@ -414,7 +414,7 @@ Využijeme, že $\lim_{x \rightarrow a}\frac{e^u-1}{u}=1$ (príklad $153.1$); po
 \end{enumerate}
 
 \textbf{Riešenie (b):}
-Využijeme, že $\lim_{x \rightarrow \infty} \frac{x^2}{e^x}=0,\lim_{x \rightarrow \infty}\frac{x^4}{e^{3x}}=0$ (pozri príklad $192$); potom 
+Využijeme, že $\lim_{x \rightarrow \infty} \frac{x^2}{e^x}=0,\lim_{x \rightarrow \infty}\frac{x^4}{e^{3x}}=0$ (pozri príklad $192$); potom
 $\lim_{x \rightarrow \infty} \frac{ln(x^2+e^x)}{ln(x^4+e^{3x})}=\lim_{x \rightarrow \infty} \frac{ln(e^x(1+\frac{x^2}{e^x}))}{ln(e^{3x}(1+\frac{x^4}{e^{3x}}))}=\lim_{x \rightarrow \infty}\frac{ln e^{3x}+ln(1+\frac{x^2}{e^x})}{ln e^{3x}+ln(1+\frac{x^4}{e^{3x}})}=\lim_{x \rightarrow \infty}\frac{x+ln(1+\frac{x^2}{e^x})}{3x+ln(1+\frac{x^4}{e^{3x}})}=\lim_{x \rightarrow \infty}\frac{1+\frac{ln(1+\frac{x^2}{e^x})}{x}}{3+\frac{ln(1+\frac{x^4}{e^x})}{x}}=\frac{1}{3}$ 	$(\lim_{x \rightarrow \infty}\frac{ln(1+\frac{x^2}{e^x})}{x}=\lim_{x \rightarrow \infty}\frac{1}{x} \cdot \lim_{x \rightarrow \infty}ln(1+\frac{x^2}{e^x})=0 \cdot 0=0$; rovnako sa vypočíta aj limita druhého sčítanca v menovateli)
 
 \textit{Poznámka (o symbole $\infty$):}
@@ -424,7 +424,7 @@ Niekedy sa okrem symbolov $+\infty$ a $-\infty$ zavádza aj symbol $\infty$; oko
 \begin{veta}
 Každá zhora ohraničená neklesajúca postupnosť ${\{a_n\}}_{n=1}^\infty$ je konvergentná a platí $\lim_{n \rightarrow \infty} a_n=\sup {a_n;n \in \mathbb{N}}$.
 Ak ${\{a_n\}}_{n=1}^\infty$ je zhora neohraničená neklesajúca postupnosť, tak $\lim_{n \rightarrow \infty} a_n=+\infty$.
-Analogicky tvrdenie pre nerastúcu postupnosť ${\{a_n\}}_{n=1}^\infty$  dostaneme, ak predchádzajúcu vetu aplikujeme na postupnosť ${\{-a_n\}}_{n=1}^\infty$. 
+Analogicky tvrdenie pre nerastúcu postupnosť ${\{a_n\}}_{n=1}^\infty$  dostaneme, ak predchádzajúcu vetu aplikujeme na postupnosť ${\{-a_n\}}_{n=1}^\infty$.
 \end{veta}
 
 \begin{enumerate}[resume]
@@ -433,7 +433,7 @@ Analogicky tvrdenie pre nerastúcu postupnosť ${\{a_n\}}_{n=1}^\infty$  dostane
 \end{enumerate}
 
 \textbf{Riešenie (a):}
-Najprv matematickou indukciou dokážeme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ (ktorú možno zadať rekurentne vzťahom $a_1=\sqrt{2},a_{n+1}=\sqrt{2+a_n}$) je rastúca a zhora ohraničená. 
+Najprv matematickou indukciou dokážeme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ (ktorú možno zadať rekurentne vzťahom $a_1=\sqrt{2},a_{n+1}=\sqrt{2+a_n}$) je rastúca a zhora ohraničená.
 \begin{itemize}
 \item Zrejme $a_1<a_2$; z predpokladu $a_n<a_{n+1}$ vyplýva $a_n=\sqrt{2+a_n}<\sqrt{2+a_{n+1}}=a_{n+2}$ (využili sme, že $\sqrt{x}$ je rastúca funkcia). Teda ${\{a_n\}}_{n=1}^\infty$ je rastúca postupnosť.
 \item Dokážeme, že $a_n<2$ pre všetky $n \in \mathbb{N}$. Toto tvrdenie zrejme platí pre $n=1$. Z predpokladu $a_n<2$ vyplýva $a_{n+1}=\sqrt{2+a_{n}}<\sqrt{2+2}=2$.
@@ -472,7 +472,7 @@ Pre postupnosti $a_n=n\pi,b_n=\frac{\pi}{2}+2\pi n$ platí $a_n=\lim_{n \rightar
 
 \section{Hromadné hodnoty, limes inferior a limes superior postupností}
 
-Postupnosť ${\{a_n\}}_{n=1}^\infty$ sa nazýva \textit{podpostupnosť (vybranou postupnosťou z) postupnosti ${\{a_n\}}_{n=1}^\infty$}, ak existuje rastúce zobrazenie $k: \mathbb{N} \rightarrow \mathbb{N}$ také, že $b_n=a_{k(n)}$. 
+Postupnosť ${\{a_n\}}_{n=1}^\infty$ sa nazýva \textit{podpostupnosť (vybranou postupnosťou z) postupnosti ${\{a_n\}}_{n=1}^\infty$}, ak existuje rastúce zobrazenie $k: \mathbb{N} \rightarrow \mathbb{N}$ také, že $b_n=a_{k(n)}$.
 
 Bod $a \in \mathbb{R^*}$ sa nazýva \textit{hromadnou hodnotou postupnosti ${\{a_n\}}_{n=1}^\infty$}, ak je limitou niektorej jej podpostupnosti (to je ekvivalentné s podmienkou: pre každé okolie $O(a)$ bodu $a$ je množina $\{n \in \mathbb{N}: a_n \in O(a) \}$). Supremum (infimum) množiny $H$ v množine $\mathbb{R^*}$ sa nazýva \textit{limes superior (limer inferior) postupnosti ${\{a_n\}}_{n=1}^\infty$} a označuje sa $\limsup_{n \rightarrow \infty} a_n$ $(\liminf_{n \rightarrow \infty} a_n)$. (Suprémum (infimum) množiny $H$ v $\mathbb{R^*}$ sa definuje ako najmenšie (najväčšie) z jej horných (dolných) ohraničení, pritom ako horné a hodlé ohraničenia prichádzajú do úvahy aj body $+\infty,-\infty$ \footnote{Teda napr. supremom zhora neohraničenej množiny $H \subset \mathbb{R}$ je v množine $\mathbb{R^*}$ bod $+\infty$; $\sup\{ -\infty\}$=$-\infty$ a pod. Pre zhora (zdola) ohraničenú množinu $H \subset \mathbb{R}$ je jej supremum (infimum) v $\mathbb{R^*}$ zhodné s jej supremom (infimom)}.)
 
@@ -489,7 +489,7 @@ Nech je daná postupnosť ${\{a_n\}}_{n=1}^\infty$, nech $b \in \mathbb{R}$. Rov
 \end{veta}
 
 \begin{veta}
-Postupnosť ${\{a_n\}}_{n=1}^\infty$ má limitu práve vtedy, keď $\limsup_{n \rightarrow \infty} a_n = \liminf_{n \rightarrow \infty} a_n$; limitou je pritom spoločná hodnota $\limsup_{n \rightarrow \infty} a_n$ a $\liminf_{n \rightarrow \infty} a_n$. 
+Postupnosť ${\{a_n\}}_{n=1}^\infty$ má limitu práve vtedy, keď $\limsup_{n \rightarrow \infty} a_n = \liminf_{n \rightarrow \infty} a_n$; limitou je pritom spoločná hodnota $\limsup_{n \rightarrow \infty} a_n$ a $\liminf_{n \rightarrow \infty} a_n$.
 \end{veta}
 
 \begin{enumerate}[resume]
