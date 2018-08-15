@@ -43,7 +43,6 @@ Z výrokov A, B môžeme pomocou operácií negácie ($\neg$), konjukcie
 
 Pravdivosť týchto zložených výrokov závisí len na pravdivosti výrokov $A, B$,
 a to následovne (1 označuje, že daný výrok je pravdivý; 0, že je nepravdivý):
-
 \begin{center}
   \begin{tabular}{|c|c|}
     \hline
@@ -67,7 +66,6 @@ a to následovne (1 označuje, že daný výrok je pravdivý; 0, že je nepravdi
 \end{center}
 
 Pre negáciu zložených výrokov platia tieto pravidlá:
-
 \begin{center}
   \begin{tabular}{c | c}
     výrok & negácia \\
@@ -81,22 +79,21 @@ Pre negáciu zložených výrokov platia tieto pravidlá:
 \end{center}
 
 Často budeme využívať, že pre ľubovoľné výroky $A, B$ je
-
 \begin{enumerate}
-  \item implikácia $A \Rightarrow B$ rovnocenná s obmenou (kontrapozíciou)
+  \item implikácia - $A \Rightarrow B$ - rovnocenná s obmenou (kontrapozíciou) -
         $\neg B \Rightarrow \neg A$
   \item ekvivalencia $A \iff B$ rovnocenná s výrokom
         $(A \Rightarrow B) \land (B \Rightarrow A)$
 \end{enumerate}
 
-Každá definícia v matematike má podobu ekvivalencie. Je však zvykom
-nevyjadrovať v definícií symbol \enquote{$\iff$} slovami \enquote{vtedy a len
-vtedy}, ale slovom \enquote{ak}. Teda napr. definíciu v slovnej podobe
-\enquote{funkcia sa nazýva rastúca, ak platí ...} treba chápať ako ekvivalenciu
-\enquote{funkcia je rastúca $\iff$ ...}.
+Každá definícia v matematike má podobu ekvivalencie. Je však zvykom nevyjadrovať
+v definícií symbol \enquote{$\iff$} slovami \enquote{vtedy a len vtedy}, ale
+slovom \enquote{ak}. Teda napr. definíciu v slovnej podobe \enquote{funkcia sa
+nazýva rastúca, ak platí ...} treba chápať ako ekvivalenciu \enquote{funkcia je
+rastúca $\iff$ ...}.
 
 \textbf{Výrokové formy. Všeobecné a existenčné výroky a ich negovanie}:
-Výroková forma je výraz, ktorý síc enie je výrokom, ale obsahuje premenné,
+Výroková forma je výraz, ktorý síce nie je výrokom, ale obsahuje premenné,
 ktorých vhodným nahradením vznikne výrok (napr. výroková forma $x^2 + y \geq 0
 \land y < 0$ obsahuje dve také premenné). Tvorenie zložených výrokových foriem
 je analogické tvoreniu zložených výrokov.
@@ -105,10 +102,11 @@ Nech $\varphi (x)$ je výroková forma, v ktorej je možno dosadzovať za jedin�
 premennú $x$, a $A$ je ľubovoľná neprázdna množina obsahujúca len také prvky,
 ktorých dosadením do $\varphi (x)$ vznikne výrok.
 
-Výrok \enquote{pre všetky $x \in A$ platí $\varphi (x)$} -- symbolicky ho zapisujeme
-
-$$\forall x \in A_1: \varphi (x)$$
-
+Výrok \enquote{pre všetky $x \in A$ platí $\varphi (x)$} -- symbolicky ho
+zapisujeme
+\[
+  \forall x \in A_1: \varphi (x)
+\]
 sa nazýva všobecný symbol $\forall$ zastupujúci slová \enquote{pre všetky} je
 tzv. všeobecný (alebo veľký) kvantifikátor. (Častá slovná podoba všeobecného
 výroku $\forall x \in A : \varphi (x)$ je \enquote{nech $x \in A$, potom
@@ -116,15 +114,14 @@ výroku $\forall x \in A : \varphi (x)$ je \enquote{nech $x \in A$, potom
 (x)$}.)
 
 Výrok \enquote{existuje $x \in A$ také, že platí $\varphi (x)$} -- symbolicky
-
-$$\exists x \in A : \varphi (x)$$
-
+\[
+  \exists x \in A : \varphi (x)
+\]
 sa nazýva existenčný výrok; symbol $\exists$ vyjadrujúci slovo
 \enquote{existuje} (\enquote{pre niektoré}) je tzv. existenčný (malý)
 kvantifikátor.
 
 Pre negáciu všeobecných a existenčných kvantifikátorov platia tieto pravidlá:
-
 \begin{center}
   \begin{tabular}{c | c}
     výrok & negácia \\
@@ -157,50 +154,48 @@ Ako príklad priameho dôkazu všobecného výroku nám poslúži dôkaz tvrdeni
 (n^2 - 1))$), ktorý prebieha nasledovne: ak $n$ nie je deliteľné 3, tak
 $n - 1$ alebo $n + 1$ je deliteľné 3, teda $n^2 - 1$ je deliteľné 3. Symbolicky
 možno tento dôkaz zapísať takto:
-
-$$
+\[
 3 \nmid n
 \Rightarrow (3 \mid (n - 1) \lor 3 \mid (n + 1))
 \Rightarrow 3 \mid (n^2 - 1)
-$$
+\]
 
-Keby sme v uvedených úvahách namiestno $n$ písali napr. číslo 5, dostali by sme
+Keby sme v uvedených úvahách namiesto $n$ písali napr. číslo 5, dostali by sme
 dôkaz implikácie $3 \nmid 5 \Rightarrow 3 \mid (5^2 - 1)$. To je pre tento typ
 dôkazu charakteristické; priamy dôkaz výroku $\forall x \in A: \varphi (x)$ je
-vlastne schémou, z ktorej možno dostať dôkaz každého jednolivého výroku
+vlastne schémou, z ktorej možno dostať dôkaz každého jednotlivého výroku
 $\varphi (a)$, ak v nej za $x$ dosadíme prvok $a \in A$.
 
 Zvláštnym typom priameho dôkazu všeobecného výroku je dôkaz matematickou
-indukciou. Výroky v tvare $\forall n \in N: \varphi (n)$ sa spravidla
-nedokazujú bezprostredne, namiesto toho stačí dokázať výroky
-
-\begin{center}
-  \begin{enumerate}[label=(\Alph*)]
-    \item platí $\varphi (1)$
-    \item $\forall n \in \mathbb{N}: \varphi (n) \Rightarrow \varphi (n + 1)$
-  \end{enumerate}
-\end{center}
-
+indukciou. Výroky v tvare $\forall n \in N: \varphi (n)$ sa spravidla nedokazujú
+bezprostredne, namiesto toho stačí dokázať výroky
+\begin{enumerate}[label=(\Alph*)]
+  \item platí $\varphi (1)$
+  \item $\forall n \in \mathbb{N}: \varphi (n) \Rightarrow \varphi (n + 1)$
+\end{enumerate}
 (výrok $\varphi (n)$ v implikácií $\varphi (n) \Rightarrow \varphi (n + 1)$ sa
-nazýva indukčný predpoklad)
+nazýva indukčný predpoklad).Z (A) a (B) možno totiž reťazcom úsudkov odvodiť
+ľubovoľný jednotlivý výrok $\varphi (n)$ takto:
 
-Z (A) a (B) možno totiž reťazcom úsudkov odvodiť ľubovoľný jednotlivý výrok
-$\varphi (n)$ takto:
-
-% TODO Indent the proof
 platí $\varphi (1)$
-platí $\varphi (1) \Rightarrow \varphi (2)$
 
+\underline{platí $\varphi (1) \Rightarrow \varphi (2)$}
 
-teda platí $\varphi (2)$;
-platí $\varphi(2) \Rightarrow \varphi(3)$
-teda platí $\varphi(3)$;
-$\ldots$
-platí $\varphi (n - 1)$
-platí $\varphi (n - 1) \Rightarrow \varphi (n)$
-teda platí $\varphi (n)$.
+\hspace{1em} teda platí $\varphi (2)$;
 
-Takýmto spôsobom možno dokazovať ja tvrdenia platné pre všetky prirodzené čísla
+\hspace{3.2em} \underline{platí $\varphi(2) \Rightarrow \varphi(3)$}
+
+\hspace{4.4em} teda platí $\varphi(3)$;
+
+\hspace{5cm} $\ldots$
+
+\hspace{6cm} platí $\varphi (n - 1)$
+
+\hspace{6cm} \underline{platí $\varphi (n - 1) \Rightarrow \varphi (n)$}
+
+\hspace{7.2cm} teda platí $\varphi (n)$
+
+Takýmto spôsobom možno dokazovať aj tvrdenia platné pre všetky prirodzené čísla
 väčšie než dané číslo $p$, pre všetky celé čísla, pre všetky párne čísla a pod.
 
 Pri nepriamom dôkaze všeobecného výroku odvodzujeme z jeho negácie nepravdivé tvrdenie.

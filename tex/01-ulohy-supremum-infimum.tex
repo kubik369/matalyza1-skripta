@@ -909,18 +909,21 @@ Dokážte nasledujúce rovnosti:
 \begin{enumerate}
 \item $\arctan x +\arctan y =\arctan\frac{x+y}{1-xy}+\varepsilon\pi$, kde $\varepsilon$ nadobúda jednu z hodnôt $-1,0,1$ $(xy\neq 1)$;
 \item $\arcsin x +\arcsin y=(-1)^\varepsilon\arcsin(x\sqrt{1-y^2}+y\sqrt{1-x^2})+\varepsilon\pi$ $(|x|\leq 1,|y|\leq 1)$, kde
-$$
-\varepsilon = \left\{
-    \begin{array}{r@{\quad}c}
-        0, $ak $ xy\leq 0 \vee x^2+y^2\leq 1 \\
-        sgn x, $ak $ xy>0 \wedge x^2+y^2>1 \\
-    \end{array}
-    \right.
-$$
+\[
+  \varepsilon =
+    \begin{cases}
+      0,      & \text{ak } xy \leq 0 \vee x^2 + y^2 \leq 1 \\
+      \sgn x, & \text{ak } xy > 0 \wedge x^2 + y^2 > 1
+    \end{cases}
+\]
 \item $\arccos x +\arccos y =(-1)^\varepsilon \arccos (xy-\sqrt{1-x^2}\sqrt{1-y^2})+2\pi\varepsilon$ $(|x|\leq 1,|y|\leq 1)$, kde
-$$\varepsilon= \left\{ \begin{array}{r@{\quad}c}
-    0, $ak $ x+y\geq 0 \\
-    1, $ak $ x+y<0 \\ \end{array} \right.$$
+\[
+  \varepsilon=
+    \begin{cases}
+      0, & \text{ak } x + y \geq 0 \\
+      1, & \text{ak } x + y < 0
+    \end{cases}
+\]
 \end{enumerate}
 \end{defproblem}
 
