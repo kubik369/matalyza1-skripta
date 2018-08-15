@@ -28,11 +28,10 @@ $\max(A)$ ($\min(A)$)
 
 Neprázdna množina $A \subset \mathbb{R}$ sa nazýva \textit{zhora (zdola)
 ohraničená}, ak platí
-
-$$
+\[
 \exists K \in  \mathbb{R} \quad \forall x \in A: x \leq K \:
 (\exists K \in \mathbb{R} \quad \forall x \in A: x \geq K).
-$$
+\]
 
 Číslo $K$ s uvedenou vlastnosťou sa nazýva \textit{horné (dolné)
 ohraničenie množiny $A$.} $\emptyset$ považujeme za ohraničenú zhora aj zdola.
@@ -158,15 +157,13 @@ Nech sú dané funkcie $f$, $g$.
 Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
 
 \noindent
-% TODO Fix tabuľku
-\begin{tabular}{|p{0.2\textwidth}|p{0.22\textwidth}|p{0.45\textwidth}|}
+% FIXME odkazy na footnotes v tabulke
+\begin{tabular}{|p{0.21\textwidth}|p{0.22\textwidth}|p{0.45\textwidth}|}
   \hline
-  {\bf Názov} & {\bf Predpis} & {\bf Definičný obor} \\
+  \textbf{Názov} & \textbf{Predpis} & \textbf{Definičný obor} \\
   \hline
   konštantné &
-  $\underset{a \in \mathbb{R}}{f(x)}\equiv a$
-  \footnote{symbol $\equiv$ čítame "identicky rovné" } &
-  $\mathbb{R}$ \\
+  $\underset{a \in \mathbb{R}}{f(x)}\equiv a$ \footnotemark[1] & $\mathbb{R}$ \\
   mocninové &
   $\underset{a \in \mathbb{R} \setminus {0}}{f(x)}\equiv a$ &
   \begin{enumerate}[leftmargin=0.5cm]
@@ -188,20 +185,24 @@ Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
     & $f(x)=a^x, $\newline$ a>0,a\neq 1$
     & $\mathbb{R}$ \\
   logaritmické
-    & $f(x)=\log_a x,$\newline$ a>0,a\neq 1$
-    \footnote{špeciálne v prípade $a=10$ budeme používať označenie $log_a x$, v prípade $a=e$ označenie $\ln x$}
-    & $\mathbb{R}^{+}$\\
+    & $f(x)=\log_a x,$\newline$ a>0,a\neq 1$ \footnotemark[2] & $\mathbb{R}^{+}$ \\
   goniometrické & $f(x)=\sin x$ & $\mathbb{R}$ \\
     & $f(x)=\cos x$ & $\mathbb{R}$ \\
     & $f(x)=\tan x$ & $\mathbb{R}\ \{\frac{\pi}{2}+k\pi;k\in\mathbb{Z}\}$ \\
     & $f(x)=\cot x$ & $\mathbb{R}\ \{k\pi;k\in\mathbb{Z}\}$ \\
-  cyklometrické\footnote{pozri odsek $1.3.4$}
+  cyklometrické \footnotemark[3]
     & $f(x)=\arcsin x$ & $\interval{-1}{1}$ \\
     & $f(x)=\arccos x$ & $\interval{-1}{1}$ \\
     & $f(x)=\arctan x$ & $\mathbb{R}$ \\
     & $f(x)=\arccot x$ & $\mathbb{R}$ \\
   \hline
 \end{tabular}
+\footnotetext[1]{symbol $\equiv$ čítame \enquote{identicky rovné}}
+\footnotetext[2]{
+  špeciálne v prípade $a=10$ budeme používať označenie $log_a x$, v prípade
+  $a=e$ označenie $\ln x$
+}
+\footnotetext[3]{pozri odsek $1.3.4$}
 
 Funkcie, ktoré vzniknú zo základných elementárnych funkcií len použitím
 operácií súčtu, rozdielu, súčinu, podielu a superpozície funkcií, sa nazývajú
@@ -290,13 +291,25 @@ množina $f(B)$. Funkcia ohraničená na svojom definičnom obore sa nazýva
 ohraničená. Analogicky sa zavádza pojem funkcie ohraničenej zhora, resp. zdola a
 funkcie ohraničenej zhora, resp. zdola na množine $B$.
 
-Ak je množina $f(B)$ zhora, resp. zdola ohraničená, tak jej supremum, resp.
-infimum sa nazýva supremum, resp. infimum funkcie $f$ na množine $B$ a označuje
-sa $\sup_{x\in B} f(x)$, resp. $\inf_{x\in B} f(x)$. Ak existuje maximum, resp.
-minimum množiny $f(B)$? nazýva sa toto číslo maximum, resp. minimum funkcie $f$
-na množine $B$ (často sa používa názov globálne maximum, resp. globálne minimum
-funkcie $f$ na množine $B$) a označuje sa $\max_{x\in B}f(x)$, resp. $\min_{x\in
-B}f(x)$.
+Ak je množina $f(B)$ zhora (zdola) ohraničená, tak jej supremum (infimum) sa
+nazýva supremum (infimum) funkcie $f$ na množine $B$ a označuje sa $\sup_{x\in
+B} f(x)$ ($\inf_{x\in B} f(x)$). Ak existuje maximum (minimum) množiny $f(B)$,
+nazýva sa toto číslo maximum (minimum) funkcie $f$ na množine $B$ (často sa
+používa názov globálne maximum (globálne minimum) funkcie $f$ na množine
+$B$) a označuje sa $\max_{x\in B}f(x)$ ($\min_{x\in B}f(x)$).
+
+%Ak je množina $f(B)$ zdola ohraničená, tak jej infimum sa nazýva infimum funkcie
+%$f$ na množine $B$ a označuje sa $\inf_{x\in B} f(x)$. Ak existuje minimum
+%množiny $f(B)$, nazýva sa toto číslo minimum funkcie $f$ na množine $B$ (často
+%sa používa názov globálne minimum funkcie $f$ na množine $B$) a označuje sa
+%$\min_{x\in B}f(x)$.
+
+%Ak je množina $f(B)$ zhora ohraničená, tak jej supremum sa nazýva supremum
+%funkcie $f$ na množine $B$ a označuje sa $\sup_{x\in B} f(x)$. Ak existuje
+%maximum množiny $f(B)$, nazýva sa toto číslo maximum funkcie $f$ na množine $B$
+%(často sa používa názov globálne maximum funkcie $f$ na množine $B$) a označuje
+%sa $\max_{x\in B}f(x)$.
+
 
 % max a min  sa asi inak zapisuje nech tie x su pod tým
 

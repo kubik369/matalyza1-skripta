@@ -21,6 +21,8 @@
 \usepackage{theorem}
 \usepackage{interval}
 \usepackage{tasks}
+\usepackage{xcolor}
+\usepackage[framemethod=TikZ]{mdframed}
 
 % Justified citácie na začiatku kapitol
 \renewcommand{\textflush}{flushepinormal}
@@ -34,6 +36,17 @@
 % probsoln package Solution label redefinition
 \renewcommand{\solutionname}{Riešenie}
 
+% šedé pozadie riešení
+\renewenvironment{solution}{
+  \par
+  \begin{mdframed}[backgroundcolor=lightgray]
+  \noindent
+  \textbf{\solutionname}:
+  \ignorespaces
+}{
+  \ignorespacesafterend\end{mdframed}
+}
+
 % sign function
 \newcommand{\sgn}{\operatorname{sgn}}
 \DeclareMathOperator{\arcsec}{arcsec}
@@ -43,8 +56,6 @@
 \input{./tex/makra.tex}
 
 \begin{document}
-
-% Medzery pred a za $$
 
 \intervalconfig{
 soft  open  fences ,
