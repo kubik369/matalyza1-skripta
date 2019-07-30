@@ -47,39 +47,104 @@ Nech $A \subset \mathbb{R}$ je zhora ohraničená neprázdna množina, nech $sup
 \end{defproblem}
 
 \begin{defproblem}{limita-105}
- Na základe definície dokážte nasledujúce tvrdenia:
- \begin{enumerate}
- \item $\lim_{n \rightarrow \infty} \frac{3n^2+1}{5n^2-1}=\frac{3}{5}$ (pre ktoré $n \in \mathbb{N}$ platí:
- \begin{enumerate}
- \item $|\frac{3n^2+1}{5n^2-1}-\frac{3}{5}|<0,5;$
- \item $<0,005;$
- \item $<0,00005 ?);$
- \end{enumerate}
+Na základe definície dokážte nasledujúce tvrdenia:
+\begin{tasks}(2)
+    \task*
+        $\lim\limits_{n \rightarrow \infty} \frac{3n^2 + 1}{5n^2 - 1} = \frac{3}{5}$
+        ;(pre ktoré $n \in \mathbb{N}$ platí):
+        \begin{enumerate*}
+            \item $|\frac{3n^2 + 1}{5n^2 - 1} - \frac{3}{5} | < 0,5;$
+            \item $< 0,005;$
+            \item $< 0,00005 ?);$
+        \end{enumerate*}
 
- \item $\lim_{n \rightarrow \infty} \frac{n^2+3n+1}{2n^2+2}=\frac{1}{2}$;
- \item $\lim_{n \rightarrow \infty} \frac{n^2}{n+8}=+\infty$
+    \task $\lim\limits_{n \rightarrow \infty} \frac{n^2 + 3n + 1}{2n^2 + 2} = \frac{1}{2}$;
+    \task $\lim\limits_{n \rightarrow \infty} (\frac{5}{n}-n)=-\infty$;
+    \task $\lim\limits_{n \rightarrow \infty} q^n=0$  $(|q|<1).$
+    \task! $\lim\limits_{n \rightarrow \infty} \frac{n^2}{n + 8} = +\infty$
 
- (počínajúc ktorým prirodzeným číslom platí nerovnosť $\frac{n^2}{n+8}>10^3$?);
- \item $\lim_{n \rightarrow \infty} (\frac{5}{n}-n)=-\infty$;
- \item $\lim_{n \rightarrow \infty} q^n=0$  $(|q|<1).$
- \end{enumerate}
+        (počínajúc ktorým prirodzeným číslom platí nerovnosť)
+        \[ \frac{n^2}{n+8} > 10^3 \]
+\end{tasks}
+
+\begin{solution}
+    \textbf{(b):}
+    Musíme dokázať pravdivosť výroku (*)
+    \[
+        \forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N},
+        n>n_0: \left\lvert \frac{n^2+3n+1}{n^2+2}-\frac{1}{2} \right\rvert < \varepsilon
+    \]
+    Nech je teda dané číslo $\varepsilon > 0$; zistíme, ktoré čísla $n \in
+    \mathbb{N}$ vyhovujú nerovnici
+    \[
+        \left\lvert \frac{n^2 + 3n + 1}{n^2 + 2}-\frac{1}{2} \right\rvert < \varepsilon.
+    \]
+    Postupnými úpravami dostaneme ekvivalentné vzťahy v $\mathbb{N}:$
+    \[
+        \left\lvert \frac{3n}{2n^2 + 2} \right\rvert < \varepsilon,
+    \]
+    \[
+        2 \varepsilon n^2 - 3n + 2 \varepsilon >0.
+    \]
+    (Nájdeme najprv všetky reálne rešenia poslednej nerovnice, z nich potom
+    vyberieme tie, ktoré ležia v $\mathbb{N}$. Diskriminant $D$ je rovný $9-16
+    \varepsilon^2$, preto pre reálne riešenia platí:
+    \begin{itemize}
+        \item
+            ak $\varepsilon > \frac{3}{4}$, t.j. ak $D<0$, je riešením každé
+            reálne číslo;
+        \item
+            ak $\varepsilon \in \interval[open left]{0}{\frac{3}{4}}$, je $D \geq 0$, preto
+            riešeniami sú všetky prvky množiny
+            $(-\infty,\frac{3-\sqrt{9-16\varepsilon^2}}{2}) \cup
+            (\frac{3+\sqrt{9-16\varepsilon^2}}{2},\infty)$.)
+    \end{itemize}
+    Preto:
+    \begin{itemize}
+        \item
+            ak $\varepsilon > \frac{3}{4}$, je riešením nerovnice
+            $|\frac{n^2 + 3n + 1}{n^2 + 2} - \frac{1}{2}| < \varepsilon$
+            každé číslo $n \in \mathbb{N}$;
+        \item
+            ak $\varepsilon \in \interval[open left]{0}{\frac{3}{4}}$, sú
+            riešeniami nerovnice
+            $|\frac{n^2 + 3n + 1}{n^2 + 2} - \frac{1}{2}|<\varepsilon$ všetky
+            tie $n \in \mathbb{N}$, pre ktoré platí
+            $n > \frac{3 + \sqrt{9 - 16\varepsilon^2}}{2\varepsilon}$.
+            Teraz už vidíme, že daný výrok (*) je pravdivý: stačí položiť
+            $n_0 = 1$ pre $\varepsilon > \frac{3}{4}$ a
+            $n_0 = [\frac{3 + \sqrt{9 - 16\varepsilon^2}}{2\varepsilon}]$
+            pre
+            $\varepsilon \in \interval[open left]{0}{\frac{3}{4}}$
+            ([.] označujú celú časť; keby sme v \textit{(a)} mali podmienku
+            $n_0 \in \mathbb{R}$, stačilo by pre
+            $\varepsilon \in \interval[open left]{0}{\frac{3}{4}}$
+            položiť $n_0 = \frac{3 + \sqrt{9 - 16\varepsilon^2}}{2\varepsilon}$).
+    \end{itemize}
+
+    \textit{Poznámka:}
+    Ak je nerovnosť $|a_n - b| < \varepsilon$ splnená pre všetky $n > n_0$ a
+    platí $n_1 > n_0$, tak nerovnosti $|a_n-b|<\varepsilon$ iste vyhovujú všetky
+    čísla $n > n_1$. Z tohto samozrejmého tvrdenia vyplýva, že v závere riešenia
+    príkladu $105 (b)$ by stačilo položiť $n_0 > 1$ pre $\varepsilon >
+    \frac{3}{4}$ a $n_0 \geq [\frac{3 + \sqrt{9 - 16\varepsilon^2}}{2
+    \varepsilon}]$ pre $\varepsilon \in (0,\frac{3}{4}\rangle$.
+ \end{solution}
 \end{defproblem}
 
 \begin{defproblem}{limita-106}
-Rozhodnite, či existujú limity nasldujúcich postupností (nezabúdajte, že svoje
+Rozhodnite, či existujú limity nasledujúcich postupností (nezabúdajte, že svoje
 tvrdenie musíte dokázať):
 \begin{enumerate}
 \item
-    $$
+    \[
     a_n =
-        \left\{
-            \begin{array}{r@{\quad}c}
-                1-\frac{1}{n}, & $ak n $\in \mathbb{N}\ $je párne$ \\
-                1+\frac{1}{n^2}, & $ak n $\in \mathbb{N}\ $je nepárne$
-            \end{array}
-        \right.
-    $$
-\item $$a_n=\frac{cos \frac{n \pi}{2}}{n}$$
+        \begin{cases}
+            1-\frac{1}{n}, & $ak $ n \in \mathbb{N}\ $je párne$ \\
+            1+\frac{1}{n^2}, & $ak $ n\in \mathbb{N}\ $je nepárne$
+        \end{cases}
+    \]
+\item \[a_n=\frac{cos \frac{n \pi}{2}}{n}\]
 \end{enumerate}
 \end{defproblem}
 
@@ -126,6 +191,7 @@ Prepíšte definíciu limity funkcie pre prípady $1-9$. (Všimnite si, že limi
 
 \begin{defproblem}{limita-112}
 Na základe definície limity dokážte tieto tvrdenia:
+\begin{multicols}{2}
 \begin{enumerate}
 \item $\lim_{x \rightarrow 3} \sqrt{x}=\sqrt{3}$;
 \item $\lim_{x \rightarrow 1} \frac{1}{(1-x^2)^2}=+\infty$;
@@ -133,6 +199,7 @@ Na základe definície limity dokážte tieto tvrdenia:
 \item $\lim_{x \rightarrow 8} \sqrt[3]{x}=2$;
 \item $\lim_{x \rightarrow -2} x^2=4$.
 \end{enumerate}
+\end{multicols}
 \end{defproblem}
 
 \begin{defproblem}{limita-113}
@@ -156,63 +223,164 @@ Ak existuje $\lim_{x \rightarrow a} f(x)=b$ ($a \in \mathbb{R^*},b \in \mathbb{R
 
 \begin{defproblem}{limita-116}
 Nájdite nasledujúce limity:
-
-\begin{multicols}{2}
-\begin{enumerate}
-    \item $\lim_{{x \rightarrow \infty}} \frac{x^2-1}{2x^2-x+1}$;
-    \item $\lim_{{x \rightarrow -\infty}} \frac{3x^3+5x^2-2}{2x^4-7}$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{(x-1)(x-2)...(x-5)}{(5x-1)^5}$;
-    \item $\lim_{{x \rightarrow \infty}} (\frac{x^3}{3x^2-4}-\frac{x^2}{3x+2})$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{1}{n}[(x+\frac{a}{n})+(x+\frac{2a}{n})+...+(x+\frac{n-1}{n}a)]$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{(-2)^n+3^n}{(-2)^{n+1}+3^{n+1}}$.
-\end{enumerate}
-\end{multicols}
+\begin{tasks}(2)
+    \task $\lim\limits_{{x \to \infty}} \frac{x^2-1}{2x^2-x+1}$;
+    \task $\lim\limits_{{x \to -\infty}} \frac{3x^3+5x^2-2}{2x^4-7}$;
+    \task $\lim\limits_{{x \to \infty}} \frac{(x-1)(x-2)...(x-5)}{(5x-1)^5}$;
+    \task $\lim\limits_{{x \to \infty}} (\frac{x^3}{3x^2-4}-\frac{x^2}{3x+2})$;
+    \task* $\lim\limits_{{x \to \infty}} \frac{1}{n}[(x+\frac{a}{n})+(x+\frac{2a}{n})+...+(x+\frac{n-1}{n}a)]$;
+    \task $\lim\limits_{{x \to \infty}} \frac{(-2)^n+3^n}{(-2)^{n+1}+3^{n+1}}$.
+\end{tasks}
 \end{defproblem}
 
 \begin{defproblem}{limita-117}
 Nájdite nasledujúce limity:
 
-\begin{multicols}{2}
-\begin{enumerate}
-    \item $\lim_{{x \rightarrow \infty}} \frac{x^2-5x+6}{x^3-6x^2+10x-3}$;
-    \item $\lim_{{x \rightarrow -\infty}} \frac{x^2-1}{2x^2-x-1}$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{x^2-1}{2x^2-x-1}$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{x^4-3x+2}{x^5-4x+3}$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{2x^3-5x^2-4x+12}{5x^2-4x-12}$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{(x^3-x-2)^{20}}{(x^3-12x+16)^{10}}$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{x^m-1}{x^n-1}$ $(m,n \in \mathbb{N})$;
-    \item $\lim_{{x \rightarrow \infty}} (\frac{2}{2x-x^2}+\frac{1}{x^2-3x+2})$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{x+x^2+...+x^n-n}{x-1}$;
-    \item $\lim_{{x \rightarrow \infty}} \frac{x^{100}-2x+1}{x^{50}-2x+1}$.
-\end{enumerate}
-\end{multicols}
+\begin{tasks}(2)
+    \task $\lim\limits_{{x \to \infty}} \frac{x^2-5x+6}{x^3-6x^2+10x-3}$;
+    \task $\lim\limits_{{x \to -\infty}} \frac{x^2-1}{2x^2-x-1}$;
+    \task $\lim\limits_{{x \to \infty}} \frac{x^2-1}{2x^2-x-1}$;
+    \task $\lim\limits_{{x \to \infty}} \frac{x^4-3x+2}{x^5-4x+3}$;
+    \task $\lim\limits_{{x \to \infty}} \frac{2x^3-5x^2-4x+12}{5x^2-4x-12}$;
+    \task $\lim\limits_{{x \to \infty}} \frac{(x^3-x-2)^{20}}{(x^3-12x+16)^{10}}$;
+    \task $\lim\limits_{{x \to \infty}} \frac{x^m-1}{x^n-1}$ $(m,n \in \mathbb{N})$;
+    \task $\lim\limits_{{x \to \infty}} (\frac{2}{2x-x^2}+\frac{1}{x^2-3x+2})$;
+    \task $\lim\limits_{{x \to \infty}} \frac{x+x^2+...+x^n-n}{x-1}$;
+    \task $\lim\limits_{{x \to \infty}} \frac{x^{100}-2x+1}{x^{50}-2x+1}$.
+\end{tasks}
+\begin{solution}
+    a)
+
+    Funkcie
+    \[
+        P(x) = x^2 - 5x + 6
+    \]
+    \[
+        Q(x) = x^3 - 6x^2 + 10x - 3
+    \]
+    sú elementárne, preto $\lim\limits_{x \to 3} P(x) = P(3) = 0$, $\lim\limits_{x
+    \to 3} Q(x) = Q(3) = 0$. Pretože $\lim\limits_{x \to 3} Q(x) = 0$,
+    nemôžeme použiť vetu o limite podielu. (Alebo inak povedané: funkcia $R = P
+    \setminus Q$ je elementárna, ale $Q(3) = 0$, preto $3 \notin D(R)$ a limitu
+    funkcie $R$ v bode $3$ teda nemožno nájsť "dosadením".)
+
+    Z rovností $P(3) = 0$, $Q(3) = 0$ vyplýva, že číslo $3$ teda polynómov $P$
+    aj $Q$, preto $P(x)$ aj $Q(x)$ musia byť deliteľné koreňovým činiteľom $(x -
+    3)$. Po vyňatí člena $(x - 3)$ dostaneme:
+    \[
+        P(x)=(x - 3)(x - 2)
+    \]
+    \[
+        Q(x)=(x - 3)(x^2 - 3x + 1)
+    \]
+    Pre $x \in D(R)$ teda platí:
+    \[
+        \frac{x^2 - 5x + 6}{x^3 - 6x^2 + 10x - 3}
+            = \frac{(x - 3)(x - 2)}{(x - 3)(x^2 - 3x + 1)}
+            = \frac{x-2}{x^2-3x+1}
+    \]
+    pritom
+    \[
+        \lim\limits_{x \to 3} \frac{x - 2}{x^2 - 3x + 1}=1
+    \]
+    (elementárna funkcia $R_1(x) = \frac{x - 2}{x^2 - 3x + 1}=1$ je
+    definovaná aj v bode $3$, preto $\lim_{x \to 3} R_1(x)$ už možno
+    nájsť ``dosadením''). Teda
+    \begin{align*}
+        \lim_{x \to 3} \frac{x^2 - 5x + 6}{x^3 - 6x^2 + 10x - 3}
+        &= \lim_{x \to 3} \frac{(x - 3)(x - 2)}{(x - 3)(x^2 - 3x + 1)} \\
+        &= \lim_{x \to 3} \frac{x - 2}{x^2 - 3x + 1} = 1
+    \end{align*}
+\end{solution}
 \end{defproblem}
 
 \begin{defproblem}{limita-118}
-Zostrojte funkcie $f,g$ definované na $\mathbb{R}$ tak, aby neexistovali $\lim_{x \rightarrow 1} f(x)$ ani $\lim_{x \rightarrow 1} g(x)$ a exitovala konečná
-\begin{multicols}{2}
-\begin{enumerate}
-    \item $\lim_{{x \rightarrow 1}} (f(x)+g(x))$;
-    \item $\lim_{{x \rightarrow 1}} (f(x) \cdot g(x))$.
-\end{enumerate}
-\end{multicols}
+Zostrojte funkcie $f,g$ definované na $\mathbb{R}$ tak, aby neexistovali
+$\lim_{x \to 1} f(x)$ ani $\lim_{x \to 1} g(x)$ a exitovala
+konečná
+\begin{tasks}(2)
+    \task $\lim\limits_{{x \to 1}} (f(x)+g(x))$;
+    \task $\lim\limits_{{x \to 1}} (f(x) \cdot g(x))$.
+\end{tasks}
 \end{defproblem}
 
 \begin{defproblem}{limita-119}
-Možno nájsť postupnosť ${\{a_n\}}_{n=1}^\infty$ takú, že existuje konečná $\lim_{n \rightarrow \infty} a_n$ a neexistuje $\lim_{n \rightarrow \infty} \frac{1}{a_n}$?
+Možno nájsť postupnosť ${\{a_n\}}_{n=1}^\infty$ takú, že existuje konečná
+$\lim\limits_{n \to \infty} a_n$ a neexistuje $\lim\limits_{n \to \infty}
+\frac{1}{a_n}$?
 \end{defproblem}
 
 \begin{defproblem}{limita-120}
-\begin{multicols}{2}
-\begin{enumerate}
-    \item $\lim_{{x \rightarrow -2}} \frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}$;
-    \item $\lim_{{x \rightarrow 4}} \frac{\sqrt{1+2x}-3}{\sqrt{x}-2}$;
-    \item $\lim_{{x \rightarrow a}} \frac{\sqrt{x}-\sqrt{a}+\sqrt{x-a}}{\sqrt{x^2-a^2}}$ $(a>0)$;
-    \item $\lim_{{x \rightarrow 3}} \frac{\sqrt{x+13}-2\sqrt{x+1}}{x^2-9}$;
-    \item $\lim_{{x \rightarrow 0}} \frac{\sqrt[3]{27+x}-\sqrt[3]{27-x}}{x+2\sqrt[3]{x^4}}$;
-    \item $\lim_{{x \rightarrow 1}} \frac{(1-\sqrt{x})(1-\sqrt[3]{x})...(1-\sqrt[n]{x})}{(1-x)^{n-1}}$.
-\end{enumerate}
-\end{multicols}
+\begin{tasks}(2)
+    \task $\lim\limits_{{x \to -2}} \frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}$;
+    \task $\lim\limits_{{x \to 4}} \frac{\sqrt{1+2x}-3}{\sqrt{x}-2}$;
+    \task $\lim\limits_{{x \to a}} \frac{\sqrt{x}-\sqrt{a}+\sqrt{x-a}}{\sqrt{x^2-a^2}}$ $(a>0)$;
+    \task $\lim\limits_{{x \to 3}} \frac{\sqrt{x+13}-2\sqrt{x+1}}{x^2-9}$;
+    \task $\lim\limits_{{x \to 0}} \frac{\sqrt[3]{27+x}-\sqrt[3]{27-x}}{x+2\sqrt[3]{x^4}}$;
+    \task $\lim\limits_{{x \to 1}} \frac{(1-\sqrt{x})(1-\sqrt[3]{x})...(1-\sqrt[n]{x})}{(1-x)^{n-1}}$.
+\end{tasks}
+\begin{solution}
+    a) Elementárna funkcia:
+    \[
+        f(x) = \frac{\sqrt[3]{x - 6} + 2}{\sqrt{x^2 - 3} - 1}
+    \]
+    nie je definovaná v bode $-2$, preto $\lim_{x \rightarrow -2} f(x)$ nemožno
+    nájsť ``dosadením''. Pre výpočet limity bude výhodnejší iný zápis predpisu
+    funkcie $f$; dosadíme ho použitím vzorca:
+    \[
+        A^2 - B^2 = (A - B)(A + B)
+    \]
+    \[
+        A^3 + B^3 = (A + B)(A^2 - AB + B^2)
+    \]
+    (obidva sú špeciálnym prípadom rovnosti)
+    \[
+        A^n - B^n = (A - B)(A^{n - 1} + A^{n - 2}B + ... + AB^{n - 2} + B^{n - 1})
+    \]
+    Podľa prvého z nich:
+    \[
+        x^2 - 4 = (\sqrt{x^2 - 3} - 1)(\sqrt{x^2 - 3} + 1)
+    \]
+    podľa druhého:
+    \[
+        x + 2=(\sqrt[3]{x - 6} + 2)(\sqrt[3]{(x - 6)^2} - 2\sqrt[3]{x - 6} + 4)
+    \]
+
+    Pre všetky $x \in D(f)$ preto platí:
+    \[
+        f(x)
+            = \frac{\sqrt[3]{x - 6} + 2}{\sqrt{x^2 - 3} - 1}
+            = \frac{x + 2}{x^2 - 4}
+              \cdot
+              \frac{\sqrt{x^2 - 3} + 1}{\sqrt[3]{(x - 6)^2} - 2\sqrt[3]{x - 6} + 4}
+    \]
+    zlomok sme rozšírili výrazom
+    \[
+        (\sqrt{x^2-3} + 1)(\sqrt[3]{(x - 6)^2} - 2\sqrt[3]{x - 6} + 4)
+    \]
+    Teraz môžeme použiť vetu o limite súčinu:
+    \[
+        \lim_{x \to -2}
+            \frac{\sqrt{x^2 - 3} + 1}{\sqrt[3]{(x - 6)^2} - 2\sqrt[3]{x - 6} + 4}
+            = \frac{1}{6}
+    \]
+    ide teda o elementárnu funkciu definovanú v bode $-2$, preto stačí dosadiť),
+    \[
+        \lim_{x \to -2} \frac{x+2}{x^2-4}
+        = \lim_{x \to -2} \frac{1}{x-2}
+        = -\frac{1}{4}
+    \]
+    Teda
+    \begin{align*}
+        \lim_{x \to -2} \frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}
+        &= \lim_{x \to -2} \frac{x+2}{x^2-4} \cdot \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4} = \\
+        &= \lim_{x \to -2} \frac{x+2}{(x+2)(x-2)}
+            \cdot
+            \lim_{x \to -2} \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4}) = \\
+        &= \lim_{x \to -2} \frac{1}{x-2})\cdot \frac{1}{6} \\
+        &= -\frac{1}{24}
+    \end{align*}
+\end{solution}
 \end{defproblem}
 
 \begin{defproblem}{limita-121}

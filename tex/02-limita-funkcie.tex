@@ -1,71 +1,93 @@
 \chapter{Limita funkcie}%\label{chapter:gramatiky}
 
 \section{Okolia a hromadné body}
-Nech $a \in \mathbb{R};$ každý interval $(a-\varepsilon,a+\varepsilon)$, kde $\varepsilon > 0$, sa nazýva \textit{okolie bodu $a$}. Číslo $\varepsilon$ sa nazýva \textit{polomer okolia} $(a-\varepsilon,a+\varepsilon);$ ak chceme zdôrazniť, že dané okolie bodu $a$ má polomer $\varepsilon$, hovoríme o $\varepsilon-$okolí bodu $a$. Okolím bodu $\infty$ sa nazýva každý interval $(K,\infty)$, kde $K \in \mathbb{R};$ okolím bodu $- \infty$ je každý interval $(- \infty,K)$, kde $K \in \mathbb{R}.$ Okolie bodu $b \in \mathbb{R^*}$ ($\mathbb{R^*}$ sa nazýva rozšírená množina reálnych čísel a pozostáva zo všetkých reálnych čísel a symbolov $+\infty,-\infty$)\footnote{namiesto symbolu $+\infty$ sa často používa symbol $\infty$, niektorí autori však zavádzajú symbol $\infty$ s iným významom, k tomu pozri poznámku na konci odseku $2.5$} budeme označovať $O(b)$, symbol $O_\varepsilon (b)$ budeme používať pre $\varepsilon-$okolie bodu $b \in \mathbb{R}$.
+Nech $a \in \mathbb{R};$ každý interval $(a-\varepsilon,a+\varepsilon)$, kde
+$\varepsilon > 0$, sa nazýva \textit{okolie bodu $a$}. Číslo $\varepsilon$ sa
+nazýva \textit{polomer okolia} $(a-\varepsilon,a+\varepsilon);$ ak chceme
+zdôrazniť, že dané okolie bodu $a$ má polomer $\varepsilon$, hovoríme o
+$\varepsilon-$okolí bodu $a$. Okolím bodu $\infty$ sa nazýva každý interval
+$(K,\infty)$, kde $K \in \mathbb{R};$ okolím bodu $- \infty$ je každý interval
+$(- \infty,K)$, kde $K \in \mathbb{R}.$ Okolie bodu $b \in \mathbb{R^*}$
+($\mathbb{R^*}$ sa nazýva rozšírená množina reálnych čísel a pozostáva zo
+všetkých reálnych čísel a symbolov $+\infty,-\infty$)\footnote{namiesto symbolu
+$+\infty$ sa často používa symbol $\infty$, niektorí autori však zavádzajú
+symbol $\infty$ s iným významom, k tomu pozri poznámku na konci odseku $2.5$}
+budeme označovať $O(b)$, symbol $O_\varepsilon (b)$ budeme používať pre
+$\varepsilon-$okolie bodu $b \in \mathbb{R}$.
 
-Bod $a \in \mathbb{R^*}$ sa nazýva hromadný bod množiny $M \subset \mathbb{R}$, ak každé jeho okolie $O(a)$ obsahuje aspoň jeden prvok množiny $M$, rôzny od bodu $a$, t.j. ak platí
-$$\forall O(a): (O(a) \setminus \{ a \}) \cap M \neq \emptyset $$
-(tento výrok možno zapísať aj v tvare $\forall O(a) \exists x\in M; x \neq a \wedge x \in O(a);$ je ekvivalentný s výrokom: každé okolie bodu $a$ obsahuje nekonečne veľa prvkov množiny $M$).
+Bod $a \in \mathbb{R^*}$ sa nazýva hromadný bod množiny $M \subset \mathbb{R}$,
+ak každé jeho okolie $O(a)$ obsahuje aspoň jeden prvok množiny $M$, rôzny od
+bodu $a$, t.j. ak platí
+\[
+  \forall O(a): (O(a) \setminus \{ a \}) \cap M \neq \emptyset
+\]
+(tento výrok možno zapísať aj v tvare $\forall O(a) \exists x\in M; x \neq a
+\wedge x \in O(a);$ je ekvivalentný s výrokom: každé okolie bodu $a$ obsahuje
+nekonečne veľa prvkov množiny $M$).
 
 Množinu všetkých hromadných bodov množiny $M$ budeme označovať $M'$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-100}
-	\item \useproblem[limita-funkcie]{limita-101}
-	\item \useproblem[limita-funkcie]{limita-102}
-	\item \useproblem[limita-funkcie]{limita-103}
-	\item \useproblem[limita-funkcie]{limita-104}
+  \item \useproblem[limita-funkcie]{limita-100}
+  \item \useproblem[limita-funkcie]{limita-101}
+  \item \useproblem[limita-funkcie]{limita-102}
+  \item \useproblem[limita-funkcie]{limita-103}
+  \item \useproblem[limita-funkcie]{limita-104}
 \end{enumerate}
 
 \section{Definícia limity}
 
-Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Bod $b \in \mathbb{R^*}$ sa nazýva \textit{limita funkcie $f$ v bode $a$} ak platí
-$$\forall O(b) \exists O(a) \forall x \in (O(a)\setminus \{ a \}) ) \cap D(f): f(x) \in O(b).$$
-(Ak $b \in \mathbb{R}$, hovoríme o \textit{vlastnej (alebo konečnej) limite}; ak $b=\infty$ alebo $b=-\infty$, o \textit{nevlastnej limite}; ak $a=\infty$ alebo $a=-\infty$, používane názov \textit{limita v nevlastnom bode}.) Zapisujeme $\lim_{x \rightarrow a} f(x)=b$ alebo $f(x) \rightarrow b$ pre $x \rightarrow a$.
+Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Bod $b
+\in \mathbb{R^*}$ sa nazýva \textit{limita funkcie $f$ v bode $a$} ak platí
+$$\forall O(b) \exists O(a) \forall x \in (O(a)\setminus \{ a \}) ) \cap D(f):
+f(x) \in O(b).$$
+(Ak $b \in \mathbb{R}$, hovoríme o \textit{vlastnej (alebo konečnej) limite}; ak
+$b=\infty$ alebo $b=-\infty$, o \textit{nevlastnej limite}; ak $a=\infty$ alebo
+$a=-\infty$, používane názov \textit{limita v nevlastnom bode}.) Zapisujeme
+$\lim_{x \rightarrow a} f(x)=b$ alebo $f(x) \rightarrow b$ pre $x \rightarrow
+a$.
 
-Všimnime si teraz jednotlivé prípady, ktoré zahŕňa uvedená definícia; začneme postupnosťami:
+Všimnime si teraz jednotlivé prípady, ktoré zahŕňa uvedená definícia; začneme
+postupnosťami:
 \begin{itemize}
-\item Nech $b \in \mathbb{R}$; hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ konverguje k (číslu) $b$, ak $\lim_{n \rightarrow \infty} a_n=b$, t.j. ak platí
-$$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N},n>n_0: |a_n-b|<\varepsilon.\footnote{Výroky $$\forall \varepsilon >0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0:|a_N-b<\varepsilon|$$ a $$\forall \varepsilon >0 \exists n_0 \in \mathbb{R} \forall n \in \mathbb{N}, n>n_0:|a_N-b<\varepsilon|$$ sú ekvivalentné. Pretože v definícii konečnej limity postupností je zvykom žiadať $n_0 \in \mathbb{N}$ (a nie $n_0 \in \mathbb{R}$), budeme ju v takej podobe používať aj my (hoci - ako uvidíme v príklade $105$ - sa tým niekedy komplikuje vyjadrenie závislosti čísla $n_0$ na čísle $\varepsilon$). Analogická poznámka sa vzťahuje aj na definície nevlastných limít postupností.}$$
-\item Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $+\infty$, ak $\lim_{n \rightarrow \infty} a_N = +\infty$, t.j. ak platí $$\forall K \in \mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: a_n>K.$$
-\item  Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $-\infty$, ak $\lim_{n \rightarrow \infty} a_N = -\infty$, t.j. ak platí $$\forall K \in \mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: a_n<K.$$
-Postupnosti, ktoré majú vlastnú limitu, sa nazývajú \textit{konvergentné}; ak postupnosť nemá limitu alebo má nevlastnú limitu, nazýva sa \textit{divergentná}.
+\item
+  Nech $b \in \mathbb{R}$; hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$
+  konverguje k (číslu) $b$, ak $\lim_{n \rightarrow \infty} a_n=b$, t.j. ak platí
+  $$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in
+  \mathbb{N},n>n_0: |a_n-b|<\varepsilon.\footnote{Výroky $$\forall \varepsilon
+  >0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N},
+  n>n_0:|a_N-b<\varepsilon|$$ a $$\forall \varepsilon >0 \exists n_0 \in
+  \mathbb{R} \forall n \in \mathbb{N}, n>n_0:|a_N-b<\varepsilon|$$ sú
+  ekvivalentné. Pretože v definícii konečnej limity postupností je zvykom žiadať
+  $n_0 \in \mathbb{N}$ (a nie $n_0 \in \mathbb{R}$), budeme ju v takej podobe
+  používať aj my (hoci - ako uvidíme v príklade $105$ - sa tým niekedy
+  komplikuje vyjadrenie závislosti čísla $n_0$ na čísle $\varepsilon$).
+  Analogická poznámka sa vzťahuje aj na definície nevlastných limít
+  postupností.}$$
+\item
+  Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $+\infty$, ak
+  $\lim_{n \rightarrow \infty} a_N = +\infty$, t.j. ak platí
+  $$\forall K \in	\mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in
+  \mathbb{N}, n>n_0: a_n>K.$$
+\item
+  Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $-\infty$, ak
+  $\lim_{n \rightarrow \infty} a_N = -\infty$, t.j. ak platí $$\forall K \in
+  \mathbb{R} \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0:
+  a_n<K.$$ Postupnosti, ktoré majú vlastnú limitu, sa nazývajú
+  \textit{konvergentné}; ak postupnosť nemá limitu alebo má nevlastnú limitu,
+  nazýva sa \textit{divergentná}.
 \end{itemize}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-105}
+  \item \useproblem[limita-funkcie]{limita-105}
 \end{enumerate}
 
-\textit{Riešenie (b):}
-
-Musíme dokázať pravdivosť výroku (*)
- $$\forall \varepsilon > 0 \exists n_0 \in \mathbb{N} \forall n \in \mathbb{N}, n>n_0: |\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$$
- Nech je teda dané číslo $\varepsilon > 0$; zistíme, ktoré čísla $n \in \mathbb{N}$ vyhovujú nerovnici $$|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon.$$
- Postupnými úpravami dostaneme ekvivalentné vzťahy v $\mathbb{N}:$
- $$|\frac{3n}{2n^2+2}|<\varepsilon,$$
- $$2 \varepsilon n^2-3n+2 \varepsilon >0.$$
- (Nájdeme najprv všetky reálne rešenia poslednej nerovnice, z nich potom vyberieme tie, ktoré ležia v $\mathbb{N}$. Diskriminant $D$ je rovný $9-16 \varepsilon^2$, preto pre reálne riešenia platí:
-\begin{itemize}
-\item ak $\varepsilon > \frac{3}{4}$, t.j. ak $D<0$, je riešením každé reálne číslo;
-\item ak $\varepsilon \in (0,\frac{3}{4} \rangle$, je $D \geq 0$, preto riešeniami sú všetky prvky množiny $(-\infty,\frac{3-\sqrt{9-16\varepsilon^2}}{2}) \cup (\frac{3+\sqrt{9-16\varepsilon^2}}{2},\infty)$.)
-\end{itemize}
-Preto:
-\begin{itemize}
-\item ak $\varepsilon > \frac{3}{4}$, je riešením nerovnice $|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$ každé číslo $n \in \mathbb{N}$;
-\item ak $\varepsilon \in (0,\frac{3}{4} \rangle$, sú riešeniami nerovnice $|\frac{n^2+3n+1}{n^2+2}-\frac{1}{2}|<\varepsilon$ všetky tie $n \in \mathbb{N}$, pre ktoré platí $n>\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}$.
-Teraz už vidíme, že daný výrok (*) je pravdivý: stačí položiť $n_0=1$ pre $\varepsilon>\frac{3}{4}$ a $n_0=[\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}]$ pre $\varepsilon \in (0,\frac{3}{4} \rangle$ ([.] označujú celú časť; keby sme v (a) mali podmienku $n_0 \in \mathbb{R}$, stačilo by pre $\varepsilon \in (0,\frac{3}{4} \rangle$ položiť $n_0=\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}$).
-\end{itemize}
-
-\textit{Poznámka:}
-
-Ak je nerovnosť $|a_n-b|<\varepsilon$ splnená pre všetky $n>n_0$ a platí $n_1>n_0$, tak nerovnosti $|a_n-b|<\varepsilon$ iste vyhovujú všetky čísla $n>n_1$. Z tohto samozrejmého tvrdenia vyplýva, že v závere riešenia príkladu $105 (b)$ by stačilo položiť $n_0>1$ pre $\varepsilon > \frac{3}{4}$ a $n_0 \geq [\frac{3+\sqrt{9-16\varepsilon^2}}{2\varepsilon}]$ pre $\varepsilon \in (0,\frac{3}{4}\rangle$.
-
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-106}
-	\item \useproblem[limita-funkcie]{limita-107}
-	\item \useproblem[limita-funkcie]{limita-108}
-	\item \useproblem[limita-funkcie]{limita-109}
-	\item \useproblem[limita-funkcie]{limita-110}
+  \item \useproblem[limita-funkcie]{limita-106}
+  \item \useproblem[limita-funkcie]{limita-107}
+  \item \useproblem[limita-funkcie]{limita-108}
+  \item \useproblem[limita-funkcie]{limita-109}
+  \item \useproblem[limita-funkcie]{limita-110}
 \end{enumerate}
 
 Ak $x \in \mathbb{R^*}$, nastáva práve jedna z troch možností:
@@ -75,10 +97,11 @@ Ak $x \in \mathbb{R^*}$, nastáva práve jedna z troch možností:
 \item $x = -\infty$.
 \end{itemize}
 
-Ak v definícii limity funkcie rozlíšime pre body $a,b \in \mathbb{R^*}$ tieto možnosti, dostaneme nasledujúcich deväť špeciálnych prípadov (v nich už a,b označujú len reálne čísla):
+Ak v definícii limity funkcie rozlíšime pre body $a, b \in \mathbb{R^*}$ tieto
+možnosti, dostaneme nasledujúcich deväť špeciálnych prípadov (v nich už $a, b$
+označujú len reálne čísla):
 
-
-\begin{multicols}{3}
+\begin{multicols}{2}
 \begin{enumerate}
     \item $\lim_{x \rightarrow a} f(x)=b$;
     \item $\lim_{x \rightarrow a} f(x)=+\infty$;
@@ -93,36 +116,44 @@ Ak v definícii limity funkcie rozlíšime pre body $a,b \in \mathbb{R^*}$ tieto
 \end{multicols}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-111}
+  \item \useproblem[limita-funkcie]{limita-111}
 \end{enumerate}
 
 \textit{Riešenie $1$:}
-V tomto prípade sú okolia $O(a)$ a $O(b)$ jednoznačne určené svojimi polomermi $\delta,\epsilon$; definíciu limity možno potom prepísať do tvaru
-$$\forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f), x \neq a, |x-a|<\delta:|f(x)-b|<\epsilon$$
+V tomto prípade sú okolia $O(a)$ a $O(b)$ jednoznačne určené svojimi polomermi
+$\delta,\epsilon$; definíciu limity možno potom prepísať do tvaru
+\[
+  \forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f),
+  x \neq a, |x-a|<\delta:|f(x)-b|<\epsilon
+\]
 alebo - čo je to isté - do tvaru
-$$\forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f), x \neq a, |x-a|<\delta \Rightarrow |f(x)-b|<\epsilon$$
+\[
+  \forall \epsilon > 0 \exists \delta > 0 \forall x \in D(f),
+  x \neq a, |x-a|<\delta \Rightarrow |f(x)-b|<\epsilon
+\]
 (Samozrejme predpokladáme, že $a$ je hromadný bod množiny $D(f)$.)
 
-\begin{veta}
-\textbf{Cauchyho-Bolzanovo kritérium konvergencie}
+\begin{veta}[Cauchyho-Bolzanovo kritérium konvergencie]
 
-Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Funkcia $f$ má v bode $a$ konečnú limitu práve vtedy, keď platí
-$$\forall \varepsilon > 0 \exists O(a) \forall x,y \in (O(a) \setminus \{ a \}) \cap D(f): |f(x)-f(y)|<\varepsilon.$$
+Nech $a \in \mathbb{R}^*$ je hromadný bod definičného oboru funkcie $f$. Funkcia
+$f$ má v bode $a$ konečnú limitu práve vtedy, keď platí
+\[
+  \forall \varepsilon > 0 \exists O(a) \forall x,y \in
+  (O(a) \setminus \{ a \}) \cap D(f): |f(x)-f(y)|<\varepsilon.
+\]
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-112}
+  \item \useproblem[limita-funkcie]{limita-112}
 \end{enumerate}
 
 \textit{Riešenie 1:}
-Treba dokázať pravdivosť tvrdenia (*)
-$$\forall \varepsilon > 0 \exists \delta > 0 \forall x \geq 0, x \neq 3, |x-3|< \delta : |\sqrt{x}-\sqrt{3}|< \varepsilon.$$
-Predpokladajme, že $|x-3|<\delta$ a skúsme na základe toho zhora odhadnúť výraz $|\sqrt{x}-\sqrt{3}|$. Pretože $|\sqrt{x}-\sqrt{3}|=\frac{|x-3|}{\sqrt{x}+\sqrt{3}}$ a $\sqrt{x}+\sqrt{3} \geq \sqrt{3}$ platí $\sqrt{x}-\sqrt{3} \leq \frac{1}{\sqrt{3}}|x-3|<\frac{\delta}{\sqrt{3}}$. Teraz už vidíme, že tvrdenie (*) platí: ak je dané $\varepsilon > 0$ a chceme, aby platilo $|\sqrt{x}-\sqrt{3}|<\varepsilon$, stačí položiť $\delta=\varepsilon \sqrt{3}$ (alebo $\delta \leq \varepsilon \sqrt{3}$).
+
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-113}
-	\item \useproblem[limita-funkcie]{limita-114}
-	\item \useproblem[limita-funkcie]{limita-115}
+  \item \useproblem[limita-funkcie]{limita-113}
+  \item \useproblem[limita-funkcie]{limita-114}
+  \item \useproblem[limita-funkcie]{limita-115}
 \end{enumerate}
 
 \section{Vety o limitách I}
@@ -155,72 +186,114 @@ Ak naviac $B \neq 0$, tak existuje aj $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}$
 
 \begin{veta}
 \textbf{o limite zloženej funkcie}
-
-Nech sú dané funkcie $f,g$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny $D(f \circ g)$. Ak $\lim_{x \rightarrow a} g(x)=A$ $(A \in \mathbb{R^*})$, pričom je splnená podmienka
-$$\exists O(a)\forall x \in O(a): x \neq a \Rightarrow g(x) \neq A,$$
-a $\lim_{x \rightarrow A} f(x)=B$  $(B \in \mathbb{R^*})$, tak $\lim_{x \rightarrow a} f(g(x))=B$
+Nech sú dané funkcie $f, g$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny
+$D(f \circ g)$. Ak $\lim_{x \rightarrow a} g(x) = A$ $(A \in \mathbb{R^*})$,
+pričom je splnená podmienka
+\[
+  \exists O(a)\forall x \in O(a): x \neq a \Rightarrow g(x) \neq A
+\]
+a $\lim_{x \rightarrow A} f(x) = B$  $(B \in \mathbb{R^*})$, tak $\lim_{x
+\rightarrow a} f(g(x)) = B$
 \end{veta}
 
 \textit{Poznámka:}
-Ak $A$ je hromadným bodom $D(f)$, ale $A \notin D(f)$, tak uvedená veta platí aj vtedy, keď nie je splnená podmienka (*).
+Ak $A$ je hromadným bodom $D(f)$, ale $A \notin D(f)$, tak uvedená veta platí aj
+vtedy, keď nie je splnená podmienka (*).
 
+Niektoré limity možno nájsť len na základe definície, v ostatných prípadoch je
+však oveľa efektívnejšie použiť vety o limitách. Pritom je potrebné osvojiť si
+zdôvodňovanie jednotlivých krokov výpočtu, inak sa nenaučíme odlišovať správne
+postupy od nesprávnych. Na ilustráciu podrobne popíšme nasledujúci výpočet
 
-Niektoré limity možno nájsť len na základe definície, v ostatných prípadoch je však oveľa efektívnejšie použiť vety o limitách. Pritom je potrebné osvojiť si zdôvodňovanie jednotlivých krokov výpočtu, inak sa nenaučíme odlišovať správne postupy od nesprávnych. Na ilustráciu podrobne popíšme nasledujúci výpočet
-
-\begin{center}
-$$\lim_{x \rightarrow \infty} \frac{2x^2+3x+5}{3x^2-7}=\lim_{x \rightarrow \infty} \frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}=\frac{\lim_{x \rightarrow \infty} (2+\frac{3}{x}+\frac{5}{x^2})}{\lim_{x \rightarrow \infty} (3-\frac{7}{x^2})}=$$
-$$=\frac{\lim_{x \rightarrow \infty} 2+\lim_{x \rightarrow \infty}\frac{3}{x}+\lim_{x \rightarrow \infty} \frac{5}{x^2}}{\lim_{x \rightarrow \infty}3-\lim_{x \rightarrow \infty}\frac{7}{x^2}}=\frac{2+0+0}{3-0}=\frac{2}{3}.$$
-\end{center}
+\[
+  \begin{split}
+    \lim_{x \rightarrow \infty} \frac{2x^2 + 3x + 5}{3x^2 - 7}
+      &= \lim_{x \rightarrow \infty}
+          \frac{
+            2
+            + \frac{3}{x}
+            + \frac{5}{x^2}}{3 - \frac{7}{x^2}}
+      = \frac{\lim_{x \rightarrow \infty}
+        (
+          2
+          + \frac{3}{x}
+          + \frac{5}{x^2}
+        )}{
+          \lim_{x \rightarrow \infty} (3 - \frac{7}{x^2})
+        } \\
+      &= \frac{
+          \lim_{x \rightarrow \infty}
+          2
+          + \lim_{x \rightarrow \infty} \frac{3}{x}
+          + \lim_{x \rightarrow \infty} \frac{5}{x^2}
+        }{
+          \lim_{x \rightarrow \infty} 3
+          -
+          \lim_{x \rightarrow \infty}
+            \frac{7}{x^2}
+        } \\
+      &= \frac{2+0+0}{3-0}
+      = \frac{2}{3}.
+  \end{split}
+\]
 
 \textit{1. krok:}
-
-Na intervale $(0,\infty)$ iste platí $\frac{2x^2+3x+5}{3x^2-7}=\frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}$ (zlomok vľavo stačí rozšíriť výrazom $\frac{1}{x^2}$), preto: ak existuje limita na pravej strane prvej rovnosti, tak existuje aj limita na jej ľavej strane a tieto limity sa rovnajú \footnote{Táto elementárna, ale veľmi častá úvaha sa vo všeobecnosti formuluje takto: Nech $a \in \mathbb{R^*}$ je hromadný bod $D(f)$, nech existuje $O(a)$ tak, že $D(f) \cap (O(a) \setminus \{ a\})=D(g) \cap (O(a) \setminus \{ a\})$ a úre všetky $x \in D(f) \cap (O(a) \setminus \{ a\})$ platí $f(x)=g(x)$. Ak existuje $\lim_{x \rightarrow a} g(x)=b$ $(\in \mathbb{R^*})$, tak platí $\lim_{x \rightarrow a} f(x)=b$.}; ďalej sa teda snažíme zistiť, či existuje $\lim_{x \rightarrow \infty}\frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}$;
+Na intervale $(0,\infty)$ iste platí
+$\frac{2x^2+3x+5}{3x^2-7}=\frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}$
+(zlomok vľavo stačí rozšíriť výrazom $\frac{1}{x^2}$), preto: ak existuje limita
+na pravej strane prvej rovnosti, tak existuje aj limita na jej ľavej strane a
+tieto limity sa rovnajú \footnote{Táto elementárna, ale veľmi častá úvaha sa vo
+všeobecnosti formuluje takto: Nech $a \in \mathbb{R^*}$ je hromadný bod $D(f)$,
+nech existuje $O(a)$ tak, že $D(f) \cap (O(a) \setminus \{ a\})=D(g) \cap (O(a)
+\setminus \{ a\})$ a úre všetky $x \in D(f) \cap (O(a) \setminus \{ a\})$ platí
+$f(x)=g(x)$. Ak existuje $\lim_{x \rightarrow a} g(x)=b$ $(\in \mathbb{R^*})$,
+tak platí $\lim_{x \rightarrow a} f(x)=b$.}; ďalej sa teda snažíme zistiť, či
+existuje $\lim_{x \rightarrow
+\infty}\frac{2+\frac{3}{x}+\frac{5}{x^2}}{3-\frac{7}{x^2}}$;
 
 \textit{2. krok:}
-
-tu sme použili vetu o limite podielu (zatiaľ ovšem len "na čestné slovo"); presnejšie povedané: ak ukážeme, že limita v čitateli aj v menovateli existujú a sú konečné, pričom limita v menovateli je nenulová, tak podľa vety o limite podielu bude platiť druhá rovnosť;
+tu sme použili vetu o limite podielu (zatiaľ ovšem len "na čestné slovo");
+presnejšie povedané: ak ukážeme, že limita v čitateli aj v menovateli existujú a
+sú konečné, pričom limita v menovateli je nenulová, tak podľa vety o limite
+podielu bude platiť druhá rovnosť;
 
 \textit{3. krok:}
-
-v čitateli sme použili vetu o limite súčtu (tú možno indukciou rozšítiť na ľubovoľný konečný počet sčítancov), v menovateli vetu o limite rozdielu (obidve zatiaľ tiež len "na čestné slovo");
+v čitateli sme použili vetu o limite súčtu (tú možno indukciou rozšítiť na
+ľubovoľný konečný počet sčítancov), v menovateli vetu o limite rozdielu (obidve
+zatiaľ tiež len ``na čestné slovo'');
 
 \textit{4. krok:}
+teraz už ľahko overíme, že druhá a tretia rovnosť skutočne platia, pretože
+$\lim_{x \rightarrow \infty} 2$, $\lim_{x \rightarrow \infty} \frac{3}{x}$,
+$\lim_{x \rightarrow \infty} \frac{5}{x^2}$, $\lim_{x \rightarrow \infty} 3$ a
+$\lim_{x \rightarrow \infty} \frac{7}{x^2}$ existujú a sú konečné (to ľahko
+dokážeme priamo z definície), bolo použitie viet o limite súčtu a rozdielu v
+tretej rovnosti oprávnené (a preto $\lim_{x \rightarrow \infty}
+(2 + \frac{3}{x} + \frac{5}{x^2}) = 2$, $\lim_{x \rightarrow \infty}
+(3 - \frac{7}{x^2}) = 3$); rovnako oprávnené bolo použitie vety o limite podielu v
+druhom kroku (limita v čitateli aj v menovateli - ako sme sa práve presvedčili -
+skutočne existujú, sú konečné a limita v menovateli je naviac nenulová).
 
-teraz už ľahko overíme, že druhá a tretia rovnosť skutočne platia, pretože $\lim_{x \rightarrow \infty} 2$, $\lim_{x \rightarrow \infty} \frac{3}{x}$, $\lim_{x \rightarrow \infty} \frac{5}{x^2}$, $\lim_{x \rightarrow \infty} 3$ a $\lim_{x \rightarrow \infty} \frac{7}{x^2}$ existujú a sú konečné (to ľahko dokážeme priamo z definície), bolo použitie viet o limite súčtu a rozdielu v tretej rovnosti oprávnené (a preto $\lim_{x \rightarrow \infty} (2+\frac{3}{x}+\frac{5}{x^2})=2$, $\lim_{x \rightarrow \infty} (3-\frac{7}{x^2})=3$); rovnako oprávnené bolo použitie vety o limite podielu v druhom kroku (limita v čitateli aj v menovateli - ako sme sa práve presvedčili - skutočne existujú, sú konečné a limita v menovateli je naviac nenulová).
+Z platnosti prvej, druhej a tretej rovnosti vyplýva $\lim_{x \rightarrow \infty}
+\frac{2x^2 + 3x + 5}{3x^2 - 7} = \frac{2}{3}$.
 
-Z platnosti prvej, druhej a tretej rovnosti vyplýva $\lim_{x \rightarrow \infty} \frac{2x^2+3x+5}{3x^2-7}=\frac{2}{3}$.
-
-Takéto zdôvodnenie (vykonané ovšem len v duchu alebo ústne) by malo byť súčasťou výpočtu každej limity; po získaní istej prace budú zápisy aj argumentácia podstatne stručnejšie
+Takéto zdôvodnenie (vykonané ovšem len v duchu alebo ústne) by malo byť súčasťou
+výpočtu každej limity; po získaní istej prace budú zápisy aj argumentácia
+podstatne stručnejšie
 
 \begin{veta}
-Ak $f$ je elementárna funkcia a bod $a \in D(f)$ je hromadný bod množiny $D(f)$ je hromadný bod množiny $D(f)$, tak $\lim_{x \rightarrow a} f(x)=f(a)$.
+Ak $f$ je elementárna funkcia a bod $a \in D(f)$ je hromadný bod množiny $D(f)$
+je hromadný bod množiny $D(f)$, tak $\lim_{x \rightarrow a} f(x) = f(a)$. (Toto
+tvrdenie veľmi úzko súvisí s pojmom spojitosti (pozri kap. 3).)
 \end{veta}
 
-(Toto tvrdenie veľmi úzko súvisí s pojmom spojitosti (pozri kap. 3).)
-
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-116}
-	\item \useproblem[limita-funkcie]{limita-117}
-\end{enumerate}
-
-\textit{Riešenie 1:}
-Funkcie $P(x)=x^2-5x+6$ a $Q(x)=x^3-6x^2+10x-3$ sú elementárne, preto $\lim_{x \rightarrow 3} P(x)=P(3)=0$, $\lim_{x \rightarrow 3} Q(x)=Q(3)=0$. Pretože $\lim_{x \rightarrow 3} Q(x)=0$, nemôžeme použiť vetu o limite podielu. (Alebo inak povedané: funkcia $R=P \setminus Q$ je elementárna, ale $Q(3)=0$, preto $3 \notin D(R)$ a limitu funkcie $R$ v bode $3$ teda nemožno nájsť "dosadením".) Z rovností $P(3)=0$, $Q(3)=0$ vyplýva, že číslo $3$ teda polynómov $P$ aj $Q$, preto $P(x)$ aj $Q(x)$ musia byť deliteľné koreňovým činiteľom $(x-3)$. Po vyňatí člena $(x-3)$ dostaneme $P(x)=(x-3)(x-2)$, $Q(x)=(x-3)(x^2-3x+1)$. Pre $x \in D(R)$ teda platí $\frac{x^2-5x+6}{x^3-6x^2+10x-3}=\frac{(x-3)(x-2)}{(x-3)(x^2-3x+1)}=\frac{x-2}{x^2-3x+1}$, pritom $\lim_{x \rightarrow 3} \frac{x-2}{x^2-3x+1}=1$ (elementárna funkcia $R_1(x)=\frac{x-2}{x^2-3x+1}=1$ je definocaná aj v bode $3$, preto $\lim_{x \rightarrow 3} R_1(x)$ už možno nájsť "dosadením").
-
-Teda $$\lim_{x \rightarrow 3} \frac{x^2-5x+6}{x^3-6x^2+10x-3}=\lim_{x \rightarrow 3} \frac{(x-3)(x-2)}{(x-3)(x^2-3x+1)}=\lim_{x \rightarrow 3} \frac{x-2}{x^2-3x+1}=1.$$
-
-\begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-118}
-	\item \useproblem[limita-funkcie]{limita-119}
-	\item \useproblem[limita-funkcie]{limita-120}
-\end{enumerate}
-
-\textit{Riešenie (a):}
-Elementárna funkcia $f(x)=\frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}$ nie je definovaná v bode $-2$, preto $\lim_{x \rightarrow -2} f(x)$ nemožno nájsť "dosadením". Pre výpočet limity bude výhodnejší iný zápis predpisu funkcie $f$; dosadíme ho použitím vzorca $A^2-B^2=(A-B)(A+B),A^3+B^3=(A+B)(A^2-AB+B^2)$ (obidva sú špeciálnym prípadom rovnost $A^n-B^n=(A-B)(A^{n-1}+A^{n-2}B+...+AB^{n-2}+B^{n-1})$ ). Podľa prvého z nich $x^2-4=(\sqrt{x^2-3}-1)(\sqrt{x^2-3}+1)$, podľa druhého $x+2=(\sqrt[3]{x-6}+2)(\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4)$.
-
-Pre všetky $x \in D(f)$ preto platí $f(x)=\frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}=\frac{x+2}{x^2-4}\cdot\frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4}$ (zlomok sme rozšírili výrazom $(\sqrt{x^2-3}+1)(\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4)$). Teraz môžeme použiť vetu o limite súčinu: $\lim_{x \rightarrow -2} \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4}=\frac{1}{6}$ (ide o elementárnu funkciu definovanú v bode $-2$, preto stačí dosadiť), $\lim_{x \rightarrow -2} \frac{x+2}{x^2-4}=lim_{x \rightarrow -2} \frac{1}{x-2}=-\frac{1}{4}$ . Teda $lim_{x \rightarrow -2} \frac{\sqrt[3]{x-6}+2}{\sqrt{x^2-3}-1}=lim_{x \rightarrow -2}  \frac{x+2}{x^2-4} \cdot \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4}$    $(=lim_{x \rightarrow -2} \frac{x+2}{(x+2)(x-2)}\cdot lim_{x \rightarrow -2} \frac{\sqrt{x^2-3}+1}{\sqrt[3]{(x-6)^2}-2\sqrt[3]{x-6}+4})=(lim_{x \rightarrow -2} \frac{1}{x-2})\cdot \frac{1}{6}=-\frac{1}{24}$.
-
-\begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-121}
+  \item \useproblem[limita-funkcie]{limita-116}
+  \item \useproblem[limita-funkcie]{limita-117}
+  \item \useproblem[limita-funkcie]{limita-118}
+  \item \useproblem[limita-funkcie]{limita-119}
+  \item \useproblem[limita-funkcie]{limita-120}
+  \item \useproblem[limita-funkcie]{limita-121}
 \end{enumerate}
 
 \textit{Riešenie (a):}
@@ -233,7 +306,7 @@ Uvedieme dva rôzne návody:
 (číslo $2$, ktoré sme pripočítali a odpočítali, je spoločnou funkcnou hodnotou funkcií $\sqrt{x+2}$ a $\sqrt[3]{x^2+4}$ v bode $2$); ďalší postup je potom rovnaký ako v príklade $120$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-122}
+  \item \useproblem[limita-funkcie]{limita-122}
 \end{enumerate}
 
 \textit{Riešenie (b):}
@@ -241,9 +314,9 @@ Aby sme sa v limitovanom výraze zbavili odmocniny, položíme $\sqrt[n]{1+x}=t$
 $$\lim_{x \rightarrow 0} \frac{\sqrt[n]{1+x}-1}{x}=\lim_{t \rightarrow 1} \frac{t-1}{t^n-1}=\lim_{t \rightarrow 1} \frac{t-1}{(t-1)(t^{n-1}+t^{n-2}+...+1)}=\frac{1}{n}.$$
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-123}
-	\item \useproblem[limita-funkcie]{limita-124}
-	\item \useproblem[limita-funkcie]{limita-125}
+  \item \useproblem[limita-funkcie]{limita-123}
+  \item \useproblem[limita-funkcie]{limita-124}
+  \item \useproblem[limita-funkcie]{limita-125}
 \end{enumerate}
 
 \begin{veta}
@@ -251,10 +324,10 @@ $\lim_{x \rightarrow 0} \frac{sin x}{x}=1$.
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-126}
-	\item \useproblem[limita-funkcie]{limita-127}
-	\item \useproblem[limita-funkcie]{limita-128}
-	\item \useproblem[limita-funkcie]{limita-129}
+  \item \useproblem[limita-funkcie]{limita-126}
+  \item \useproblem[limita-funkcie]{limita-127}
+  \item \useproblem[limita-funkcie]{limita-128}
+  \item \useproblem[limita-funkcie]{limita-129}
 \end{enumerate}
 
 \textit{Riešenie (d):}
@@ -262,7 +335,7 @@ Takéto limity sa pohodlnejšie počítajú v bode $0$, použijeme preto substit
 $\lim_{x \rightarrow \frac{\pi}{3}} \frac{sin (x-\frac{\pi}{3})}{1-2 cos x}=\lim_{t \rightarrow 0} \frac{sin t}{1-2 cos (t+\frac{\pi}{3})}=\lim_{t \rightarrow 0} \frac{sin t}{1-2(\frac{1}{2}cos t -\frac{\sqrt{3}}{2}sin t)}=\lim_{t \rightarrow 0} \frac{sin t}{\sqrt{3}sin t + 1 - cos t}=\lim_{t \rightarrow 0} \frac{\frac{sin t}{t}}{\sqrt{3}\frac{sin t}{t}+\frac{1-cos t}{t^2}\cdot t}=\frac{1}{\sqrt{3}}$ (pritom sme využili rovnosť $\lim_{t \rightarrow 0} \frac{1-cos t}{t^2}=\frac{1}{2}$; pozri príklad $127.1$).
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-130}
+  \item \useproblem[limita-funkcie]{limita-130}
 \end{enumerate}
 
 \section{Vety o limitách II (porovnávacie vety, vety o nevlastných limitách, jednostranné limity)}
@@ -276,17 +349,17 @@ Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množin
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-131}
-	\item \useproblem[limita-funkcie]{limita-132}
+  \item \useproblem[limita-funkcie]{limita-131}
+  \item \useproblem[limita-funkcie]{limita-132}
 \end{enumerate}
 
 \textit{Riešenie (a):}
 Pre $n \geq 3$ platí $\frac{2}{1}\cdot \frac{2}{2}\cdot \frac{2}{3}\cdot ... \cdot \frac{2}{n} \leq 2 \cdot 1 \cdot \frac{2}{3} \cdot ... \cdot \frac{2}{3}=2 \cdot (\frac{2}{3})^{n-2}=\frac{9}{2} \cdot (\frac{2}{3})^n$. Teda pre $n \geq 3$ platí $0 \leq \frac{2^n}{n!}\leq \frac{9}{2}\cdot (\frac{2}{3})^n$, pritom $\lim_{n \rightarrow \infty} 0=\lim_{n \rightarrow \infty} \frac{9}{2} \cdot (\frac{2}{3})^n=0$ (pozri príklad $105.5$). Preto (podľa vety $6$) $\lim_{n \rightarrow \infty} \frac{2^n}{n!}=0$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-133}
-	\item \useproblem[limita-funkcie]{limita-134}
-	\item \useproblem[limita-funkcie]{limita-135}
+  \item \useproblem[limita-funkcie]{limita-133}
+  \item \useproblem[limita-funkcie]{limita-134}
+  \item \useproblem[limita-funkcie]{limita-135}
 \end{enumerate}
 
 \textit{Riešenie (a):}
@@ -297,7 +370,7 @@ Teda $$0\leq \omega (n) \leq \frac{a-1}{n}, n \in \mathbb{N},$$
 pritom $\lim_{n \rightarrow \infty} 0=\lim_{n \rightarrow \infty} \frac{a-1}{n}=0,$ preto (podľa vety $6$) $\lim_{n \rightarrow \infty}\omega (n)=0.$ Z rovnosti $\sqrt[n]{a}=1+\omega (n)$ potom (podľa vety o limite súčtu) vyplýva $\lim_{n \rightarrow \infty} (1+\omega (n))=1$. Zostal ešte prípad $0<a<1$; tu už bude dôkaz jednoduchý: ak $0<a<1$, tak $b=\frac{1}{a}>1$. Podľa predchádzajúceho teda $\lim_{n \rightarrow \infty} \sqrt[n]{b}=1$. Z rovnosti $\sqrt[n]{a}=\frac{1}{\sqrt[n]{b}}$ potom (podľa vety o limite podielu) vyplýva $\lim_{n \rightarrow \infty} \sqrt[n]{a}=\lim_{n \rightarrow \infty} \frac{1}{\sqrt[n]{b}}=1$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-136}
+  \item \useproblem[limita-funkcie]{limita-136}
 \end{enumerate}
 
 \begin{veta}
@@ -338,11 +411,11 @@ Nech je daná funkcia $f$, nech $a \in \mathbb{R^*}$ he hromadný bod množiny $
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-137}
-	\item \useproblem[limita-funkcie]{limita-138}
-	\item \useproblem[limita-funkcie]{limita-139}
-	\item \useproblem[limita-funkcie]{limita-140}
-	\item \useproblem[limita-funkcie]{limita-141}
+  \item \useproblem[limita-funkcie]{limita-137}
+  \item \useproblem[limita-funkcie]{limita-138}
+  \item \useproblem[limita-funkcie]{limita-139}
+  \item \useproblem[limita-funkcie]{limita-140}
+  \item \useproblem[limita-funkcie]{limita-141}
 \end{enumerate}
 
 Nech je daná funkcia $f$, nech $a \mathbb{R}$ je hromadný bod množiny $D^+:=D(f)\cap (a,\infty)$ (množiny $D^-:=D(f)\cap (-\infty,a)$); označme $f'$ zúženie funkcie na množinu $D^+$ (na množinu $D^-$). Ak existuje limita funkcie $f'$ v bode $a$, nazývame ju \textit{limitou funkcie $f$ v bode $a$ sprava (zľava)} a označujeme $\lim_{x \rightarrow a+} f(x)$ $(\lim_{x \rightarrow a-} f(x))$. Pre limity sprava a zľava sa používa súhrnný názov \textit{jednostranné limity}.
@@ -352,11 +425,11 @@ Nech je daná funkcia $f$, nech $a$ je hromadný bod množín $D(f) \cap (-\inft
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-142}
-	\item \useproblem[limita-funkcie]{limita-143}
-	\item \useproblem[limita-funkcie]{limita-144}
-	\item \useproblem[limita-funkcie]{limita-145}
-	\item \useproblem[limita-funkcie]{limita-146}
+  \item \useproblem[limita-funkcie]{limita-142}
+  \item \useproblem[limita-funkcie]{limita-143}
+  \item \useproblem[limita-funkcie]{limita-144}
+  \item \useproblem[limita-funkcie]{limita-145}
+  \item \useproblem[limita-funkcie]{limita-146}
 \end{enumerate}
 
 \section{Limity mocninovo-exponenciálnych funkcií}
@@ -366,7 +439,7 @@ $\lim_{x \rightarrow +\infty} (1+\frac{1}{x})^x=e,\lim_{x \rightarrow 0} (1+x)^{
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-147}
+  \item \useproblem[limita-funkcie]{limita-147}
 \end{enumerate}
 
 \textit{Riešenie:}
@@ -378,7 +451,7 @@ Analogicky sa dá postupovať v prípade funkcií typu $a^{+/- \infty}(a>0,a /ne
 V ďalšom budeme symbol $1^{+/- \infty}$ chápať trochu všeobecnejšie: znak $+/- \infty$ bude okrem funkcií s limitou $+\infty$ alebo $-\infty$ označovať aj tie exponenty, ktoré síce nemajú limitu, ale ich jednostranné limity sú nevlastné \footnote{rovnako možno zovšeobecniť aj pojem neurčitého výrazu typu $0 \cdot (+/- \infty)$ a $\frac{+/- \infty}{+/- \infty}$; ďalšie zovšeobecnenie pozri v poznámke na konci odseku}. Dôležitým príkladom limity tohto typu je $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}$. Ukážeme teraz, ako sa rovnosť $\lim_{x \rightarrow 0} (1+x)^{\frac{1}{x}}=e$ využíva pri výpočte ďalších limít typu $1^{+/- \infty}$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-148}
+  \item \useproblem[limita-funkcie]{limita-148}
 \end{enumerate}
 
 \textbf{Riešenie:}
@@ -393,24 +466,24 @@ Podľa príkladu $147$ je preto $\lim_{x \rightarrow \frac{\pi}{2}} f_1(x)^{g_1(
 I keď uvedený postup môže na prvý pohľad pôsobiť deprimujúcim dojmom, nie je až také ťažké zapamätať si ho: funkciu $f^g$ typu $1^{+/- \infty}$ prepisujeme na tvar $f_1^{g_1}$ tak, aby limita funkcie $f_1$ bola rovný $e$; preto položíme $f_1=(1+(f-1)\cdot g)$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-149}
-	\item \useproblem[limita-funkcie]{limita-150}
-	\item \useproblem[limita-funkcie]{limita-151}
-	\item \useproblem[limita-funkcie]{limita-152}
+  \item \useproblem[limita-funkcie]{limita-149}
+  \item \useproblem[limita-funkcie]{limita-150}
+  \item \useproblem[limita-funkcie]{limita-151}
+  \item \useproblem[limita-funkcie]{limita-152}
 \end{enumerate}
 
 \textbf{Riešenie (d):}
 Využijeme, že $\lim_{u \rightarrow 0}\frac{ln(1+u)}{u}=1$ (príklad $152.1$); potom $\lim_{x \rightarrow 0}\frac{sin 3x}{ln(1+sin 5x)}=\lim_{x \rightarrow 0}\frac{3x \cdot \frac{sin 3x}{3x}}{sin 5x \cdot \frac{ln (1+sin 5x)}{sin 5x}}(=\lim_{x \rightarrow 0} \frac{3x}{sin 5x} \frac{\lim_{x \rightarrow 0}\frac{sin 3x}{3x}}{\lim_{x \rightarrow 0} \frac{ln(1+sin 5x))}{sin 5x}})=\frac{1}{1}\cdot \lim_{x \rightarrow 0}\frac{3x}{sin 5x}=\frac{3}{5}$
 \footnote{všeobecným pohľadom na takýto spôsob výpočtu je príklad $193$}.
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-153}
+  \item \useproblem[limita-funkcie]{limita-153}
 \end{enumerate}
 
 \textbf{Riešenie (d):}
 Využijeme, že $\lim_{x \rightarrow a}\frac{e^u-1}{u}=1$ (príklad $153.1$); potom $\lim_{x \rightarrow a}\frac{x^x-x^a}{x-a}=\lim_{x \rightarrow a}x^a \cdot \frac{x^{x-a}-1}{x-a}(=\lim_{x \rightarrow a}x^a \cdot \lim_{x \rightarrow a}\frac{x^{x-a}-1}{x-a})=$\footnote{funkcia $x^a$ je elementárna, preto $x^a \rightarrow a^a$, ak $x \rightarrow a$} $a^a \cdot \lim_{x \rightarrow a}(\frac{e^{(x-a)ln x}-1}{(x-a)ln x}\cdot ln x)(=a^a \cdot \lim_{x \rightarrow a}\frac{e^{(x-a)ln x}-1}{(x-a)ln x}\cdot \lim_{x \rightarrow a}ln x)=a^a \cdot 1 \cdot ln a=a^a ln a$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-154}
+  \item \useproblem[limita-funkcie]{limita-154}
 \end{enumerate}
 
 \textbf{Riešenie (b):}
@@ -428,8 +501,8 @@ Analogicky tvrdenie pre nerastúcu postupnosť ${\{a_n\}}_{n=1}^\infty$  dostane
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-155}
-	\item \useproblem[limita-funkcie]{limita-156}
+  \item \useproblem[limita-funkcie]{limita-155}
+  \item \useproblem[limita-funkcie]{limita-156}
 \end{enumerate}
 
 \textbf{Riešenie (a):}
@@ -445,7 +518,7 @@ Pretože ${\{a_n\}}_{n=1}^\infty$ je zhora ohraničená rastúca postupnosť, ex
 Rovnosť $\lim_{n \rightarrow \infty} a_n=2$ vyplýva z rovnosti (*), mohlo by sa teda zdať, že stačilo len v rekurentnom vzťahu $a_{n+1}=\sqrt{2+a_n}$ prejsť k limite a príklad by bol vyriešený, t.j. všetky úvahy o monotónnosti a ohraničenosti boli vlastne zbytočné. To je ovšem omyl; skôr ako napíšeme (*), sa totiž musíme presvedčiť, že limity, ktoré tam vystupujú, skutočne existujú.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-157}
+  \item \useproblem[limita-funkcie]{limita-157}
 \end{enumerate}
 
 \section{Heiného definícia limity}
@@ -460,14 +533,14 @@ Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru $D(f)$ funkcie $f
 Limitu funkcie možno definovať aj bez použitia pojmu okolia; v takomto prípade sa zavedie len pojem vlastnej a nevlastnej limity postupnosti a na definíciu limity funkcie $f$ v bode $a$ sa použije vlastnosť $2$ z uvedenej vety. Definícia limity funkcie v takejto podobe sa nazýva \textit{Hejného definíciou limity}. Veta $15$ teda hovorí, že definícia limity pomocou okolia a Hejného definícia limity sú ekvivalentné.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-158}
+  \item \useproblem[limita-funkcie]{limita-158}
 \end{enumerate}
 
 \textbf{Riešenie (a):}
 Pre postupnosti $a_n=n\pi,b_n=\frac{\pi}{2}+2\pi n$ platí $a_n=\lim_{n \rightarrow \infty} a_n=\lim_{n \rightarrow \infty} b_n=\infty$, $\lim_{n \rightarrow \infty} \sin a_n=0,\lim_{n \rightarrow \infty} b_n=1$. Pre žiadne $b \in \mathbb{R^*}$ teda nemôže byť splnená vlastnosť $2$ z vety $15$, preto neexistuje $\lim_{n \rightarrow \infty} \sin x$.
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-159}
+  \item \useproblem[limita-funkcie]{limita-159}
 \end{enumerate}
 
 \section{Hromadné hodnoty, limes inferior a limes superior postupností}
@@ -493,13 +566,13 @@ Postupnosť ${\{a_n\}}_{n=1}^\infty$ má limitu práve vtedy, keď $\limsup_{n \
 \end{veta}
 
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-160}
-	\item \useproblem[limita-funkcie]{limita-161}
-	\item \useproblem[limita-funkcie]{limita-162}
-	\item \useproblem[limita-funkcie]{limita-163}
-	\item \useproblem[limita-funkcie]{limita-164}
-	\item \useproblem[limita-funkcie]{limita-165}
-	\item \useproblem[limita-funkcie]{limita-166}
+  \item \useproblem[limita-funkcie]{limita-160}
+  \item \useproblem[limita-funkcie]{limita-161}
+  \item \useproblem[limita-funkcie]{limita-162}
+  \item \useproblem[limita-funkcie]{limita-163}
+  \item \useproblem[limita-funkcie]{limita-164}
+  \item \useproblem[limita-funkcie]{limita-165}
+  \item \useproblem[limita-funkcie]{limita-166}
 \end{enumerate}
 
 \textit{Riešenie:}
@@ -514,45 +587,45 @@ $\liminf_{n \rightarrow \infty} (a_n+b_n) \leq \liminf_{k \rightarrow \infty} (a
 
 \section{Ďalšie príklady}
 \begin{enumerate}[resume]
-	\item \useproblem[limita-funkcie]{limita-167}
-	\item \useproblem[limita-funkcie]{limita-168}
-	\item \useproblem[limita-funkcie]{limita-169}
-	\item \useproblem[limita-funkcie]{limita-170}
-	\item \useproblem[limita-funkcie]{limita-171}
-	\item \useproblem[limita-funkcie]{limita-172}
-	\item \useproblem[limita-funkcie]{limita-173}
-	\item \useproblem[limita-funkcie]{limita-174}
-	\item \useproblem[limita-funkcie]{limita-175}
-	\item \useproblem[limita-funkcie]{limita-176}
-	\item \useproblem[limita-funkcie]{limita-177}
-	\item \useproblem[limita-funkcie]{limita-178}
-	\item \useproblem[limita-funkcie]{limita-179}
-	\item \useproblem[limita-funkcie]{limita-180}
-	\item \useproblem[limita-funkcie]{limita-181}
-	\item \useproblem[limita-funkcie]{limita-182}
-	\item \useproblem[limita-funkcie]{limita-183}
-	\item \useproblem[limita-funkcie]{limita-184}
-	\item \useproblem[limita-funkcie]{limita-185}
-	\item \useproblem[limita-funkcie]{limita-186}
-	\item \useproblem[limita-funkcie]{limita-187}
-	\item \useproblem[limita-funkcie]{limita-188}
-	\item \useproblem[limita-funkcie]{limita-189}
-	\item \useproblem[limita-funkcie]{limita-190}
-	\item \useproblem[limita-funkcie]{limita-191}
-	\item \useproblem[limita-funkcie]{limita-192}
-	\item \useproblem[limita-funkcie]{limita-193}
-	\item \useproblem[limita-funkcie]{limita-194}
-	\item \useproblem[limita-funkcie]{limita-195}
-	\item \useproblem[limita-funkcie]{limita-196}
-	\item \useproblem[limita-funkcie]{limita-197}
-	\item \useproblem[limita-funkcie]{limita-198}
-	\item \useproblem[limita-funkcie]{limita-199}
-	\item \useproblem[limita-funkcie]{limita-200}
-	\item \useproblem[limita-funkcie]{limita-201}
-	\item \useproblem[limita-funkcie]{limita-202}
-	\item \useproblem[limita-funkcie]{limita-203}
-	\item \useproblem[limita-funkcie]{limita-204}
-	\item \useproblem[limita-funkcie]{limita-205}
-	\item \useproblem[limita-funkcie]{limita-206}
-	\item \useproblem[limita-funkcie]{limita-207}
+  \item \useproblem[limita-funkcie]{limita-167}
+  \item \useproblem[limita-funkcie]{limita-168}
+  \item \useproblem[limita-funkcie]{limita-169}
+  \item \useproblem[limita-funkcie]{limita-170}
+  \item \useproblem[limita-funkcie]{limita-171}
+  \item \useproblem[limita-funkcie]{limita-172}
+  \item \useproblem[limita-funkcie]{limita-173}
+  \item \useproblem[limita-funkcie]{limita-174}
+  \item \useproblem[limita-funkcie]{limita-175}
+  \item \useproblem[limita-funkcie]{limita-176}
+  \item \useproblem[limita-funkcie]{limita-177}
+  \item \useproblem[limita-funkcie]{limita-178}
+  \item \useproblem[limita-funkcie]{limita-179}
+  \item \useproblem[limita-funkcie]{limita-180}
+  \item \useproblem[limita-funkcie]{limita-181}
+  \item \useproblem[limita-funkcie]{limita-182}
+  \item \useproblem[limita-funkcie]{limita-183}
+  \item \useproblem[limita-funkcie]{limita-184}
+  \item \useproblem[limita-funkcie]{limita-185}
+  \item \useproblem[limita-funkcie]{limita-186}
+  \item \useproblem[limita-funkcie]{limita-187}
+  \item \useproblem[limita-funkcie]{limita-188}
+  \item \useproblem[limita-funkcie]{limita-189}
+  \item \useproblem[limita-funkcie]{limita-190}
+  \item \useproblem[limita-funkcie]{limita-191}
+  \item \useproblem[limita-funkcie]{limita-192}
+  \item \useproblem[limita-funkcie]{limita-193}
+  \item \useproblem[limita-funkcie]{limita-194}
+  \item \useproblem[limita-funkcie]{limita-195}
+  \item \useproblem[limita-funkcie]{limita-196}
+  \item \useproblem[limita-funkcie]{limita-197}
+  \item \useproblem[limita-funkcie]{limita-198}
+  \item \useproblem[limita-funkcie]{limita-199}
+  \item \useproblem[limita-funkcie]{limita-200}
+  \item \useproblem[limita-funkcie]{limita-201}
+  \item \useproblem[limita-funkcie]{limita-202}
+  \item \useproblem[limita-funkcie]{limita-203}
+  \item \useproblem[limita-funkcie]{limita-204}
+  \item \useproblem[limita-funkcie]{limita-205}
+  \item \useproblem[limita-funkcie]{limita-206}
+  \item \useproblem[limita-funkcie]{limita-207}
 \end{enumerate}
