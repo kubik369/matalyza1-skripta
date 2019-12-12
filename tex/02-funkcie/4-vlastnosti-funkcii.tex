@@ -1,0 +1,110 @@
+Nech $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia
+$f:A\rightarrow\mathbb{R}$ sa nazýva ohraničená na množine $B$, ak je ohraničená
+množina $f(B)$. Funkcia ohraničená na svojom definičnom obore sa nazýva
+ohraničená. Analogicky sa zavádza pojem funkcie ohraničenej zhora, resp. zdola a
+funkcie ohraničenej zhora, resp. zdola na množine $B$.
+
+Ak je množina $f(B)$ zhora (zdola) ohraničená, tak jej supremum (infimum) sa
+nazýva supremum (infimum) funkcie $f$ na množine $B$ a označuje sa
+$\sup\limits_{x\in B} f(x)$ ($\inf\limits_{x\in B} f(x)$). Ak existuje maximum
+(minimum) množiny $f(B)$, nazýva sa toto číslo maximum (minimum) funkcie $f$ na
+množine $B$ (často sa používa názov globálne maximum (globálne minimum) funkcie
+$f$ na množine $B$) a označuje sa $\max\limits_{x\in B}f(x)$ ($\min\limits_{x\in
+B}f(x)$).
+
+%Ak je množina $f(B)$ zdola ohraničená, tak jej infimum sa nazýva infimum funkcie
+%$f$ na množine $B$ a označuje sa $\inf_{x\in B} f(x)$. Ak existuje minimum
+%množiny $f(B)$, nazýva sa toto číslo minimum funkcie $f$ na množine $B$ (často
+%sa používa názov globálne minimum funkcie $f$ na množine $B$) a označuje sa
+%$\min_{x\in B}f(x)$.
+
+%Ak je množina $f(B)$ zhora ohraničená, tak jej supremum sa nazýva supremum
+%funkcie $f$ na množine $B$ a označuje sa $\sup_{x\in B} f(x)$. Ak existuje
+%maximum množiny $f(B)$, nazýva sa toto číslo maximum funkcie $f$ na množine $B$
+%(často sa používa názov globálne maximum funkcie $f$ na množine $B$) a označuje
+%sa $\max_{x\in B}f(x)$.
+
+\begin{enumerate}[resume]
+  \item \useproblem[funkcie]{funkcie-35}
+  \item \useproblem[funkcie]{funkcie-36}
+  \item \useproblem[funkcie]{funkcie-37}
+  \item \useproblem[funkcie]{funkcie-38}
+  \item \useproblem[funkcie]{funkcie-39}
+\end{enumerate}
+
+Na $A,B\subset\mathbb{R}$ sú neprázdne množiny, $B\subset A$. Funkcia
+$f:A\rightarrow\mathbb{R}$ sa nazýva rastúca na množine $B$, resp. neklesajúca
+na množine $B$, ak platí
+\[
+  (\forall x,y \in B):
+    x < y \Rightarrow f(x) < f(y)
+\]
+resp.
+\[
+  (\forall x,y \in B):
+    x < y \Rightarrow f(x) \leq f(y)
+\]
+
+Ak má funkcia $f$ niektorú z uvedených štyroch vlastností, nazýva sa monotónna
+na množine $B$; funkcia, ktorá je rastúca na množine $B$ alebo klesajúca na
+množine $B$, sa nazýva rýdzomonotónna na množine $B$.
+
+Funkcia rastúca (klesajúca, nerastúca, neklesajúca, monotónna, rýdzomonotónna)
+na svojom definičnom obore sa nazýva rastúca (klesajúca, nerastúca, neklesajúca,
+monotónna, rýdzomonotónna).
+
+\begin{enumerate}[resume]
+  \item \useproblem[funkcie]{funkcie-40}
+  \item \useproblem[funkcie]{funkcie-41}
+  \item \useproblem[funkcie]{funkcie-42}
+  \showanswers
+  \item \useproblem[funkcie]{funkcie-43}
+  \hideanswers
+  \item \useproblem[funkcie]{funkcie-44}
+  \item \useproblem[funkcie]{funkcie-45}
+  \item \useproblem[funkcie]{funkcie-46}
+  \item \useproblem[funkcie]{funkcie-47}
+\end{enumerate}
+
+Funkcia $f$ sa nazýva periodická, ak existuje číslo $T>0$ tak, že platí
+\begin{itemize}
+\item
+  $
+    (\forall a\in D(f)):
+      d(f)\cap \interval{a+T}{a+2T}=\{x+T;x\in D(f)\cap \interval{a}{a + T}\}
+  $
+\item  $(\forall a \in D(f)):f(a+T)=f(a)$
+\end{itemize}
+
+Každé číslo $T$ s uvedenými vlastnosťami sa nazýva perióda funkcie $f$; ak
+existuje najmenšie také $T>0$, nazýva sa najmenšia perióda funkcie $f$ (možno sa
+stretnúť aj s terminológiou, v ktorej sa pojem perióda používa výlučne v zmysle
+tu zavedeného pojmu najmenšej periódy).
+
+\begin{enumerate}[resume]
+  \item \useproblem[funkcie]{funkcie-48}
+  \item \useproblem[funkcie]{funkcie-49}
+  \item \useproblem[funkcie]{funkcie-50}
+  \item \useproblem[funkcie]{funkcie-51}
+  \item \useproblem[funkcie]{funkcie-52}
+\end{enumerate}
+
+Funkcia $f:A \rightarrow\mathbb{R}$ sa nazýva prostá (injektívna, jednoznačná),
+ak platí:
+\[
+  (\forall x,y\in A):
+    x \neq y \Rightarrow f(x) \neq f(y)
+\]
+
+Ak je funkcia $f:A \rightarrow \mathbb{R}$ prostá, tak funkcia s definičným
+oborom $f(A)$, ktorý každému číslu $x\in f(A)$ priradí to číslo $y\in A$, pre
+ktoré $f(y)=x$, sa nazýva inverzná funkcia k funkcii $f$ a označuje sa $f^{-1}$.
+
+\begin{enumerate}[resume]
+  \showanswers
+    \item \useproblem[funkcie]{funkcie-53}
+  \hideanswers
+  \item \useproblem[funkcie]{funkcie-54}
+  \item \useproblem[funkcie]{funkcie-55}
+  \item \useproblem[funkcie]{funkcie-56}
+\end{enumerate}

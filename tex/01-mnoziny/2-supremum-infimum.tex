@@ -1,0 +1,78 @@
+Neprázdna množina $A \subset \mathbb{R}$ sa nazýva \textit{zhora (zdola)
+ohraničená}, ak platí
+\[
+  (\exists K \in  \mathbb{R})
+    (\forall x \in A):
+      x \leq K
+\]
+\[
+  ((\exists K \in \mathbb{R})
+    (\forall x \in A):
+      x \geq K)
+\]
+
+Číslo $K$ s uvedenou vlastnosťou sa nazýva \textit{horné (dolné)
+ohraničenie množiny $A$.} $\emptyset$ považujeme za ohraničenú zhora aj zdola.
+
+Množina, ktorá je zhora aj zdola ohraničená, sa nazýva \textit{ohraničená}.
+Množina, ktorá nie je ohraničená sa nazýva \textit{neohraničená}.
+
+\begin{enumerate}[resume]
+\item \useproblem[supremum-infimum]{supremum-infimum-14}
+\item \useproblem[supremum-infimum]{supremum-infimum-15}
+\item \useproblem[supremum-infimum]{supremum-infimum-16}
+\end{enumerate}
+
+
+Číslo $\alpha \in \mathbb{R}$ sa nazýva \textit{supremum množiny $A$}
+$\subset \mathbb{R}, A \neq \emptyset$, ak
+\[
+  (\forall x \in A): x \leq \alpha \label{eq:supremum-i}
+\]
+\[
+  (\forall \varepsilon > 0) (\exists \: x_\varepsilon \in A):
+  x_\varepsilon > \alpha - \varepsilon
+\]
+
+Podľa \ding{34} je $\alpha$ horné ohraničenie množiny $A$; \ding{37} je negácia
+výroku ``pre niektoré $\varepsilon > 0$ je číslo $\alpha - \varepsilon$ horným
+ohraničením množiny $A$'', hovorí teda, že neexistuje horné ohraničenie množiny
+$A$, ktoré by bolo menšie než $\alpha$. Teda $\alpha$ je najmenšie horné
+ohraničenie množiny $A$. Supremum množiny $A$ označujeme $\sup \{ A \}$.
+
+Číslo $\beta \in \mathbb{R}$ sa nazýva \textit{infimum množiny} $A \subset
+\mathbb{R}, A \neq \emptyset$, ak:
+
+\begin{align*}
+\forall x \in A&: x \geq \beta \tag{\ding{34}} \\
+(\forall \varepsilon > 0) (\exists \: x_\varepsilon \in A)&:
+x_\varepsilon < \beta + \varepsilon \tag{\ding{37}}
+\end{align*}
+
+To znamená, že $\beta$ je najväčšie z dolných ohraniční množiny $A$. Infimum
+množiny $A$ označujeme $\inf\{A\}$
+
+Ak usporiadané pole $\mathbb{R}$ reálnych čísel konštruujeme z poľa
+$\mathbb{Q}$ racionálnych čísel pomocou Dedekindových rezov, môžeme dokázať
+nasledujúce dve ekvivalentné tvrdenia:
+
+\begin{veta}
+Každá neprázdna zhora ohraničená množina reálnych čísel má supremum.
+\end{veta}
+
+\begin{veta}
+Každá neprázdna zdola ohraničená množina reálnych čísel má infimum.
+\end{veta}
+
+Ak usporiadané pole $\mathbb{R}$ zavádzame axiomaticky, považujeme prvé z
+uvedených tvrdení za axiómu, z nej možno odvodiť vetu o existencií infima.
+
+\showanswers
+\begin{enumerate}[resume]
+\item \useproblem[supremum-infimum]{supremum-infimum-17}
+\hideanswers
+\item \useproblem[supremum-infimum]{supremum-infimum-18}
+\item \useproblem[supremum-infimum]{supremum-infimum-19}
+\item \useproblem[supremum-infimum]{supremum-infimum-20}
+\item \useproblem[supremum-infimum]{supremum-infimum-21}
+\end{enumerate}

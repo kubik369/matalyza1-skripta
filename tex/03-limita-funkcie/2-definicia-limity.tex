@@ -1,0 +1,118 @@
+Nech $a \in \mathbb{R^*}$ je hromadný bod definičného oboru funkcie $f$. Bod $b
+\in \mathbb{R^*}$ sa nazýva \textit{limita funkcie $f$ v bode $a$} ak platí
+\[
+  (\forall O(b)) (\exists O(a)) (\forall x \in (O(a)\setminus \{ a \}) \cap D(f) ):
+  f(x) \in O(b)
+\]
+(Ak $b \in \mathbb{R}$, hovoríme o \textit{vlastnej (alebo konečnej) limite}; ak
+$b=\infty$ alebo $b=-\infty$, o \textit{nevlastnej limite}; ak $a=\infty$ alebo
+$a=-\infty$, používane názov \textit{limita v nevlastnom bode}.) Zapisujeme
+$\lim_{x \rightarrow a} f(x)=b$ alebo $f(x) \rightarrow b$ pre $x \rightarrow
+a$.
+
+Všimnime si teraz jednotlivé prípady, ktoré zahŕňa uvedená definícia; začneme
+postupnosťami:
+\begin{itemize}
+\item
+  Nech $b \in \mathbb{R}$; hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$
+  konverguje k (číslu) $b$, ak $\lim\limits_{n \rightarrow \infty} a_n=b$, t.j.
+  ak platí
+  \[
+    (\forall \varepsilon > 0)
+      (\exists n_0 \in \mathbb{N})
+        (\forall n \in \mathbb{N}) (n > n_0): |a_n-b| < \varepsilon
+  \]
+
+  \textit{Poznámka:} Výroky
+  \[
+    (\forall \varepsilon > 0)
+      (\exists n_0 \in \mathbb{N})
+        (\forall n \in \mathbb{N})
+          (n > n_0): |a_N - b| < \varepsilon
+  \]
+  a
+  \[
+    (\forall \varepsilon > 0)
+      (\exists n_0 \in \mathbb{R})
+        (\forall n \in \mathbb{N})
+          (n > n_0): |a_N - b| < \varepsilon
+  \]
+  sú ekvivalentné. Pretože v definícii konečnej limity postupností je zvykom
+  žiadať $n_0 \in \mathbb{N}$ (a nie $n_0 \in \mathbb{R}$), budeme ju v takej
+  podobe používať aj my (hoci - ako uvidíme v príklade $105$ - sa tým niekedy
+  komplikuje vyjadrenie závislosti čísla $n_0$ na čísle $\varepsilon$).
+  Analogická poznámka sa vzťahuje aj na definície nevlastných limít postupností.
+\item
+  Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $+\infty$, ak
+  $\lim\limits_{n \rightarrow \infty} a_N = +\infty$, t.j. ak platí
+  \[
+    (\forall K \in	\mathbb{R})
+      (\exists n_0 \in \mathbb{N})
+        (\forall n \in \mathbb{N})
+        (n > n_0): a_n>K
+  \]
+\item
+  Hovoríme, že postupnosť ${\{a_n\}}_{n=1}^\infty$ diverguje k $-\infty$, ak
+  $\lim\limits_{n \rightarrow \infty} a_N = -\infty$, t.j. ak platí
+  \[
+    (\forall K \in \mathbb{R})
+      (\exists n_0 \in \mathbb{N})
+        (\forall n \in \mathbb{N})
+          (n > n_0): a_n < K
+  \]
+  Postupnosti, ktoré majú vlastnú limitu, sa nazývajú \textit{konvergentné}; ak
+  postupnosť nemá limitu alebo má nevlastnú limitu, nazýva sa
+  \textit{divergentná}.
+\end{itemize}
+
+\begin{enumerate}[resume]
+  \item \useproblem[limita-funkcie]{limita-105}
+  \item \useproblem[limita-funkcie]{limita-106}
+  \item \useproblem[limita-funkcie]{limita-107}
+  \item \useproblem[limita-funkcie]{limita-108}
+  \item \useproblem[limita-funkcie]{limita-109}
+  \item \useproblem[limita-funkcie]{limita-110}
+\end{enumerate}
+
+Ak $x \in \mathbb{R^*}$, nastáva práve jedna z troch možností:
+$x \in \mathbb{R}$, $x = +\infty$, $x = -\infty$.
+
+Ak v definícii limity funkcie rozlíšime pre body $a, b \in \mathbb{R^*}$ tieto
+možnosti, dostaneme nasledujúcich deväť špeciálnych prípadov (v nich už $a, b$
+označujú len reálne čísla):
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\lim\limits_{x \rightarrow a} f(x) = b$
+    \item $\lim\limits_{x \rightarrow a} f(x) = +\infty$
+    \item $\lim\limits_{x \rightarrow a} f(x) = -\infty$
+    \item $\lim\limits_{x \rightarrow \infty} f(x) = b$
+    \item $\lim\limits_{x \rightarrow \infty} f(x) = +\infty$
+    \item $\lim\limits_{x \rightarrow \infty} f(x) = -\infty$
+    \item $\lim\limits_{x \rightarrow -\infty} f(x) = b$
+    \item $\lim\limits_{x \rightarrow -\infty} f(x) = +\infty$
+    \item $\lim\limits_{x \rightarrow -\infty} f(x) = -\infty$
+\end{enumerate}
+\end{multicols}
+
+\begin{enumerate}[resume]
+  \item \useproblem[limita-funkcie]{limita-111}
+\end{enumerate}
+
+\begin{veta}[Cauchyho-Bolzanovo kritérium konvergencie]
+Nech $a \in \mathbb{R}^*$ je hromadný bod definičného oboru funkcie $f$. Funkcia
+$f$ má v bode $a$ konečnú limitu práve vtedy, keď platí:
+\[
+  (\forall \varepsilon > 0)
+    (\exists O(a))
+      (\forall x,y \in (O(a) \setminus \{ a \}) \cap D(f))
+        : |f(x)-f(y)| < \varepsilon
+\]
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[limita-funkcie]{limita-112}
+  \item \useproblem[limita-funkcie]{limita-113}
+  \item \useproblem[limita-funkcie]{limita-114}
+  \item \useproblem[limita-funkcie]{limita-115}
+\end{enumerate}

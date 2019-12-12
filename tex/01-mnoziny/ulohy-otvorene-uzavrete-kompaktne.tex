@@ -1,0 +1,159 @@
+\begin{defproblem}{kompaktne-208}
+Rozhodnite o uzavretosti a otvorenosti nasledujúcich množín:
+\begin{tasks}(2)
+    \task
+        $\interval[open]{0}{1} \cup \interval{2}{3}$
+    \task
+        $\interval[open]{0}{1} \setminus \{\frac{1}{2^n}; n \in \mathbb{N}\}$
+    \task $\interval{0}{1} \setminus \{\frac{1}{n}; n \in \mathbb{N}\}$
+    \task $\mathbb{N}$
+    \task $\mathbb{Q}$
+    \task $\zeta(\mathbb{R})$
+    \task
+        $f(\mathbb{R})$, kde $f$ je Riemannova funkcia (definíciu Riemannovej
+        funkcie pozri v príklade $230$)
+    \task $\bigcup_{n \in \mathbb{N}} (\frac{1}{2n+1},\frac{1}{2n})$
+    \task!
+        $\bigcup_{n \in \mathbb{N}} \interval{\frac{1}{2n+1}}{\frac{1}{2n}}$
+        $(= \interval{\frac{1}{3}}{\frac{1}{2}}
+        \cup \interval{\frac{1}{5}}{\frac{1}{4}} \cup ...)$
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-209}
+Dokážte nasledujúce tvrdenia:
+\begin{tasks}
+\task
+    ak $A,B$ sú otvorené množiny, tak aj množiny $A \cup B$,$A \cap B$ sú
+    otvorené
+\task
+    ak $A,B$ sú uzavreté množiny, tak aj množiny $A \cup B$,$A \cap B$ sú
+    uzavreté
+\task
+    ak $A$ je otvorená a $B$ uzavretá množina, tak $A \setminus B$ je otvorená
+    $B \setminus A$ je uzavretá množina
+\task
+    ak $\{A_{\alpha}: \alpha \in I\}$ je systém otvorených množín (I je
+    neprázdna indexová množina), tak $\bigcup_{\alpha \in I} A_\alpha (:=\{x \in
+    \mathbb{R}; \exists \alpha \in I: x \in A_\alpha\})$ je otvorená množina
+    (teda slovne: zjednotenie ľubovoľného systému otvorených množín je otvorená
+    množina)
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-210}
+Ak $\emptyset \neq A \subset \mathbb{R}$ je otvorená množina a $B \subset
+\mathbb{R}$ je ľubovoľná neprázdna množina, tak $A+B$ je otvorená množina
+(definíciu množiny $A+B$ pozri v príklade $21$).
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-211}
+Ukážte, že $1.$ interval $(a,b)$ možno písať ako zjednotenie uzavretých
+nedegenerovaných intervalov (degenerovanými intervalmi sa nazývajú jednoprvkové
+množiny), ale $2.$ interval $\interval{a}{b}$ nemožno písať v tvare zjednotenia
+otvorených intervalov.
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-212}
+Nech $\emptyset \neq A \subset \mathbb{R}$ je otvorená množina a $B \subset
+\mathbb{R}$ je ľubovoľná neprázdna množina. Potom množina $A:=\{|x-y|; x \in A,
+y \in B\}$ je buď otvorená alebo je zjednotením otvorenej množiny s
+jednoprvkovou množinou $\{0 \}$.
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-213}
+Ak množina $A \subset \mathbb{R}$ je súčasne otvorená aj uzavretá, tak
+$A=\emptyset$ alebo $A=\mathbb{R}$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-214}
+Dokážte, že:
+\begin{tasks}
+\task uzavretá podmnožina kompaktu je kompakt
+\task zjednotenie konečného počtu kompaktov je kompakt
+\task prienik konečného počtu kompaktov je kompakt
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-215}
+Je daná spočítateľná kompaktná množina
+$E=\{0,1,\frac{1}{2},...,\frac{1}{2^n},...\}$
+ktorá je pokrytá systémom intervalov
+\[
+\{
+    (-\varepsilon, \varepsilon),
+    (1-\varepsilon,1+\varepsilon),
+    (\frac{1-\varepsilon}{2},\frac{1+\varepsilon}{2}),
+    ...,
+    (\frac{1-\varepsilon}{2^n},
+    \frac{1+\varepsilon}{2^n}),
+    ...
+\}
+\]
+kde $\varepsilon$ je dané kladné číslo, $\varepsilon<\frac{1}{2}$. Nájdite
+konečné pokrytie vybrané z tohto otvoreného pokrytia.
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-216}
+Je daná spočítateľná množina
+$E=\{0,1,\frac{1}{2},...,\frac{1}{2^n},... \}$
+pokrytá systémom otvorených intervalov
+$$
+\{
+    (-\varepsilon, \varepsilon),
+    (1-\varepsilon,1+\varepsilon),
+    (\frac{1-\varepsilon}{2},\frac{1+\varepsilon}{2}),
+    ...,
+    (\frac{1-\varepsilon}{2^n},\frac{1+\varepsilon}{2^n}),
+    ...
+\}
+$$
+kde $\varepsilon$ je dané kladné číslo, $\varepsilon<\frac{1}{2}$. Možno z tohto
+pokrytia vybrať konečné podpokrytie?
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-217}
+Množina $\interval[open left]{0}{1}$ nie je kompaktná. Nájdite také jej otvorené
+pokrytie, z ktorého nemožno vybrať konečné podpokrytie!
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-218}
+\begin{tasks}
+\task
+    Nech $A_1,...,A_n,...$ sú neprázdne kompaktné množiny, nech
+    \[A_1 \supset A_2 \supset ... \supset A_n \supset ...\]
+    Dokážte, že množina
+    \[
+        \bigcap_{n \in \mathbb{N}} A_n (:=\{x \in \mathbb{R};
+        (\forall n \in \mathbb{N}): x \in A_n\})
+    \]
+    je neprázdna!
+\task
+    Nech ${\{A_n\}}_{n=1}^\infty$ je postupnosť kompaktov taká, že prienik
+    ľubovoľného konečného počtu jej členov je neprázdny. Potom
+    \[ \bigcap_{n \in \mathbb{N}} A_n \neq \emptyset \]
+    Dokážte!
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-219}
+Rozhodnite, či tvrdenie \enquote{$A \subset \mathbb{R}$ je kompaktná množina} je
+ekvivalentné s niektorou z podmienok:
+\begin{tasks}
+\task
+    otvorenými intervalmi
+\task
+    uzavretými množinami
+\task
+    uzavretými nedegenerovanými intervalmi
+\task
+    intervalmi typu $\interval[open right]{a}{b}$ možno vybrať konečné
+    podpokrytie
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{kompaktne-220}
+Ak sú $A,B \subset \mathbb{R}$ neprázdne kompaktné množiny, tak aj množiny
+$A+B,A \cdot B$ sú kompaktné. Dokážte! $(A \cdot B :=\{a \cdot b; a \in A, b \in
+B\})$
+\end{defproblem}

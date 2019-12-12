@@ -1,0 +1,65 @@
+Postupnosť ${\{a_n\}}_{n=1}^\infty$ sa nazýva \textit{podpostupnosť (vybranou
+postupnosťou z) postupnosti ${\{a_n\}}_{n=1}^\infty$}, ak existuje rastúce
+zobrazenie $k: \mathbb{N} \rightarrow \mathbb{N}$ také, že $b_n=a_{k(n)}$.
+
+Bod $a \in \mathbb{R^*}$ sa nazýva \textit{hromadnou hodnotou postupnosti
+${\{a_n\}}_{n=1}^\infty$}, ak je limitou niektorej jej podpostupnosti (to je
+ekvivalentné s podmienkou: pre každé okolie $O(a)$ bodu $a$ je množina $\{n \in
+\mathbb{N}: a_n \in O(a) \}$). Supremum (infimum) množiny $H$ v množine
+$\mathbb{R^*}$ sa nazýva \textit{limes superior (limer inferior) postupnosti
+${\{a_n\}}_{n=1}^\infty$} a označuje sa $\lim\limits_{n \rightarrow \infty}\sup
+a_n$ $(\lim\limits_{n \rightarrow \infty} \inf a_n)$.
+
+Suprémum (infimum) množiny $H$ v $\mathbb{R^*}$ sa definuje ako najmenšie
+(najväčšie) z jej horných (dolných) ohraničení, pritom ako horné a dolné
+ohraničenia prichádzajú do úvahy aj body $+\infty,-\infty$. Teda napr.
+supremom zhora neohraničenej množiny $H \subset \mathbb{R}$ je v množine
+$\mathbb{R^*}$ bod $+\infty$; $\sup\{-\infty\}$=$-\infty$ a pod. Pre zhora
+(zdola) ohraničenú množinu $H \subset \mathbb{R}$ je jej supremum (infimum) v
+$\mathbb{R^*}$ zhodné s jej supremom (infimom).
+
+\begin{veta}
+Limes superior a limes ingerior postupnosti ${\{a_n\}}_{n=1}^\infty$ sú jej
+hromadnými hodnotami.
+\end{veta}
+
+\begin{veta}
+Nech je daná postupnosť ${\{a_n\}}_{n=1}^\infty$, nech $b \in \mathbb{R}$.
+Rovnosť
+\begin{align*}
+  \lim\limits_{n \rightarrow \infty} \sup a_n =b
+  && (\lim\limits_{n \rightarrow \infty} \inf a_n =b)
+\end{align*}
+platí práve vtedy, keď:
+\begin{itemize}
+\item $b$ je hromadná hodnota postupnosti ${\{a_n\}}_{n=1}^\infty$
+\item
+  pre každé $\varepsilon > 0$ je množina
+  \begin{align*}
+    \{ n \in \mathbb{N}: a_n \geq b +\varepsilon \}
+    && (\{  n \in \mathbb{N}: a_n \leq b +\varepsilon \} )
+  \end{align*}
+  konečná.
+\end{itemize}
+\end{veta}
+
+\begin{veta}
+Postupnosť ${\{a_n\}}_{n=1}^\infty$ má limitu práve vtedy, keď:
+\[
+  \lim\limits_{n \rightarrow \infty} \sup a_n = \lim\limits_{n \rightarrow \infty} \inf a_n
+\]
+Limitou je pritom spoločná hodnota $\lim\limits_{n \rightarrow \infty} \sup a_n$
+a $\lim\limits_{n \rightarrow \infty} \inf a_n$.
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[limita-funkcie]{limita-160}
+  \item \useproblem[limita-funkcie]{limita-161}
+  \item \useproblem[limita-funkcie]{limita-162}
+  \item \useproblem[limita-funkcie]{limita-163}
+  \item \useproblem[limita-funkcie]{limita-164}
+  \item \useproblem[limita-funkcie]{limita-165}
+  \par
+  \needspace{2\baselineskip}
+  \item \useproblem[limita-funkcie]{limita-166}
+\end{enumerate}

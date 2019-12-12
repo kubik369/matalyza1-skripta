@@ -1,11 +1,9 @@
-\chapter*{Úvod (výroky, dôkazy)}
-
 \epigraph{
-  ``Prosím také, aby čtenář nepovažoval tyto vědomě neúplné poznámky za
+  \enquote{Prosím také, aby čtenář nepovažoval tyto vědomě neúplné poznámky za
 nějaký (sebe elementárnejší) úvod do matematickej logiky. Šlo mně jenom o to,
 abychom si ujasnili způsob vjadřovaní, kterého ostatně nadaný matematik užívá
-intuitivně s neomylnou správností.''
-}{Vojtěch Jarník, Diferenciální počet (II)}
+intuitivně s neomylnou správností.}
+}{\textit{Vojtěch Jarník, Diferenciální počet (II)}}
 
 V matematike sa stretávame s tvrdeniami, o ktorých má
 zmysel povedať, že sú pravdivé alebo nepravdivé. Také tvrdenia sa nazývajú
@@ -16,28 +14,39 @@ Z výrokov A, B môžeme pomocou operácií negácie ($\neg$), konjukcie
 ($\iff$) vytvoriť nové, tzv. \emph{zložené výroky}:
 
 \begin{center}
-  \begin{tabular}{ m{0.15\linewidth} p{0.5\linewidth} }
+  \begin{tabular}{|m{0.15\linewidth} | p{0.6\linewidth}|}
+    \hline
     $\neg A$ & negácia výroku $A$ \\
+    \hline
     \bigskip
     $A \land B$
       & \enquote{$A$ a súčasne $B$},
         \enquote{$A$ a $B$};
+
         namiesto $A \land B$ a často píše $A, B$ \\
+    \hline
     \bigskip
     $A \lor B$
       & \enquote{$A$ alebo $B$},
         \enquote{alebo $A$ alebo $B$} \\
+    \hline
     \bigskip
     $A \Rightarrow B$
       & \enquote{ak $A$, tak $B$},
         \enquote{nech $A$, potom $B$},
+
         \enquote{$A$ je postačujúca podmienka pre $B$},
+
         \enquote{$B$ je nutná podmienka pre $A$} \\
+    \hline
     \bigskip
     $A \iff B$
       & \enquote{$A$ vtedy a len vtedy, keď $B$},
+
         \enquote{$A$ práve vtedy, keď $B$},
+
         \enquote{$A$ je nutná a postačujúca podmienka pre $B$} \\
+    \hline
   \end{tabular}
 \end{center}
 
@@ -78,12 +87,18 @@ Pre negáciu zložených výrokov platia tieto pravidlá:
   \end{tabular}
 \end{center}
 
-Často budeme využívať, že pre ľubovoľné výroky $A, B$ je
+Často budeme využívať, že pre ľubovoľné výroky $A, B$ je:
 \begin{enumerate}
-  \item implikácia - $A \Rightarrow B$ - rovnocenná s obmenou (kontrapozíciou) -
-        $\neg B \Rightarrow \neg A$
-  \item ekvivalencia $A \iff B$ rovnocenná s výrokom
-        $(A \Rightarrow B) \land (B \Rightarrow A)$
+  \item
+    implikácia rovnocenná s obmenou (kontrapozíciou)
+    \[
+      A \Rightarrow B \iff \neg B \Rightarrow \neg A
+    \]
+  \item
+    ekvivalencia rovnocenná s výrokom
+    \[
+      (A \iff B) \iff (A \Rightarrow B) \land (B \Rightarrow A)
+    \]
 \end{enumerate}
 
 Každá definícia v matematike má podobu ekvivalencie. Je však zvykom nevyjadrovať
@@ -92,7 +107,8 @@ slovom \enquote{ak}. Teda napr. definíciu v slovnej podobe \enquote{funkcia sa
 nazýva rastúca, ak platí ...} treba chápať ako ekvivalenciu \enquote{funkcia je
 rastúca $\iff$ ...}.
 
-\textbf{Výrokové formy. Všeobecné a existenčné výroky a ich negovanie}:
+\subsubsection*{Výrokové formy. Všeobecné a existenčné výroky a ich negovanie}
+
 Výroková forma je výraz, ktorý síce nie je výrokom, ale obsahuje premenné,
 ktorých vhodným nahradením vznikne výrok (napr. výroková forma $x^2 + y \geq 0
 \land y < 0$ obsahuje dve také premenné). Tvorenie zložených výrokových foriem
@@ -146,8 +162,7 @@ všeobecný (existenčný) výrok.
 Dôkaz ekvivalencie $A \iff B$ spravidla prevádzame na dôkaz dvoch implikácií
 $A \Rightarrow B$ a $B \Rightarrow A$
 
-\textbf{Podrobnejšie o dôkazoch všeobecných výrokov:}
-
+\subsubsection*{Podrobnejšie o dôkazoch všeobecných výrokov:}
 Ako príklad priameho dôkazu všobecného výroku nám poslúži dôkaz tvrdenia
 \enquote{ak celé číslo $n$ nie je deliteľné 3, tak $n^2 - 1$ je deliteľné 3}
 (symbolicky $\forall n \in \mathbb{Z}: (3 \nmid n \Rightarrow 3 \mid
@@ -198,9 +213,13 @@ platí $\varphi (1)$
 Takýmto spôsobom možno dokazovať aj tvrdenia platné pre všetky prirodzené čísla
 väčšie než dané číslo $p$, pre všetky celé čísla, pre všetky párne čísla a pod.
 
-Pri nepriamom dôkaze všeobecného výroku odvodzujeme z jeho negácie nepravdivé tvrdenie.
+Pri nepriamom dôkaze všeobecného výroku odvodzujeme z jeho negácie nepravdivé
+tvrdenie.
 
-\textbf{Dôkazy existenčných výrokov.} Výrok $\exists ~ x \in A: \varphi (x)$
+\medskip
+
+\subsubsection*{Dôkazy existenčných výrokov}
+Výrok $\exists ~ x \in A: \varphi (x)$
 môžeme dokázať tak, že priamo určíme (skonštruujeme) prvok $a \in A$, pre ktorý
 je výrok $\varphi (a)$ pravdivý. Taký dôkaz sa nazýva konštruktívny. Často však
 odvodzujeme existenčný výrok z iných existenčných viet bez toho, že by sme

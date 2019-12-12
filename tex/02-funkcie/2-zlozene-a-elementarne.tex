@@ -1,0 +1,110 @@
+Nech sú dané funkcie $f$, $g$.
+
+\begin{itemize}
+  \item
+    Ak je množina $D_1:=D(f)\cap D(g)$ neprázdna, nazývajú sa funkcie $p, q, r$
+    definované na množine $D_1$ predpismi
+    \begin{align*}
+      p(x) &= f(x)+g(x) \\
+      q(x) &= f(x)-g(x) \\
+      r(x) &= f(x)\cdot g(x)
+    \end{align*}
+    súčet, rozdiel a súčin funkcií $f, g$ a označujú sa $f+g$, $f-g$, $f\cdot g$.
+  \item
+    Ak je množina $D_2:=D(f)\cap \{x\in D(g);g(x)\neq 0\}$ neprázdna, nazýva sa
+    funkcia $s:D_2 \rightarrow \mathbb{R}$ definovaná predpisom
+    \[
+      a(x)=\frac{f(x)}{g(x)}
+    \]
+    podiel funkcií $f$, $g$ a označuje sa $\frac{f}{g}$.
+  \item
+    Ak je množina $D_3:=\{x\in D(f);f(x)\in D(g)\}$ neprázdna, nazýva sa funkcia
+    $t:D_3\rightarrow\mathbb{R}$ daná predpisom
+    $$t(x)=g(f(x))$$
+    zložená funkcia z funkcií $f$, $g$ (superpozícia funkcií $f$ a $g$) a označuje
+    sa $g \circ f$. Funkcia $f$ sa nazýva vnútorná zložka, funkcia $g$ vonkajšia
+    zložka funkcie $g \circ f$.
+\end{itemize}
+
+Základnými elementárnymi funkciami nazývame nasledujúce funkcie:
+
+\noindent
+% FIXME odkazy na footnotes v tabulke
+\begin{tabular}{|p{0.21\textwidth}|p{0.22\textwidth}|p{0.45\textwidth}|}
+  \hline
+  \textbf{Názov} & \textbf{Predpis} & \textbf{Definičný obor} \\
+  \hline
+  konštantné &
+  $\underset{a \in \mathbb{R}}{f(x)}\equiv a$  & $\mathbb{R}$ \\
+  \hline
+  mocninové &
+  $\underset{a \in \mathbb{R} \setminus {0}}{f(x)}\equiv a$ &
+  \begin{enumerate}[leftmargin=0.5cm]
+    \item ak $a>0$:
+      \begin{enumerate}[leftmargin=0.5cm]
+        \item ak $a=\frac{p}{q},p,q\in\mathbb{N},$ $p$ je párne alebo $p$ aj $q$
+              sú nepárne: $\mathbb{R}$
+        \item vo všetkých ostatných prípadoch: $\interval[open right]{0}{\infty}$
+      \end{enumerate}
+    \item ak $a<0$:
+      \begin{enumerate}[leftmargin=0.5cm]
+        \item ak $a=-\frac{p}{q},p,q\in\mathbb{N}$, $p$ je párne lebo $p$ aj $q$
+              sú nepárne: $\mathbb{R} \setminus \{0\}$
+        \item vo všetkých ostatných prípadoch: $\interval[open]{0}{\infty}$
+      \end{enumerate}
+  \end{enumerate}
+  \\
+  \hline
+  exponenciálne
+    & $f(x)=a^x, $\newline$ a>0,a\neq 1$
+    & $\mathbb{R}$ \\
+  \hline
+  logaritmické
+    & $f(x)=\log_a x,$\newline$ a>0,a\neq 1$ & $\mathbb{R}^{+}$ \\
+  \hline
+  goniometrické & $f(x)=\sin x$ & $\mathbb{R}$ \\
+    & $f(x)=\cos x$ & $\mathbb{R}$ \\
+    & $f(x)=\tan x$ & $\mathbb{R}\ \{\frac{\pi}{2}+k\pi;k\in\mathbb{Z}\}$ \\
+    & $f(x)=\cot x$ & $\mathbb{R}\ \{k\pi;k\in\mathbb{Z}\}$ \\
+  \hline
+  cyklometrické
+    & $f(x)=\arcsin x$ & $\interval{-1}{1}$ \\
+    & $f(x)=\arccos x$ & $\interval{-1}{1}$ \\
+    & $f(x)=\arctan x$ & $\mathbb{R}$ \\
+    & $f(x)=\arccot x$ & $\mathbb{R}$ \\
+  \hline
+\end{tabular}
+
+Funkcie, ktoré vzniknú zo základných elementárnych funkcií len použitím
+operácií súčtu, rozdielu, súčinu, podielu a superpozície funkcií, sa nazývajú
+elementárne funkcie.
+
+Všimnime si, že definičný obor funkcie, ktorá je súčtom, rozdielom, súčinom,
+podielom alebo superpozíciou daných funkcií $f$ a $g$, je jednoznačne určený
+množinami $D(f)$ a $D(g)$. Teda ak funkcia $h$ vznikne z funkcií
+$f_1,\ldots,f_n$ len použitím operácií súčtu, rozdielu, súčinu, podielu a
+superpozície funkcií, je množina $D(h)$ jednoznačne určená množinami
+$D(f_1),\ldots,D(f_n)$. Preto ak napíšeme predpis takejto funkcie $h$ bez toho,
+aby sme výslovne určili jej definičný obor, považujeme funkciu $h$ za
+definovanú práve na tej množine, ktorá je určená množinami
+$D(f_1),\ldots,D(f_n)$ na základe definícií súčtu, rozdielu, súčinu, podielu a
+superpozície funkcií. (Teda trocha nepresne povedané, za definičný obor takejto
+funkcie $h$ považujeme množinu všetkých tých $x\in\mathbb{R}$, pre ktoré má
+predpis funkcie $h$ \enquote{zmysel}.)
+
+\begin{enumerate}[resume]
+  \item \useproblem[funkcie]{funkcie-22}
+  \item \useproblem[funkcie]{funkcie-23}
+  \item \useproblem[funkcie]{funkcie-24}
+  \item \useproblem[funkcie]{funkcie-25}
+\end{enumerate}
+
+Ak $f: A \rightarrow \mathbb{R}, g: B \rightarrow \mathbb{R}$ sú funkcie, $A
+\subset B$ a pre všetky $x \in A$ platí $f(x) = g(x)$, hovoríme, že funkcia $f$
+je zúženie funkcie $g$ na množinu $A$ ($f$ je funkcia $g$ zúžená na množinu
+$A$) a označujeme $f = \frac{g}{A}$.
+
+% má tam byť číslovanie v príklade
+\begin{enumerate}[resume]
+  \item \useproblem[funkcie]{funkcie-26}
+\end{enumerate}

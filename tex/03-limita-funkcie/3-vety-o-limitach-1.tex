@@ -1,0 +1,184 @@
+\begin{veta}
+\textbf{o limite skalárneho násobku, súčtu, rozdielu, súčinu a podielu}
+
+Nech sú dané funkcie $f,g$, nech $a \in \mathbb{R^*}$ je hromadný bod množiny
+$D(f) \cap D(g)$. Ak existujú konečné $\lim\limits_{x \rightarrow a} f(x)=A$,
+$\lim\limits_{x \rightarrow a} g(x)=B$, tak existuje aj
+$\lim\limits_{x \rightarrow a} cf(x)$ ($c \in \mathbb{R}$ je konštanta),
+$\lim\limits_{x \rightarrow a} (f(x)+g(x)),
+\lim\limits_{x \rightarrow a}(f(x)-g(x)),
+\lim\limits_{x \rightarrow a} (f(x) \cdot g(x))$
+a platí
+\begin{multicols}{2}
+\begin{enumerate}[label=]
+    \item $\lim\limits_{x \rightarrow a} c \cdot f(x) = cA$
+    \item $\lim\limits_{x \rightarrow a} (f(x)+g(x)) = A+B$
+    \item $\lim\limits_{x \rightarrow a} (f(x)-g(x)) = A-B$
+    \item $\lim\limits_{x \rightarrow a} (f(x) \cdot g(x)) = A \cdot B$
+    \item $( = c \cdot \lim\limits_{x \rightarrow a} f(x))$
+    \item $( = \lim\limits_{x \rightarrow a} f(x)+\lim\limits_{x \rightarrow a} g(x))$
+    \item $( = \lim\limits_{x \rightarrow a} f(x)-\lim\limits_{x \rightarrow a} g(x))$
+    \item $( = \lim\limits_{x \rightarrow a} f(x) \cdot \lim\limits_{x \rightarrow a} g(x))$
+\end{enumerate}
+\end{multicols}
+Ak naviac $B \neq 0$, tak existuje aj $\lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)}$
+a platí
+\begin{multicols}{2}
+\begin{enumerate}[label=]
+\item $\lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)}=\frac{A}{B}$
+\item $(=\frac{\lim\limits_{x \rightarrow a} f(x)}{\lim\limits_{x \rightarrow a} g(x)})$.
+\end{enumerate}
+\end{multicols}
+\end{veta}
+
+\begin{veta} \textbf{o limite zloženej funkcie}
+Nech sú dané funkcie $f, g$ nech $a \in \mathbb{R^*}$ je hromadný bod množiny
+$D(f \circ g)$. Ak $\lim\limits_{x \rightarrow a} g(x) = A$ $(A \in
+\mathbb{R^*})$, pričom je splnená podmienka
+\[
+  (\exists O(a))
+    (\forall x \in O(a)):
+      x \neq a \Rightarrow g(x) \neq A
+\]
+a
+\[
+  \lim\limits_{x \rightarrow A} f(x) = B \quad (B \in \mathbb{R^*})
+\]
+tak
+\[
+  \lim\limits_{x \rightarrow a} f(g(x)) = B
+\]
+\end{veta}
+
+\textit{Poznámka:}
+Ak $A$ je hromadným bodom $D(f)$, ale $A \notin D(f)$, tak uvedená veta platí aj
+vtedy, keď nie je splnená podmienka (*).
+
+Niektoré limity možno nájsť len na základe definície, v ostatných prípadoch je
+však oveľa efektívnejšie použiť vety o limitách. Pritom je potrebné osvojiť si
+zdôvodňovanie jednotlivých krokov výpočtu, inak sa nenaučíme odlišovať správne
+postupy od nesprávnych. Na ilustráciu podrobne popíšme nasledujúci výpočet
+
+\[
+  \begin{split}
+    \lim_{x \rightarrow \infty} \frac{2x^2 + 3x + 5}{3x^2 - 7}
+      &= \lim_{x \rightarrow \infty}
+          \frac{
+            2
+            + \frac{3}{x}
+            + \frac{5}{x^2}}{3 - \frac{7}{x^2}}
+      = \frac{\lim\limits_{x \rightarrow \infty}
+        (
+          2
+          + \frac{3}{x}
+          + \frac{5}{x^2}
+        )}{
+          \lim\limits_{x \rightarrow \infty} (3 - \frac{7}{x^2})
+        } \\
+      &= \frac{
+          \lim\limits_{x \rightarrow \infty}
+          2
+          + \lim\limits_{x \rightarrow \infty} \frac{3}{x}
+          + \lim\limits_{x \rightarrow \infty} \frac{5}{x^2}
+        }{
+          \lim\limits_{x \rightarrow \infty} 3
+          -
+          \lim\limits_{x \rightarrow \infty}
+            \frac{7}{x^2}
+        } \\
+      &= \frac{2+0+0}{3-0}
+      = \frac{2}{3}.
+  \end{split}
+\]
+
+\textbf{1. krok:}
+Na intervale $\interval[open]{0}{\infty}$ iste platí
+\[
+  \frac{2x^2 + 3x + 5}{3x^2 - 7}
+  = \frac{2 + \frac{3}{x} + \frac{5}{x^2}}{3 - \frac{7}{x^2}}
+\]
+(zlomok vľavo stačí rozšíriť výrazom $\frac{1}{x^2}$), preto: ak existuje limita
+na pravej strane prvej rovnosti, tak existuje aj limita na jej ľavej strane a
+tieto limity sa rovnajú.
+
+\textit{Poznámka}: Táto elementárna, ale veľmi častá úvaha sa vo všeobecnosti
+formuluje takto: Nech $a \in \mathbb{R^*}$ je hromadný bod $D(f)$, nech existuje
+$O(a)$ tak, že:
+\[
+  D(f) \cap (O(a) \setminus \{ a\})=D(g) \cap (O(a) \setminus \{ a\})
+\]
+a $(\forall x \in D(f) \cap (O(a) \setminus \{ a\})$ platí $f(x)=g(x)$
+Ak existuje $\lim\limits_{x \rightarrow a} g(x)=b$ $(\in \mathbb{R^*})$, tak
+platí $\lim\limits_{x \rightarrow a} f(x)=b$.
+
+Ďalej sa teda snažíme zistiť, či
+existuje
+\[
+  \lim\limits_{x \rightarrow \infty}
+    \frac{2+\frac{3}{x} + \frac{5}{x^2}}{3-\frac{7}{x^2}}
+\]
+
+\textbf{2. krok:}
+tu sme použili vetu o limite podielu (zatiaľ ovšem len \enquote{na čestné
+slovo}); presnejšie povedané: ak ukážeme, že limita v čitateli aj v menovateli
+existujú a sú konečné, pričom limita v menovateli je nenulová, tak podľa vety o
+limite podielu bude platiť druhá rovnosť;
+
+\textbf{3. krok:}
+v čitateli sme použili vetu o limite súčtu (tú možno indukciou rozšítiť na
+ľubovoľný konečný počet sčítancov), v menovateli vetu o limite rozdielu (obidve
+zatiaľ tiež len \enquote{na čestné slovo});
+
+\textbf{4. krok:}
+teraz už ľahko overíme, že druhá a tretia rovnosť skutočne platia, pretože
+$\lim\limits_{x \rightarrow \infty} 2$,
+$\lim\limits_{x \rightarrow \infty} \frac{3}{x}$,
+$\lim\limits_{x \rightarrow \infty} \frac{5}{x^2}$,
+$\lim\limits_{x \rightarrow \infty} 3$
+a
+$\lim\limits_{x \rightarrow \infty} \frac{7}{x^2}$
+existujú a sú konečné (to ľahko dokážeme priamo z definície), bolo použitie viet
+o limite súčtu a rozdielu v tretej rovnosti oprávnené (a preto $\lim\limits_{x
+\rightarrow \infty} (2 + \frac{3}{x} + \frac{5}{x^2}) = 2$, $\lim\limits_{x
+\rightarrow \infty} (3 - \frac{7}{x^2}) = 3$); rovnako oprávnené bolo použitie
+vety o limite podielu v druhom kroku (limita v čitateli aj v menovateli - ako
+sme sa práve presvedčili - skutočne existujú, sú konečné a limita v menovateli
+je naviac nenulová).
+
+Z platnosti prvej, druhej a tretej rovnosti vyplýva $\lim\limits_{x \rightarrow
+\infty} \frac{2x^2 + 3x + 5}{3x^2 - 7} = \frac{2}{3}$.
+
+Takéto zdôvodnenie (vykonané ovšem len v duchu alebo ústne) by malo byť súčasťou
+výpočtu každej limity; po získaní istej prace budú zápisy aj argumentácia
+podstatne stručnejšie
+
+\begin{veta}
+Ak $f$ je elementárna funkcia a bod $a \in D(f)$ je hromadný bod množiny $D(f)$
+je hromadný bod množiny $D(f)$, tak $\lim\limits_{x \rightarrow a} f(x) = f(a)$.
+(Toto tvrdenie veľmi úzko súvisí s pojmom spojitosti (pozri kap. 3).)
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[limita-funkcie]{limita-116}
+  \item \useproblem[limita-funkcie]{limita-117}
+  \item \useproblem[limita-funkcie]{limita-118}
+  \item \useproblem[limita-funkcie]{limita-119}
+  \item \useproblem[limita-funkcie]{limita-120}
+  \item \useproblem[limita-funkcie]{limita-121}
+  \item \useproblem[limita-funkcie]{limita-122}
+  \item \useproblem[limita-funkcie]{limita-123}
+  \item \useproblem[limita-funkcie]{limita-124}
+  \item \useproblem[limita-funkcie]{limita-125}
+\end{enumerate}
+
+\begin{veta}
+$\lim\limits_{x \rightarrow 0} \frac{\sin{x}}{x}=1$.
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[limita-funkcie]{limita-126}
+  \item \useproblem[limita-funkcie]{limita-127}
+  \item \useproblem[limita-funkcie]{limita-128}
+  \item \useproblem[limita-funkcie]{limita-129}
+  \item \useproblem[limita-funkcie]{limita-130}
+\end{enumerate}

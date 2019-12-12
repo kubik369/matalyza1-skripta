@@ -1,0 +1,73 @@
+Pri zostrojovaní grafu funkcie $f$ postupujeme spravidla nasledovne:
+\begin{itemize}
+\item
+  určíme $D(f)$
+\item
+  nájdeme všetky hodnoty $x$, pre ktoré $f(x)=0$ (t.j. priesečníky grafu funkcie
+  $f$ s osou $Ox$)
+\item
+  vyšetríme spojitosť funkcie $f$ a jej správanie sa v bodoch nespokojnosti
+\item
+  zistíme, na ktorých intervaloch je $f$ monotónna, a nájdeme body, v ktorých
+  nadobúda lokálne extrémy
+\item
+  vyšetríme konvexnosť a konkávnosť funkcie $f$, nájdeme inflexné body
+\item
+  nájdeme asymptoty grafu funkcie (definíciu asymptoty pozri ďalej)
+\end{itemize}
+Zostrojenie grafu funkcie $f$ môžu uľahčiť niektoré jej špeciálne vlastnosti:
+pri párnej alebo nepárnej funkcii stačí zostrojiť graf funkcie $f/D(f)\cap
+\interval[open right]{0}{+\infty}$, v prípade periodickej funkcie $f$ graf
+funkcie $f/\interval{a}{a + T} \cap D(f)$ a $T$ je niektorá perióda funkcie $f$.
+
+(Nech je daná funkcia $f$, nech $a\in\mathbb{R}$ je hromadný bod množiny
+$D(f)\cap (a,+\infty)$) (množiny $D(f)\cap (-\infty,a)$). Ak existuje
+$\lim\limits_{x\rightarrow a+}f(x)$  $(\lim\limits_{x\rightarrow a-}f(x))$ a je nevlastná,
+nazýva sa priamka $x=ay$ asymptotou bez smernice grafu funkcie $f$.
+
+Nech bod $+\infty$ je hromadný bod definičného oboru funkcie $f$. Priamka
+$y=kx+q$ sa nazýva asymptota so smernicou grafu funkcie $f$ v bode $+\infty$, ak
+$\lim\limits_{x\rightarrow \infty}(f(x)-kx-q)=0$.
+
+Analogicky sa definuje asymptota so smernicou grafu funkcie $f$ v bode
+$-\infty$.
+
+\begin{veta}
+Nech bod $+\infty$ je hromadný bod definičného oboru funkcie $f$. Priamka
+$y=kx+q$ je asymptotou so smernicou grafu funkcie $f$ v bode $+\infty$ práve
+vtedy, keď:
+\begin{itemize}
+\item
+  existuje konečná $\lim\limits_{x\rightarrow \infty} \frac{f(x)}{x}$ a platí
+  $\lim\limits_{x\rightarrow \infty} \frac{f(x)}{x}=k$
+\item
+  existuje konečná $\lim\limits_{x\rightarrow \infty} (f(x)-kx)$ a rovná sa
+  číslu $q$
+
+(Analogická veta platí pre asymptotu so smernicou grafu funkcie $f$ v bode $-\infty$.)
+\end{itemize}
+\end{veta}
+
+Zostrojte grafy nasledujúcich funkcií:
+\begin{enumerate}[resume]
+  \begin{multicols}{2}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-394}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-395}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-396}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-397}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-398}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-399}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-400}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-401}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-402}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-403}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-404}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-405}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-406}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-407}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-408}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-409}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-410}
+    \item \useproblem[diferencialny-pocet]{diferencialny-pocet-411}
+  \end{multicols}
+\end{enumerate}

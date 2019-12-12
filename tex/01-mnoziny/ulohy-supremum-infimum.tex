@@ -1,0 +1,148 @@
+\begin{defproblem}{supremum-infimum-14}
+Zistite, či sú dané množiny zhora, resp. zdola ohraničené:
+\begin{tasks}
+  \task $A = \{ \sqrt{a + \sqrt{b}} ; \: a, b \in \mathbb{N}, a < b \}$
+  \task $B = \{ \frac{1}{x + \frac{1}{x}} ; \: x \in \interval[open]{0}{\infty} \}$
+  \task $C = \{ sin(n!) ; \: n \in \mathbb{N} \}$
+  \task $D = \{ \frac{\sqrt{x}}{\sqrt[3]{x} + \sqrt[4]{x}}; \:
+              x \in \mathbb{Q} \cap \interval[open]{2}{3} \}$
+  \task $E = \{ x \in \mathbb{R}; \: \exists \: a, b, c \in \mathbb{Q}:
+                a \neq 0 \land ax^2 + bx +c = 0 \}$
+
+        (teda $E$ je množina koreňov všetkých polynómov druhého stupňa s
+        racionálnymi koeficientami)
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-15}
+Ak $A \cap \mathbb{R}$ je neohraničená množina, tak platí
+\[
+(\forall a \in A) (\forall \beta > 0) (\exists \: b \in A): |a - b| > \beta
+\]
+Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-16}
+Nech $A, B \subset \mathbb{R}$ sú neprázdne množiny, pričom $B$ je
+neohraničená. Ak existuje $\beta > 0$ také, že platí:
+\[
+(\forall x \in B) (\exists \: y \in A): |x - y| < \beta
+\]
+tak $A$ je neohraničená množina. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-17}
+Dokážte alebo vyvráťte nasledujúce rovnosti:
+\begin{tasks}(2)
+  \task $1 = \inf \: \{ \frac{x^2 + 2}{x^2 + 1}; x \in \mathbb{R} \}$
+  \task $1 = \sup \: \{ \frac{2x^2}{2x^2 + 1}; x \in \mathbb{R} \}$
+  \task! $-2 = \inf \: \{ 2x^2 + 8x + 1; x \in \mathbb{R} \}$
+  \task! $12 = \inf \: \{ 1 + 6x - x^2; x \in \mathbb{R} \}$
+\end{tasks}
+
+\begin{solution}
+  \textbf{a):} Musíme zistiť, či číslo 1 vyhovuje podmienkam \ding{34} a
+  \ding{37} z definície infíma:
+
+  \begin{itemize}
+    \item[\ding{34}] pretože $\frac{x^2 + 2}{x^2 + 1} = 1 + \frac{1}{1 + x^2}$ a číslo
+        $\frac{1}{1 + x^2}$ je kladné číslo pre každé $x \in \mathbb{R}$, platí
+        $\frac{x^2 + 2}{x^2 + 1} > 1$ pre všetky $x \in \mathbb{R}$; teda číslo
+        1 vyhovuje podmienke \ding{34};
+    \item[\ding{37}] podmienka má v tomto prípade tvar
+          $$(\forall \varepsilon > 0) (\exists a \in \mathbb{R}):
+            \frac{a^2 + 2}{a^2 + 1} < 1 + \varepsilon$$
+          čo je ekvivalentné s podmienkou
+          $$(\forall \varepsilon > 0) (\exists a \in \mathbb{R}):
+            a^2 > \frac{1}{\varepsilon} - 1$$
+  \end{itemize}
+
+  Odtiaľ už vidíme, že pre každé dané $\varepsilon > 0$ také číslo
+  $a \in \mathbb{R}$ skutočne existuje (pre $\varepsilon > 1$ vyhovuje
+  uvedenej nerovnosti dokonca každé reálne číslo $a$, pre
+  $\varepsilon \in (0, 1>$ stačí za $a$ zvoliť ľubovoľné číslo, pre ktoré
+  platí $|a| > \sqrt{\frac{1}{\varepsilon} - 1}$); teda pre číslo 1 je splnená
+  aj podmienka \ding{37}.
+
+  Pretože číslo 1 vyhovuje obidvom podmienkam z definície infima, platí
+  $1 = \inf \{ \frac{x^2 + 2}{x^2 + 1}; x \in \mathbb{R} \}$.
+\end{solution}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-18}
+Najdite supremum a infimum nasledujúcich množín (nezabudnite, že svoje tvrdenia)
+musíte dokázať podobne ako v pr. 17):
+
+\begin{enumerate}[label=\arabic*.]
+  \item $A = \{ x \in \interval[open]{2}{3};$ zápis čísla $x$ v desiatkovej
+        sústave má konečný počet cifier za desationnou čiarkou$\}$
+  \item $B = \{ x \in \interval[open right]{0}{2};$ zápis čísla $x$ v
+        desiatkovej sústave obsahuje len cifry $0, 1 \}$
+  \item $C = \{ \cos \pi(n!); n \in \mathbb{N} \}$
+\end{enumerate}
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-19}
+Nech $A \subset B \subset \mathbb{R}$, pričom $A$ je neprázdna a $B$ je zhora
+ohraničená množina. Potom $A$ je zhora ohraničená množina a platí
+$\sup\{A\} \leq \sup\{B\}$. Dokážte! Sformulujte analogické tvrdenie pre infíma!
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-20}
+Nech $A$ je neprázdna ohraničená množina; definujme množina $-A$ nasledovne:
+$$-A := \{ -z; z \in A\}$$
+Potom
+$$\sup\{-A\} = -\inf\{A\}$$
+$$\inf\{-A\} = -\sup\{A\}$$
+Dokážte!
+
+\begin{solution}
+  Dokážeme prvú z uvedených rovností. Označme $\beta := \inf\{A\}$. Pre číslo
+  $\beta$ teda platí:
+  \begin{align*}
+    (\forall z \in A)&: z \geq \beta \\
+    (\forall \varepsilon > 0) \: (\exists z_\varepsilon \in A)&:
+            z_\varepsilon < \beta + \varepsilon
+  \end{align*}
+  máme ukázať, že číslo $-\beta$ je supremom množiny $-A$, t.j. že vyhovuje
+  podmienkam \ding{34} a \ding{37} z definície suprema.
+
+  \begin{itemize}
+    \item[\ding{34}]
+      Podmienka má v tomto prípade podobu
+      \[
+        (\forall x \in -A): x \leq -\beta
+      \]
+      čo je ekvivalentné s podmienkou
+      \[
+        (\forall z \in A): -z \leq -\beta
+        \iff
+        (\forall z \in A): z \geq \beta
+      \]
+      posledné tvrdenie je pravdivé, pretože $\beta$ vyhovuje
+      podmienke (1).
+    \item[\ding{37}]
+      Podmienka má tvar
+      \[
+        (\forall \varepsilon > 0) (\exists x_\varepsilon \in -A):
+        x_\varepsilon > -\beta - \varepsilon
+      \]
+      to je ekvivalentné s výrokom
+      \begin{align*}
+        (\forall \varepsilon > 0) (\exists z_\varepsilon \in A)&:
+        -z_\varepsilon > -\beta - \varepsilon \\
+        (\forall \varepsilon > 0) (\exists z_\varepsilon \in A)&:
+        z_\varepsilon < \beta + \varepsilon
+      \end{align*}
+      to je ale podmienka (2), ktorá je podľa predpokladov splnená.
+  \end{itemize}
+\end{solution}
+
+\end{defproblem}
+
+\begin{defproblem}{supremum-infimum-21}
+Nech $A, B$ sú neprázdne ohraničené množiny, definujme množinu $A + B$
+nasledovne: $A + B := \{ a + b ; a \in A, b \in B \}$. Potom platí:
+$$\sup\{A + B\} = \sup\{A\} + \sup\{B\}$$
+Dokážte! Sformulujte a dokážte analogické tvrdenie pre infíma!
+\end{defproblem}

@@ -6,6 +6,7 @@
 \usepackage{tabularx}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{epsfig}
 \usepackage{epigraph}
 \setlength{\epigraphwidth}{.6\textwidth}
@@ -53,7 +54,16 @@
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arccsc}
 
+\settasks{
+  %debug=true
+}
+
+
 \input{./tex/makra.tex}
+
+%\includeonly{
+%  ./tex/05-diferencialny-pocet/main
+%}
 
 \begin{document}
 
@@ -62,33 +72,24 @@ soft  open  fences ,
 }
 
 \hyphenation{in-ver-zná}
+\lccode`\'=39\hyphenation{l'Ho-spi-ta-lo-vho}
 
-\input{./tex/titulna.tex}
-\input{./tex/predslov.tex}
+\include{./tex/titulna}
+\include{./tex/predslov}
 
 \tableofcontents
 
-\loadallproblems[uvod]{./tex/00-ulohy-uvod.tex}
-\input{./tex/00-uvod.tex}
+\include{./tex/00-uvod/main}
 
-\loadallproblems[realne-cisla]{./tex/01-ulohy-realne-cisla.tex}
-\loadallproblems[supremum-infimum]{./tex/01-ulohy-supremum-infimum.tex}
-\input{./tex/01-mnoziny.tex}
+\include{./tex/01-mnoziny/main}
 
-\loadallproblems[dodatok-1]{./tex/01-ulohy-dodatok.tex}
-\input{./tex/01-dodatok.tex}
+\include{./tex/02-funkcie/main}
 
-\loadallproblems[limita-funkcie]{./tex/02-ulohy-limita-funkcie.tex}
-\input{./tex/02-limita-funkcie.tex}
+\include{./tex/03-limita-funkcie/main}
 
-\loadallproblems[dodatok-2]{./tex/02-ulohy-dodatok-2.tex}
-\input{./tex/02-dodatok-2.tex}
+\include{./tex/04-spojitost-funkcie/main}
 
-\loadallproblems[spojitost-funkcie]{./tex/03-ulohy-spojitost-funkcie.tex}
-\input{./tex/03-spojitost-funkcie.tex}
-
-\loadallproblems[diferencialny-pocet]{./tex/04-ulohy-diferencialny-pocet.tex}
-\input{./tex/04-diferencialny-pocet.tex}
+\include{./tex/05-diferencialny-pocet/main}
 \end{document}
 
 % TODO

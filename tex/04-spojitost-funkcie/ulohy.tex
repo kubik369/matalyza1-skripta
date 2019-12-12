@@ -1,0 +1,693 @@
+\begin{defproblem}{s-funkcie-221}
+Pomocou kvantifikátorov zapíšte tvrdenie \enquote{funkcia $f$ nie je spojitá v
+bode $a \in D(f)$}!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-222}
+Vyšetrite spojitosť nasledujúcich funkcií v daných bodoch:
+\begin{tasks}
+\task $f(x) =
+  \begin{cases}
+    \frac{\sin x}{x}& $ak $ x \neq 0 \\
+    1 &  $ak $ x = 0
+  \end{cases}
+  $ v bode $0$
+\task $f(x) =
+  \begin{cases}
+    \frac{\sin x}{|x|} & $ak $ x \neq 0 \\
+  1 &  $ak $ x = 0
+  \end{cases}
+  $ v bode $0$
+\task $f(x) =
+  \begin{cases}
+    \frac{1}{(1+x)^2} & $ak $ x \neq 0 \\
+    1 &  $ak $ x = 0
+  \end{cases}
+  $ v bode $-1$
+\task $f(x)=\sgn x$ v bode $0$
+\task $f(x)=x \cdot \sgn x$ v bode $0$
+\end{tasks}
+
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-223}
+Nasledujúce funkcie nie sú definované v bode $a$. Určite hodnotu $f(a)$ tak, aby
+takto dodefinovaná funkcia $f$ bola spojitá v bode $a$:
+\begin{tasks}
+  \task $f(x)=\frac{\sqrt{1+x}-1}{\sqrt[3]{1+x}-x}$, $a=0$
+  \task $f(x)=(1+x)^{\frac{1}{2}x}$, $a=0$
+  \task $f(x)=e^{-\frac{1}{x^2}}$, $a=0$
+  \task $f(x)=\frac{1}{1+e^{\frac{1}{x-1}}},x<1$, $a=1$
+  \task $f(x)=(x+3) \cdot \sin \frac{1}{x+3}$, $a=-3$
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-224}
+Vyšetrite spojitosť nasledujúcich funkcií:
+\begin{tasks}(2)
+\task $f(x)=\frac{x^2-4x+7}{x^3+5x^2+6x}$
+\task $f(x) =
+  \begin{cases}
+    \frac{1-e^x}{x},& $ak $ x \leq 0 \\
+    2x-1, &  $ak $ x \geq 0
+  \end{cases}
+  $
+\task $f(x)=\sgn (x \cdot (1-x^2))$
+\task $f(x)=x \cdot [x]$
+\task $f(x)=\lim\limits_{n \rightarrow \infty} \frac{1}{1+x^n},x \geq 0$
+\task $f(x)=\lim\limits_{n \rightarrow \sqrt[n]{1+x^{2n}}}$
+\task $f(x)=\sqrt{-\sin^2 x}$
+\end{tasks}
+
+\begin{solution}
+  \textbf{b):}
+  Dokázať spojitosť funkcie $f$ na množine $\mathbb{R} \setminus \{0\}$ je
+  jednoduché: pre každé číslo $a<0$ možno nájsť také jeho okolie $O(a)$, na
+  ktorom sa funkcia $f$ zhoduje s elementárnou funkciou $\frac{1-e^x}{x}$ tá je
+  spojitá v bode $a$; preto
+  \[
+    \lim\limits_{x \rightarrow a}f(x)
+    = \lim_{x \rightarrow a}\frac{1-e^x}{x}=\frac{1*e^a}{a}=f(a)
+  \]
+  čo znamená, že funkcia $f$ je spojitá v bode $a$. Analogicky sa postupuje v
+  prípade $a>0$. Prípad $a=0$ treba vyšetriť samostatne: vtedy
+  \[
+    \lim_{x \rightarrow 0+}f(x)=\lim_{x \rightarrow 0+}\frac{1-e^x}{x}=-1
+  \]
+  \[
+    \lim_{x \rightarrow 0-}f(x)=\lim_{x \rightarrow 0-}(2x-1)=-1
+  \]
+  preto $\lim\limits_{x \rightarrow 0}f(x)=-1=f(0)$. Funkcia $f$ je teda spojitá
+  aj v bode $0$, preto $f$ je spojitá funkcia.
+\end{solution}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-225}
+Nech funkcie $f,g$ sú definované na $\mathbb{R}$ a funkcia $f+g$ je spojitá v
+bode $a$. Potom nastane práve jedna z nasledujúcich možností:
+\begin{enumerate}
+\item funkcia $f$ aj funkcia $g$ sú spojité v bode $a$;
+\item ani funkcia $f$, ani funkcia $g$ nie je spojitá v bode $a$.
+\end{enumerate}
+Dokážte: obidve uvedené možnosti dokumentujte na príkladoch!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-226}
+Nech $f: \mathbb{R} \rightarrow \mathbb{R}$ je spojitá funkcia. Potom funkcia $f
+\cdot \zeta$ je spojitá práve v bodoch množiny $\{x\in \mathbb{R}: f(x)=0\}$.
+Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-227}
+Možno tvrdiť, že funkcia $g \circ f$ nie je spojitá v bode $x_{0}$, ak $f$ je
+spojitá v bode $x_{0}$ a $g$ nie je spojitá v bode $f(x_0) \in D(g)$?
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-228}
+Nech funkcie $f,g$ sú spojité v bode $a$ $(\in D(f)\cap D(g))$. Potom aj funkcie
+$|f|,\max \{f,g\},\min \{f,g\}$ sú spojité v bode $a$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-229}
+Vyšetrite spojitosť Dirichletovej funkcie $\zeta (x)$!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-230}
+Dokážte, že Riemannova funkcia $f$, definovaná predpisom $f(x)=0$, ak $x \in
+\mathbb{R} \setminus \mathbb{Q}$ a $f(x)=\frac{1}{n}$, ak $x=\frac{m}{n}$, kde
+$\mathbb{N}, m \in \mathbb{Z}$ sú nesúdeliteľné čísla, je spojitá v každom
+iracionálnom čísle a nespojitá v každom racionálnom čísle.
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-231}
+Nech funkcia $f$ je spojitá na intervale $\interval{a}{b}$. Potom
+\[
+  \sup \{f(x); x \in \interval{a}{b}\}= \sup \{f(x);
+  x \in \interval{a}{b} \cap \mathbb{Q}\}
+\]
+Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-232}
+\begin{tasks}(2)
+\task $f(x)=\frac{x}{(1-x)^2}$
+\task $f(x)=\frac{x^2-1}{x^3-3x+2}$
+\task $f(x)=\frac{\sin x}{x}$
+\task $f(x)=\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{1}{x-1}-\frac{1}{x}}$
+\task $f(x)=\sqrt{\frac{1-\cos \pi x}{4-x^2}}$
+\task $f(x)=\cos^2 \frac{1}{x}$
+\task $f(x)=\sqrt{x}\cdot \arctan \frac{1}{x}$
+\task $f(x)=\frac{1}{\ln x}$
+\task $f(x) = \begin{cases}
+  x & $, ak $ |x| \leq 1 \\
+  1 &  $, ak $ |x| \geq 1
+  \end{cases}
+  $
+\task $f(x)=x \cdot [\frac{1}{x}]$
+\task $g(g(g(x)))$, kde $g(x)=\frac{1}{1-x}$
+\task!
+  $ f(x)=g(\varphi(x)) $
+
+  $
+    g(x) =
+    \begin{cases}
+        \sin \pi x & \text{, ak } x \in \mathbb{Q} \\
+        0          & \text{, ak } x \in \mathbb{R} \setminus \mathbb{Q}
+    \end{cases}
+  $
+\task!
+  $f(x)=g(\varphi(x))$
+
+  $g(x) =
+    \begin{cases}
+      x,   & \text{, ak } 0 \leq x \leq 1 \\
+      2-x, & \text{, ak } 1 < x < 2
+    \end{cases}
+  $
+
+  $\varphi(x) =
+    \begin{cases}
+        x   & \text{, ak } x \in \mathbb{Q} \\
+        2-x &  \text{, ak } x \in \mathbb{R} \setminus \mathbb{Q}
+    \end{cases}
+  $
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-233}
+\begin{tasks}
+\task
+  Dokážte, že monotónna funkcia definovaná na $\mathbb{R}$ môže mať len body
+  nespojitosti $1.$ druhu.
+\task
+  Dokážte, že množina bodov nespojitosti neklesajúcej funkcie $f$ definovanej na
+  intervale $I$ je spočítateľná.
+
+(\textit{Návod:} Stačí dokázať, že množina $S$ všetkých bodov nespojitosti
+funkcie $f$ ležia vnútri intervalu $I$ - každý z nich je bodom nespojitosti $1.$
+druhu - je spočítateľná. Ak každému bodu $a \in S$ priradíme interval ($\lim_{x
+\rightarrow a-}f(x),\lim_{x \rightarrow a+}f(x)$)), dostaneme systém po
+dvochdisjunktných intervalov; tento systém je spočítateľný - pozri príklad $99$.
+)
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-234}
+Dokážte, že existuje
+\begin{tasks}
+\task $x \in \interval[open]{0}{1}$, pre ktoré platí $x^5+x^4+x^3+x^2-x-1=0$
+\task $x \in \mathbb{R}$, pre ktoré platí $x=\cos x$
+\task aspoň jedno riešenie rovnice $P(x)=0$, kde $P$ je polynóm nepárneho stupňa
+\end{tasks}
+
+\begin{solution}
+  \textbf{a):}
+  Funkcia daná predpisom
+  \[
+    f(x)=x^5+x^4+x^3+x^2-x-1
+  \]
+  je spojitá, a teda aj darbouxovská na $\mathbb{R}$, nadobúda preto na
+  intervale $\interval{0}{1}$ všetky hodnoty medzi $f(0)=-1$ a $f(1)=2$. Pretože
+  $-1<0<2$, musí existovať $x \in (0,1)$, v ktorom $f(x)=0$.
+\end{solution}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-235}
+Nech funkcia $f$ je spojitá na intervale $(a,b)$, nech $x_1,x_2,...,x_n \in
+(a,b)$. Potom existuje $o \in (a,b)$ tak, že:
+$$f(c)=\frac{1}{n}(f(x_1)+...+f(x_n))$$
+Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-236}
+Nech $f: \interval{0}{1} \rightarrow \interval{0}{1}$ je spojitá funkcia.
+Potom pre niektoré $c \in \interval{0}{1}$ platí $f(c)=c$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-237}
+Ak pre spojitú unkciu $f: \mathbb{R} \rightarrow \mathbb{R}$ platí
+$f(\mathbb{Q}= \{0\})$, tak aj $f(\mathbb{R})=\{0\}$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-238}
+Nech funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$ má túto vlastnosť: pre každý
+interval $I \subset \mathbb{R}$ je $I \setminus f(\mathbb{R} \neq \emptyset)$.
+Potom je $f$ konštantná na $\mathbb{R}$ alebo nespojitá v každom bode $x \in
+\mathbb{R}$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-239}
+Ak je funkcia $f$ prostá a spojitá na intervale $I$, tak je tam rýdyomonotónna.
+Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-240}
+Nech spojitá funkcia $f$ nadobúda na intervale $\interval{a}{b}$ len kladné
+hodnoty. Potom existuje $\mu > 0$ tak, že $f(x) \geq \mu$ platí pre každé $x \in
+\interval{a}{b}$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-241}
+Ak funkcia $f: \interval[open]{a}{b} \rightarrow \mathbb{R}$ $(a,b\in
+\mathbb{R^*})$ je spojitá a existujú konečné $\lim\limits_{x \rightarrow
+a}f(x),\lim\limits_{x \rightarrow b}f(x)$, tak $f$ je ohraničená. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-242}
+Ak $P$ je polynóm párneho stupňa, tak existuje $\max\limits_{x \in \mathbb{R}}
+P(x)$. Dokážte! Aký je koeficient pri člene s najvyššou mocninou, ak existuje
+$\min\limits_{x \in \mathbb{R}} P(x)$?
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-243}
+Ak $f$ je spojitá na intervale $\interval[open right]{0}{\infty}$ a
+$\lim\limits_{x \rightarrow \infty} f(x)=f(0)$, tak existuje $\max\limits_{x
+\geq 0} f(x)$ aj $\min\limits_{x \geq 0}f(x)$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-244}
+Vetu $5$ možno dokázať na základe nasledujúcich faktov:
+\begin{tasks}
+\task
+  ak funkcia $f$ je spojitá na kompaktnej množine $A$, tak $f(A)$ je
+  kompaktná množina
+\task
+  každá kompakná množina je ohraničená a obsahuje svoje supremum a infimum.
+\end{tasks}
+Dokážte tieto tvrdenia!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-245}
+Nech $f: \mathbb{R} \rightarrow \mathbb{R}$ má len body nespojitosti $1.$ druhu.
+Potom $f$ je ohraničená na každom ohraničenom intervale. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-246}
+Existuje spojitá a ohraničená funkcia $f:\interval[open left]{0}{1} \rightarrow
+\mathbb{R}$ taká, že neexistuje $\max\limits_{x \in \interval[open left]{0}{1}}
+f(x)$ ani $\min\limits_{x \in \interval[open left]{0}{1}} f(x)$?
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-247}
+Pomocou kvamtifikátorov zapíšeme tvrdenie \enquote{Funkcia $f$ je spojitá na intervale
+$\interval[open]{a}{b}$, ale nie je tam rovnomerne spojitá.}!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-248}
+Rozhodnite, či je funkcia $f$ rovnomerne spojitá na množine $A$. Svoje tvrdenie
+dokážte na základe definície!
+\begin{tasks}(2)
+\task $f(x)=5x-3$,$A=\mathbb{R}$
+\task $f(x)=x^2-2x-1$,$A= \interval{-2}{5}$
+\task $f(x)=\cos \frac{1}{x}$,$A=\interval[open]{0}{1}$
+\task $f(x)=\frac{1}{x}$,$A=\interval[open]{\frac{1}{10}}{1}$
+\task $f(x)=\sin x^2$,$A=\interval[open right]{0}{\infty}$
+\task $f(x)=\sqrt{x}$,$A=\interval[open right]{0}{\infty}$
+\task $f(x)=x+\sin x$,$A=\mathbb{R}$
+\end{tasks}
+
+\begin{solution}
+  \textbf{b):}
+  Predpokladajme, že $x,y \in \interval{-2}{5}, |x-y|<\delta$, a pokúsme sa na
+  základe toho zhora odhadnúť výraz $|f(x)-f(y)|$. Postupne dostaneme
+  \begin{align*}
+    |f(x)-f(y)|&=|x^2-2x-1-(y^2-2y-1)| = \\
+       &= |(x^2-y^2)+2(y-x)|\leq
+    |x^2-y^2|+2|x-y|=  \\
+    &=|x-y||x+y|+2|x-y| = \\
+    &=|x-y|(|x+y|+2)\leq  \\
+    & \leq|x-y|(|x|+|y|+2)\leq 12|x-y|<\delta
+  \end{align*}
+
+  Zistili sme teda:
+  \[
+    x,y \in \interval{-2}{5}:
+    |x-y|<\delta
+    \Rightarrow
+    |f(x)-f(y)|<12\delta
+  \]
+  To znamená, že funkcia $f$ je rovnomerne spojitá na
+  intervale $\interval{-2}{5}$, pre dané $\varepsilon > 0$ stačí totiž
+  položiť $\delta = \frac{\varepsilon}{12}$.
+
+  \textbf{e):}
+  Ak si predstavíme graf funkcie $f(x)=\sin x^2,x \geq 0$, zistíme, že v smere k
+  $+\infty$ funkcia $f$ na intervaloch stále menšej dĺžky nadobúda všetky
+  hodnoty medzi $1$ a $-1$, t.j. že jej graf sa smerom k $+\infty$
+  \enquote{zhusťuje}. To nás vedie k domnienke, že $f$ nie je na $\interval[open
+  right]{0}{\infty}$ rovnomerne spojitá. Všimnime si preto podrobnejšie dvojice
+  bodov
+  \[
+    (x_n,y_n)=(\sqrt{-\frac{\pi}{2}+2\pi n},\sqrt{\frac{\pi}{2}+2\pi
+    n}),n\in \mathbb{N}
+  \]
+  Zrejme $f(x_n)=-1,f(y_n)=1$. Pretože $\lim_{n \rightarrow \infty}|y_n-x_n|=0$,
+  existuje pre každé $\delta>0$ dvojica $(x_n,y_n)$ také, že $|x_n-y_n|<\delta$.
+  Tým sme dokázali
+  \begin{align*}
+    \exists \varepsilon >0 (\varepsilon=2)
+    \forall\delta>0\exists x_n \geq 0,y_n \geq 0: \\
+    |x_n-y_n|<\delta \wedge |f(x_n)-f(y_n)| \geq \varepsilon
+  \end{align*}
+  čo je negácia tvrdenia \enquote{$f$ je rovnomerne spojitá na $\interval[open
+  right]{0}{\infty}$}. Teda $\sin x^2$ nie je rovnomerne spojitá na intervale
+  $\interval[open right]{0}{\infty}$.
+\end{solution}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-249}
+Funkcia $f$ je rovnomerne spojitá na ohraničenom intervale $I$ práve vtedy, keď
+pre ľubovoľné $\varepsilon >0$ existuje spojitá po častiach lineárna funkcia
+$\varphi$ taká, že pre všetky $x \in I$ platí $|f(x)-\varphi(x)|< \varepsilon$.
+Dokážte! (Spojitá funkcia $\varphi$ definovaná na ohraničenom intervale $I$ sa
+nazýva po častiach lineárna, ak existuje konečný počet po dvoch disjunktných
+intervlov $I_1,I_2,...,I_n$ tak, že $I_1 \cup I_2 \cup ... \cup I_n=I$ a funkcie
+$\frac{\varphi}{I_i}$ $(i=1,...,n)$ sú lineárne; t.j. grafom je "lomená čiara".)
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-250}
+Pre funkciu $F$ nájdite spojitú po častiach lineárnu funkciu $f$ takú, aby pre
+všetky $x \in \interval{a}{b}$ platilo $|F(x)-f(x)|<0,1$ ak:
+\begin{tasks}(2)
+\task $F(x)=x^2, \interval{a}{b} = \interval{-1}{1}$
+\task $F(x)=\frac{1}{x}, \interval{a}{b} = \interval{\frac{2}{3}}{2}$
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-251}
+Rozhodnite, či je funkcia $f$ rovnomerne spojitá na množine $A$:
+\begin{tasks}(2)
+\task $f(x)=\frac{x}{4-x^2}$, $A=\interval{-1}{1}$
+\task $f(x)=\frac{\sin x}{x}$, $A=\interval[open left]{0}{\pi}$
+\task $f(x)=\sqrt[3]{x}$, $A=\interval[open right]{0}{\infty}$
+\task!  $f(x) =
+  \begin{cases}
+    x\cdot \sin \frac{1}{x} & $, ak $ x \in \interval[open left]{0}{\pi} \\
+    0 &  $, ak $ x=0
+  \end{cases}
+    $, $A= \interval{0}{\pi}$
+\task $f(x)=x \cdot \sin x$, $A= \interval[open right]{0}{\infty}$
+\task! $f(x)=\frac{x^6-1}{\sqrt{1-x^4}}$, $A=\interval[open]{-1}{1}$
+\task $f(x)=\ln x$, $A=\interval[open right]{1}{\infty}$
+\end{tasks}
+
+\begin{solution}
+  \textbf{b):}
+  Na funkciu $f(x)=\frac{\sin x}{x},x \in \interval[open left]{0}{\pi}$ nemôžeme
+  vetu $6$, pretože $D(f)=\interval[open left]{0}{\pi}$ nie je kompaktná
+  množina. Pomôžeme si nasledovne: funkciu $f$ možno spojite dodefinovať v čísle
+  $0$, pretože $0$ je bodom odstrániteľnej nespojitosti. Teda
+  $f=f_1/\interval[open left]{0}{\pi}$, kde funkcia $f_1$ je určená predpisom:
+  \[
+    f_1(x) =\begin{cases}
+      f(x) & $, ak $ x \in \interval[open left]{0}{\pi} \\
+      1    & $, ak $ x = 0
+    \end{cases}
+  \]
+  Na kompakte $\interval{0}{\pi}$ je $f_1$ spojitá, a teda podľa vety $6$ aj
+  rovnomerne spojitá. Pretože zúženie rovnomerne spojitej funkcie je funkcia
+  rovnomerne spojitá, je funkcia $\frac{\sin x}{x}$ rovnomerne spojitá na
+  intervale $\interval[open left]{0}{\pi}$.
+
+\end{solution}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-252}
+  Ak funkcia $f$ je spojitá na intervale
+  $\interval[open right]{0}{\infty}$ a $\exists$ konečná
+  $\lim\limits_{x \rightarrow \infty} f(x)$, tak $f$ je rovnomerne spojitá na
+  $\interval[open right]{0}{\infty}$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-253}
+  Každá spojitá periodická funkcia $f:\mathbb{R} \rightarrow \mathbb{R}$ je
+  rovnomerne spojitá. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-254}
+Nech funkcia $f$ je definovaná na ohraničenom intervale $(a,b)$, nech
+\begin{tasks}(2)
+  \task $\lim\limits_{x \rightarrow b-}f(x)=+\infty$
+  \task $\lim\limits_{x \rightarrow b-}f(x)$ neexistuje
+\end{tasks}
+Potom $f$ nie je rovnomerne spojitá na $\interval[open]{a}{b}$.
+Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-255}
+  Spojitá funkcia $f$ definovaná na ohraničenom intervale
+  $\interval[open]{a}{b}$ je rovnomerne spojitá na $\interval[open]{a}{b}$
+  práve vtedy, keď existujú konečné
+  $\lim\limits_{x \rightarrow a^+}f(x)$, $\lim\limits_{x \rightarrow b^-}f(x)$.
+  Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-256}
+\begin{tasks}
+  \task
+    Ak $f$ je rovnomerne spojitá na ohraničenom intervale
+    $\interval[open]{a}{b}$, tak $f$ je na $\interval[open]{a}{b}$ ohraničená.
+    Dokážte!
+  \task
+    Uveďte príklad funkcie, ktorá je spojitá a ohraničená na ohraničenom
+    intervale, ale nie je tam rovnomerne spojitá!
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-257}
+Vyšetrite spojitosť nasledujúcich funkcií, určte charakter bodov nespojitosti:
+\begin{tasks}(2)
+\task $f(a)=(-1)^{[x^2]}$
+\task $f(a)=[\frac{1}{x}] \sgn \sin [\frac{\pi}{x}]$
+\task $f(a)=\frac{x+1}{\arctan\frac{1}{x}}$
+\task $f(a)=\lim\limits_{n \rightarrow \infty} \frac{x+x^2e^{nx}}{1+e^{nx}}$
+\task $f(a)=\lim\limits_{t \rightarrow \infty}\frac{\ln (1+e^{xt})}{1+e^t}$
+\task! $f(a)=\lim\limits_{n \rightarrow \infty} (x \cdot \arctan(n \cdot \cot x))$
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-258}
+Určte číslo $A$ tak, aby funkcia
+$f_1(x) = \begin{cases}
+  f(x), & $ak $ x \in D(f) \\
+  A, &  $ak $ x=0
+\end{cases}
+  $ bola spojitá v bode $0$:
+\begin{tasks}(3)
+  \task $f(x)=\frac{1}{x^2}^{-\frac{1}{x^2}}$
+  \task $f(x)=x^x,x>0$
+  \task $f(x)=x \cdot \ln^2 x$
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-259}
+Nech $f: \mathbb{R} \rightarrow \mathbb{R}$ je spojitá funkcia. Potom funkcia:
+\[
+F(x) = \begin{cases}
+    -c   & \text{, ak } f(x)<-c \\
+    f(x) & \text{, ak } |f(x)|\leq c \\
+    0    & \text{, ak } f(x)>c
+\end{cases}
+\]
+je spojitá. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-260}
+Zoraďme množinu $\mathbb{Q}$ do proste postupnosti ${\{q_n\}}_{n=1}^\infty$;
+nech ${\{a_n\}}_{n=1}^\infty$ je daná postupnosť reálnych čísel. Definujme
+funkciu $\psi$ (nazýva sa zovšeobecnená Riemannova funkcia) nasledovne:
+\[
+  \psi = \begin{cases}
+  0 & $, ak $ x \in \mathbb{R} \setminus \mathbb{Q} \\
+  a_n &  $, ak $ x=q_n
+\end{cases}
+\]
+  Ak $\lim\limits_{n \rightarrow \infty} a_n=0$, tak funkcia $\psi$ je spojitá v
+  každom iracionálnom čísle. Dokážte! Platí aj obrátená implikácia?
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-261}
+Vyšetrite spojitosť funkcie
+\[
+  f(x) =
+  \begin{cases}
+      \frac{nx}{|x|} & \text{, ak } x=\frac{m}{n}, m\in \mathbb{Z} \text{ a } m\in \mathbb{N} \text{ sú nesúdeliteľné} \\
+      f(x)           & \text{, ak } |f(x)|\leq c \\
+      |x|            & \text{, ak } x \in \mathbb{R} \setminus \mathbb{Q}
+  \end{cases}
+\]
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-262}
+Nech $f: \interval{a}{b} \rightarrow \mathbb{R}$ je spojitá funkcia. Vyšetrite
+spojitosť funkcie
+\[
+  g(x) = \begin{cases}
+  \sup\limits_{t \in \interval[open right]{a}{x}}f(t)
+    - \inf\limits_{t \in \interval[open right]{a}{x}}f(t)
+      &$, ak $ x \in \interval[open left]{a}{b} \\
+  0 &  $, ak $ x=a
+\end{cases}
+\]
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-263}
+\begin{tasks}
+\task
+  Nech je daná funkcia $f$, nech $x_0 \in D(f)$ a platí
+  \[
+    (\forall \delta > 0)
+      (\exists \varepsilon >0):
+        |x - x_0| < \delta \Rightarrow |f(x)-f(x_0)| < \varepsilon
+  \]
+  Vyplýva z týchto predpokladov spojitosť funkcie
+  $f$ v bode $x_0$? Akú vlastnosť funkcie $f$ popisuje uvedená podmienka?
+\task
+  Nech je daná funkcia $f$, nech platí
+  \[
+    (\forall x_0 \in D(f))
+      (\forall \delta > 0)
+        (\exists \varepsilon > 0):
+          |f(x)-f(x_0)| < \varepsilon \Rightarrow |x-x_0| < \delta
+  \]
+  Vyplýva z týchto predpokladov spojitosť funkcie $f$? Aká vlastnosť funkcie $f$
+  je popísaná uvedenou podmienkou?
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-264}
+Možno tvrdiť, že funkcia $g \circ f$ je nespojitá v bode $a$, ak $f$ nie je spojitá v bode $a \in D(f)$ a funkcia $g$ je
+\begin{tasks}
+\task spojitá na $\mathbb{R}$
+\task prostá a spojitá na $\mathbb{R}$
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-265}
+Zostrojte funkciu $f: \mathbb{R} \rightarrow \mathbb{R}$, ktorá je spojitá práve
+v bodoch množiny $M$, ak
+\begin{tasks}(3)
+\task $M=\{0\}$
+\task $M=\emptyset$
+\task $M=\mathbb{N}$
+\task $M=\{\frac{1}{n};n \in \mathbb{N}\}$
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-266}
+Zistite, či existuje bijekcia $f: \mathbb{R} \rightarrow \mathbb{R}$, ktorá nie
+je spojitá v žiadnom bode $x \in \mathbb{R}$.
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-267}
+Dokážte, že neexistuje funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$ taká, že
+pre každé $a \in \mathbb{R}$ existuje vlastná $\lim\limits_{x \rightarrow
+a}f(x)$ a platí $\lim\limits_{x \rightarrow a}f(x) \neq f(a)$.
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-268}
+\begin{tasks}
+\task
+  Ak pre funkciu $f: \mathbb{R} \rightarrow \mathbb{R}$ platí $\lim\limits_{x
+  \rightarrow a}f(x)=0$ v každom bode $a \in \mathbb{R}$, tak množina $A:=\{x
+  \in \mathbb{R};f(x)\neq 0\}$ je spojiteľná. Dokážte!
+\task
+  Neexistuje funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$, ktorá má v každom
+  bode $a \in \mathbb{R}$ nevlastnú limitu. Dokážte!
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-269}
+Ak polynóm $P$ párneho stupňa nadobúda aspoň jednu hodnotu, ktorá má oparné
+znamienko ako koeficient pri člene s najvyššou mocninou, tak $P$ má aspoň dva
+reálne korene. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-270}
+Ak je funkcia $f: \mathbb{R} \rightarrow \mathbb{Q}$ spojitá, tak je konštantná.
+Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-271}
+Nech funkcia $f: \interval[open right]{0}{\infty} \rightarrow \mathbb{R}$ je
+spojitá a ohraničená a neexistuje $\lim\limits_{x \rightarrow \infty}f(x)$.
+Potom existuje $A \in \mathbb{R}$, pre ktoré má rovnica $f(x)=A$ nekonečne veľa
+riešení. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-272}
+Ak $f: \mathbb{R} \rightarrow \mathbb{R}$ je spojitá funkcia a pre každé $x \in
+\mathbb{R}$ platí $f(f(x))=x$, tak existuje riešenie rovnice $f(x)=x$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-273}
+Ak $f: \mathbb{R} \rightarrow \mathbb{R}$ je spojitá periodická funkcia s
+periódou $T$, tak existuje také $a \in \mathbb{R}$, pre ktoré
+$f(a+\frac{T}{2})=f(a)$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-274}
+\par
+\needspace{2\baselineskip}
+\begin{tasks}
+  \task
+    Inverzná funkcia k rýdzomonotónnej funkcii definovanej na intervale je
+    spojitá. Dokážte!
+  \task
+    Uveďte príklad prostej funkcie spojitej aj v bode $0$, ktorej inverzná
+    funkcia nie je spojitá v bode $f(0)$.
+  \task
+    Uveďte príklad spojitej rýdzomonotónnej funkcie, ktorej inverzná funkcia
+    nie je spojitá!
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-275}
+Nech funkcia $f: \mathbb{R} \rightarrow \mathbb{R}$ je rovnomerne spojitá. Potom
+existujú čísla $a \geq 0,b \geq 0$ tak, že pre všetky $x \in \mathbb{R}$ platí
+$|f(x)| \leq a \cdot |x|+b$. Dokážte!
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-276}
+\begin{tasks}
+\task
+  Ak sú funkcie $f,g$ rovnomerne spojité na ohraničenom intervale $(a,b)$, tak
+  sú tam rovnomerne spojité aj funkcie $f+g,f \cdot g$. Dokážte!
+\task
+  Uveďte príklad funkcií $f \cdot g$ rovnomerne spojitých na intervale, ktorých
+  súčin tam nie je rovnomerne spojitý.
+\end{tasks}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-277}
+Rozhodnite o pravdivosti nasledujúceho tvrdenia: \enquote{Nech $g$ je spojitá
+nekonštantná funkcia definovaná na intervale $I$, nech funkcia $f$ je spojitá na
+intervale $g(I)$. Ak aspoň jedna z funkcií $f,g$ je rovnomerne spojitá, tak aj
+funkcia $f \circ g$ je rovnomerne spojitá.}
+\end{defproblem}
+
+\begin{defproblem}{s-funkcie-278}
+Popíšte funkcie, ktoré vyhovujú podmienke:
+\begin{tasks}
+\task
+  $
+    (\forall \varepsilon > 0)
+      (\exists 0 < \delta <\varepsilon)
+        (\forall x,y \in \mathbb{R}){:}
+          |x-y| < \delta \Rightarrow |f(x)-f(y)|<\varepsilon
+  $
+\task
+  $
+    (\forall \varepsilon > 0)
+      (\exists \delta > 0)
+        (\forall x,y \in \mathbb{R}):
+          |x - y| < \delta \Rightarrow f(x)-f(y) < \varepsilon
+  $
+\task
+  $
+    (\forall \varepsilon > 0)
+      (\exists \delta > 0)
+        (\forall x,y \in \mathbb{R}):
+          |x-y| < \delta \Rightarrow |f(x)-f(y)| < \varepsilon$
+\end{tasks}
+\end{defproblem}

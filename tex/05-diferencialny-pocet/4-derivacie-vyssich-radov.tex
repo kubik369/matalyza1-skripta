@@ -1,0 +1,37 @@
+Derivácie vyšších rádov definujeme rekurentne: Nech funkcia $f$ je definovaná v okolí bodu $a\in\mathbb{R}$; označme $f^{(0)}:=f$. Hovoríme,že funkcia $f$ má n-tú deriváciu v bode $a$, reps. nevlastnú n-tú deriváciu v bode $a$, ak existuje derivácia, resp. nevlastná derivácia funkcie $f^{(n-1)}$ v bode $a$. n-tú deriváciu v bode $a$ aj nevlastnú n-tú deriváciu v bode $a$   označujeme $f^{(n)}(a)$. (Analogicky sa definujú vlastné a nevlastné jednostranné n-té derivácie v bode $a$.) Derivácia funkcie $f^{(n-1)}$ sa nazýva n-tá derivácia funkcie $f$ a označuje sa $f^{(n)}$. Okrem označení $f^{(1)},f^{(2)},f^{(3)},f^{(4)},f^{(5)},...$ sa používajú aj označenia $f',f'',f''',f''''$ (alebo $f^{VI}$),$f^{V},...$ .
+Platia nasledujúce vzťahy:
+
+\begin{itemize}
+    \item $(x^m)^{(n)}=
+        \begin{cases}
+            \frac{m!x^{m-n}}{(m-n)!},& $ak $ n\leq m \\
+            0, &  $ak $ n>m
+        \end{cases}
+        $,$(m\in\mathbb{N})$
+    \item $(\sin x)^{(n)}=\sin (x+\frac{n\pi}{2})$
+    \item $(\cos x)^{(n)}=\cos (x+\frac{n\pi}{2})$
+    \item $(a^x)^{(n)}=a^x\ln^n a$
+    \item $(e^x)^{(n)}=e^x$
+    \item $(\log_a x)^{(n)}=\frac{(-1)^{n-1}(n-1)!}{x^n\ln^n a},x>0$
+    \item $(\ln x)^{(n)}=\frac{(-1)^{n-1}(n-1)!}{x^n},x>0$
+\end{itemize}
+
+\begin{veta}
+\textit{Leibnitzov vzorec}
+Ak funkcie $f,g$ majú n-tú deriváciu v bode $a$, tak existuje $(f\cdot
+g)^{(n)}(a)$ a platí
+\[
+    (f\cdot g)^{(n)}(a)=\sum_{k=0}^n {n \choose k} f^{k}(a)\cdot g^{(n-k)}(a)
+\]
+\end{veta}
+
+\begin{enumerate}[resume]
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-321}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-322}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-323}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-324}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-325}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-326}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-327}
+	\item \useproblem[diferencialny-pocet]{diferencialny-pocet-328}
+\end{enumerate}

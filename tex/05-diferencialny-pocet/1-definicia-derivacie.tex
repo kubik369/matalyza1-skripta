@@ -1,0 +1,141 @@
+Hovoríme, že funkcia $f$ (definovaná v okolí bodu $a$ \footnote{t.j. pre
+niektoré $\varepsilon>0$ platí $\interval[open]{a-\varepsilon}{a+\varepsilon}
+\subset D(f)$; pojmy derivácie a nevlastnej derivácie a nevlastnej derivácie v
+bode $a$ by bolo možné zaviesť aj za slabšieho predpokladu \enquote{$a \in D(f)$
+je hromadný bod množiny $D(f)$} (odstránili by sa tým aj niektoré ťažkosti so
+zavedením pojmu derivácie ako funkcie), definícia predpokladajúca, že $a$ je
+vnútorný bod množiny $D(f)$, je však v literatúre najčastejšia}) má deriváciu v
+bode $a,(a \in \mathbb{R})$, ak existuje konečná $\lim\limits_{x \rightarrow
+a}\frac{f(x)-f(a)}{x-a}$. Ak existuje nevlastná $\lim\limits_{x \rightarrow
+a}\frac{f(x)-f(a)}{x-a}$, hovoríme, že funkcia $f$ má nevlastnú (alebo
+nekonečnú) deriváciu v bode $a$. Hodnotu $\lim\limits_{x \rightarrow
+a}\frac{f(x)-f(a)}{x-a}$ v obidvoch týchto prípadoch označujeme $f'(a)$. Ak nás
+nezaujíma, či je $\lim\limits_{x \rightarrow a}\frac{f(x)-f(a)}{x-a}$ konečná
+alebo nekonečná. používame spoločný názov vlastná alebo nevlastná derivácia v
+bode $a$. Pojmy derivácie sprava a nevlastnej derivácie sprava, resp. derivácie
+zľava a nevlastnej derivácie zľava dostaneme, ak v predchádzajúcich definíciách
+$\lim\limits_{x \rightarrow a}\frac{f(x)-f(a)}{x-a}$ nahradíme limitou
+$\lim\limits_{x \rightarrow a+}\frac{f(x)-f(a)}{x-a}$, resp. $\lim\limits_{x
+\rightarrow a-}\frac{f(x)-f(a)}{x-a}$ (v takom prípade stačí predpokladať, že
+definičný obor funkcie $f$ obsahuje interval $\interval[open
+right]{a}{a+\varepsilon}, resp. (a-\varepsilon,a\rangle$ pre niektoré
+$\varepsilon>0$). Hodnoty $\lim\limits_{x \rightarrow a+}\frac{f(x)-f(a)}{x-a}$,
+resp. $\lim\limits_{x \rightarrow a-}\frac{f(x)-f(a)}{x-a}$ označujeme
+$f'_+(a)$,resp. $f'_-(a)$.
+
+\begin{veta}
+Funkcia $f$ (definovaná v okolí bodu $a \in \mathbb{R}$) má vlastnú alebo
+nevlastnú deriváciu $f'(a)$ práve vtedy, keď existujú $f'_+(a),f'_-(a)$ a platí
+$f'_+(a)=f'_-(a)$. Hodnota $f'(a)$ sa pritom rovná spoločnej hodnote $f'_+(a)$ a
+$f'_-(a)$.
+\end{veta}
+
+Pojem derivácie ako funkcie sa vo všeobecnosti definuje nasledovne: Nech $M$ je
+množina všetkých bodov definičného oboru $D(f)$, v ktorých má funkcia $f$
+deriváciu. Funkcia $f':M \rightarrow \mathbb{R}$, ktorá každému bodu $a$  $M$
+priradí hodnotu $f'(a)$ derivácie funkcie $f$ v bode $a$, sa nazýva derivácia
+funkcie $f$. V špeciálnych prípadoch, ktoré ilustruje nasledujúca poznámka, sa
+niekedy pojem derivácie ako funkcie chápe širšie: ak definičným oborom funkcie
+$f$ je niektorý z intervalov $\interval{a}{b}, \interval[open right]{a}{b},
+\interval[open left]{a}{b}$, pričom v jeho koncovom bode existuje jednostranná
+derivácia (v prvom prípade prichádzajú do úvahy body $a,b$, v druhom bod $a$, v
+trečom bod $b$), tak funkciu $f'$ považujeme za definovanú aj v tomto bode, jej
+funkčnou hodnotou je hodnota príslušnej jednostrannej derivácie.
+
+\begin{enumerate}[resume]
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-279}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-280}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-281}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-282}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-283}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-284}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-285}
+\end{enumerate}
+
+\begin{veta}
+Ak funkcie $f,g$ majú derivácie v bode $a$, tak aj funkcie $c \cdot f$ ($c$ je
+reálna konštanta), $f+g,f-g,f\cdot g$ majú v bode $a$ derivácie a platí:
+\begin{enumerate}
+\item $(c\cdot f)'(a)=c\cdot f'(a)$,
+\item $(f+g)'(a)=f'(a)+g'(a)$,
+\item $(f-g)'(a)=f'(a)-g'(a)$,
+\item $(f\cdot g)'(a)=f'(a)\cdot g'(a)$.
+\end{enumerate}
+Ak naviac $g(a)\neq 0$ majú v bode $a$ deriváciu aj funkcie
+$\frac{1}{g},\frac{f}{g}$ a platí
+\begin{enumerate}
+\item $(\frac{1}{g})'(a)=-\frac{g'(a)}{g^2(a)}$,
+\item $(\frac{f}{g})'(a)=\frac{f'(a)\cdot g(a)-f(a)\cdot g'(a)}{g^2 (a)}$.
+\end{enumerate}
+\end{veta}
+
+\begin{veta}
+Ak funkcia $f$ má deriváciu v bode $a$, funkcia $g$ v bode $f(a)$ a zložená
+funkcia $h=g \circ f$ je definovaná v okolí bodu $a$, tak $h$ má v bode $a$
+deriváciu a platí $$h'(a)=f'(a)\cdot g'(f(a)).$$ (Analogické vety možno dokázať
+aj pre jednostranné derivácie.)
+\end{veta}
+
+V nasledujúcej tabuľke sú derivácie základných elementárnych funkcií ($c$ je
+reálna konštanta):
+\begin{itemize}
+\item $c'=0$,
+\item $(x^n)'=n\cdot x^{n-1},(n \in \mathbb{R} \setminus \{0\})$,
+\item $(\sin x)'=\cos x$,
+\item $(\cos x)'=-\sin x$,
+\item $(\tan x)'=\frac{1}{\cos^2 x}$,
+\item $(a^x)'=a^x \cdot \ln a$, špeciálne $(e^x)'=e^x$,
+\item $(\log_{a} x)'=\frac{1}{x\cdot \ln a},x>0$, špeciálne $(\ln x)'=\frac{1}{x},x>0$,
+\item $(\arcsin x)'=\frac{1}{\sqrt{1-x^2}}$,
+\item $(\arccos x)'=-\frac{1}{\sqrt{1-x^2}}$,
+\item $(\arctan x)'=\frac{1}{1+x^2}$,
+\item $(arcctan x)'=-\frac{1}{1+x^2}$.
+\end{itemize}
+
+Pre deriváciu hyperbolických funkcií platia nasledujúce vzorce
+\begin{multicols}{2}
+\begin{itemize}
+  \item $(\sinh x)'=\cosh x$,
+  \item $(\cosh x)'=\sinh x$,
+  \item $(\tanh x)'=\frac{1}{ch^2 x}$,
+  \item $(\coth x)'=-\frac{1}{sh^2 x}$.
+\end{itemize}
+\end{multicols}
+
+Ak pri hľadaní derivácie funkcie využívame len znalosť derivácií základných
+elementárnych funkcií a vety o derivácii súčtu, rozdielu, súčinu, podielu a
+zloženej funkcie, nazýva sa taký postup tabuľkovým derivovaním.
+
+\begin{enumerate}[resume]
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-286}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-287}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-288}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-289}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-290}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-291}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-292}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-293}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-294}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-295}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-296}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-297}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-298}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-299}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-300}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-301}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-302}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-303}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-304}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-305}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-306}
+\end{enumerate}
+
+\begin{veta}
+Ak funkcia $f$ má v bode $a$ deriváciu, tak $f$ je v tomto bode spojitá.
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-307}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-308}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-309}
+\end{enumerate}

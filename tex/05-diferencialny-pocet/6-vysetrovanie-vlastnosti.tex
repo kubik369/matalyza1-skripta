@@ -1,0 +1,186 @@
+\subsection{Monotónnosť}
+\begin{veta}
+Nech funkcia $f: I \rightarrow\mathbb{R}$ je spojitá na intervale $I$ a má
+deriváciu v každom jeho vnútornom bode. Potom
+\begin{itemize}
+\item
+  ak $f'>0,(f'\geq 0)$ vnútri intervalu $I$ (t.j. ak pre každý vnútorný bod
+  $x$ intervalu $I$ platí $f'(x)>0,(f'(x)\geq 0)$), tak $f$ je rastúca
+  (neklesajúca) na $I$
+\item
+  ak $f'<0,(f'\leq 0)$ vnútri intervalu $I$, tak $f$ je klesajúca (nerastúca) na
+  $I$
+\end{itemize}
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-349}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-350}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-351}
+\end{enumerate}
+
+\begin{veta}
+Nech funkcie $f,g$ sú $n$-krát diferencovateľné na intervale $I$, nech v bode
+$a\in I$ platí $f(a)=g(a),f'(a)=g'(a),...,f^{(n-1)}(a)=g^{(n-1)}(a)$ (teda ak
+$n=1$, predpokladáme len $f(a)=g(a)$). Potom
+\begin{enumerate}
+\item
+  ak $f^{(n)}(x)>g^{(n)}(x)$, pre všetky $x\in I \cap \interval[open]{a}{\infty}$, tak
+  $f(x)>g(x)$ Pre všetky $x\in I \cap \interval[open]{a}{\infty}$ (pritom samozrejme
+  predpokladáme, že $I \cap \interval[open]{a}{\infty} \neq \emptyset$ )
+\item
+  \begin{itemize}
+    \item
+      ak $f^{(n)}(x)>g^{(n)}(x)$ pre všetky $x\in I \cap
+      \interval[open]{-\infty}{a}$ a $n$ je párne, tak $f(x)>g(x)$ pre všetky
+      $x\in I \cap \interval[open]{-\infty}{a}$;
+    \item
+      ak $f^{(n)}(x)>g^{(n)}(x)$ pre všetky $x\in I \cap
+      \interval[open]{-\infty}{a}$ a $n$ je nepárne, tak $f(x)<g(x)$ pre všetky
+      $x\in I \cap \interval[open]{-\infty}{a}$ (pritom predpokladáme $I \cap
+      \interval[open]{-\infty}{a}\neq \emptyset$)
+  \end{itemize}
+\end{enumerate}
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-352}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-353}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-354}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-355}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-356}
+\end{enumerate}
+
+\subsection{Konvexnosť a konkávnosť. Inflexné body}
+Funkcia $f$ sa nazýva rýdzo konvexná (konvexná) na intervale $I \subset D(f)$,
+ak platí $(*)$
+\[
+  \forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)<pf(x)+qf(y)
+\]
+\[
+  (\forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)\leq pf(x)+qf(y))
+\]
+Funkcia $f$ sa nazýva rýdzo konkávna (konkávna) na intervale $I \subset D(f)$,
+ak platí
+\[
+  \forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)>pf(x)+qf(y)
+\]
+\[
+  (\forall x,y\in I,x\neq y \forall p,q>0,p+q=1;f(px+qy)\geq pf(x)+qf(y))
+\]
+(Geometricky možno výrok $(*)$ interpretovať takto: pre ľubovoľné $2$ čísla
+$x,y\in I,x<y$, leží úsečka spájajúca body $(x,f(x))$ nad grafom funkcie
+$f/(x,y)$.)
+
+\begin{veta}
+Nech funkcia $f$ je spojitá na intervale $I$ a dvakrát diferencovateľná v každom
+jeho vnútornom bode. Potom
+\begin{itemize}
+\item
+  $f''>0,(f''\geq 0)$ vnútri intervalu $I$, tak $f$ je rýdzo konvexná (konvexná)
+  na $I$
+\item
+  $f''<0,(f''\leq 0)$ vnútri intervalu $I$, tak $f$ je rýdzo konkávna (konkávna)
+  na $I$
+\end{itemize}
+Vnútorný bod $a$ množiny $D(f)$ sa nazýva inflexný bod funkcie $f$, ak $f$ má v
+bode $a$ deriváciu a existuje $\varepsilon >0$ tak, že funkcia $f$ je rýdzo
+konvexná na jednej z množín $\interval[open left]{a-\varepsilon}{a}$,
+$\interval[open right]{a}{a + \varepsilon}$ a rýdzo konkávna na druhej z nich.
+\end{veta}
+
+\begin{veta}
+Nech funkcia $f$ je trikrát diferencovateľná v bode $a$ a dvakrát
+diferencovateľná v niektorom jeho okolí. Ak $f''(a)=0,f''(a)\neq 0$, tak $a$ je
+inflexný bod funkcie $f$.
+\end{veta}
+
+\textit{Poznámka:}
+Existujú aj iné definície rýdzej konvexnosti, rýdzej konkávnosti a inflexného
+bodu, ktoré nie sú ekvivalentné tu uvedeným. Všetky v matematickej literatúre
+používané definície týchto pojmov sú však volené tak, že vety $13$ a $14$
+zostanú v platnosti.
+
+\begin{enumerate}[resume]
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-357}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-358}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-359}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-360}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-361}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-362}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-363}
+\end{enumerate}
+
+\textit{Poznámka:}
+Na vlastnostiach odvodených v príklade $362$ sa zakladajú nasledujúce definície,
+odlišné od definícií používaných v tomto odstavci:
+\begin{itemize}
+\item
+  Funkcia $f$ diferencovateľná na intervale $I$ sa nazýva rýdzo konvexná (rýdzo
+  konkávna) na $I$, ak pre každé $a\in I$ platí: na množine $I \setminus \{a\}$
+  leží graf funkcie $f$ nad (pod) svojou dotyčnicou v bode $(a,f(a))$.
+\item
+  Bod $a$ sa nazýva inflexný bod funkcie $f$, ak existuje konečná $f'(a)$ a graf
+  funkcie $f$ prechádza v bode $a$ z jednej strany svojej dotyčnice na druhú.
+\end{itemize}
+Prvá z týchto definícií predstavuje užšie chápanie pojmov rýdzo konvexná a rýdzo
+konkávna funkcia (to sme tu nedokazovali, ale môžete to skúsiť sami), druhá
+naopak širšie chápanie pojmu inflexný bod (to ukazujú príklady $362$ a $363$).
+
+\subsection{Extrémy}
+Nech definičným oborom funkcie $f$ je interval $I$. Hovoríme, že funkcia $f$ má
+v bode $a$ $I$ lokálne maximum (lokálne minimum), ak existuje okolie $O(a)$ bodu
+$a$ tak, že platí:
+\[
+  \forall x\in (O(a)\setminus \{a\})\cap I:f(x)\leq f(a)
+\]
+\[
+  (\forall x\in (O(a)\setminus \{a\})\cap I:f(x)\geq f(a))
+\]
+Definíciu ostrého lokálneho maxima (ostrého lokálneho minima) dostaneme, ak v
+predchádzajúcej definícii zameníme znak $\leq$ ($\geq$) znakom $<(>)$. Lokálne
+maximá a lokálne minimá sa súhrnne nazývajú lokálnymi extrémami.
+
+\begin{veta}
+Ak funkcia $f$ má lokálny extrém vo vnútornom bode $a$ svojho definičného oboru,
+tak buď neexistuje vlastná ani nevlastná $f'(a)$, alebo $f'(a)=0$. Bod $a$ sa
+nazýva stacionálny bod funkcie $f$, ak $f'(a)=0$. Pri hľadaní lokálnych extrémov
+funkcie $f:I\rightarrow\mathbb{R}$, treba teda vyšetriť:
+\begin{enumerate}
+\item všetky jej stacionárne body
+\item všetky body $a\in I$, v ktorých neexistuhe $f'(a)$
+\item všetky body $a\in I$, ktoré nie sú vnútornými bodmi intervalu $I$
+\end{enumerate}
+\end{veta}
+
+\begin{veta}
+Ak funkcia $f$ je dvakrát diferencovateľná vo vnútornom bode $a$ množiny $D(f)$
+a platí $f'(a)=0,f''(a)>0$  $(f'(a)=0,f''(a)<0)$, tak $f$ má v bode $a$ ostré
+lokálne minimum (ostré lokálne maximum).
+\end{veta}
+
+\begin{veta}
+Nech funkcia $f$ je $n$-krát $(n\geq 2)$ diferencovateľná vo vnútornom bode $a$
+množiny $D(f)$, nech $f'(a)=...=f^{(n-1)}(a)=0,f^{(n)}\neq 0$.
+
+Ak $n$ je párne a $f^{(n)}(a)>0$  $(f^{(n)}(a)<0)$, tak funkcia $f$ má v bode
+$a$ ostré lokálne minimum (ostré lokálne maximum).
+
+Ak $n$ je nepárne, nemá funkcia $f$ v bode $a$ lokálny extrém.
+\end{veta}
+
+\begin{enumerate}[resume]
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-364}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-365}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-366}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-367}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-368}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-369}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-370}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-371}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-372}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-373}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-374}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-375}
+  \item \useproblem[diferencialny-pocet]{diferencialny-pocet-376}
+\end{enumerate}
