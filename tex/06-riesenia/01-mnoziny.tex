@@ -1,0 +1,450 @@
+$\boxed{3.}$
+nepriamo z negácie (t.j. z výroku $\exists a\in\mathbb{Q},b\in\mathbb{R}\setminus \mathbb{Q}:a+b\in\mathbb{Q}$) vyplýva (pretože rozdiel racionálnych čísel $a+b$, $a$ je racionálne číslo) $\exists b\in \mathbb{R}:b\in \mathbb{R}\setminus \mathbb{Q}\wedge b\in \mathbb{Q}$, čo je nepravdivý výrok;\\
+$\boxed{4.}$
+nepriamo; využite rovnosť $\sqrt{ab}=\frac{1}{2}((\sqrt{a})+\sqrt{b})^2-a-b$;\\
+$\boxed{5.}$
+$\boldsymbol{1.},\ \boldsymbol{2.}$ možno postupovať ako v známom dôkaze iracionálnosti čísla $\sqrt{2}$; $\boldsymbol{3.},\ \boldsymbol{4.}$ využite príklad č.$4$; $\boldsymbol{5.}$ nepriamo ($\sqrt{3}=\frac{6a+3}{4},$ kde $a=\frac{4\sqrt{3}-3}{6}$);\\
+$\boxed{6.}$
+pozor, odvodenie pravdivého výroku z danej nerovnosti nie je ešte jej dôkazom;
+$\boldsymbol{4.}$ do nerovnosti $x^2+y^2\geq 2xy$ dosaďte za $(x,y)$ postupne $(a,b),(a,c),(b,c)$ a získané nerovnosti sčítajte;
+$\boldsymbol{6.}$ vyplýva z nerovnosti $(\sqrt{x^2+1}-1)^2 \geq 0$;
+$\boxed{7.}$ 
+ak $m\ (M)$ je najmenší (najväčší) zlomok, tak $mb_1\leq a_1\leq Mb_1,...,mb_n\leq a_n\leq Mb_n$; súčet týchto nerovností vydeľte $(b_1+...+b_n)$;
+$\boxed{8.}$
+$\boldsymbol{3.}$ matematickou indukciou, v jej druhom kroku treba využiť nerovnosť $\frac{\sqrt{n}+1}{\sqrt{n+1}}$;
+$\boldsymbol{4.}$ v druhom kroku indukcie stačí pripočítaním a odpočítaním čísla $\frac{1}{n+1}$ upraviť ľavú stranu nerovnosti tak, aby sme mohli využiť indukčný predpoklad $\frac{1}{n+2}+...+\frac{1}{2n+2}=(\frac{1}{n+1}+...+\frac{1}{2n})+(\frac{1}{2n+1}+\frac{1}{2n+2}-\frac{1}{n+1})$, pritom druhá zo zátvoriek je kladné číslo;\\
+$\boxed{9.}$
+$\boldsymbol{2.}$ pre $n=1$ má dokazovaná nerovnosť tvar $|x_1|\leq |x_1|$, čo zrejme platí; dôkaz pre $n=2$: podľa pr. $9.1$ je $x_1\leq |x_1|,-x_1\leq |x_1|,x_2\leq |x_2|,-x_2\leq |x_2|$; odtiaľ vyplýva $x_1+x_2 \leq |x_1|+|x_2|,-x_1-x_2\leq |x_1|+|x_2|$; preto $\max \{x_1+x_2,-x_1-x_2\}\leq |x_1|+|x_2|$; t.j. (podľa pr. $9.1$) $|x_1+x_2|\leq |x_1|+|x_2|$; pre $n>2$ možno postupovať analogicky alebo použiť matematickú indukciu: $|x_1+...+x_{n+1}|=|(x_1+...+x_n)+x_{n+1}|\leq |x_1+...+x_n|+|x_{n+1}|$ (iná možnosť dôkazu pre $n=2:|x_1+x_2|^2=|x_1|^2+2x_1x_2+|x_2|^2\leq (|x_1|+|x_2|)^2$);$3.$ do nerovnosti $|x+y|\leq |x|+|y|$ dosaďte za $(x,y)$ postupne $(a-b,b)$, $(b-a,a)$ a použite pr. $9.1$;\\
+$\boxed{11.}$
+$\boldsymbol{4.}$ podľa návodu stačí dokázať nerovnosť $2\leq (\frac{(n+2)}{n+1})^{n+1}=(1+\frac{1}{n+1})^{n+1}$, tá vyplýva z binomickej vety (alebo z pr. $10.1$); $\boldsymbol{5.}$ nerovnosť $((2n+2)!=)$ $(n+2)!$ $[(n+3)(n+4)...(2n+2)]\geq (n+2)!$ $[(n+2)^n]$ možno dokázať priamo: $k$-ty člen v hranatej zátvorke vľavo je väčší ako $k$-ty člen v hranatej zátvorke vpravo, $k=1,...,n$;
+$\boldsymbol{6.}$ nerovnosť možno dokázať priamo použitím binomickej vety, iná možnosť: podľa návodu stačí dokázať nerovnosť $(\frac{(n+1)^2}{n*(n+2)})^{n+1}\geq 1$, na jej dôkaz možno použiť pr. $10.1$;\\
+$\boxed{12.}$ 
+$\boldsymbol{1.}$ $x_1(1-x_2)>1-x_2$; $\boldsymbol{2.}$ matematickou indukciou; ak neplatí $x_1=x_2=...=x_{n+1}=1$ (vtedy totiž dokazovaná nerovnosť zrejme platí), je aspoň jedno z čísel $x_1,x_2,...,x_{n+1}$ väčšie a aspoň jedno menšie než $1$; preznačme ich tak, aby $x_n>1,x_{n+1}<1$; ak na $n$ čísel $x+1,...,x_{n-1},x_n*x_{n+1}$ použijeme indukčný predpoklad (ktorý má podobu $\forall a_1,...,a_n\in \mathbb{R^+}:a_1*a_2*...*a_n=1\Rightarrow a_1+...+a_n\geq n$), dostaneme $x_1+...+x_{n-1}+x_n*x_{n+1}\geq n$; podľa pr. $12.1$ je potom $x_1+...+x_{n-1}+x_m+x_{n+1}>x_1+...+x_{n-1}+x_n*x_{n+1}+1\geq n+1$;
+$3.$ čísla $\frac{x_1}{x_2},...,\frac{x_n}{x_1}$, resp. $\frac{x_1}{\sqrt[n]{x_1*...*x_n}},...,\frac{x_n}{\sqrt[n]{x_1*...*x_n}}$ vyhovujú predpokladom tvrdenia z pr. $12.2$; 
+$\boxed{13.}$
+$\boldsymbol{1.}$ do nerovnosti $\frac{1}{k^2}<\frac{1}{k(k-1)}=\frac{1}{k-1}-\frac{1}{k}$ $(k\geq 2)$ dosaďte postupne $k=2,...,k=n$ a sčítajte; $\boldsymbol{2.}$ analogicky využite nerovnosť $\frac{1}{n!}<\frac{1}{2^{n-1}}$ $(n\geq 3)$ (možno ju dokázať matematickou indukciou);
+$\boxed{14.}$
+$\boldsymbol{1.}$ zdola ohraničená $(\forall m\in A:\sqrt{2}\leq m)$; platí $\forall K\in\mathbb{R}\ \exists m\in A:m>K$ (pre dané $K$ stačí položiť $a=1,b=n^4$, kde $n\in\mathbb{N}\setminus \{1\}$ je číslo väčšie než $K$; existenciu takého $n$ zaručuje Archimedov princíp - pozri $[18,$ str. $31]$), teda $A$ nie je ohraničená zhora; $\boldsymbol{2.}$ ohraničená $(\forall b\in B: 0<b\leq \frac{1}{2})$; $\boldsymbol{3.}$ ohraničená (pre každé $x\in\mathbb{R}$, teda aj pre $x=n!$, platí $|\sin x|\leq 1$); $\boldsymbol{4.}$ ohraničená (pre všetky $x\in (2,3)$, teda aj pre všetky $x\in\mathbb{Q}\cap (2,3)$ paltí $\frac{\sqrt{2}}{\sqrt[3]{3}+\sqrt[4]{3}}\leq \frac{\sqrt{x}}{\sqrt[3]{x}+\sqrt[4]{x}}\leq \frac{\sqrt{3}}{\sqrt[3]{2}+\sqrt[4]{2}}$); $\boldsymbol{5.}$ platí $\mathbb{Z}\subset E$ $(x^2-z^2$, kde $z\in\mathbb{Z}$, je polynóm druhého stupňa s racionálnymi koeficientami, ktorého koreňom je číslo $z$), preto $E$ nie je zhora ani zdola ohraničená;
+$\boxed{15.}$
+nepriamo; z výroku $ \exists a\in A \quad \exists \beta > 0  \quad \forall b \in A : \quad \mid a - b \mid < \beta \quad $ vyplýva na základe nerovnosti $ \mid b \mid \leq \mid a \mid + \mid b - a \mid  $ tvrdenie $ \exists a\in A \quad \exists \beta > 0  \quad \forall b \in A : \quad \mid b \mid < \mid a \mid + \beta$ , čo znamená, že $ A $ je ohraničená množina; 
+$\boxed{16.}$ 
+sporom; ak platí $ ( \star ) $ a $ A $ je ohraničená, tak z toho a nerovnosti $ \mid x \mid \leq  \mid y \mid + \mid x - y \mid $ vyplýva, že aj $ B $ je ohraničená;
+$\boxed{17.}$
+$\boldsymbol{2.}$
+platí (pri dôkaze vlastnosti (ii) vyhovuje príslušnej nerovnosti pre $\varepsilon > 1$ každé reálne číslo $ x_{\varepsilon}  $, pre $ 0 < \varepsilon \leq  1 $ každé číslo  $ x_{\varepsilon}  $  s vlastnosťou $ \mid x_{\varepsilon} \mid > \sqrt{ \frac{1 - \varepsilon }{2 \varepsilon}} $;
+$\boldsymbol{3.}$ $ 2x^{2}+8x+1=2.(x+2)^{2} -7 $, odtiaľ vidno, že $ -2 $ nie je dolným ohraničením danej množiny  ( teda nevyhovuje podmienke (i), ale nevyhovuje podmienke (ii) z definície  suprema (existuje totiž menšie horné ohraničenie ako číslo 12), uvedená rovnosť teda neplatí;
+$\boxed{18.}$
+$\boldsymbol{1.}$ $ sup \, A = 3 $, $ inf \, A = 2 $;
+$\boldsymbol{2.}$ $ inf \, B = 0 $, $ sup \, B = 1,\overline{1} =\frac{10}{9} $;
+$\boldsymbol{3.}$ $ C = \left\lbrace  1, -1 \right\rbrace  $, teda $ inf \, C = -1 $, $ sup \, C = 1 $;
+$\boxed{19.}$
+označme $ \beta := sup \, B $, potom pre všetky $ x \in B $ a teda aj pre všetky $ x \in A $, platí $ x \leq \beta $; teda $ \beta $ je horné ohraničenie množiny $ A $; pretože $ sup \, A $ je najmenšie z horných ohraničení množiny $ A $, platí $ sup \, A \leq \beta $, tvrdenie pre infíma znie: Nech $ A \subset B  \subset \R  $, pričom $ A $ je neprázdna a $ B $ zdola ohraničená množina, potom $ A $ je zdola ohraničená a platí $ inf \, A \geq inf  \, B $. 
+$\boxed{21.}$ 
+označme $ \alpha := sup \, A $,  $ \beta := sup \, B $; pretože $ x \leq \alpha $ pre $ x \in A $, $ y \leq \beta $ pre $ y \in B $, je $ x+y \leq \alpha + \beta $ pre každé $ x \in A $ a každé $ y \in B $ ( tým je dokázaná vlastnosť (i)), ak $ x_{\varepsilon } > \alpha - \frac{\varepsilon}{2} $,  $ y_{\varepsilon } > \beta - \frac{\varepsilon}{2} $   ( $ \alpha, \, \beta $ majú vlastnosť (ii), preto také $ x_{\varepsilon } \in A $, $ y_{ \varepsilon }$  $ \in B $ pre dané ${\varepsilon } > 0 $ existujú), tak $ x_{\varepsilon } + y_{\varepsilon } > \alpha + \beta - \varepsilon$, pričom $ x_{\varepsilon } + y_{\varepsilon } \in A + B $ (tým je dokázaná vlastnosť (ii)), pre infíma platí  $ inf \, A + inf \,B = inf \, ( A + B ) $; 
+$\boxed{22.}$ 
+$\boldsymbol{1.}$
+$ y = \sin x , u=y^{3} $;
+$\boldsymbol{2.}$ 
+$ y = x^{3}, u= \sin y $
+$\boldsymbol{3.}$ 
+$ y = \tan x, u= y^{2}, v = 5^{u} $;
+$\boldsymbol{4.}$ 
+$ y = b^{x}, u= \sqrt{y}, v= \sin u, w = v^{2}, z = \log_{3} w $;
+$\boldsymbol{5.}$ 
+$ y = \sin x , u= 2^{y}, v= \cos u, w = \sqrt{v}$;
+$\boxed{23.}$ 
+$\boldsymbol{1.}$
+$ (- \infty , - \sqrt{3}\rangle \cup \langle 0 , \sqrt{3}\rangle $;
+$\boldsymbol{2.}$
+$ (- \infty , -2 ) \cup ( 2 , \infty) $;
+$\boldsymbol{3.}$
+$\bigcup\limits_{n=0}^\infty \langle 4 n^{2} \pi ^{2}, (2n+1)^{2} \pi ^{2}\rangle $;
+$\boldsymbol{4.}$
+$\bigcup\limits_{k \in Z} (e^{-x/2}.e^{2kx},e^{x/2}.e^{2kx}) $;
+$\boldsymbol{5.}$
+$ \lbrace (2k + 1) \pi  ; k \in Z  \rbrace \cup \bigcup\limits_{n  \in Z} (\langle 2n  \pi , \frac{\pi}{3} + 2n \pi\rangle \cup \langle \frac{4 \pi}{3}+2n \pi , \frac{3 \pi}{2} + 2n \pi \rangle) $;
+$\boldsymbol{6.}$
+$ \langle - \sqrt{ \frac{ \pi}{2}},\sqrt{ \frac{ \pi}{2} \rangle} \cup \bigcup\limits_{n=1}^\infty  
+\langle  \sqrt{- \frac{ \pi}{2}+ 2n \pi} ,  \sqrt{\frac{ \pi}{2}+ 2n \pi}\rangle \cup \bigcup\limits_{n=1}^\infty  
+ \langle -\sqrt{ \frac{ \pi}{2}+ 2n \pi} , -\sqrt{-\frac{ \pi}{2}+ 2n \pi}\rangle $;
+ $\boldsymbol{7.}$
+ $ (- \frac{1}{3}, \infty) $;
+ $\boldsymbol{8.}$
+ pre $ f(x) =3. \sin^{2}x - 4, \, g(x)= \ln x $ je množina $ D_{3} $ z definície zloženej funkcie prázdna, preto týmto predpisom nie je definovaná žiadna funkcia; 
+ $\boldsymbol{9.}$
+ $ \langle -3, -1) \cup (2, 3\rangle $;
+ $\boldsymbol{10.}$
+ $ \langle 1, 4 \rangle $;
+ $\boldsymbol{11.}$ 
+ $ (0, \frac{1}{4}) $;
+ $\boldsymbol{12.}$
+ $ \mathbb{Z} $;
+ $\boldsymbol{13.}$
+ $ \bigcup\limits_{k \in Z} ((- \frac{\pi}{2}+ 2k \pi, 2k \pi) \cup ( 2k \pi, \frac{\pi}{2}+ 2k \pi)) $;
+ $\boldsymbol{14.}$
+ $ (- \infty, 1) \cup \langle 2, \infty) $;
+ $\boldsymbol{15.}$
+ $ (2,3) $;
+ $\boldsymbol{16.}$
+ $ \bigcup\limits_{n \in Z} (( \frac{\pi}{4}+ n \pi,  \frac{3}{4} \pi + n \pi) $ ( pre $n$ musí platiť alebo $ \sin x + \cos x = 0 $ alebo $ 0 < (\sin x + \cos x)(\sin x - \cos x)= - \cos 2x $; využili sme, že podiel $ \frac{a}{b} $ je kladný práve vtedy, keď $ a.b > 0 $ ); 
+ $\boldsymbol{17.}$
+ $ (-6,\frac{-5 \pi}{3}\rangle \cup \langle \frac{- \pi}{3}, \frac{1}{6 }) $; 
+ $\boxed{24.}$ 
+ $\boldsymbol{1.}$
+$ f(f(x)) = x^{4} $, $ f(g(x)) = 4^{x} $, $ g(f(x)) = 2^{x^{2}} $, $ g(g(x)) = 2^{2^{x}} $;\\
+\begin{align*} 
+\boldsymbol{2.}\ f(g(x))= g(f(x))= \left\{ \begin{array}{cc} 
+                1 & \hspace{5mm} ak\ x > 0 \\
+                -1 & \hspace{5mm} ak\ x < 0 , \\
+                \end{array} \right.
+\end{align*}
+$ g(g(x))= x \, x \ne 0 $; \\
+$\boldsymbol{3.}$
+$ f(f(x)) = f(x) $, $ f(g(x)) = 0 $, $ g(f(x)) = g(x) $, $ g(g(x)) = 0 $;
+\begin{align*} 
+\boldsymbol{4.}\ f(f(x))= \left\{ \begin{array}{cc} 
+                x^{4} & \hspace{5mm} ak\ x \in \langle0,1\rangle \\
+                9x & \hspace{5mm} ak\ x \notin \langle0,1\rangle , \\
+                \end{array} \right.
+\end{align*}, 
+\begin{align*} 
+ f(f(x))= \left\{ \begin{array}{cc} 
+                4x^{2} & \hspace{5mm} ak\ x \in \langle0, \frac{1}{2}\rangle \\
+                6x & \hspace{5mm} ak\ x \in ( \frac{1}{2},1\rangle \\
+                12x-6 & \hspace{5mm} ak\ x \notin \langle0,1\rangle , \\
+                \end{array} \right.
+\end{align*}
+\begin{align*} 
+g(f(x))= \left\{ \begin{array}{cc} 
+                2x^{2} & \hspace{5mm} ak\ x \in \langle0,1\rangle \\
+                12x-2 & \hspace{5mm} ak\ x \notin \langle0,1\rangle , \\
+                \end{array} \right.
+\end{align*}, 
+\begin{align*} 
+ f(f(x))= \left\{ \begin{array}{cc} 
+                4x & \hspace{5mm} ak\ x \in \langle0, \frac{1}{2}\rangle \\
+                8x-2 & \hspace{5mm} ak\ x \in ( \frac{1}{2},1\rangle \\
+                16x-10 & \hspace{5mm} ak\ x \notin \langle0,1\rangle , \\
+                \end{array} \right.
+\end{align*}
+\begin{align*} 
+\boldsymbol{5.}\ f(f(x))= f(x), f(g(x))= \left\{ \begin{array}{cc} 
+                0 & \hspace{5mm} ak\ x^{2} \notin \mathbb{Q} \\
+                1 & \hspace{5mm} ak\ x^{2} \in \mathbb{Q}-\lbrace0\rbrace \\
+                \end{array} \right.
+\end{align*}
+$ g(f(x))=1, \, x \in \mathbb{Q}, \, g(g(x))=x^{4}, \, x \ne 0 $;
+\begin{align*} 
+  f(f(x))= \left\{ \begin{array}{cc} 
+                4x & \hspace{5mm} ak\ x \in \langle0, \frac{1}{2}\rangle \\
+                8x-2 & \hspace{5mm} ak\ x \in ( \frac{1}{2},1\rangle \\
+                16x-10 & \hspace{5mm} ak\ x \notin \langle0,1\rangle , \\
+                \end{array} \right.
+\end{align*}
+\begin{align*} 
+\boldsymbol{6.}\ f(f(x))= 0, \, f(g(x))= \left\{ \begin{array}{cc} 
+                1 & \hspace{5mm} ak\ x \in \langle -2, -\sqrt{3} ) \cup (-1,1) \cup ( \sqrt{3, 2}\rangle \\
+                0 & \hspace{5mm} ak\ x \in ( - \infty, -2) \cup \langle - \sqrt{3},2\rangle \cup \langle1, \sqrt{3}\rangle \cup (2, \infty), \\
+                \end{array} \right.
+\end{align*}, 
+\begin{align*} 
+g(f(x))= \left\{ \begin{array}{cc} 
+                -2 & \hspace{5mm} ak\ \vert x \vert\leq 1  \\
+                -1 & \hspace{5mm} ak\ \vert x \vert > 1 , \\
+                \end{array} \right.
+\end{align*}, 
+\begin{align*} 
+g(g(x))= \left\{ \begin{array}{cc} 
+                x^{4}-4x^{2}+2 & \hspace{5mm} ak\ \vert x \vert\leq 2  \\
+                -1 & \hspace{5mm} ak\ \vert x \vert > 2 , \\
+                \end{array} \right.
+\end{align*} 
+$\boxed{25.}$ 
+$\boldsymbol{1.}$
+$ f_{n}(x)= \frac{x}{\sqrt{1+nx^{2}}} $;
+$\boldsymbol{2.}$
+$ f_{n}(x)= a. \frac{b^{n}-1}{b-1}+b^{n}x \quad pre \quad b \ne 1$ (použite vzťah $ 1+b+.....+b^{n-1}=\frac{b^{n}-1}{b-1} $ ),  $ f_{n}(x)= na+x \, \quad pre \quad b=1 $;
+$\boldsymbol{3.}$
+$ f_{n}(x)= \frac{x}{a. \frac{b^{n}-1}{b-1}x+b^{n}}, \quad D(f_{n}) = \mathbb{R}- \lbrace - \frac{b^{k}}{a. \frac{b^{n}-1}{b-1}}\, , k=1,.....,n\rbrace $ ( všetky uvedené predpisy sa dokážu matematickou indukciou );
+$\boxed{26.}$ 
+$\boldsymbol{1.}$
+nerovnajú sa $ D(f) = (-\infty, 0\rangle \cup \langle 1, \infty) \, \ne \, \langle 1, \infty) = D(g), \quad A=\langle 1, \infty) $;
+$\boldsymbol{2.}$
+nerovnajú sa $ A = (2, \infty) $;
+$\boldsymbol{3.}$
+nerovnajú sa $ A = \mathbb{R}- \lbrace \frac{k \pi}{2}; \, k \in \mathbb{Z}\rbrace $;
+$\boldsymbol{4.}$
+rovnajú sa $ D(f)=D(g)= \mathbb{R} $, zlomok $ \vert \frac{\sqrt{x^{2}+1}-x}{\sqrt{x^{2}+1}+x}\vert  $ treba rozšíriť výrazom $ \vert\sqrt{x^{2}+1}+x\vert $);
+$\boldsymbol{5.}$
+rovnajú sa ($ f(x) = \vert x+2 \vert - \vert x-4 \vert $),
+$\boxed{27.}$ 
+$\boldsymbol{7.}$
+$ y=-1+ \frac{2}{1-x} $;
+$\boldsymbol{12.}$
+$ y= \frac{2}{3}( \frac{1}{8})^{x}+2 $;
+$\boxed{29.}$ 
+$\boldsymbol{1.}$
+$ g(x)=f(2x_{0}-x) $;
+$\boldsymbol{2.}$
+$ g(x)=2y_{0}-f(x) $;
+$\boxed{31.}$ 
+$\boldsymbol{2.}$
+$ y=  \sqrt{2}\, \sin (\frac{\pi}{4}-x)=-\sqrt{2}\, \sin (x-\frac{\pi}{4}) $;
+$\boldsymbol{2.}$
+$ y=10 \, \sin (x+ \alpha) $, kde $ \alpha $ je určená podmienkami $ \alpha \in \langle 0, \frac{\pi}{2}\rangle, \,  \sin \alpha = 0,6 $;
+$\boxed{32.}$ 
+$ g(x)=f(x-a)-2a^{3} $;
+$\boxed{35.}$ 
+$\boldsymbol{1.}$
+pretože $ \vert \sin \frac{1}{x}  \vert \leq 1 $ pre každé $ x \in (0,1) $, je $ f $ ohraničená na 
+$ (0,1) $;
+$\boldsymbol{2.}$
+pre všetky $ x \geq 2$ platí $ 0  < \frac{1}{4+x^{2}  < \frac{1}{8}} $, teda $ f $ je ohraničená na $ \langle2, \infty) $;
+$\boldsymbol{3.}$
+pre každé $ x \in (1,2 \rangle $ je $ \frac{x+5}{x-1} >0 $, tj. $ f $ je zdola ohraničená na $ (1,2 \rangle  $; $ f $ nie je zhora ohraničená na $ (1,2 \rangle  $  ( nerovnica $ \frac{x+5}{x-1} >K $ má v intervale $ (1,2 \rangle  $ riešenie pre každé $ K \in \mathbb{R} $;
+$\boxed{36.}$
+$\exists x \in B: f(x) > f(x_{0})$;
+$\boxed{38.}$
+ak $ \alpha:= sup_{x \in \mathbb{R}} \, f(x), \quad \beta :=sup_{x \in \mathbb{R}} \, g(x) $, tak pre všetky $ x \in \mathbb{R} $ je $ f(x) \leq \alpha $, $ g(x) \leq \beta $, odtiaľ $ f(x)+g(x) \leq \alpha + \beta $; teda $ \alpha + \beta $ je horné ohraničenie množiny $ (f+g)(\mathbb{R}) $; pretože $ \gamma := sup_{x \in \mathbb{R}}  (f(x)+g(x))$ je jej najmenším horným ohraničením, musí platiť  $ \gamma\leq\alpha+\beta $ (ak si uvedomíme, že tento dôkaz je založený na rovnakých myšlienkach ako dôkazy z pr. 19 a 21, môžeme pomocou nich naše riešenie zapísať aj takto: Označme $ A := (f+g)(\mathbb{R}), \, B:= \, f(\mathbb{R})+g(\mathbb{R}) $, potom $ A \subset B $. Podľa pr. 19 $ sup \, A \leq sup \, B $ a podľa pr. 21 $ sup \, B  = sup \, f( \mathbb{R}) + g( \mathbb{R}) $ teda $ sup_{x \in \mathbb{R}} (f(x)+g(x)) = sup \,A \leq  sup \,B =  sup_{x \in \mathbb{R}}f (x) +  sup_{\pi \in \mathbb{R}} g(x).) $;
+$\boxed{40.}$
+$\boldsymbol{1.}$
+$ f(x)= \sqrt{2}\sin (x+\frac{x}{4}) $ (pozri pr. 31), teda $ f $ je rastúca na každej z  množín$ \langle -\frac{3 \pi}{4}+2k \pi, \frac{\pi}{4}+2k \pi \rangle ,\, k \in \mathbb{Z} $ ale nie je rastúca na zjednotení týchto množín), $ f $ je klesajúca na každej z  množín $ \langle \frac{ \pi}{4}+2k \pi, \frac{5 \pi}{4}+2k \pi \rangle ,\, k \in \mathbb{Z} $  ale nie je klesajúca na zjednotení týchto množín);
+$\boldsymbol{2.}$
+$ f(x) =( \cos^{2} x+ \sin^{2} x) ^{2} -2 \sin^{2} \cos^{2} x = 1- \frac{1}{2} \sin^{2} 2x = 1- \frac{1}{2}( \frac{1- \cos 4x}{2}) $; $ f $ rastie na každej z množín $ \langle (2k-1) \pi, 2k \pi\rangle , \, k\in \mathbb{Z} $, klesá  na každej z množín $ \langle 2k \pi, (2k+1) \pi \rangle   \, k\in \mathbb{Z} $;
+$\boxed{41.}$
+dokazovanie sa zjednoduší, ak si uvedomíme, že postupvosť $ \lbrace x_{n}\rbrace_{n=1}^\infty $  je rastúca práve vtedy, keď platí $ \forall n \in \mathbb{N}: \, x_{n}< x_{n+1} $; analogické tvrdenia platia pre všetky monotónne postupnosti;
+$\boxed{42.}$
+$\boldsymbol{1.}$
+$ \exists x,y \in M: \, x<y \, \land \, f(x)\leq f(y) $;
+$\boldsymbol{2.}$
+$( \exists x,y \in M: \, x<y \, \land \, f(x)<f(y)) \,\land \, ( \exists x,y \in M: \, x<y \, \land \, f(x)>f(y))  $ ( funkcia nie je monotónna práve vtedy, keď nie je nerastúca a nie je neklesajúca - dokážte!);
+$\boxed{45.}$
+$\boldsymbol{1.}$
+rastúca;
+$\boldsymbol{2.}$
+klesajúca;
+$\boldsymbol{3.}$
+klesajúca;
+$\boldsymbol{4.}$
+rastúca;
+$\boxed{46.}$
+$\boldsymbol{1.}$
+mnemotechnická pomôcka: priraďte rastúcej funkcii číslo 1, klesajúcej číslo -1, potom číslo priradené superpozícii rýdzomonotónnych funkcií je súčinom čísel priradených k jednotlivým zložkám; 
+$\boldsymbol{2a/}$
+$ x^{2}-6x+10=(x-3)^{2}+1  $ klesá na $ (-\infty,3 \rangle $, rastie na $ \langle3, \infty) $, $log u $ rastie na   $(0, \infty) $, teda podľa príkladu 46.1 $ f $ klesá na $ (-\infty,3 \rangle $, rastie na $ \langle3, \infty) $;
+$\boldsymbol{2b/}$
+$ f $ rastie na $ (-\infty,4 \rangle $, klesá na  $ \langle4, \infty) $;
+$\boxed{48.}$
+$\boldsymbol{2.}$
+sporom, keby $ a \notin \mathbb{Q}, a>0 $ bola perióda funkcie $ \chi $, muselo by platiť $ 0=\chi(1-a)= \chi((1-a)+a)=1 $;
+$\boxed{49.}$
+$ g(x+ \frac{T}{a})=f(ax+b+T)=f(ax+b)=g(x), \, x \in \mathbb{R} $ tada $ \frac{T}{a} $ je perióda; keby nebola najmenšia, tak zo vzťahu $f(x)=g(\frac{x}{a}-\frac{b}{a}) $  vyplýva, že $ f $ má niektorú periódu menšiu ako $ T $, čo je spor;
+$\boxed{51.}$
+$\boldsymbol{1.}$
+$ f(x+2T)=-f(x+T)=f(x), \, x\in \mathbb{R} $,  teda $ 2T $ je perióda;
+$\boldsymbol{2.}$
+$ f(x+2T)=f(x) $;
+$\boldsymbol{3.}$
+$ f(x+2T)=f(x) $;
+$\boldsymbol{4.}$
+$ f(x+3T)=f(x) $;
+$\boxed{52.}$
+ak pre začiatok pomôžeme svojej predstavivosti obrázkom, zistíme, že $ f $ musí mať periódu $ 2(b-a) $; dôkaz: podľa pr. 29.1 pre všetky $ x \in \mathbb{R} $  platí $ f(x)=f(2a-x) $ a $ f(x)=f(2b-x) $, ak na vyjadrenie $ f(2a-x) $ použijeme druhú z týchto rovností, dostaneme $ f(x)=f(2b-(2a-x))=f(x+2(b-a)), \, x \in \mathbb{R} $
+$\boxed{53.}$
+$\boldsymbol{1.}$
+$ f^{-1}(x)= \frac{1-x}{1+x}; \, x \in \mathbb{R}-\lbrace-1\rbrace $;
+$\boldsymbol{2.}$
+$ f $ nie je prostá (rovnica $ f(y)=x $ má dve rôzne riešenia pre každé $ x \in (- \frac{1}{\sqrt{8}}, \frac{1}{\sqrt{8}}) - \lbrace 0 \rbrace $;
+$\boldsymbol{4.}$
+$ f^{-1}(x)=\frac{x}{1+\sqrt{1-x^{2}}}, \, x \in \langle-1,1\rangle $, 
+ak $ x \in \mathbb{R} $ je dané a má platnosť $ f(y)=x $, tak $ y $ je riešenie rovnice $ ay^{2}-2y+x=0; \, pre x=0 $ je 
+$ y=0 $, pre $ x \in \langle -1,1 \rangle - \lbrace 0 \rbrace $ sú jej riešeniami $ y_{1}= \frac{1+\sqrt{1-x^{2}}}{x} $ a  $ y_{2}= \frac{1-\sqrt{1-x^{2}}}{x} $, pre $ \vert x\vert > 1$ riešenie neexistuje; podmienka $ \vert y_{2} \vert \leq 1 $ je splnená pre všetky 
+$ x \in \langle -1,1 \rangle - \lbrace 0 \rbrace $, $ \vert y_{1} \vert \leq 1  $ len pre 
+$ x=1,-1 $ ale  pre  $ x=1,-1 $ je $ y _{1} = y_{2} $;
+teda $ f^{-1}(x)=\frac{1-\sqrt{1-x^{2}}}{x} $ pre $ x \in \langle -1,1 \rangle - \lbrace 0 \rbrace $, $ f^{-1}(0)=0 $; to možno napísať v spoločnom tvare $ f^{-1}(x) = \frac{x}{1+ \sqrt{1-x^{2}}}, \, \vert x \vert \leq 1 $;
+$\boldsymbol{5.}$
+$ f^{-1}(x) = 1+\frac{1}{log_{3}x -1},x \ne 3 \,  $;
+$\boldsymbol{6.}$
+$ f^{-1}(x)=1- \sqrt{1+log_{2}x}, \, x\geq \frac{1}{2} $;
+$\boldsymbol{7.}$
+$ f^{-1}(x)= \frac{1}{2} log \frac{x}{2-x}, \, x \in (0,2) $;
+$\boldsymbol{8.}$
+$ ^{-1} (x)= \frac{1}{2}ln (x^{2}-2x-2), \, x>1+ \sqrt{3} $ (rovnica $ x=1+ \sqrt{3+e^{2y}} $ má riešenie len pre $ x>1+ \sqrt{3}) $;
+$\boldsymbol{9.}$
+$ f^{-1} (x)=10^{1/x}$, $x\ne 0  $ (platí $ log_{x}10 = \frac{1}{log x} $; 
+$\boldsymbol{10.}$
+$ f^{-1} (x)=2 + e^{2 log_{2}\frac{x}{2}}$, $x> 0  $;
+$\boldsymbol{11.}$
+$ f^{-1} (x)=x + \sqrt{x^{2}+1}$, $x \in \mathbb{R}  $;
+$\boldsymbol{12.}$
+$ f^{-1} (x)=x - \sqrt{x^{2}+1}$, $x \in \mathbb{R}  $;
+$\boldsymbol{13.}$
+$ f^{-1} (x)= \frac{1}{2}(x+ \frac{1}{x})$, $x \in \langle-1,0) \cup \langle1, \infty)  $; ( rovnicu $ x = y + \sqrt{y^{2}-1} $ vynásobte výrazom $ y -  \sqrt{y^{2}-1} $, potom možno vyjadriť $ y= \frac{1}{2}(x+ \frac{1}{x}) $, pri skúške správnosti zistíme, že vyhovujú len tie riešenia, pre ktoré je $ x - \frac{1}{x}\geq 0  $;
+$\boldsymbol{14.}$
+$ f^{-1} (x)= \frac{1}{2}( 2^{x}- 2^{-x})$, $x \in \mathbb{R}  $;
+$\boldsymbol{15.}$
+\begin{align*} 
+f^{-1}(x)= \left\{ \begin{array}{cc} 
+                x & \hspace{5mm} ak\ x < 0 \\
+                 \frac{x}{2} & \hspace{5mm} ak\ x \geq 0  \\
+                \end{array} \right.
+\end{align*}
+
+$\boldsymbol{16.}$
+\begin{align*}
+f^{-1}(x)= \left\{ \begin{array}{cc} 
+                x & \hspace{5mm} ak\ x  \in  \mathbb{Q} \\
+                 1-x & \hspace{5mm} ak\ x \notin  \mathbb{Q}  \\
+                \end{array} \right.
+\end{align*}
+$\boldsymbol{17.}$
+\begin{align*}
+f^{-1}(x)= \left\{ \begin{array}{cc} 
+                x +1& \hspace{5mm} ak\ x < 0 \\
+                  \sqrt{x}& \hspace{5mm} ak\ x \in  \langle1,16\rangle  \\
+                  log _{2} x& \hspace{5mm} ak\ x> 16 
+                \end{array} \right.
+\end{align*}
+$\boxed{54.}$ 
+treba ukázať, že platí rovnosť $ f^{-1}=f $, (graf funkcie $ f $ je symetrický podľa osi $ y = x $ s grafom funkcie  $ f^{-1} $) ;
+$\boxed{55.}$ 
+$\boldsymbol{2.}$
+napr. funkcia z pr. 53.16 ;
+$\boxed{56.}$
+neplatí ( vhodný protipríklad už musíte nájsť sami );
+$\boxed{54.}$
+$\boldsymbol{1.}$
+$ x/3 $;
+$\boldsymbol{2.}$
+$  \frac{1}{\sqrt{2}} $;
+$\boldsymbol{3.}$
+$  \frac{x}{3} $;
+$\boldsymbol{4.}$
+$  \frac{x}{6} $;
+$\boldsymbol{5.}$
+$  \sqrt{3} $;
+$\boxed{58.}$
+$\boldsymbol{1a/}$
+$ \arcsin x+2 \pi $;
+$\boldsymbol{1b/}$
+$  \pi - \arcsin x $;
+$\boxed{59.}$
+$\boldsymbol{1.}$
+$ f^{-1}(x)= \arcsin \sqrt[3]{x} $, $ \vert x \vert \leq1 $;
+$\boldsymbol{2.}$
+$ f^{-1}(x)= \pi - \arcsin \sqrt[3]{x} $, $ \vert x \vert \leq1 $ ( ak je $ x $ dané a má platiť $ f(y)=x $, tak postupne dostávame $ x = \sin^{3} y $, $  \sqrt[3]{x } = \sin y $, $ \arcsin \sqrt[3]{x} = \arcsin (\sin y) = \pi -y $);
+$\boldsymbol{3.}$
+$ f^{-1}(x)= 2( \pi + \arcsin \sqrt{x}) $, $  x \in \langle0,1\rangle $  (postupne $ x = \sin ^{2} \frac{y}{2} $, $ \sqrt{x}= \vert \sin \frac{y}{2}\vert = - \sin \frac{y}{2} $, $ \arcsin \sqrt{x}= \arcsin (- \sin \frac{y}{2})= - \arcsin ( \sin \frac{y}{2}) = - ( \pi - \frac{y}{2}))$;
+$\boldsymbol{4.}$
+$ f^{-1}(x)= \arctan x- \pi $ pre $ x\geq 0 $, $ f^{-1} (x)= \arctan x$ pre $ x<0 $;
+$\boldsymbol{5.}$
+$f^{-1}(x)= \cot x $, $0<\vert x \vert < \frac{ \pi}{2}$;
+$\boldsymbol{6.}$
+$ f^{-1}(x)= \sqrt[3]{1- \sin ^{2} \frac{\pi}{4}} $, $ x \in \langle0, 2 \pi \rangle $;
+$\boldsymbol{7.}$
+$ f^{-1}(x)= 1+ \cos  \frac{x-3}{4} $, $ x \in \langle 3, 3+4 \pi \rangle $;
+$\boldsymbol{8.}$
+$ f^{-1}(x)= \tan (log _{2} \frac{\pi}{8} $, $ x \in ( 2^{3- \frac{\pi}{2}}, 2^{3+ \frac{\pi}{2}}) $;
+$\boldsymbol{9.}$
+$ f^{-1} (x) = \frac{1+ \arcsin x}{3}$, $ \vert x \vert<1  $ ($ D (f^{-1}) $ sa v týchto príkladoch nájde ak $ f(D(f)) $);
+$\boxed{60.}$
+$\boldsymbol{1.}$
+$ \sqrt{1-x^{2}} $;
+$\boldsymbol{2.}$
+$ \sqrt{1-x^{2}} $ (treba použiť vzorec $ \sin 2 \alpha = 2 \sin \alpha \cos \alpha $);
+$\boldsymbol{3.}$
+$ \frac{1}{1+x^{2}} $ (pre $ u \in (-\frac{\pi}{2},\frac{\pi}{2} ) $ platí pre $ \cos ^{2 }u = \frac{1}{1+\tan^{2}u} $);
+$\boldsymbol{4.}$
+$ \frac{1}{1+x^{2}} $;
+$\boldsymbol{5.}$
+$ \frac{x}{\sqrt{1+x^{2}}} $;
+$\boldsymbol{6.}$
+$ \frac{3x-x^{3}}{1-3x^{2}} $, $ x \ne \frac{1}{\sqrt{3}} $;
+$\boxed{61.}$
+$\boldsymbol{2.}$
+$ x \in \langle-1,0\rangle $ (funkčné hodnoty obidvoch strán ležia v $ \langle - \frac{\pi}{2},\frac{\pi}{2}\rangle  $, možno využiť injektívnosť funkcie $ \sin/\langle - \frac{\pi}{2},\frac{\pi}{2}\rangle ) $;
+$\boldsymbol{3.}$
+$ x\geq 0 $ pre $ x<0 $ je $ \arccos \frac{1-x^{2}}{1+x^{2}}  \in (0,\pi\rangle $, $ 2 \arctan x \in (-\pi,0) $; pre $ x\geq 0 $ možno využiť injektívnosť funkcie $ \cos/\langle0,\pi) $ a vzťah $ \cos^{2} \alpha = \frac{1}{1+ \tan^{2}\alpha} $, $ \alpha \ne k \pi, \, k \in \mathbb{Z} $;
+$\boldsymbol{4.}$
+$ x \in \mathbb{R} $;
+$\boldsymbol{5.}$
+$ x > 1 $;
+$\boxed{62.}$
+$\boldsymbol{1.}$
+čísla $ \arccos x, \, \frac{\pi}{2}-\arcsin x $ ležia v $ \langle0, \pi\rangle $, stačí využiť injektívnosť funkcie $ \cos/\langle0,\pi) $;
+$\boldsymbol{1.}$
+pre $ x>0 $ použite injektívnosť funkcie $ \cos/\langle0,\pi) $, pre $ x<0 $  injektívnosť funkcie $ \cos/( -\pi,0\rangle $;
+$\boxed{64.}$
+$\boldsymbol{1.}$
+$ sh \, x\,\, ch\, y + sh \,y\,\, ch\, x $;
+$\boldsymbol{2.}$
+$ ch \, x\,\, ch\, y + sh \,y\,\, sh\, x $;
+$\boldsymbol{3.}$
+$ \sgn x. \sqrt{\frac{ch\, x -1}{2}} $ (stačí sčítať rovnosti 63.1 a 63.2, kam dosadíme $ \frac{x}{2} $ namiesto $ x $);
+$\boldsymbol{4.}$
+$ 2 \, ch \, \frac{x+y}{2}. ch\, \frac{x-y}{2}$ použite rovnosti $ x= \frac{x+y}{2}+ \frac{x-y}{2} $,  $ y= \frac{x+y}{2}- \frac{x-y}{2} $ a  vzorec pre $ ch \, ( \alpha\pm \beta) $);
+$\boldsymbol{5.}$
+$ 2 \, sh \, \frac{x+y}{2}. ch\, \frac{x-y}{2}$;
+$\boxed{65.}$
+platí
+$\boxed{66.}$
+neplatí; platí teda negácia uvedeného tvrdenia (na overenie jej platnosti stačí položiť $ A = \mathbb{R} $, $ B= \lbrace0\rbrace $);
+$\boxed{68.}$
+podľa (*) je každé $ x\in A $ dolné ohraničenie množiny $ B $, každé $ y \in B $ horné ohraničenie  množiny $ A $, preto $ A $ je zhora , $ B $ zdola ohraničená a platí $ \forall x \in A: \, x\leq \inf B $; teda $ \inf B $ je horné ohraničenie $ A $, odtiaľ $ \sup A\leq \inf B $; ďalej postupujeme sporom: ak $ \sup A > \inf B $, položme $ \varepsilon_{1}:= \sup A - \inf B $  zrejme , $ \varepsilon_{1}>0 $, z toho odvodíme spor s (**);
+$\boxed{69.}$ 
+ak $ k\geq 0 $, tak $ \sup kA = k \sup A $, $ \inf kA = k \inf A $; ak $ k\geq 0 $, tak $ \sup kA = k \inf A $, $ \inf kA = k \sup A $; (tieto tvrdenia treba ovšem dokázať, pritom dôkaz pre $ k<0 $ možno vykonať pomocou tvrdenia z pr. 20 a už dokázaných vzťahov pre $ k\geq 0 $, pretože $ kA = -((-k).A)) $;
+$\boxed{71.}$
+platí (treba dokázať, že číslo $ \sup _{x\in I} f(x) - \inf _{x\in I} f(x)  $ má obidve vlastnosti, ktoré charakterizujú suprémum množiny $ \lbrace \vert f(x)-f(y)\vert ;x,y \in I\rbrace $; iná možnosť: dokázať rovnosť $ \sup \lbrace \vert f(x)-f(y)\vert ;x,y \in I\rbrace =  \lbrace f(x)-f(y) ;x,y \in I\rbrace $, potom využiť rovnosť $ \sup (A-B) = \sup A - \inf B $);
+$\boxed{72.}$
+$\boldsymbol{2.}$
+tento vzťah možno odvodiť z 72.1 rovnako, ako sa odvodzuje nerovnosť $ \vert \vert a \vert - \vert b \vert\vert \leq \vert a-b \vert $ z nerovnosti $ \vert a+b \vert \leq \vert a \vert + \vert b \vert $;
+$\boxed{73.}$
+napr. $ f(x) = 0 $ pre $ x \notin \mathbb{Q} $, $ f(x) = m $, ak $ x=\frac{n}{m} $, kde $ m \in \mathbb{N} $ a $ n \in \mathbb{Z} $ sú nesúdeliteľné; resp. $ g(x)=0 $ pre $ x \notin \mathbb{Q} $, $ g(x)=(-1)^{m}.m $, ak $ x= \frac{n}{m} $;
+$\boxed{76.}$
+ak $ T $ je perióda, tak $ 1= \sin 0 + \cos a.0 = \sin T + \cos aT = \sin (-T) + \cos a.(-T) = -\sin T + \cos aT $; odtiaľ $ \sin T = 0 $, tj. $ T $  je v tvare $ k \pi\ \,(k \in \mathbb{N})$; $ \cos aT = 1$, tj. $ aT = 2n \pi \, (n \in \mathbb{Z}) $, odtiaľ $ a=\frac{2n}{k} \in \mathbb{Q} $;
+$\boxed{77.}$
+neexistuje ; stačí dokázať, že funkcia, ktorej periódou je každé kladné iracionálne číslo, je konštantná (porovnaj pr. 77 a pr. 48);
+$\boxed{79.}$
+pozri pr. 29 a 52;
+$\boxed{80.}$
+$\boldsymbol{1.}$
+$ (-1,1) $;
+$\boldsymbol{2.}$
+$ \bigcup\limits_{k \in \mathbb{Z}} (2k \pi , (2k+1)\pi) $;
+$\boldsymbol{3.}$
+$ (1,e) $;
+$\boxed{81.}$
+$\boldsymbol{1.}$
+$ f(t) = t^{2} -5t+6 $ (ak je  dané $ t \in \mathbb{R} $ a chceme nájsť $ f(t) $, treba voliť $ x $ tak, aby platilo $ x+1=t $);
+$\boldsymbol{2.}$
+$ f(t)=t^{2}-2 $ pre $ \vert t \vert \geq 2 $, $ f(t) $ je ľubovoľne určené pre $ \vert t \vert < 2 $ (pri úpravách využite rovnosť  $ \frac{t+ \sqrt{t^{2}-4}}{2}= \frac{2}{t - \sqrt{t^{2}-4}}$);
+$\boldsymbol{3.}$
+$ f(t)=\frac{1}{t}+ \sqrt{1+ \frac{1}{t^{2}}}$,  pre  $t\ne 0$, $ f(0) $ je určené ľubovoľne;
+$\boldsymbol{4.}$
+$ f(t)=\frac{t^{2}}{(1-t)^{2}} $ pre $ t \ne 1 $, $ f(1) $ je určené ľubovoľne;
+$\boxed{82.}$
+nie;
+$\boxed{83.}$
+$\boldsymbol{1.}$
+áno, napr. $ f(x) = \chi (x) $, $ g(x) = \chi (x)+1 $;
+$\boldsymbol{2.}$
+áno, pre $ g(\mathbb{R}) $ musí platiť: ak $ I \subset \mathbb{R} $ je interval, tak $ I\not\subset g(\mathbb{R} ) $; zoraďme spočitateľnú množinu $ \mathbb{Q} $ (definíciu spočitateľnosti pozri v Dodatku 1; k spočitateľnosti  množiny $ \mathbb{Q} $ pozri pr. 94) do prostej postupnosti $ \lbrace a _{n}\rbrace_{n=1}^\infty  $, potom funkcie definované predpismi $ g(x)=x $ pre $ x \notin \mathbb{Q} $, $ g(x)=n $ pre $ x=a_{n} $; $ f(x)=0 $ pre $ x \in \mathbb{N} \cup (\mathbb{R}-\mathbb{Q}) $, $ f(x)=1 $ pre $x \in \mathbb{Q} - \mathbb{N} $ vyhovujú zadaniu;
+ $\boxed{84.}$
+$\boldsymbol{1.}$
+$ f(x)=3(\cos x - \frac{\sqrt{3}}{2})^{2}+ \frac{7}{4} $, funkcia $ g(u)=3(u - \frac{\sqrt{3}}{2})^{2}+ \frac{7}{4} $ má na $ \langle-1,1\rangle $ minimum v bode $u =\frac{\sqrt{3}}{2} $ maximum v bode $ u=-1 $; teda $ \frac{7}{4}= \min_{x\in \mathbb{R}} f(x) $ sa nadobúda pre $ x=\pm \frac{\pi}{6}+2k \pi \, k\in \mathbb{Z} $, $ 7+3\sqrt{3}= \max_{x\in \mathbb{R}} f(x) $ sa nadobúda pre $ x=(2k-1)\pi \, (k\in \mathbb{Z}) $; 
+$\boldsymbol{2.}$
+$ 1=3^{0}=\min_{x\in \mathbb{R}} f(x) $ pre $ x=0 $, $ \max_{x\in \mathbb{R}} f(x) $ neexistuje $ g(u)=3^{0} $ je rastúca a zhora neohraničená na $ \langle0,\infty) $);
+$\boldsymbol{3.}$
+$ \sqrt{a^{2}+b^{2}}=\max_{x\in \mathbb{R}}f(x) $ pre $ x=\alpha + \frac{\pi}{2}+2k \pi \, (k\in \mathbb{Z}) $, $ -\sqrt{a^{2}+b^{2}}=\min_{x\in \mathbb{R}}f(x) $ pre $ x=\alpha - \frac{\pi}{2}+2k \pi \, (k\in \mathbb{Z}) $, kde $ \alpha $ je určená podmienkami $ \sin \alpha = - \frac{a}{\sqrt{a^{2}+b^{2}}} $, $ \cos \alpha =  \frac{b}{\sqrt{a^{2}+b^{2}}} $ (pozri pr. 31);
+$\boldsymbol{4.}$
+$ f(x)=\frac{1}{\sqrt{2}} \sin (2x+\frac{\pi}{4})+\frac{1}{2} $; $ \max_{x\in \mathbb{R}}f(x)= \frac{\sqrt{2}+1}{2} $, $ \min_{x\in \mathbb{R}}f(x)=\frac{1-\sqrt{2}}{2} $;
+$\boxed{85.}$
+(pozri pr. 46) f rastie na $ (-\infty,-1\rangle $, klesá na $ \langle-1,0\rangle $, rastie na $ \langle0,1\rangle $, klesá na $ \langle1,\infty) $;
+$\boxed{87.}$
+$\boldsymbol{1.}$
+pre $ x>0 $, $ y>0 $ využite injektívnosť $ cos/(0,\pi) $, pre $ x<0 $, $ y<0 $ injektívnosť $ cos/(-\pi,0) $, pre $ xy\leq 0 $ injektívnosť $ sin/(-\frac{\pi}{2},\frac{\pi}{2}) $, pritom tiež zistíte, že $ \varepsilon =0 $ pre $ xy<1 $, $ \varepsilon =1 $ pre $x>0 \, \land \, y > 0 \, \land \, xy>1 $, $ \varepsilon =-1 $ pre $x<0 \, \land \, y < 0 \, \land \, xy>1 $;
+$\boxed{88.}$
+$ f^{-1}(x)=\frac{1-2\pi+\arcsin(y-1)/2}{1+2\pi+\arcsin(y-1)/2} $, $ x \in \langle-1,3\rangle $;
+$\boxed{89.}$
+platí;
+

@@ -25,6 +25,12 @@
 \usepackage{xcolor}
 \usepackage[framemethod=TikZ]{mdframed}
 
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
 % Justified citácie na začiatku kapitol
 \renewcommand{\textflush}{flushepinormal}
 
@@ -90,6 +96,8 @@ soft  open  fences ,
 \include{./tex/04-spojitost-funkcie/main}
 
 \include{./tex/05-diferencialny-pocet/main}
+
+\include{./tex/06-riesenia/main}
 \end{document}
 
 % TODO

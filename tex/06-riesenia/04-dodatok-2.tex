@@ -1,0 +1,33 @@
+$\boxed{208.}$  $\boldsymbol{1.}$ nie je otvorená (2 a 3 nie sú vnútorné body), nie je uzavretá (neobsahuje svoje hromadné body 0, 1);
+$\boldsymbol{2.}$ otvorená , nie je uzavretá (neobsahuje napr. svoj hromadný bod 0);
+$\boldsymbol{3.}$ nie je otvorená (bod 0),  nie je uzavretá (napr.  bod 1);
+$\boldsymbol{4.}$ uzavretá, nie je otvorená;
+$\boldsymbol{5.}$  nie je otvorená, nie je uzavretá;
+$\boldsymbol{6.}$  $\chi (R)=\lbrace 0,1\rbrace $,  nie je otvorená, je uzavretá;
+$\boldsymbol{7.}$ nie je otvorená,  nie je uzavretá (neobsahuje svoj hromadný bod 0);
+$\boldsymbol{8.}$ $f(R)=\lbrace \frac{1}{n}; n \in \mathbb{N} \rbrace  \cup \lbrace 0 \rbrace$; je  uzavretá, nie je otvorená;
+$\boldsymbol{9.}$  otvorená , nie je uzavretá;
+$\boxed{209.}$  $\boldsymbol{2.}$ stačí dokázať, že doplnky sú otvorené; využite de Morganove vzorce $\mathbb{R}-(A \cup B)= (\mathbb{R} - A) \cap ( \mathbb{R} - B) $, $\mathbb{R}-(A \cap B)= (\mathbb{R} - A) \cup ( \mathbb{R} - B) $ a pr. 209.1;
+$\boldsymbol{3.}$ $ A-B=A \cap (\mathbb{R} - B)$, ďalej využite pr. 209.1,2;
+$\boldsymbol{4.}$ nech $x \in \bigcup\limits_{\alpha \in I }A_{\alpha} $, potom  $x \in A_{\alpha_{0}}  $ pre  niektoré $\alpha_{0}\in I $; $ A_{\alpha_{0}} $ je otvorená množina, teda pre niektoré okolie $O(x)$ bodu $x$ platí $O(x) \subset A_{\alpha_{0}}$; pretože $A_{\alpha_{0}}\subset \bigcup\limits_{\alpha \in I}A_{\alpha} $, platí aj $O(x) \subset \bigcup\limits_{\alpha \in I}A_{\alpha}$; teda každý prvok množiny $\bigcup\limits_{\alpha \in I}A_{\alpha}$ je jej vnútorným bodom;
+$\boxed{210.}$ $A+B=\bigcup\limits_{b \in B} ( \lbrace b \rbrace + A)$, každá z množín $\lbrace b \rbrace +A $ je otvorená, zjednotenie ľubovoľného systému otvorených množín je otvorená množina (pozri pr. 209.4);
+$\boxed{211.}$ $\boldsymbol{1.}$ $(a,b)=\bigcup\limits_{n \in \mathbb{N}} \langle a+ \frac{b-a}{n+2}, b-\frac{b-a}{n+2} \rangle $;
+$\boldsymbol{2.}$ nepriamo, ak $\langle a,b \rangle =\bigcup\limits_{t \in I}A_{t} $, kde $ A_{t} $ je otvorený interval pre každé $t \in I $, tak $\exists t_{0} \in I: \, b \in A_{t_{0}} \subset \langle a,b \rangle$, teda $b$ je vnútorný bod množiny $\langle a,b \rangle$, čo neplatí;
+$\boxed{212.}$ $C =\bigcup\limits_{b \in B}C_{b} $, kde $C_{b}= \lbrace \vert x-b \vert; x \in A \rbrace $; pre $b \notin A $  je množina $ C_{b}$ otvorená (ak $ \varepsilon  $-okolie bodu  $x$ patrí do $A$, tak $ \varepsilon  $-okolie bodu $\vert x-b \vert $ patrí do $ C_{b}$); pre $b \in A $ možno $ C_{b}$ písať v tvare $\lbrace 0 \rbrace \cup \lbrace \vert x-b \vert ; x \in A- \lbrace b \rbrace \rbrace $, pritom $A-\lbrace b\rbrace  $ je otvorená podľa pr. 209.3 a $b \notin A-\lbrace b \rbrace $, preto - v predchádzajúcej úvahe stačí nahradiť množinu $A$   množinou $  A- \lbrace b \rbrace $  - je $\lbrace \vert x-b \vert; x \in A - \lbrace b \rbrace  \rbrace$ otvorená množina;
+dokončenie dôkazu ponechávame čitateľovi;
+$\boxed{213.}$ sporom, ak $\varnothing \ne A \ne \mathbb{R}$ je súčasne uzavretá a otvorená, tak $ A $ aj $ \mathbb{R} -A $ sú otvorené a neprázdne; nech $ a \in A $, $b \in \mathbb{R} - A$, predpokladajme $ a<b $ (pre $ a>b $ je postup analogický); nech $ c:= \sup \lbrace x \in (a,b); \, x \in A \rbrace $, potom $ c \ne a $  (lebo  $ A $  je otvorená), $ c \ne b$  (lebo  $\mathbb{R} - A $  je otvorená); pritom  $ c  $ nemôže ležať v $ A $ ($ c $ by muselo patriť do $ A $  spolu s niektorým svojim okolím, teda existovali by prvky patriace do $ A $  a ležiace v intervale $ (c,b) $, čo odporuje vlastnostiam $ c $  ako suprema) a nemôže patriť ani do $\mathbb{R} - A $, čo je spor; 
+$\boxed{214.}$ využite, že množina $A \subset \mathbb{R}$ je kompaktná práve vtedy, keď je uzavretá a ohraničená (tvrdenie pr. 209.2 možno matematickou indukciou rozšíriť na konečný počet množín);
+$\boxed{215.}$ ak $N:= \max \lbrace n \in \mathbb{N};\, \frac{1}{n} \geq \epsilon \rbrace $, tak konečné podpokrytie je $\lbrace (-\varepsilon , \varepsilon),  ( 1- \varepsilon , 1+ \varepsilon),..., (\frac{1-\varepsilon}{2^{N}},\frac{1+\varepsilon}{2^{N}}) \rbrace$;
+$\boxed{216.}$ nie, každý y uvedených intervalov obsahuje práve jeden prvok nekonečnej množiny $E$;
+$\boxed{217.}$ napr. $\lbrace ( \frac{1}{n},2);\, n \in \mathbb{N} \rbrace $;
+$\boxed{218.}$ $\boldsymbol{1.}$ z množiny $A_{n}$ vyberme prvok $a_{n}$ ( potom $\lbrace a_{n} \rbrace _{n=k}  ^{\infty}$ je postupnosť prvkov z  $A_{k}$), z $\lbrace a_{n} \rbrace _{n=1}  ^{\infty}$ možno vybrať konvergentnú postupnosť, jej limita leží v každej z množín  $A_{n}$, $ n \in \mathbb{N}$, teda leží aj v $ A $;
+$\boldsymbol{2.}$ $\bigcap\limits_{n \in \mathbb{N}} A_{n} = \bigcap\limits_{n \in \mathbb{N}} B_{n}$, kde $B_{n}:= A_{1}\cap A_{2}\cap ... \cap A_{n}$;  $\lbrace B_{n} \rbrace _{n=1}  ^{\infty}$ vyhovuje podmienkam z pr. 218.1;
+$\boxed{219.}$ $\boldsymbol{1.}$ áno (využite, že každú otvorenú množinu možno písať v tvare zjedotenia otvorených intervalov);
+$\boldsymbol{2.}$ nie (túto vlastnosť majú len konečné množiny; využite, že $\lbrace \lbrace a \rbrace;a \in A \rbrace$  je pokrytie množiny $A \ne \varnothing $  uzavretými množinami);
+$\boldsymbol{3.}$ nie (uvažujte napr. množinu $\langle 0,1\rangle $ a jej pokrytie $\lbrace \langle -\frac{1}{4}, \frac{1}{4} \rangle$, $\langle \frac{3}{4}, \frac{5}{4} \rangle \rbrace \cup $ $\lbrace \langle \frac{1}{4} +\frac{1}{n} , \frac{3}{4} - \frac{1}{n} \rangle$; $n\geq 3 \rbrace $; platí ale, že každá množina s uvedenou vlastnosťou je kompaktná, využite pr. 219.1);
+$\boldsymbol{4.}$ nie (uvažujte napr. množinu $\langle 0,1\rangle$ a jej  pokrytie $\lbrace \langle 1, 2 ) \rbrace \cup \lbrace\langle 0, \frac{n-1}{n} ); \, n \geq 2 \rbrace $; platí ale,  že každá množina s uvedenou vlastnosťou je kompaktná);
+$\boxed{220.}$ využite ekvivalenciu $a/ \iff c/$ z vety 21; ak $c_{n} \in A+B$, $n \in \mathbb{N} $, tak existujú $a_{n} \in A$, $b_{n} \in B$ ($n \in \mathbb{N} $) tak, že $\lbrace c_{n} \rbrace _{n=1}  ^{\infty}$ $=\lbrace a _{n}+b_{n} \rbrace _{n=1}  ^{\infty}$; z $\lbrace a_{n} \rbrace _{n=1}  ^{\infty}$ možno vybrať konvergentnú $\lbrace a_{n_{k}} \rbrace _{k=1}  ^{\infty}$, z $\lbrace b_{n} \rbrace _{n=1}  ^{\infty}$ možno vybrať konvergentnú $\lbrace b_{n_{k}} \rbrace _{k=1}  ^{\infty}$, potom  $\lbrace c_{n_{k_{l}}} \rbrace _{l=1}  ^{\infty}$ je konvergentná a jej limita leží v množine  $A+B $; podobne pre $A.B$;
+ 
+
+
+
